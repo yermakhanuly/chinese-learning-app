@@ -41,7 +41,7 @@ const TITLES: Record<Step, { title: string; subtitle: string }> = {
 export default function OnboardingScreen() {
   const theme = useTheme();
   const { data: profile } = useProfile();
-  const update = useUpdateProfile();
+  const update = useUpdateProfile({ optimistic: false });
 
   const [stepIndex, setStepIndex] = useState(0);
   const [name, setName] = useState(profile?.display_name ?? '');
@@ -127,7 +127,7 @@ export default function OnboardingScreen() {
           </ThemedText>
         </>
       ) : null}
-      {step === 'tutorial' ? <TutorialSlides onDone={finish} /> : null}
+      {step === 'tutorial' ? <TutorialSlides onDone={finish} busy={update.isPending} /> : null}
 
       {error ? (
         <ThemedText themeColor="danger" role="alert">

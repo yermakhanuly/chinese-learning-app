@@ -41,7 +41,16 @@ const SLIDES: Slide[] = [
 ];
 
 /** Onboarding tutorial (#10): what each tab is for. */
-export function TutorialSlides({ onDone, doneLabel = 'Start learning' }: { onDone: () => void; doneLabel?: string }) {
+export function TutorialSlides({
+  onDone,
+  doneLabel = 'Start learning',
+  busy = false,
+}: {
+  onDone: () => void;
+  doneLabel?: string;
+  /** Shows a spinner on the final button while `onDone` saves. */
+  busy?: boolean;
+}) {
   const theme = useTheme();
   const [index, setIndex] = useState(0);
   const slide = SLIDES[index];
@@ -73,7 +82,12 @@ export function TutorialSlides({ onDone, doneLabel = 'Start learning' }: { onDon
         {index > 0 ? (
           <Button label="Back" variant="secondary" onPress={() => setIndex(index - 1)} style={styles.flex} />
         ) : null}
-        <Button label={last ? doneLabel : 'Next'} onPress={() => (last ? onDone() : setIndex(index + 1))} style={styles.flex} />
+        <Button
+          label={last ? doneLabel : 'Next'}
+          onPress={() => (last ? onDone() : setIndex(index + 1))}
+          loading={last && busy}
+          style={styles.flex}
+        />
       </View>
     </View>
   );

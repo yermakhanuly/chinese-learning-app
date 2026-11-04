@@ -40,10 +40,6 @@ jobs:
         run: npx supabase start -x studio,imgproxy,logflare,vector,supavisor
       - name: Import vocabulary
         run: npm run data:import
-      - name: Write .env.local
-        run: |
-          eval "$(npx supabase status -o env | grep -E '^(API_URL|PUBLISHABLE_KEY)=')"
-          printf 'EXPO_PUBLIC_SUPABASE_URL=%s\nEXPO_PUBLIC_SUPABASE_KEY=%s\n' "$API_URL" "$PUBLISHABLE_KEY" > .env.local
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test
         env:

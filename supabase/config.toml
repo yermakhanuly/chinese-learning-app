@@ -146,7 +146,7 @@ max_catalogs = 2
 
 # Store vector embeddings in S3 for large and durable datasets
 [storage.vector]
-enabled = true
+enabled = false  # not used by the app
 max_buckets = 10
 max_indexes = 5
 
@@ -432,3 +432,20 @@ enabled = true
 # formatted with uppercase keywords, indent 2, max width 180, trailing commas,
 # and column/key alignment. Set to "null" to emit raw, unformatted SQL.
 # format_options = "{\"keywordCase\":\"upper\",\"indent\":2,\"maxWidth\":180,\"commaStyle\":\"trailing\"}"
+
+# ---------------------------------------------------------------------------
+# Cloud project (the app's database). Settings here override the ones above,
+# for `supabase config push` only; local Supabase keeps using Mailpit.
+[remotes.cloud-dev]
+project_id = "dpyfrpfrqewgrmkozsny"
+
+# Gmail SMTP: needed on the free plan to send real emails and to use our
+# password-reset template. Values live in supabase/.env (git-ignored).
+[remotes.cloud-dev.auth.email.smtp]
+enabled = true
+host = "smtp.gmail.com"
+port = 587
+user = "env(SUPABASE_AUTH_SMTP_USER)"
+pass = "env(SUPABASE_AUTH_SMTP_PASS)"
+admin_email = "env(SUPABASE_AUTH_SMTP_USER)"
+sender_name = "HSK Chinese"

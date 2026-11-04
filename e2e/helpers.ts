@@ -1,22 +1,9 @@
-import fs from 'node:fs';
-import path from 'node:path';
-
 import { createClient } from '@supabase/supabase-js';
 import { expect, type Page } from '@playwright/test';
 
-function readEnv(): Record<string, string> {
-  const file = path.join(__dirname, '..', '.env.local');
-  const env: Record<string, string> = {};
-  for (const line of fs.readFileSync(file, 'utf8').split('\n')) {
-    const m = line.match(/^([A-Z_]+)=(.*)$/);
-    if (m) env[m[1]] = m[2].trim();
-  }
-  return env;
-}
+import { localSupabase } from './local-supabase';
 
-const env = readEnv();
-export const SUPABASE_URL = env.EXPO_PUBLIC_SUPABASE_URL;
-export const SUPABASE_KEY = env.EXPO_PUBLIC_SUPABASE_KEY;
+export const { url: SUPABASE_URL, key: SUPABASE_KEY } = localSupabase();
 export const MAILPIT_URL = 'http://127.0.0.1:54324';
 export const PASSWORD = 'correct-horse-42';
 

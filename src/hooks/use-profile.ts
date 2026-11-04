@@ -40,8 +40,12 @@ export function useProfile() {
   });
 }
 
-/** Saves profile fields with an optimistic update (the UI changes instantly, rolls back on error). */
-export function useUpdateProfile() {
+/**
+ * Saves profile fields. By default the update is optimistic (the UI changes instantly, rolls back
+ * on error). Pass `{ optimistic: false }` when the change moves the user to another screen (finishing
+ * onboarding): the UI then waits for the server, so a reload mid-save can't lose it.
+ */
+export function useUpdateProfile({ optimistic = true }: { optimistic?: boolean } = {}) {
   const queryClient = useQueryClient();
   const { session } = useAuth();
   const userId = session?.user.id;
@@ -56,6 +60,7 @@ export function useUpdateProfile() {
     },
     onMutate: async (changes) => {
       await queryClient.cancelQueries({ queryKey: key });
+      if (!optimistic) return { previous: undefined };
       const previous = queryClient.getQueryData<Profile>(key);
       if (previous) queryClient.setQueryData<Profile>(key, { ...previous, ...changes });
       return { previous };

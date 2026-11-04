@@ -54,6 +54,10 @@ supabase/.branches/
 /playwright-report/
 
 .env
+
+# local notes and editor-assistant files (not part of the project)
 PLAN.md
 CLAUDE.md
 skills-lock.json
+AGENTS.md
+.claude/
