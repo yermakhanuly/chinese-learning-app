@@ -1,4 +1,4 @@
-import { parseCedictLine, parseHskEntry } from '../vocab-parsers';
+import { parseCedictLine, parseHskEntry, primaryForm, type HskSourceEntry } from '../vocab-parsers';
 
 describe('parseHskEntry', () => {
   const entry = {
@@ -71,5 +71,49 @@ describe('parseCedictLine', () => {
     expect(parseCedictLine('# CC-CEDICT')).toBeNull();
     expect(parseCedictLine('')).toBeNull();
     expect(parseCedictLine('garbage')).toBeNull();
+  });
+});
+
+describe('primaryForm', () => {
+  const form = (pinyin: string, meanings: string[]) => ({
+    traditional: '',
+    transcriptions: { pinyin, numeric: '' },
+    meanings,
+    classifiers: [],
+  });
+  const entry = (simplified: string, forms: ReturnType<typeof form>[]): HskSourceEntry => ({
+    simplified,
+    level: ['newest-1'],
+    forms,
+  });
+
+  it('skips surname readings', () => {
+    const e = entry('都', [form('Dū', ['surname Du']), form('dōu', ['all']), form('dū', ['capital city'])]);
+    expect(primaryForm(e).transcriptions.pinyin).toBe('dōu');
+  });
+
+  it('skips variant and bound-form readings', () => {
+    expect(primaryForm(entry('个', [form('gě', ['used in 自个儿']), form('gè', ['classifier'])])).transcriptions.pinyin).toBe('gè');
+    expect(primaryForm(entry('要', [form('yāo', ['(bound form) to demand']), form('yào', ['to want'])])).transcriptions.pinyin).toBe('yào');
+  });
+
+  it('keeps proper nouns when every reading is capitalized', () => {
+    expect(primaryForm(entry('中国', [form('Zhōng guó', ['China'])])).transcriptions.pinyin).toBe('Zhōng guó');
+  });
+
+  it('prefers the reading with the most meanings', () => {
+    const e = entry('说', [form('shuì', ['to persuade']), form('shuō', ['to speak', 'to explain']), form('shuō', ['variant of 说'])]);
+    expect(primaryForm(e).transcriptions.pinyin).toBe('shuō');
+  });
+
+  it('uses the hand-checked reading for particles', () => {
+    const e = entry('了', [form('le', ['particle']), form('liǎo', ['to finish', 'to understand'])]);
+    expect(primaryForm(e).transcriptions.pinyin).toBe('le');
+  });
+
+  it('applies hand-checked overrides', () => {
+    const e = entry('行', [form('háng', ['row']), form('xíng', ['to walk'])]);
+    expect(primaryForm(e).transcriptions.pinyin).toBe('xíng');
+    expect(parseHskEntry(e).meanings).toEqual(['to walk']);
   });
 });

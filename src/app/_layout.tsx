@@ -12,6 +12,8 @@ import { ThemePreferenceProvider } from '@/providers/theme-preference';
 
 SplashScreen.preventAutoHideAsync();
 
+const WITH_HEADER = { headerShown: true, headerBackTitle: 'Back', headerShadowVisible: false } as const;
+
 export default function RootLayout() {
   const [queryClient] = useState(() => new QueryClient({ defaultOptions: { queries: { retry: 2 } } }));
   return (
@@ -50,6 +52,10 @@ function ThemedRoot() {
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Protected guard={!needsOnboarding}>
           <Stack.Screen name="(tabs)" />
+          {/* Dictionary pages pushed over the tabs, with a native header (back button, title). */}
+          <Stack.Screen name="word" options={WITH_HEADER} />
+          <Stack.Screen name="words" options={WITH_HEADER} />
+          <Stack.Screen name="saved" options={WITH_HEADER} />
           <Stack.Screen name="sign-in" options={{ presentation: 'modal' }} />
           <Stack.Screen name="sign-up" options={{ presentation: 'modal' }} />
           <Stack.Screen name="forgot-password" options={{ presentation: 'modal' }} />

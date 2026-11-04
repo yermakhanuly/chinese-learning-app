@@ -1,4 +1,11 @@
-import { numberedSyllableToMarked, numberedToMarked, toPlainPinyin, tonesOf } from '../pinyin';
+import {
+  numberedSyllableToMarked,
+  numberedToMarked,
+  toneOfMarkedSyllable,
+  toneSignature,
+  toPlainPinyin,
+  tonesOf,
+} from '../pinyin';
 
 describe('numberedSyllableToMarked', () => {
   it.each([
@@ -43,5 +50,20 @@ describe('toPlainPinyin', () => {
 describe('tonesOf', () => {
   it('reads tone numbers, with 5 for neutral', () => {
     expect(tonesOf('ni3 hao3 ma5')).toEqual([3, 3, 5]);
+  });
+});
+
+describe('toneOfMarkedSyllable / toneSignature', () => {
+  it('reads tones from marks', () => {
+    expect(toneOfMarkedSyllable('hǎo')).toBe(3);
+    expect(toneOfMarkedSyllable('lǜ')).toBe(4);
+    expect(toneOfMarkedSyllable('Zhōng')).toBe(1);
+    expect(toneOfMarkedSyllable('ma')).toBe(5);
+  });
+  it('builds a signature from marks or numbers, skipping neutral tones', () => {
+    expect(toneSignature('nǐ hǎo')).toBe('33');
+    expect(toneSignature('ni3hao3')).toBe('33');
+    expect(toneSignature('ma5 ma1')).toBe('1');
+    expect(toneSignature('ni hao')).toBe('');
   });
 });

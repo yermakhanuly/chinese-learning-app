@@ -36,6 +36,16 @@ SUPABASE_URL=https://dpyfrpfrqewgrmkozsny.supabase.co \
 SUPABASE_SERVICE_ROLE_KEY=<secret key: projects api-keys --reveal> npm run data:import
 ```
 
+`data:import` loads HSK words, CC-CEDICT, Tatoeba example sentences (downloaded to `data/raw/`, needs `bzip2`) and the word topics from `data/word-topics.json`.
+
+### Word topics (AI-tagged, run once)
+
+```bash
+echo 'ANTHROPIC_API_KEY=sk-ant-...' > scripts/.env   # git-ignored
+npm run data:topics     # Claude tags each HSK word with 1–2 of 25 topics (Batch API, ~1 hour, ≈ $5)
+npm run data:import     # loads them; commit data/word-topics.json
+```
+
 > `config push` applies the `[remotes.cloud-dev]` overrides at the end of `config.toml` (Gmail SMTP) and needs `supabase/.env` filled in (see Emails).
 
 ### Local database (tests, or offline work)
@@ -103,3 +113,5 @@ e2e/                Playwright tests
 
 - HSK word lists: [complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary) (MIT). Levels use the **2026 HSK 3.0 syllabus** (`hsk_level`; 7 = levels 7–9); the 2021 standard and HSK 2.0 levels are stored too.
 - Dictionary: [CC-CEDICT](https://www.mdbg.net/chinese/dictionary?page=cc-cedict) (CC BY-SA 4.0) — attribution shown in the app's Profile → Credits.
+- Example sentences: [Tatoeba](https://tatoeba.org) (CC BY 2.0 FR) — each sentence links to its Tatoeba page.
+- Word audio (for now): the device's built-in Chinese voice.

@@ -75,3 +75,34 @@ export function tonesOf(numbered: string): number[] {
     .filter((m): m is RegExpExecArray => m !== null)
     .map((m) => Number(m[1]));
 }
+
+const MARK_TONE: Record<string, number> = {};
+for (const marks of Object.values(TONE_MARKS)) {
+  marks.forEach((m, i) => {
+    MARK_TONE[m] = i + 1;
+    MARK_TONE[m.toUpperCase()] = i + 1;
+  });
+}
+
+/** Tone (1–4, 5 = neutral) of one tone-marked syllable: "hǎo" → 3, "ma" → 5. */
+export function toneOfMarkedSyllable(syllable: string): number {
+  for (const ch of syllable) {
+    const tone = MARK_TONE[ch];
+    if (tone) return tone;
+  }
+  return 5;
+}
+
+/**
+ * The tones a pinyin string spells out, neutral tones left out: "nǐ hǎo" → "33", "ni3hao3" → "33",
+ * "ni hao" → "". Used to rank search results whose tones match what the learner typed.
+ */
+export function toneSignature(pinyin: string): string {
+  let out = '';
+  for (const ch of pinyin) {
+    const tone = MARK_TONE[ch];
+    if (tone) out += tone;
+    else if (ch >= '1' && ch <= '4') out += ch;
+  }
+  return out;
+}

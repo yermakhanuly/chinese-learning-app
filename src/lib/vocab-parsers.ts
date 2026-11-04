@@ -61,11 +61,99 @@ function levelFor(tags: string[], family: 'newest' | 'new' | 'old'): number | nu
   return levels.length ? Math.min(...levels) : null;
 }
 
+/**
+ * Readings the heuristics below get wrong (mostly grammar particles, whose single meaning is
+ * outnumbered by rarer readings). The learner-facing reading for these words.
+ */
+const PREFERRED_READING: Record<string, string> = {
+  了: 'le',
+  吗: 'ma',
+  没: 'méi',
+  长: 'cháng',
+  地: 'de',
+  得: 'de',
+  着: 'zhe',
+  行: 'xíng',
+  觉: 'jué',
+  掺: 'chān',
+  强: 'qiáng',
+  汤: 'tāng',
+  令: 'lìng',
+  占: 'zhàn',
+  散: 'sàn',
+  露: 'lù',
+  佛: 'fó',
+  转: 'zhuǎn',
+  转动: 'zhuǎn dòng',
+  扎: 'zhā',
+  挑: 'tiāo',
+  卷: 'juǎn',
+  涨: 'zhǎng',
+  盛: 'shèng',
+  老公: 'lǎo gōng',
+  量: 'liáng',
+  中: 'zhōng',
+  雨: 'yǔ',
+  卡: 'kǎ',
+  空: 'kōng',
+  价: 'jià',
+  淋: 'lín',
+  起来: 'qǐ lai',
+  省事: 'shěng shì',
+  削: 'xiāo',
+  咋: 'zǎ',
+  背着: 'bēi zhe',
+  啊: 'a',
+  哄: 'hǒng',
+  切: 'qiē',
+  缝: 'féng',
+  钉: 'dīng',
+};
+
+/** Meanings that mark a rare, archaic or name-only reading. */
+const MINOR_MEANING = /^(surname|old variant|variant of|unofficial variant|euphemistic|archaic|used in|see |\((bound form|chess|dialect|literary|old|Tw)\))/i;
+
+/**
+ * The reading to show first. The source sorts readings by tone, not by how common they are
+ * (说 lists shuì "to persuade" before shuō "to speak"), so: skip surnames and variants, then take
+ * the reading with the most meanings (counted across forms that share it); a hand-checked list
+ * covers the exceptions.
+ */
+export function primaryForm(entry: HskSourceEntry): HskSourceForm {
+  const forms = entry.forms;
+  const preferred = PREFERRED_READING[entry.simplified];
+  if (preferred) {
+    const match =
+      forms.find((f) => f.transcriptions.pinyin === preferred) ??
+      forms.find((f) => f.transcriptions.pinyin.toLowerCase() === preferred);
+    if (match) return match;
+  }
+  const allProper = forms.every((f) => /^[A-Z]/.test(f.transcriptions.pinyin));
+  const senses = new Map<string, number>();
+  for (const f of forms) {
+    const key = f.transcriptions.pinyin;
+    const real = (f.meanings ?? []).filter((m) => !MINOR_MEANING.test(m)).length;
+    senses.set(key, (senses.get(key) ?? 0) + real);
+  }
+  // Lower is better: penalties first, then more senses; ties keep the source order.
+  const score = (f: HskSourceForm) => {
+    const meanings = f.meanings ?? [];
+    let penalty = 0;
+    if (!allProper && /^[A-Z]/.test(f.transcriptions.pinyin)) penalty += 10;
+    if (meanings.length === 0) penalty += 8;
+    else if (meanings.every((m) => MINOR_MEANING.test(m))) penalty += 5;
+    return penalty * 100 - Math.min(senses.get(f.transcriptions.pinyin) ?? 0, 50);
+  };
+  let best = forms[0];
+  for (const f of forms) if (score(f) < score(best)) best = f;
+  return best;
+}
+
 export function parseHskEntry(entry: HskSourceEntry): WordRow {
   if (!entry.simplified || !entry.forms?.length) {
     throw new Error(`Invalid HSK entry: ${JSON.stringify(entry).slice(0, 120)}`);
   }
-  const first = entry.forms[0];
+  const first = primaryForm(entry);
   return {
     simplified: entry.simplified,
     traditional: first.traditional || entry.simplified,

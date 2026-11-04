@@ -4,6 +4,7 @@ import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
 
 import { Avatar } from '@/components/avatar';
 import { Button } from '@/components/button';
+import { ReadingSettings } from '@/components/dictionary-controls';
 import { Card } from '@/components/card';
 import { ChoiceList } from '@/components/choice-list';
 import { Screen } from '@/components/screen';
@@ -57,6 +58,7 @@ export default function ProfileScreen() {
         <ActivityIndicator aria-label="Loading profile" />
       )}
       <AppearanceCard />
+      <ReadingSettings />
       {session ? (
         <>
           <Card title="Help">
@@ -68,7 +70,7 @@ export default function ProfileScreen() {
       <Card title="Credits">
         <ThemedText type="small" themeColor="textSecondary">
           Dictionary data: CC-CEDICT (CC BY-SA 4.0), MDBG. HSK word lists: complete-hsk-vocabulary by Yanis
-          Zafirópulos (MIT).
+          Zafirópulos (MIT). Example sentences: Tatoeba (CC BY 2.0 FR), tatoeba.org.
         </ThemedText>
       </Card>
     </Screen>

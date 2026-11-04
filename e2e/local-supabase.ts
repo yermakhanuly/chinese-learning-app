@@ -9,7 +9,10 @@ export function localSupabase(): { url: string; key: string } {
   if (!process.env.E2E_SUPABASE_URL || !process.env.E2E_SUPABASE_KEY) {
     let out: string;
     try {
-      out = execFileSync('npx', ['supabase', 'status', '-o', 'env'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+      out = execFileSync('npx', ['supabase', 'status', '-o', 'env'], {
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'ignore'],
+      });
     } catch {
       throw new Error('Local Supabase is not running. Start it with `npm run db:start` (and `npm run data:import`).');
     }

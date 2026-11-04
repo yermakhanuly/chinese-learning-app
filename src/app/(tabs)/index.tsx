@@ -1,11 +1,14 @@
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
+import { useState } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { Button } from '@/components/button';
 
-import { Card, ComingSoon } from '@/components/card';
+import { Card } from '@/components/card';
+import { SearchField } from '@/components/dictionary-controls';
 import { DAILY_GOALS, LEARNING_GOALS, SELF_LEVELS, labelFor } from '@/constants/profile-options';
 import { Screen } from '@/components/screen';
+import { PressableLink } from '@/components/pressable-link';
 import { ThemedText } from '@/components/themed-text';
 import { Radius, Spacing } from '@/constants/theme';
 import { hskLevelLabel, useHskLevelCounts } from '@/hooks/use-hsk-level-counts';
@@ -20,6 +23,7 @@ export default function HomeScreen() {
 
   return (
     <Screen title={name ? `你好, ${name}!` : '你好!'} subtitle="Nǐ hǎo! Welcome to HSK Chinese.">
+      <HomeSearch />
       {session ? (
         profile ? (
           <Card title="Your plan">
@@ -49,9 +53,18 @@ export default function HomeScreen() {
         </Card>
       )}
       <VocabularyCard />
-      <ComingSoon phase={2} items={['Search the dictionary', 'Hear every word', 'Save words to study later']} />
     </Screen>
   );
+}
+
+/** Global search: opens the Dictionary with the query. */
+function HomeSearch() {
+  const [text, setText] = useState('');
+  const submit = () => {
+    const q = text.trim();
+    if (q) router.push({ pathname: '/dictionary', params: { q } });
+  };
+  return <SearchField value={text} onChangeText={setText} onClear={() => setText('')} onSubmitEditing={submit} />;
 }
 
 function VocabularyCard() {
@@ -76,16 +89,19 @@ function VocabularyCard() {
           </ThemedText>
           <View style={styles.levels}>
             {data.map(({ level, count }) => (
-              <View
+              <PressableLink
                 key={level}
-                accessible
+                href={{ pathname: '/words', params: { level: String(level) } }}
                 aria-label={`${hskLevelLabel(level)}: ${count} words`}
-                style={[styles.level, { backgroundColor: theme.background, borderColor: theme.border }]}>
+                style={({ pressed }) => [
+                  styles.level,
+                  { backgroundColor: pressed ? theme.backgroundSelected : theme.background, borderColor: theme.border },
+                ]}>
                 <ThemedText type="smallBold" themeColor="tint">
                   {hskLevelLabel(level)}
                 </ThemedText>
                 <ThemedText type="label">{count.toLocaleString()}</ThemedText>
-              </View>
+              </PressableLink>
             ))}
           </View>
         </>

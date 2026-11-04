@@ -13,3 +13,8 @@
   outline: 2px solid #b8202e;
   outline-offset: 2px;
 }
+
+/* The search box shows focus on its whole frame instead (see SearchField). */
+input[role='searchbox']:focus-visible {
+  outline: none;
+}
