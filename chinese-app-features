@@ -1,0 +1,132 @@
+1. User accounts and onboarding
+1. Sign up / Log in — Email, Google, or Apple authentication.
+2. User profile — Name, avatar, learning statistics, and preferences.
+3. Learning goals — Travel, business, HSK preparation, studying abroad, or casual learning.
+4. Chinese proficiency selection — Complete beginner, intermediate, or advanced.
+5. Placement test — Determine the user's initial Chinese proficiency.
+6. Daily learning goal — Choose a target of 5, 10, 15, 20, or 30 minutes.
+7. Personalized learning path — Lessons adapted to goals and current proficiency.
+8. Simplified / Traditional Chinese selection — Choose the preferred writing system.
+9. Native language selection — Change the language used for explanations and translations.
+10. Onboarding tutorial — Introduce the learning interface and core functionality.
+2. Learning curriculum and lessons
+11. Structured learning roadmap — Progress through beginner, intermediate, and advanced material.
+12. HSK-aligned curriculum — Organize lessons around the HSK proficiency framework.
+13. Thematic lessons — Greetings, numbers, food, travel, shopping, work, and more.
+14. Short interactive lessons — Bite-sized sessions of approximately 3–10 minutes.
+15. Vocabulary introduction — Learn new words with translations and examples.
+16. Grammar lessons — Explain Chinese sentence structures and grammatical rules.
+17. Sentence-building exercises — Arrange words into correct sentences.
+18. Translation exercises — Translate Chinese to English and vice versa.
+19. Multiple-choice questions — Select the correct Chinese word, sound, or meaning.
+20. Fill-in-the-blank exercises — Complete sentences with missing words.
+3. Vocabulary and reading
+21. Vocabulary dictionary — Search Chinese words and their definitions.
+22. Pinyin display — Show pronunciation using Romanized Chinese.
+23. Tone-mark display — Show tones using standard pinyin diacritics.
+24. Word audio playback — Hear individual words pronounced.
+25. Example sentences — Learn vocabulary through realistic contexts.
+26. Word frequency indicators — Identify commonly used Chinese words.
+27. Vocabulary categories — Organize words by topic and difficulty.
+28. Saved vocabulary — Bookmark words for later review.
+29. Interactive reading passages — Read short stories and dialogues.
+30. Tap-to-translate reading — Tap unfamiliar characters or words to view their meanings.
+4. Listening and pronunciation
+31. Native-speaker audio — Listen to natural Mandarin pronunciation.
+32. Four-tone training — Practice the four Mandarin tones.
+33. Neutral-tone training — Recognize and produce the neutral tone.
+34. Tone recognition quizzes — Identify tones from audio.
+35. Tone-pair exercises — Practice common combinations of two tones.
+36. Tone-sandhi lessons — Learn pronunciation changes, including third-tone sandhi.
+37. Speech recording — Record pronunciation through the microphone.
+38. Pronunciation feedback — Receive feedback on spoken Chinese.
+39. Slow audio playback — Reduce playback speed for difficult phrases.
+40. Listening comprehension exercises — Answer questions after hearing sentences or conversations.
+5. Chinese characters and handwriting
+41. Hanzi character lessons — Learn characters and their meanings.
+42. Animated stroke order — Show the correct sequence of strokes.
+43. Handwriting practice — Draw characters using a finger, mouse, or stylus.
+44. Stroke-order correction — Detect incorrect stroke sequences.
+45. Character recognition quizzes — Match characters with their meanings.
+46. Radical lessons — Understand the components of Chinese characters.
+47. Character decomposition — Break complex characters into meaningful components.
+48. Character similarity exercises — Distinguish visually similar characters.
+49. Character etymology — Explain the historical origins of selected characters.
+50. Character-writing challenges — Practice writing characters from memory.
+6. Grammar and sentence construction
+51. Grammar reference library — Search explanations of grammatical structures.
+52. Sentence pattern lessons — Learn common patterns such as subject–verb–object.
+53. Measure-word lessons — Practice classifiers such as 个, 本, and 张.
+54. Word-order exercises — Practice natural Chinese sentence structure.
+55. Question formation — Learn how to ask questions in Mandarin.
+56. Negation exercises — Practice 不, 没, and related structures.
+57. Aspect particle lessons — Understand 了, 过, and 着.
+58. Grammar mistake explanations — Explain why an answer is incorrect.
+59. Sentence transformations — Convert affirmative, negative, and interrogative sentences.
+60. Context-based grammar quizzes — Select appropriate grammar in real situations.
+7. Flashcards, revision, and assessments
+61. Spaced repetition system (SRS) — Schedule reviews based on recall performance.
+62. Flashcard decks — Study words, characters, and sentences.
+63. Custom flashcards — Create personalized vocabulary cards.
+64. Audio flashcards — Listen before revealing written answers.
+65. Reverse flashcards — Practice both recognition and active recall.
+66. Daily review queue — Show vocabulary and concepts due for review.
+67. Weak-word detection — Identify words the learner repeatedly forgets.
+68. Mistake notebook — Save incorrect answers for targeted practice.
+69. Lesson completion quizzes — Test learning after each lesson.
+70. Progressive assessments — Evaluate skills at the end of each unit or level.
+8. AI-powered learning features
+71. AI Mandarin tutor — Chat with an AI tutor to ask questions about Chinese.
+72. AI conversation practice — Practice realistic written conversations.
+73. AI voice conversation — Practice spoken Mandarin through voice interaction.
+74. AI role-playing scenarios — Simulate ordering food, visiting a doctor, or interviewing for a job.
+75. AI grammar correction — Correct user-written sentences and explain mistakes.
+76. AI sentence explanations — Break down unfamiliar sentences into components.
+77. AI vocabulary examples — Generate personalized example sentences.
+78. AI-adaptive lesson difficulty — Adjust learning difficulty according to performance.
+79. AI-generated quizzes — Create exercises based on recently learned vocabulary.
+80. AI study recommendations — Suggest what to review or study next.
+9. Gamification and motivation
+81. Experience points (XP) — Earn points by completing learning activities.
+82. Daily streaks — Track consecutive days of learning.
+83. Achievements and badges — Reward important learning milestones.
+84. Learning levels — Unlock higher levels through progress.
+85. Daily challenges — Complete special exercises for rewards.
+86. Weekly challenges — Work toward longer-term learning goals.
+87. Leaderboards — Compare learning activity with other users.
+88. Study reminders — Receive notifications to practice.
+89. Progress celebrations — Display animations after milestones or completed lessons.
+90. Personal learning milestones — Celebrate learning 100 words, finishing a course, or passing an assessment.
+10. Progress tracking and analytics
+91. Learning dashboard — Overview of progress, goals, and upcoming lessons.
+92. Vocabulary mastered counter — Track words and characters learned.
+93. Study time tracking — Record daily, weekly, and monthly learning time.
+94. Skills breakdown — Show progress in listening, speaking, reading, and writing.
+95. Accuracy statistics — Display performance across exercises.
+96. Learning activity calendar — Visualize study consistency.
+97. Personalized progress reports — Summarize achievements and difficulties.
+98. HSK readiness estimates — Estimate readiness based on relevant skill assessments.
+99. Learning history — Review completed lessons, quizzes, and past results.
+100. Goal completion tracking — Track progress toward personal learning targets.
+11. User experience and accessibility
+101. Responsive design — Support desktop, tablet, and mobile screens.
+102. Progressive Web App (PWA) — Allow installation from a browser.
+103. Dark mode — Provide light and dark display themes.
+104. Offline learning — Download supported lessons and study without internet.
+105. Cross-device synchronization — Continue learning across multiple devices.
+106. Adjustable text size — Make Hanzi and other text easier to read.
+107. Pinyin visibility toggle — Show or hide pinyin while studying.
+108. Audio playback controls — Repeat recordings, change playback speed, and control volume.
+109. Accessibility support — Support keyboard navigation, screen readers, and sufficient contrast.
+110. Search and navigation — Quickly find lessons, vocabulary, and learning materials.
+12. Administration, content management, and monetization
+111. Admin dashboard — Manage learners, learning content, and application settings.
+112. Course management system — Create and organize lessons and units.
+113. Vocabulary management — Add, edit, import, and categorize vocabulary.
+114. Audio content management — Upload and manage pronunciation recordings.
+115. Quiz management — Create exercises and configure correct answers.
+116. Content quality review — Check translations, pinyin, grammar, and audio before publishing.
+117. User feedback system — Let learners report errors and suggest improvements.
+118. Subscription management — Support free and premium plans.
+119. Payment integration — Process subscriptions and manage billing.
+120. Analytics, security, and backups — Monitor application performance, protect user information, and maintain reliable backups.

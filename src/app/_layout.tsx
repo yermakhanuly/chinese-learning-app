@@ -1,0 +1,65 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
+import { StatusBar } from 'expo-status-bar';
+import { useEffect, useState } from 'react';
+
+import { Colors } from '@/constants/theme';
+import { useColorScheme } from '@/hooks/use-color-scheme';
+import { useProfile } from '@/hooks/use-profile';
+import { AuthProvider, useAuth } from '@/providers/auth';
+import { ThemePreferenceProvider } from '@/providers/theme-preference';
+
+SplashScreen.preventAutoHideAsync();
+
+export default function RootLayout() {
+  const [queryClient] = useState(() => new QueryClient({ defaultOptions: { queries: { retry: 2 } } }));
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <ThemePreferenceProvider>
+          <ThemedRoot />
+        </ThemePreferenceProvider>
+      </AuthProvider>
+    </QueryClientProvider>
+  );
+}
+
+function ThemedRoot() {
+  const scheme = useColorScheme();
+  const base = scheme === 'dark' ? DarkTheme : DefaultTheme;
+  const c = Colors[scheme];
+  const { session, initialized } = useAuth();
+  const profile = useProfile();
+
+  // Hide the splash once we know who is signed in (and, if someone is, whether they finished onboarding).
+  const ready = initialized && (!session || !profile.isPending);
+  useEffect(() => {
+    if (ready) SplashScreen.hideAsync();
+  }, [ready]);
+
+  const needsOnboarding = !!session && !!profile.data && !profile.data.onboarded_at;
+
+  return (
+    <ThemeProvider
+      value={{
+        ...base,
+        colors: { ...base.colors, primary: c.tint, background: c.background, card: c.background, text: c.text, border: c.border },
+      }}>
+      <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Protected guard={!needsOnboarding}>
+          <Stack.Screen name="(tabs)" />
+          <Stack.Screen name="sign-in" options={{ presentation: 'modal' }} />
+          <Stack.Screen name="sign-up" options={{ presentation: 'modal' }} />
+          <Stack.Screen name="forgot-password" options={{ presentation: 'modal' }} />
+          <Stack.Screen name="tutorial" options={{ presentation: 'modal' }} />
+        </Stack.Protected>
+        <Stack.Protected guard={needsOnboarding}>
+          <Stack.Screen name="onboarding" options={{ gestureEnabled: false }} />
+        </Stack.Protected>
+        <Stack.Screen name="auth/callback" options={{ presentation: 'card' }} />
+      </Stack>
+    </ThemeProvider>
+  );
+}
