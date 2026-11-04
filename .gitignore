@@ -54,3 +54,6 @@ supabase/.branches/
 /playwright-report/
 
 .env
+PLAN.md
+CLAUDE.md
+skills-lock.json
