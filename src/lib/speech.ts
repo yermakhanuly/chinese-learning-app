@@ -39,17 +39,24 @@ function subscribe(l: () => void) {
   return () => listeners.delete(l);
 }
 
+// Bumps on every speak, so callbacks from an earlier (stopped) utterance can't clear a newer one.
+let turn = 0;
+
 export async function speakChinese(text: string, id = text) {
+  const mine = ++turn;
   await Speech.stop();
   const voice = await chineseVoice();
+  if (mine !== turn) return; // another button was pressed meanwhile
   setPlaying(id);
   const done = () => {
-    if (playing === id) setPlaying(null);
+    if (mine === turn) setPlaying(null);
   };
   Speech.speak(text, {
     language: 'zh-CN',
     voice,
     rate: 0.85,
+    // iPhone: let the system manage speech audio, so it plays even with the silent switch on.
+    useApplicationAudioSession: false,
     onDone: done,
     onStopped: done,
     onError: done,
