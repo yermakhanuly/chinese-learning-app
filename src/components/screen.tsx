@@ -2,6 +2,7 @@ import { type ReactNode } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { ScrollLockProvider } from '@/components/scroll-lock';
 import { ThemedText } from '@/components/themed-text';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
@@ -26,34 +27,41 @@ export function Screen({ title, subtitle, topAction, modal, stacked, children }:
   const isWeb = process.env.EXPO_OS === 'web';
 
   return (
-    <ScrollView
-      // Insets are applied manually below; stop iOS from adding them a second time.
-      contentInsetAdjustmentBehavior={stacked ? 'automatic' : 'never'}
-      keyboardShouldPersistTaps="handled"
-      automaticallyAdjustKeyboardInsets
-      style={{ backgroundColor: theme.background }}
-      contentContainerStyle={[
-        styles.content,
-        {
-          paddingTop: stacked ? Spacing.three : (modal && process.env.EXPO_OS === 'ios' ? 0 : insets.top) + Spacing.four,
-          // Web tab bar sits in the layout flow; the iPhone tab bar floats over content.
-          // Stacked pages: iOS adds the home-indicator inset itself ('automatic' above).
-          paddingBottom: stacked
-            ? Spacing.five
-            : insets.bottom + (isWeb ? Spacing.five : BottomTabInset + Spacing.four),
-        },
-      ]}>
-      <View style={styles.inner}>
-        {topAction}
-        {title ? (
-          <View style={styles.header}>
-            <ThemedText type="title">{title}</ThemedText>
-            {subtitle ? <ThemedText themeColor="textSecondary">{subtitle}</ThemedText> : null}
+    <ScrollLockProvider>
+      {(locked) => (
+        <ScrollView
+          scrollEnabled={!locked}
+          // Insets are applied manually below; stop iOS from adding them a second time.
+          contentInsetAdjustmentBehavior={stacked ? 'automatic' : 'never'}
+          keyboardShouldPersistTaps="handled"
+          automaticallyAdjustKeyboardInsets
+          style={{ backgroundColor: theme.background }}
+          contentContainerStyle={[
+            styles.content,
+            {
+              paddingTop: stacked
+                ? Spacing.three
+                : (modal && process.env.EXPO_OS === 'ios' ? 0 : insets.top) + Spacing.four,
+              // Web tab bar sits in the layout flow; the iPhone tab bar floats over content.
+              // Stacked pages: iOS adds the home-indicator inset itself ('automatic' above).
+              paddingBottom: stacked
+                ? Spacing.five
+                : insets.bottom + (isWeb ? Spacing.five : BottomTabInset + Spacing.four),
+            },
+          ]}>
+          <View style={styles.inner}>
+            {topAction}
+            {title ? (
+              <View style={styles.header}>
+                <ThemedText type="title">{title}</ThemedText>
+                {subtitle ? <ThemedText themeColor="textSecondary">{subtitle}</ThemedText> : null}
+              </View>
+            ) : null}
+            {children}
           </View>
-        ) : null}
-        {children}
-      </View>
-    </ScrollView>
+        </ScrollView>
+      )}
+    </ScrollLockProvider>
   );
 }
 

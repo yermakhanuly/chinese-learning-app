@@ -4,8 +4,8 @@
  */
 import { DefaultScheduler, Rating } from 'ts-fsrs';
 
-export type Direction = 'read' | 'listen' | 'recall';
-export type CardKind = 'word' | 'sentence' | 'custom';
+export type Direction = 'read' | 'listen' | 'recall' | 'write';
+export type CardKind = 'word' | 'sentence' | 'custom' | 'character';
 export type Grade = 1 | 2 | 3 | 4;
 
 export const GRADES: { grade: Grade; label: string }[] = [
@@ -24,6 +24,13 @@ export type SentenceContent = {
   tokens: { s: string; t: string; p?: string }[];
 };
 export type CustomContent = { front: string; back: string; zh: string | null };
+export type CharacterContent = {
+  character: string;
+  pinyin: string[];
+  definition: string | null;
+  strokes: string[];
+  medians: number[][][];
+};
 
 /** A row of `review_queue()`. */
 export type ReviewCardRow = {
@@ -44,7 +51,7 @@ export type ReviewCardRow = {
   lapses: number;
   scheduled_days: number;
   learning_step: number;
-  content: WordContent | SentenceContent | CustomContent;
+  content: WordContent | SentenceContent | CustomContent | CharacterContent;
 };
 
 type Scheduler = Awaited<ReturnType<typeof DefaultScheduler<'FSRS-7'>>>;
@@ -162,7 +169,7 @@ export function localDayStart(now = new Date()): string {
   return d.toISOString();
 }
 
-export type Deck = 'all' | 'saved' | 'sentences' | 'custom' | 'weak' | `level:${number}` | `unit:${string}`;
+export type Deck = 'all' | 'saved' | 'sentences' | 'custom' | 'writing' | 'weak' | `level:${number}` | `unit:${string}`;
 
 export function isDeck(value: string | undefined): value is Deck {
   return (
@@ -170,6 +177,7 @@ export function isDeck(value: string | undefined): value is Deck {
     value === 'saved' ||
     value === 'sentences' ||
     value === 'custom' ||
+    value === 'writing' ||
     value === 'weak' ||
     /^level:[1-7]$/.test(value ?? '') ||
     /^unit:hsk\d-u\d{2}$/.test(value ?? '')

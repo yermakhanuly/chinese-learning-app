@@ -108,7 +108,7 @@ describe('helpers', () => {
   });
 
   it('accepts only known decks', () => {
-    expect(['all', 'saved', 'sentences', 'custom', 'weak', 'level:1', 'unit:hsk1-u03'].every(isDeck)).toBe(true);
+    expect(['all', 'saved', 'sentences', 'custom', 'writing', 'weak', 'level:1', 'unit:hsk1-u03'].every(isDeck)).toBe(true);
     expect(['', 'level:x', 'unit:drop table', undefined].some(isDeck)).toBe(false);
   });
 });

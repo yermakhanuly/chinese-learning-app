@@ -91,6 +91,7 @@ function SignedIn() {
             <DeckRow deck="saved" title="Saved words" />
             <DeckRow deck="sentences" title="Sentences" />
             <DeckRow deck="custom" title="My cards" />
+            <DeckRow deck="writing" title="Writing" />
             <DeckRow deck="level:1" title="HSK 1" />
             {course.data?.map((u) => (
               <DeckRow key={u.id} deck={`unit:${u.id}`} title={`Unit ${u.position}: ${u.title}`} />

@@ -6,7 +6,9 @@ import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'reac
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/button';
+import { StrokeOrder, WritingPad } from '@/components/character/character-svg';
 import { closeModal } from '@/components/close-button';
+import { ScrollLockProvider } from '@/components/scroll-lock';
 import { RubyText } from '@/components/ruby-text';
 import { ThemedText } from '@/components/themed-text';
 import { Hanzi, Pinyin, SpeakButton } from '@/components/word-parts';
@@ -24,6 +26,7 @@ import {
   isDeck,
   previewGrades,
   startSession,
+  type CharacterContent,
   type CustomContent,
   type Grade,
   type ReviewCardRow,
@@ -41,7 +44,12 @@ export default function ReviewSessionScreen() {
   const params = useLocalSearchParams<{ deck?: string }>();
   const deck = isDeck(params.deck) ? params.deck : 'all';
   const queue = useReviewQueue(deck, hydrated);
-  const scheduler = useQuery({ queryKey: ['fsrs-scheduler'], queryFn: getScheduler, staleTime: Infinity, gcTime: Infinity });
+  const scheduler = useQuery({
+    queryKey: ['fsrs-scheduler'],
+    queryFn: getScheduler,
+    staleTime: Infinity,
+    gcTime: Infinity,
+  });
 
   if (!auth) {
     return (
@@ -79,6 +87,8 @@ function Player({ cards, scheduler }: { cards: ReviewCardRow[]; scheduler: Await
   const insets = useSafeAreaInsets();
   const [session, setSession] = useState<Session>(() => startSession(cards));
   const [flipped, setFlipped] = useState(false);
+  // Writing cards are graded by the writing pad (or "I don't remember" = Again).
+  const [autoGrade, setAutoGrade] = useState<Grade | null>(null);
   const [failed, setFailed] = useState(0);
   // Answers still being saved (one list for the whole session).
   const [saving] = useState<Promise<unknown>[]>(() => []);
@@ -96,12 +106,26 @@ function Player({ cards, scheduler }: { cards: ReviewCardRow[]; scheduler: Await
     saving.push(recordReview(card.id, grade, updated).catch(() => setFailed((n) => n + 1)));
     setSession((s) => answerCard(s, grade, fromFsrsCard(updated), new Date()));
     setFlipped(false);
+    setAutoGrade(null);
   }
+
+  const writing = card.kind === 'character';
+  const written = (grade: Grade) => {
+    setAutoGrade(grade);
+    setFlipped(true);
+  };
 
   const remaining = session.queue.length;
   const progress = total ? Math.min(1, session.seen.length / total) : 1;
   return (
-    <View style={[styles.screen, { backgroundColor: theme.background, paddingTop: insets.top + Spacing.two }]}>
+    <View
+      style={[
+        styles.screen,
+        {
+          backgroundColor: theme.background,
+          paddingTop: insets.top + Spacing.two,
+        },
+      ]}>
       <View style={styles.topBar}>
         <Pressable role="button" aria-label="Close review" onPress={closeModal} hitSlop={12}>
           <SymbolView name={{ ios: 'xmark', web: 'close' }} size={22} tintColor={theme.textSecondary} />
@@ -120,24 +144,54 @@ function Player({ cards, scheduler }: { cards: ReviewCardRow[]; scheduler: Await
         </ThemedText>
       </View>
 
-      <ScrollView style={styles.flex} contentContainerStyle={styles.body}>
-        {/* Keyed so each card (and each repeat) mounts fresh, e.g. to play its audio. */}
-        <View key={`${card.id}-${session.done}`} style={[styles.inner, styles.card, { borderColor: theme.border, backgroundColor: theme.backgroundElement }]}>
-          <ThemedText type="smallBold" themeColor="tint">
-            {cardLabel(card)}
-          </ThemedText>
-          <CardFace card={card} flipped={flipped} />
-        </View>
-      </ScrollView>
+      <ScrollLockProvider>
+        {(locked) => (
+          <ScrollView style={styles.flex} contentContainerStyle={styles.body} scrollEnabled={!locked}>
+            {/* Keyed so each card (and each repeat) mounts fresh, e.g. to play its audio. */}
+            <View
+              key={`${card.id}-${session.done}`}
+              style={[
+                styles.inner,
+                styles.card,
+                {
+                  borderColor: theme.border,
+                  backgroundColor: theme.backgroundElement,
+                },
+              ]}>
+              <ThemedText type="smallBold" themeColor="tint">
+                {cardLabel(card)}
+              </ThemedText>
+              <CardFace card={card} flipped={flipped} onWritten={written} />
+            </View>
+          </ScrollView>
+        )}
+      </ScrollLockProvider>
 
-      <View style={[styles.footer, { paddingBottom: insets.bottom + Spacing.three, borderTopColor: theme.border }]}>
+      <View
+        style={[
+          styles.footer,
+          {
+            paddingBottom: insets.bottom + Spacing.three,
+            borderTopColor: theme.border,
+          },
+        ]}>
         <View style={styles.inner}>
           {failed ? (
             <ThemedText type="small" themeColor="danger" role="alert">
               Some answers couldn&apos;t be saved. Check your connection.
             </ThemedText>
           ) : null}
-          {!next ? (
+          {writing ? (
+            next && autoGrade ? (
+              <Button
+                label={`Continue · ${GRADES[autoGrade - 1].label}, next in ${formatInterval(now, new Date(next[autoGrade].dueAt))}`}
+                variant={autoGrade === 1 ? 'danger' : 'primary'}
+                onPress={() => rate(autoGrade)}
+              />
+            ) : (
+              <Button label="I don't remember" variant="secondary" onPress={() => written(1)} />
+            )
+          ) : !next ? (
             <Button label="Show answer" onPress={() => setFlipped(true)} />
           ) : (
             <View role="group" aria-label="How well did you remember?" style={styles.grades}>
@@ -151,8 +205,12 @@ function Player({ cards, scheduler }: { cards: ReviewCardRow[]; scheduler: Await
                     onPress={() => rate(grade)}
                     style={({ pressed }) => [
                       styles.grade,
-                      { borderColor: grade === 1 ? theme.danger : grade === 3 ? theme.tint : theme.border },
-                      { backgroundColor: pressed ? theme.backgroundSelected : theme.background },
+                      {
+                        borderColor: grade === 1 ? theme.danger : grade === 3 ? theme.tint : theme.border,
+                      },
+                      {
+                        backgroundColor: pressed ? theme.backgroundSelected : theme.background,
+                      },
                     ]}>
                     <ThemedText type="label" themeColor={grade === 1 ? 'danger' : 'text'}>
                       {label}
@@ -174,15 +232,17 @@ function Player({ cards, scheduler }: { cards: ReviewCardRow[]; scheduler: Await
 function cardLabel(card: ReviewCardRow): string {
   const repeat = card.state === 0 ? 'NEW' : card.state === 1 || card.state === 3 ? 'AGAIN' : 'REVIEW';
   const what =
-    card.kind === 'custom'
-      ? 'MY CARD'
-      : card.direction === 'listen'
-        ? 'LISTEN'
-        : card.direction === 'recall'
-          ? 'SAY IT IN CHINESE'
-          : card.kind === 'sentence'
-            ? 'SENTENCE'
-            : 'WHAT DOES IT MEAN?';
+    card.kind === 'character'
+      ? 'WRITE IT'
+      : card.kind === 'custom'
+        ? 'MY CARD'
+        : card.direction === 'listen'
+          ? 'LISTEN'
+          : card.direction === 'recall'
+            ? 'SAY IT IN CHINESE'
+            : card.kind === 'sentence'
+              ? 'SENTENCE'
+              : 'WHAT DOES IT MEAN?';
   return `${repeat} · ${what}`;
 }
 
@@ -197,9 +257,21 @@ function useAutoplay(text: string | null, when: boolean) {
   }, [text, when]);
 }
 
-function CardFace({ card, flipped }: { card: ReviewCardRow; flipped: boolean }) {
-  if (card.kind === 'word') return <WordFace content={card.content as WordContent} direction={card.direction} flipped={flipped} />;
-  if (card.kind === 'sentence') return <SentenceFace content={card.content as SentenceContent} direction={card.direction} flipped={flipped} />;
+function CardFace({
+  card,
+  flipped,
+  onWritten,
+}: {
+  card: ReviewCardRow;
+  flipped: boolean;
+  onWritten: (g: Grade) => void;
+}) {
+  if (card.kind === 'character')
+    return <WriteFace content={card.content as CharacterContent} flipped={flipped} onWritten={onWritten} />;
+  if (card.kind === 'word')
+    return <WordFace content={card.content as WordContent} direction={card.direction} flipped={flipped} />;
+  if (card.kind === 'sentence')
+    return <SentenceFace content={card.content as SentenceContent} direction={card.direction} flipped={flipped} />;
   return <CustomFace content={card.content as CustomContent} flipped={flipped} />;
 }
 
@@ -220,12 +292,21 @@ function Divider() {
   return <View style={[styles.divider, { backgroundColor: theme.border }]} />;
 }
 
-function WordFace({ content, direction, flipped }: { content: WordContent; direction: ReviewCardRow['direction']; flipped: boolean }) {
+function WordFace({
+  content,
+  direction,
+  flipped,
+}: {
+  content: WordContent;
+  direction: ReviewCardRow['direction'];
+  flipped: boolean;
+}) {
   useAutoplay(content.simplified, direction === 'listen' || flipped);
   const word = <Hanzi simplified={content.simplified} traditional={content.traditional} size={64} />;
-  const audio = <SpeakButton text={content.simplified} label="Play" size={direction === 'listen' && !flipped ? 88 : 44} />;
-  const front =
-    direction === 'read' ? word : direction === 'listen' ? audio : <Meanings meanings={content.meanings} />;
+  const audio = (
+    <SpeakButton text={content.simplified} label="Play" size={direction === 'listen' && !flipped ? 88 : 44} />
+  );
+  const front = direction === 'read' ? word : direction === 'listen' ? audio : <Meanings meanings={content.meanings} />;
   return (
     <View style={styles.face}>
       {front}
@@ -244,10 +325,20 @@ function WordFace({ content, direction, flipped }: { content: WordContent; direc
   );
 }
 
-function SentenceFace({ content, direction, flipped }: { content: SentenceContent; direction: ReviewCardRow['direction']; flipped: boolean }) {
+function SentenceFace({
+  content,
+  direction,
+  flipped,
+}: {
+  content: SentenceContent;
+  direction: ReviewCardRow['direction'];
+  flipped: boolean;
+}) {
   useAutoplay(content.simplified, direction === 'listen' || flipped);
   const text = <RubyText tokens={content.tokens} size={26} />;
-  const audio = <SpeakButton text={content.simplified} label="Play sentence" size={direction === 'listen' && !flipped ? 88 : 44} />;
+  const audio = (
+    <SpeakButton text={content.simplified} label="Play sentence" size={direction === 'listen' && !flipped ? 88 : 44} />
+  );
   return (
     <View style={styles.face}>
       {direction === 'listen' ? audio : text}
@@ -263,6 +354,57 @@ function SentenceFace({ content, direction, flipped }: { content: SentenceConten
       ) : (
         <ThemedText themeColor="textSecondary">What does it mean?</ThemedText>
       )}
+    </View>
+  );
+}
+
+/** Write the character from its sound and meaning; the pad grades it. */
+function WriteFace({
+  content,
+  flipped,
+  onWritten,
+}: {
+  content: CharacterContent;
+  flipped: boolean;
+  onWritten: (g: Grade) => void;
+}) {
+  const [result, setResult] = useState<string | null>(null);
+  const gaveUp = flipped && result === null;
+  return (
+    <View style={styles.face}>
+      <View style={styles.meanings}>
+        {content.pinyin.length ? <Pinyin text={content.pinyin.join(', ')} size={24} /> : null}
+        <ThemedText type="subtitle" style={styles.centerText}>
+          {content.definition ?? ''}
+        </ThemedText>
+      </View>
+      <SpeakButton text={content.character} label="Play" size={44} />
+      {gaveUp ? (
+        <StrokeOrder character={content.character} data={content} size={220} />
+      ) : (
+        <WritingPad
+          character="the character"
+          data={content}
+          mode="memory"
+          size={260}
+          onComplete={(r) => {
+            const grade: Grade = r.hinted ? 1 : r.misses === 0 ? 3 : 2;
+            setResult(
+              r.hinted
+                ? 'You needed a hint: Again.'
+                : r.misses === 0
+                  ? 'No mistakes: Good.'
+                  : `${r.misses} ${r.misses === 1 ? 'miss' : 'misses'}: Hard.`,
+            );
+            onWritten(grade);
+          }}
+        />
+      )}
+      {result ? (
+        <ThemedText type="label" style={styles.centerText}>
+          {content.character} · {result}
+        </ThemedText>
+      ) : null}
     </View>
   );
 }
@@ -307,7 +449,15 @@ function Summary({ session, failed, saving }: { session: Session; failed: number
   }, []);
   const remembered = session.counts[2] + session.counts[3] + session.counts[4];
   return (
-    <View style={[styles.center, { backgroundColor: theme.background, paddingTop: insets.top, paddingBottom: insets.bottom }]}>
+    <View
+      style={[
+        styles.center,
+        {
+          backgroundColor: theme.background,
+          paddingTop: insets.top,
+          paddingBottom: insets.bottom,
+        },
+      ]}>
       <View style={[styles.inner, styles.summary]}>
         <ThemedText style={styles.trophy}>{reviewed ? '✅' : '🌱'}</ThemedText>
         <ThemedText type="title" style={styles.centerText}>
@@ -336,7 +486,13 @@ function Summary({ session, failed, saving }: { session: Session; failed: number
 const styles = StyleSheet.create({
   screen: { flex: 1 },
   flex: { flex: 1 },
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: Spacing.three, padding: Spacing.three },
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Spacing.three,
+    padding: Spacing.three,
+  },
   topBar: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -347,16 +503,40 @@ const styles = StyleSheet.create({
     maxWidth: MaxContentWidth,
     alignSelf: 'center',
   },
-  track: { flex: 1, height: 12, borderRadius: Radius.small, overflow: 'hidden' },
+  track: {
+    flex: 1,
+    height: 12,
+    borderRadius: Radius.small,
+    overflow: 'hidden',
+  },
   fill: { height: '100%', borderRadius: Radius.small },
-  body: { padding: Spacing.three, alignItems: 'center', flexGrow: 1, justifyContent: 'center' },
+  body: {
+    padding: Spacing.three,
+    alignItems: 'center',
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
   inner: { width: '100%', maxWidth: MaxContentWidth, gap: Spacing.three },
-  card: { borderWidth: StyleSheet.hairlineWidth, borderRadius: Radius.large, padding: Spacing.four, minHeight: 280 },
+  card: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderRadius: Radius.large,
+    padding: Spacing.four,
+    minHeight: 280,
+  },
   face: { alignItems: 'center', gap: Spacing.three },
   meanings: { alignItems: 'center', gap: Spacing.one },
-  divider: { height: StyleSheet.hairlineWidth, alignSelf: 'stretch', marginVertical: Spacing.one },
+  divider: {
+    height: StyleSheet.hairlineWidth,
+    alignSelf: 'stretch',
+    marginVertical: Spacing.one,
+  },
   centerText: { textAlign: 'center' },
-  footer: { borderTopWidth: StyleSheet.hairlineWidth, paddingTop: Spacing.three, paddingHorizontal: Spacing.three, alignItems: 'center' },
+  footer: {
+    borderTopWidth: StyleSheet.hairlineWidth,
+    paddingTop: Spacing.three,
+    paddingHorizontal: Spacing.three,
+    alignItems: 'center',
+  },
   grades: { flexDirection: 'row', gap: Spacing.two },
   grade: {
     flex: 1,

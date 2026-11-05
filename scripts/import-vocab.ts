@@ -3,6 +3,7 @@
  * (content/) into Supabase.
  *
  *   npm run data:import            # local Supabase (credentials read from `supabase status`)
+ *   npm run data:import -- --only=characters   # only the characters step
  *
  * For a cloud project set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY first.
  * Safe to re-run: words are upserted, dictionary entries are replaced.
@@ -16,6 +17,7 @@ import { gunzipSync } from 'node:zlib';
 import { createClient } from '@supabase/supabase-js';
 
 import { parseCedictLine, parseHskEntry, type HskSourceEntry } from '../src/lib/vocab-parsers.ts';
+import { importCharacters } from './import-characters.ts';
 import { importLessons } from './import-lessons.ts';
 import { importSentencesAndTopics } from './import-sentences.ts';
 
@@ -74,6 +76,10 @@ async function main() {
   if (!Array.isArray(hskRaw)) throw new Error('Unexpected HSK file format');
   const words = hskRaw.map(parseHskEntry);
   const unique = [...new Map(words.map((w) => [w.simplified, w])).values()];
+
+  const only = process.argv.find((a) => a.startsWith('--only='))?.slice('--only='.length);
+  if (only === 'characters') return importCharacters(db, RAW, unique);
+  if (only) throw new Error(`Unknown step: ${only}`);
   for (let i = 0; i < unique.length; i += BATCH) {
     const { error } = await db
       .from('words')
@@ -98,6 +104,7 @@ async function main() {
   }
   console.log(`✔ dictionary entries: ${entries.length}`);
 
+  await importCharacters(db, RAW, unique);
   await importSentencesAndTopics(db, ROOT, unique, entries);
   await importLessons(db, ROOT, unique, entries);
 

@@ -54,6 +54,12 @@ export default function LearnScreen() {
           {!session ? (
             <ThemedText themeColor="textSecondary">Lessons are free to try. Log in to save your progress.</ThemedText>
           ) : null}
+          <Card title="Characters 汉字">
+            <ThemedText themeColor="textSecondary">
+              Stroke order, handwriting practice, recognition quizzes and look-alike drills.
+            </ThemedText>
+            <Button label="Open characters" variant="secondary" onPress={() => router.push('/characters')} />
+          </Card>
           {units.map((u) => (
             <UnitCard
               key={u.id}

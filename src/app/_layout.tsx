@@ -58,10 +58,14 @@ function ThemedRoot() {
           <Stack.Screen name="saved" options={WITH_HEADER} />
           <Stack.Screen name="mistakes" options={WITH_HEADER} />
           <Stack.Screen name="my-cards" options={WITH_HEADER} />
+          {/* Pages with a writing pad: a left-to-right stroke must not swipe back (use the Back button). */}
+          <Stack.Screen name="character" options={{ ...WITH_HEADER, gestureEnabled: false }} />
+          <Stack.Screen name="characters" options={WITH_HEADER} />
           {/* Lessons and review sessions take the whole screen; the placement test is a sheet. */}
           <Stack.Screen name="lesson" options={{ presentation: 'fullScreenModal' }} />
           <Stack.Screen name="review-session" options={{ presentation: 'fullScreenModal' }} />
           <Stack.Screen name="placement" options={{ presentation: 'modal' }} />
+          <Stack.Screen name="character-quiz" options={{ presentation: 'modal', gestureEnabled: false }} />
           <Stack.Screen name="sign-in" options={{ presentation: 'modal' }} />
           <Stack.Screen name="sign-up" options={{ presentation: 'modal' }} />
           <Stack.Screen name="forgot-password" options={{ presentation: 'modal' }} />

@@ -47,6 +47,10 @@ npm run data:import     # loads lessons (adds pinyin/traditional and word detail
 
 Delete a lesson's JSON file and re-run `content:draft` to redraft it; or edit the JSON by hand. `src/lib/lessons.ts` describes the format and the checks (only words already taught, valid answers, every HSK word taught once).
 
+### Characters
+
+`npm run data:import` also loads stroke order and character details from [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) for every character in the HSK words (simplified and traditional forms, ~4,300). `npm run data:import -- --only=characters` reloads just those. Handwriting is checked in `src/lib/stroke-match.ts` (adapted from Hanzi Writer, MIT).
+
 ### Review (spaced repetition)
 
 Cards live in `review_cards` and are created by the database: finishing a lesson (`complete_lesson`) adds its words, saving a word adds it (trigger), and learners add sentences and their own cards. Each word gets three cards (read, listen, recall). The app schedules them with [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) (FSRS-7, `src/lib/srs.ts`) and saves each answer through `record_review`, which also logs mistakes. `review_queue` builds the day's session: due cards, then new cards up to the learner's daily limit, one direction of a word per day.
@@ -128,4 +132,5 @@ e2e/                Playwright tests
 - Dictionary: [CC-CEDICT](https://www.mdbg.net/chinese/dictionary?page=cc-cedict) (CC BY-SA 4.0) — attribution shown in the app's Profile → Credits.
 - Example sentences: [Tatoeba](https://tatoeba.org) (CC BY 2.0 FR) — each sentence links to its Tatoeba page.
 - Review scheduling: [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) (MIT).
+- Characters: [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) — stroke shapes and medians under the Arphic Public License, character details (radical, parts, origin) under the LGPL. Stroke checking adapted from [Hanzi Writer](https://github.com/chanind/hanzi-writer) (MIT).
 - Word audio (for now): the device's built-in Chinese voice.

@@ -2,6 +2,7 @@ import { Stack, useLocalSearchParams } from 'expo-router';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { Card } from '@/components/card';
+import { CharacterChip } from '@/components/character/character-chip';
 import { PinyinToggle, SaveButton } from '@/components/dictionary-controls';
 import { Screen } from '@/components/screen';
 import { AddSentenceToReview, SentenceView } from '@/components/sentence-view';
@@ -12,6 +13,7 @@ import { partsOfSpeech } from '@/constants/parts-of-speech';
 import { Radius, Spacing } from '@/constants/theme';
 import { useWord, type WordDetail } from '@/hooks/use-dictionary';
 import { useTheme } from '@/hooks/use-theme';
+import { hanCharacters } from '@/lib/characters';
 import { useDisplayPreferences } from '@/providers/display-preferences';
 
 export default function WordScreen() {
@@ -124,6 +126,19 @@ function WordDetails({ word }: { word: WordDetail }) {
             </PressableLink>
           ))}
         </View>
+      ) : null}
+
+      {hanCharacters(shown).length ? (
+        <Card title={hanCharacters(shown).length === 1 ? 'Character' : 'Characters'}>
+          <ThemedText type="small" themeColor="textSecondary">
+            Tap for stroke order, parts and writing practice.
+          </ThemedText>
+          <View style={styles.inline}>
+            {hanCharacters(shown).map((c) => (
+              <CharacterChip key={c} character={c} size={32} />
+            ))}
+          </View>
+        </Card>
       ) : null}
 
       {word.source === 'hsk' ? (

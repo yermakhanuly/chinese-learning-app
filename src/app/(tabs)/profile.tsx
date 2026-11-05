@@ -71,7 +71,8 @@ export default function ProfileScreen() {
       <Card title="Credits">
         <ThemedText type="small" themeColor="textSecondary">
           Dictionary data: CC-CEDICT (CC BY-SA 4.0), MDBG. HSK word lists: complete-hsk-vocabulary by Yanis
-          Zafirópulos (MIT). Example sentences: Tatoeba (CC BY 2.0 FR), tatoeba.org.
+          Zafirópulos (MIT). Example sentences: Tatoeba (CC BY 2.0 FR), tatoeba.org. Character strokes: Make Me a Hanzi (Arphic Public License);
+          character details: Make Me a Hanzi (LGPL). Handwriting checking adapted from Hanzi Writer (MIT). Review scheduling: ts-fsrs (MIT).
         </ThemedText>
       </Card>
     </Screen>
