@@ -1,0 +1,259 @@
+{
+  "id": "hsk1-u05-l4",
+  "title": "At the Shops",
+  "kind": "lesson",
+  "words": [
+    "商店",
+    "超市",
+    "书店",
+    "店",
+    "可以",
+    "找",
+    "杯子"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "商店"
+    },
+    {
+      "type": "word",
+      "word": "超市"
+    },
+    {
+      "type": "word",
+      "word": "书店"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "书店",
+      "listen": false,
+      "options": [
+        "bookstore",
+        "supermarket",
+        "restaurant",
+        "store"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'supermarket'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "书店",
+        "超市",
+        "饭店",
+        "商店"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "The bookstore has a lot of books.",
+      "before": "",
+      "after": "有很多书。",
+      "options": [
+        "书店",
+        "饭店",
+        "老师"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "店"
+    },
+    {
+      "type": "word",
+      "word": "找"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我在找书店。",
+      "listen": true,
+      "options": [
+        "I'm looking for a bookstore.",
+        "I'm looking for a supermarket.",
+        "I'm at the bookstore.",
+        "I'm buying a book."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I'm looking for my cat.",
+      "before": "我在",
+      "after": "我的猫。",
+      "options": [
+        "找",
+        "吃",
+        "喝",
+        "穿"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "This shop is very small.",
+      "answer": [
+        "这个",
+        "店",
+        "很",
+        "小"
+      ],
+      "also": [],
+      "distractors": [
+        "大",
+        "找"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "杯子"
+    },
+    {
+      "type": "fill",
+      "en": "This cup is very pretty.",
+      "before": "这个杯子很",
+      "after": "。",
+      "options": [
+        "漂亮",
+        "好吃",
+        "多"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "可以"
+    },
+    {
+      "type": "grammar",
+      "title": "可以: may (asking permission)",
+      "body": "To ask if you may do something, put 可以 before the action and add 吗 at the end. To say yes, answer 可以. To say no, answer 不可以.",
+      "examples": [
+        {
+          "zh": "我可以喝茶吗?",
+          "en": "May I drink some tea?"
+        },
+        {
+          "zh": "请问,我可以买这本书吗?",
+          "en": "Excuse me, may I buy this book?"
+        },
+        {
+          "zh": "可以。",
+          "en": "Yes, you may."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我可以喝水吗?",
+      "listen": false,
+      "options": [
+        "May I drink some water?",
+        "Can you drink some water?",
+        "I want to drink some water.",
+        "I'm drinking tea."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Excuse me, may I buy this book?",
+      "before": "请问,我可以",
+      "after": "这本书吗?",
+      "options": [
+        "买",
+        "吃",
+        "喝"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我可以买这个杯子吗?",
+      "answer": [
+        "Can",
+        "I",
+        "buy",
+        "this",
+        "cup"
+      ],
+      "also": [],
+      "distractors": [
+        "sell",
+        "book"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Things at the supermarket are cheap.",
+      "answer": [
+        "超市",
+        "的",
+        "东西",
+        "很",
+        "便宜"
+      ],
+      "also": [],
+      "distractors": [
+        "贵",
+        "书店"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "那个店的杯子很便宜。",
+      "answer": [
+        "The",
+        "cups",
+        "at",
+        "that",
+        "shop",
+        "are",
+        "cheap"
+      ],
+      "also": [],
+      "distractors": [
+        "expensive",
+        "books"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "这个商店的东西很贵。",
+      "listen": true,
+      "options": [
+        "Things in this store are expensive.",
+        "Things in this store are cheap.",
+        "Things in this supermarket are expensive.",
+        "This bookstore is very big."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I'm looking for cups in the store.",
+      "before": "我在商店",
+      "after": "杯子。",
+      "options": [
+        "找",
+        "喝",
+        "吃",
+        "穿"
+      ],
+      "answer": 0
+    }
+  ]
+}

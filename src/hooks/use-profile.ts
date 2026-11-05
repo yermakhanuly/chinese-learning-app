@@ -18,12 +18,15 @@ export type Profile = {
   explanation_language: ExplanationLanguage;
   onboarded_at: string | null;
   tutorial_completed_at: string | null;
+  /** Where the learner's path starts (placement test result). */
+  start_lesson_id: string | null;
+  placed_at: string | null;
 };
 
 export type ProfileUpdate = Partial<Omit<Profile, 'id'>>;
 
 const COLUMNS =
-  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at';
+  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at, start_lesson_id, placed_at';
 
 /** The signed-in learner's profile. Refetched when the app/tab regains focus, so edits sync across devices. */
 export function useProfile() {

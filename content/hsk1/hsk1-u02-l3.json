@@ -1,0 +1,268 @@
+{
+  "id": "hsk1-u02-l3",
+  "title": "How Old Are You?",
+  "kind": "lesson",
+  "words": [
+    "岁",
+    "多",
+    "大",
+    "年",
+    "今年",
+    "去年",
+    "明年"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "岁"
+    },
+    {
+      "type": "word",
+      "word": "年"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "二十岁",
+      "listen": false,
+      "options": [
+        "20 years old",
+        "20 years",
+        "20 people",
+        "12 years old"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I'm 18 years old.",
+      "before": "我十八",
+      "after": "。",
+      "options": [
+        "岁",
+        "年",
+        "个",
+        "两"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "今年"
+    },
+    {
+      "type": "word",
+      "word": "去年"
+    },
+    {
+      "type": "word",
+      "word": "明年"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'next year'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "去年",
+        "今年",
+        "明年",
+        "年"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "今年是2026年。",
+      "listen": true,
+      "options": [
+        "Last year was 2026.",
+        "This year is 2026.",
+        "Next year is 2026."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "Next year is 2027.",
+      "before": "明年是2027",
+      "after": "。",
+      "options": [
+        "年",
+        "岁",
+        "个",
+        "几"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "去年是2025年。",
+      "listen": false,
+      "options": [
+        "Last year was 2025.",
+        "This year is 2025.",
+        "Next year is 2025.",
+        "2025 was a good year."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Next year I'll be twenty.",
+      "answer": [
+        "我",
+        "明年",
+        "二十",
+        "岁"
+      ],
+      "also": [
+        [
+          "明年",
+          "我",
+          "二十",
+          "岁"
+        ]
+      ],
+      "distractors": [
+        "去年",
+        "年"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "多"
+    },
+    {
+      "type": "word",
+      "word": "大"
+    },
+    {
+      "type": "grammar",
+      "title": "Asking someone's age",
+      "body": "To ask an adult or someone your own age, say 你多大？ (literally 'you how big?'). For a young child, say 你几岁？, because 几 expects a small number. Answer with the number plus 岁. You don't need 是 in the answer.",
+      "examples": [
+        {
+          "zh": "你多大？我二十岁。",
+          "en": "How old are you? I'm twenty."
+        },
+        {
+          "zh": "你几岁？我六岁。",
+          "en": "How old are you? I'm six."
+        },
+        {
+          "zh": "他今年多大？他三十多岁。",
+          "en": "How old is he this year? He's in his thirties."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你今年多大？",
+      "listen": false,
+      "options": [
+        "How old are you this year?",
+        "How old is he this year?",
+        "Are you a student this year?",
+        "How many years?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "How old are you? (to a child)",
+      "before": "你几",
+      "after": "？",
+      "options": [
+        "岁",
+        "年",
+        "大",
+        "多"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他四十多岁。",
+      "answer": [
+        "He",
+        "is",
+        "over",
+        "forty"
+      ],
+      "also": [],
+      "distractors": [
+        "under",
+        "fifty"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "去年他三十岁。",
+      "listen": true,
+      "options": [
+        "He'll be 30 next year.",
+        "He was 30 last year.",
+        "He is 30 this year."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "How old is he this year?",
+      "before": "他今年多",
+      "after": "？",
+      "options": [
+        "大",
+        "岁",
+        "年",
+        "几"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Are you twenty this year?",
+      "answer": [
+        "你",
+        "今年",
+        "二十",
+        "岁",
+        "吗"
+      ],
+      "also": [
+        [
+          "今年",
+          "你",
+          "二十",
+          "岁",
+          "吗"
+        ]
+      ],
+      "distractors": [
+        "呢",
+        "大"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我们老师五十多岁。",
+      "listen": false,
+      "options": [
+        "Our teacher is fifty.",
+        "Our teacher is over fifty.",
+        "Our teacher is under fifty.",
+        "Our teacher is fifteen."
+      ],
+      "answer": 1
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "id": "hsk1-u06-quiz",
+  "title": "Time & Daily Routine: quiz",
+  "kind": "quiz",
+  "words": [],
+  "steps": [
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "现在几点？",
+      "listen": false,
+      "options": [
+        "What time is it now?",
+        "What day is it today?",
+        "How many hours is it?",
+        "When do you get up?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'afternoon'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "下午",
+        "上午",
+        "中午",
+        "晚上"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我早上七点起床。",
+      "listen": true,
+      "options": [
+        "I get up at seven in the morning.",
+        "I go to bed at seven in the evening.",
+        "I get up at eleven in the morning.",
+        "I eat breakfast at seven in the morning."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I go to bed at eleven at night.",
+      "before": "我晚上十一点",
+      "after": "。",
+      "options": [
+        "睡觉",
+        "起床",
+        "忙",
+        "早"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "It's half past three now.",
+      "answer": [
+        "现在",
+        "三",
+        "点",
+        "半"
+      ],
+      "also": [],
+      "distractors": [
+        "分",
+        "一半"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "他正在吃午饭。",
+      "listen": false,
+      "options": [
+        "He is eating lunch right now.",
+        "He has already eaten lunch.",
+        "He wants to eat lunch.",
+        "He is making dinner right now."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I'm very busy today, I don't have time.",
+      "before": "我今天很",
+      "after": "，没有时间。",
+      "options": [
+        "忙",
+        "早",
+        "小",
+        "大"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "你什么时候睡觉？",
+      "answer": [
+        "When",
+        "do",
+        "you",
+        "go",
+        "to",
+        "bed"
+      ],
+      "also": [],
+      "distractors": [
+        "get",
+        "up"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "分钟",
+      "listen": true,
+      "options": [
+        "分钟",
+        "小时",
+        "时间",
+        "时候"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'daytime'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "白天",
+        "晚上",
+        "今天",
+        "时候"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "It's nine o'clock, and he is still sleeping.",
+      "before": "九点了，他",
+      "after": "在睡觉。",
+      "options": [
+        "还",
+        "也",
+        "都",
+        "很"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I have a lot of things to do today.",
+      "answer": [
+        "我",
+        "今天",
+        "有",
+        "很多",
+        "事"
+      ],
+      "also": [
+        [
+          "今天",
+          "我",
+          "有",
+          "很多",
+          "事"
+        ]
+      ],
+      "distractors": [
+        "忙",
+        "时间"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I sleep eight hours at night.",
+      "before": "我晚上睡八个",
+      "after": "。",
+      "options": [
+        "小时",
+        "分钟",
+        "点",
+        "天"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "白天我很忙。",
+      "answer": [
+        "I",
+        "am",
+        "very",
+        "busy",
+        "during",
+        "the",
+        "day"
+      ],
+      "also": [],
+      "distractors": [
+        "night",
+        "not"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我们晚上七点吃晚饭。",
+      "listen": true,
+      "options": [
+        "We eat dinner at seven in the evening.",
+        "We eat lunch at seven.",
+        "We eat dinner at eleven in the evening.",
+        "We make dinner at seven in the evening."
+      ],
+      "answer": 0
+    }
+  ]
+}

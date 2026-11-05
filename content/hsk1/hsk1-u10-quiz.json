@@ -1,0 +1,228 @@
+{
+  "id": "hsk1-u10-quiz",
+  "title": "Hobbies & Free Time: quiz",
+  "kind": "quiz",
+  "words": [],
+  "steps": [
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我喜欢看电影。",
+      "listen": false,
+      "options": [
+        "I like watching TV.",
+        "I like watching movies.",
+        "I like listening to songs.",
+        "I like reading."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'cinema'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "电影",
+        "电视",
+        "电影院",
+        "商店"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "她唱歌很好听。",
+      "listen": true,
+      "options": [
+        "She sings beautifully.",
+        "She often listens to songs.",
+        "She likes watching TV.",
+        "She reads a lot."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I saw him at the cinema.",
+      "before": "我在电影院",
+      "after": "了他。",
+      "options": [
+        "听见",
+        "看见",
+        "唱",
+        "读书"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "Did you hear it?",
+      "before": "你",
+      "after": "见了吗？",
+      "options": [
+        "唱",
+        "玩",
+        "听",
+        "喜欢"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Some people like watching TV.",
+      "answer": [
+        "有的",
+        "人",
+        "喜欢",
+        "看",
+        "电视"
+      ],
+      "also": [],
+      "distractors": [
+        "电影院",
+        "唱"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "看电影很好玩儿。",
+      "answer": [
+        "Watching",
+        "movies",
+        "is",
+        "very",
+        "fun"
+      ],
+      "also": [],
+      "distractors": [
+        "TV",
+        "songs"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'some'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "这些",
+        "那些",
+        "哪些",
+        "有些"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "孩子们在外边玩。",
+      "listen": true,
+      "options": [
+        "The children are reading inside.",
+        "The children are playing outside.",
+        "The children are singing outside.",
+        "The children are watching TV."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "My mom likes to sing.",
+      "before": "我妈妈喜欢",
+      "after": "歌。",
+      "options": [
+        "唱",
+        "看",
+        "读",
+        "玩"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I like reading on Sundays.",
+      "answer": [
+        "我",
+        "星期天",
+        "喜欢",
+        "读书"
+      ],
+      "also": [
+        [
+          "星期天",
+          "我",
+          "喜欢",
+          "读书"
+        ]
+      ],
+      "distractors": [
+        "电视",
+        "听"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "电视",
+      "listen": true,
+      "options": [
+        "电影",
+        "电视",
+        "电话",
+        "电脑"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他们晚上在家看电视。",
+      "answer": [
+        "They",
+        "watch",
+        "TV",
+        "at",
+        "home",
+        "in",
+        "the",
+        "evening"
+      ],
+      "also": [],
+      "distractors": [
+        "movies",
+        "cinema"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Some students like listening to songs.",
+      "before": "有",
+      "after": "学生喜欢听歌。",
+      "options": [
+        "个",
+        "本",
+        "些",
+        "件"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "她唱的歌很好听。",
+      "listen": false,
+      "options": [
+        "The movies she watches are fun.",
+        "The books she reads are good.",
+        "The songs she listens to are very nice.",
+        "The songs she sings sound very nice."
+      ],
+      "answer": 3
+    }
+  ]
+}

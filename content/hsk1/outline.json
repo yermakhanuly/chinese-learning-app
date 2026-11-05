@@ -1,0 +1,675 @@
+{
+  "units": [
+    {
+      "id": "hsk1-u01",
+      "title": "Greetings & Introductions",
+      "title_zh": "你好",
+      "theme": "communication",
+      "description": "Greet people, say who you are, ask simple questions and use basic polite expressions.",
+      "lessons": [
+        {
+          "id": "hsk1-u01-l1",
+          "title": "Hello and Goodbye",
+          "words": [
+            "你",
+            "好",
+            "我",
+            "您",
+            "再见",
+            "谢谢",
+            "不客气"
+          ],
+          "grammar": "greetings: 你好 / 您好"
+        },
+        {
+          "id": "hsk1-u01-l2",
+          "title": "Who Are You?",
+          "words": [
+            "是",
+            "不",
+            "他",
+            "她",
+            "老师",
+            "学生",
+            "中国",
+            "人",
+            "对"
+          ],
+          "grammar": "是 sentences: A 是 B, negated with 不是"
+        },
+        {
+          "id": "hsk1-u01-l3",
+          "title": "We, You and They",
+          "words": [
+            "吗",
+            "们",
+            "我们",
+            "你们",
+            "他们",
+            "她们",
+            "大家"
+          ],
+          "grammar": "yes-no questions with 吗"
+        },
+        {
+          "id": "hsk1-u01-l4",
+          "title": "What's Your Name?",
+          "words": [
+            "叫",
+            "什么",
+            "名字",
+            "认识",
+            "很",
+            "高兴",
+            "也",
+            "呢"
+          ],
+          "grammar": "follow-up questions with 呢 (你呢？)"
+        },
+        {
+          "id": "hsk1-u01-l5",
+          "title": "Being Polite",
+          "words": [
+            "对不起",
+            "没关系",
+            "请",
+            "请问",
+            "先生",
+            "女士",
+            "谁",
+            "哪",
+            "国"
+          ],
+          "grammar": "question words 谁 and 哪 (哪国人)"
+        }
+      ]
+    },
+    {
+      "id": "hsk1-u02",
+      "title": "Numbers & Dates",
+      "title_zh": "几月几号",
+      "theme": "numbers",
+      "description": "Count, say how many, talk about age and give the date and day of the week.",
+      "lessons": [
+        {
+          "id": "hsk1-u02-l1",
+          "title": "Zero to Six",
+          "words": [
+            "零",
+            "一",
+            "二",
+            "三",
+            "四",
+            "五",
+            "六"
+          ],
+          "grammar": ""
+        },
+        {
+          "id": "hsk1-u02-l2",
+          "title": "How Many?",
+          "words": [
+            "七",
+            "八",
+            "九",
+            "十",
+            "个",
+            "几",
+            "两"
+          ],
+          "grammar": "measure word 个 (两个, 几个)"
+        },
+        {
+          "id": "hsk1-u02-l3",
+          "title": "How Old Are You?",
+          "words": [
+            "岁",
+            "多",
+            "大",
+            "年",
+            "今年",
+            "去年",
+            "明年"
+          ],
+          "grammar": "asking age: 你多大？/ 你几岁？"
+        },
+        {
+          "id": "hsk1-u02-l4",
+          "title": "Days and Dates",
+          "words": [
+            "月",
+            "号",
+            "日",
+            "星期",
+            "星期天",
+            "星期日",
+            "今天",
+            "明天",
+            "昨天"
+          ],
+          "grammar": "dates: X月X号, 星期几"
+        }
+      ]
+    },
+    {
+      "id": "hsk1-u03",
+      "title": "Family & Friends",
+      "title_zh": "我的家",
+      "theme": "people",
+      "description": "Introduce your family, friends and pets and say what you have.",
+      "lessons": [
+        {
+          "id": "hsk1-u03-l1",
+          "title": "My Family",
+          "words": [
+            "的",
+            "家",
+            "爸爸",
+            "妈妈",
+            "哥哥",
+            "姐姐",
+            "弟弟",
+            "妹妹"
+          ],
+          "grammar": "possessive 的 (我的, 我妈妈)"
+        },
+        {
+          "id": "hsk1-u03-l2",
+          "title": "Family Members",
+          "words": [
+            "有",
+            "没有",
+            "口",
+            "和",
+            "家人",
+            "孩子",
+            "儿子",
+            "女儿"
+          ],
+          "grammar": "有 / 没有: to have"
+        },
+        {
+          "id": "hsk1-u03-l3",
+          "title": "This Is My Friend",
+          "words": [
+            "这",
+            "那",
+            "朋友",
+            "男朋友",
+            "女朋友",
+            "男",
+            "女",
+            "小朋友"
+          ],
+          "grammar": "这 and 那: this / that"
+        },
+        {
+          "id": "hsk1-u03-l4",
+          "title": "Our Pets",
+          "words": [
+            "狗",
+            "猫",
+            "它",
+            "它们",
+            "小",
+            "漂亮",
+            "爱",
+            "都"
+          ],
+          "grammar": "都: all, both"
+        }
+      ]
+    },
+    {
+      "id": "hsk1-u04",
+      "title": "Food & Drink",
+      "title_zh": "吃什么",
+      "theme": "food",
+      "description": "Say what you eat and drink, what you want, and order simple food.",
+      "lessons": [
+        {
+          "id": "hsk1-u04-l1",
+          "title": "Eating and Drinking",
+          "words": [
+            "吃",
+            "喝",
+            "水",
+            "茶",
+            "牛奶",
+            "饭",
+            "米饭",
+            "菜"
+          ],
+          "grammar": "word order: subject + verb + object"
+        },
+        {
+          "id": "hsk1-u04-l2",
+          "title": "What Do You Want?",
+          "words": [
+            "要",
+            "想",
+            "苹果",
+            "水果",
+            "面包",
+            "鸡蛋"
+          ],
+          "grammar": "想 / 要 + verb: want to"
+        },
+        {
+          "id": "hsk1-u04-l3",
+          "title": "Chinese Food",
+          "words": [
+            "饺子",
+            "包子",
+            "面条儿",
+            "好吃",
+            "太",
+            "了",
+            "真",
+            "非常"
+          ],
+          "grammar": "太……了: too / so"
+        },
+        {
+          "id": "hsk1-u04-l4",
+          "title": "Three Meals",
+          "words": [
+            "早饭",
+            "午饭",
+            "晚饭",
+            "做",
+            "做饭",
+            "饭店",
+            "在"
+          ],
+          "grammar": "在 + place + verb"
+        },
+        {
+          "id": "hsk1-u04-l5",
+          "title": "Ordering Food",
+          "words": [
+            "给",
+            "吧",
+            "再",
+            "一点儿",
+            "少",
+            "一些",
+            "只"
+          ],
+          "grammar": "suggestions with 吧"
+        }
+      ]
+    },
+    {
+      "id": "hsk1-u05",
+      "title": "Shopping & Money",
+      "title_zh": "多少钱",
+      "theme": "money",
+      "description": "Ask prices, count money, compare cheap and expensive, and find the right shop.",
+      "lessons": [
+        {
+          "id": "hsk1-u05-l1",
+          "title": "How Much Is It?",
+          "words": [
+            "买",
+            "卖",
+            "东西",
+            "钱",
+            "多少",
+            "块",
+            "元"
+          ],
+          "grammar": "asking prices: 多少钱？"
+        },
+        {
+          "id": "hsk1-u05-l2",
+          "title": "Books and Clothes",
+          "words": [
+            "百",
+            "千",
+            "本",
+            "件",
+            "书",
+            "衣服",
+            "穿"
+          ],
+          "grammar": "measure words 本 and 件"
+        },
+        {
+          "id": "hsk1-u05-l3",
+          "title": "Cheap or Expensive?",
+          "words": [
+            "贵",
+            "便宜",
+            "新",
+            "好看",
+            "这些",
+            "那些",
+            "哪些"
+          ],
+          "grammar": "这些 / 那些 / 哪些: these, those, which"
+        },
+        {
+          "id": "hsk1-u05-l4",
+          "title": "At the Shops",
+          "words": [
+            "商店",
+            "超市",
+            "书店",
+            "店",
+            "可以",
+            "找",
+            "杯子"
+          ],
+          "grammar": "可以: may (asking permission)"
+        }
+      ]
+    },
+    {
+      "id": "hsk1-u06",
+      "title": "Time & Daily Routine",
+      "title_zh": "现在几点",
+      "theme": "time",
+      "description": "Tell the time and describe what you do during the day.",
+      "lessons": [
+        {
+          "id": "hsk1-u06-l1",
+          "title": "What Time Is It?",
+          "words": [
+            "现在",
+            "点",
+            "分",
+            "半",
+            "一半",
+            "小时",
+            "分钟"
+          ],
+          "grammar": "telling time: X点Y分, X点半"
+        },
+        {
+          "id": "hsk1-u06-l2",
+          "title": "Morning to Night",
+          "words": [
+            "早上",
+            "上午",
+            "中午",
+            "下午",
+            "晚上",
+            "白天",
+            "早",
+            "晚"
+          ],
+          "grammar": "time words before the verb"
+        },
+        {
+          "id": "hsk1-u06-l3",
+          "title": "My Day",
+          "words": [
+            "起床",
+            "睡觉",
+            "睡",
+            "时间",
+            "时候",
+            "忙"
+          ],
+          "grammar": "……的时候: when …"
+        },
+        {
+          "id": "hsk1-u06-l4",
+          "title": "What Are You Doing?",
+          "words": [
+            "正在",
+            "看",
+            "事",
+            "还",
+            "天"
+          ],
+          "grammar": "正在 + verb: action in progress"
+        }
+      ]
+    },
+    {
+      "id": "hsk1-u07",
+      "title": "School & Work",
+      "title_zh": "学习和工作",
+      "theme": "school",
+      "description": "Talk about school, studying Chinese, classes, your job and phone calls.",
+      "lessons": [
+        {
+          "id": "hsk1-u07-l1",
+          "title": "Going to School",
+          "words": [
+            "学校",
+            "小学",
+            "中学",
+            "大学",
+            "小学生",
+            "中学生",
+            "大学生",
+            "上学"
+          ],
+          "grammar": ""
+        },
+        {
+          "id": "hsk1-u07-l2",
+          "title": "Learning Chinese",
+          "words": [
+            "学",
+            "学习",
+            "汉语",
+            "中文",
+            "汉字",
+            "字",
+            "说",
+            "写",
+            "会"
+          ],
+          "grammar": "会 + verb: can (learned skill)"
+        },
+        {
+          "id": "hsk1-u07-l3",
+          "title": "In Class",
+          "words": [
+            "课",
+            "上课",
+            "下课",
+            "同学",
+            "第",
+            "问",
+            "问题",
+            "读"
+          ],
+          "grammar": "ordinal numbers with 第"
+        },
+        {
+          "id": "hsk1-u07-l4",
+          "title": "At Work",
+          "words": [
+            "工作",
+            "公司",
+            "上班",
+            "下班",
+            "回"
+          ],
+          "grammar": "了 for completed actions"
+        },
+        {
+          "id": "hsk1-u07-l5",
+          "title": "Phone Calls",
+          "words": [
+            "电话",
+            "打电话",
+            "喂",
+            "手机",
+            "电脑",
+            "知道",
+            "说话"
+          ],
+          "grammar": "给 + person + verb (给妈妈打电话)"
+        }
+      ]
+    },
+    {
+      "id": "hsk1-u08",
+      "title": "Places & Transport",
+      "title_zh": "去哪儿",
+      "theme": "places",
+      "description": "Ask where things are, describe locations and say how you get somewhere.",
+      "lessons": [
+        {
+          "id": "hsk1-u08-l1",
+          "title": "Where Is It?",
+          "words": [
+            "哪儿",
+            "这儿",
+            "那儿",
+            "哪里",
+            "这里",
+            "那里",
+            "住"
+          ],
+          "grammar": "asking where: …在哪儿？"
+        },
+        {
+          "id": "hsk1-u08-l2",
+          "title": "In My Room",
+          "words": [
+            "上",
+            "下",
+            "里",
+            "前",
+            "后",
+            "桌子",
+            "椅子",
+            "房间"
+          ],
+          "grammar": "location words: 桌子上, 房间里"
+        },
+        {
+          "id": "hsk1-u08-l3",
+          "title": "Coming and Going",
+          "words": [
+            "去",
+            "来",
+            "到",
+            "外",
+            "边",
+            "外边",
+            "这边",
+            "那边"
+          ],
+          "grammar": "去 / 来 + place"
+        },
+        {
+          "id": "hsk1-u08-l4",
+          "title": "Getting Around",
+          "words": [
+            "坐",
+            "开",
+            "开车",
+            "车",
+            "出租车",
+            "火车",
+            "飞机",
+            "怎么"
+          ],
+          "grammar": "怎么 + verb: asking how (怎么去？)"
+        }
+      ]
+    },
+    {
+      "id": "hsk1-u09",
+      "title": "Weather & Health",
+      "title_zh": "天气和看病",
+      "theme": "body-health",
+      "description": "Talk about the weather, say how you feel and go to see a doctor.",
+      "lessons": [
+        {
+          "id": "hsk1-u09-l1",
+          "title": "How's the Weather?",
+          "words": [
+            "天气",
+            "怎么样",
+            "热",
+            "冷",
+            "雨",
+            "雪",
+            "下雨"
+          ],
+          "grammar": "了 for change of state (下雨了)"
+        },
+        {
+          "id": "hsk1-u09-l2",
+          "title": "Feeling Unwell",
+          "words": [
+            "觉得",
+            "病",
+            "生病",
+            "有点儿",
+            "休息"
+          ],
+          "grammar": "有点儿 + adjective"
+        },
+        {
+          "id": "hsk1-u09-l3",
+          "title": "Seeing a Doctor",
+          "words": [
+            "看病",
+            "医生",
+            "医院",
+            "能",
+            "不要"
+          ],
+          "grammar": "不要 + verb: don't …"
+        }
+      ]
+    },
+    {
+      "id": "hsk1-u10",
+      "title": "Hobbies & Free Time",
+      "title_zh": "喜欢做什么",
+      "theme": "hobbies",
+      "description": "Say what you like doing in your free time: films, music, reading and having fun.",
+      "lessons": [
+        {
+          "id": "hsk1-u10-l1",
+          "title": "Films and TV",
+          "words": [
+            "喜欢",
+            "电影",
+            "电影院",
+            "电视",
+            "玩"
+          ],
+          "grammar": "喜欢 + verb"
+        },
+        {
+          "id": "hsk1-u10-l2",
+          "title": "Music and Songs",
+          "words": [
+            "听",
+            "歌",
+            "唱",
+            "好听",
+            "见",
+            "听见",
+            "看见"
+          ],
+          "grammar": "result complement 见 (看见, 听见)"
+        },
+        {
+          "id": "hsk1-u10-l3",
+          "title": "Weekend Fun",
+          "words": [
+            "读书",
+            "有的",
+            "有些",
+            "些",
+            "好玩儿"
+          ],
+          "grammar": "有的……有的……: some … others …"
+        }
+      ]
+    }
+  ]
+}

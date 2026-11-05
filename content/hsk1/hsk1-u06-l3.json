@@ -1,0 +1,264 @@
+{
+  "id": "hsk1-u06-l3",
+  "title": "My Day",
+  "kind": "lesson",
+  "words": [
+    "起床",
+    "睡觉",
+    "睡",
+    "时间",
+    "时候",
+    "忙"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "起床"
+    },
+    {
+      "type": "word",
+      "word": "睡觉"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我早上六点半起床。",
+      "listen": false,
+      "options": [
+        "I get up at 6:30 in the morning.",
+        "I go to bed at 6:30 in the evening.",
+        "I get up at 7:30 in the morning.",
+        "I eat breakfast at 6:30 in the morning."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I go to bed at 11 in the evening.",
+      "before": "我晚上十一点",
+      "after": "。",
+      "options": [
+        "睡觉",
+        "早饭",
+        "商店",
+        "朋友"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "睡"
+    },
+    {
+      "type": "word",
+      "word": "忙"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他今天很忙。",
+      "listen": true,
+      "options": [
+        "He is very busy today.",
+        "He is very busy tomorrow.",
+        "He is very happy today.",
+        "He is not busy today."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to sleep; to lie down'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "睡",
+        "吃",
+        "喝",
+        "买"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "时间"
+    },
+    {
+      "type": "word",
+      "word": "时候"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我今天时间不多。",
+      "listen": false,
+      "options": [
+        "I don't have much time today.",
+        "I'm not very busy today.",
+        "I don't have much money today.",
+        "I don't have much time tomorrow."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "grammar",
+      "title": "……的时候: when …",
+      "body": "To say 'when (something happens)', put the action first, then add 的时候. The 'when' part always comes before the main part of the sentence. You can use it with actions (吃饭的时候) or descriptions (忙的时候).",
+      "examples": [
+        {
+          "zh": "我吃早饭的时候喝茶。",
+          "en": "When I eat breakfast, I drink tea."
+        },
+        {
+          "zh": "他忙的时候不吃午饭。",
+          "en": "When he is busy, he doesn't eat lunch."
+        },
+        {
+          "zh": "我起床的时候，妈妈做早饭。",
+          "en": "When I get up, Mom makes breakfast."
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "When I eat breakfast, I drink milk.",
+      "before": "我吃早饭的",
+      "after": "喝牛奶。",
+      "options": [
+        "时候",
+        "时间",
+        "小时",
+        "分钟"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "When I'm busy, I don't eat lunch.",
+      "answer": [
+        "我",
+        "忙",
+        "的",
+        "时候",
+        "不",
+        "吃",
+        "午饭"
+      ],
+      "also": [
+        [
+          "忙",
+          "的",
+          "时候",
+          "我",
+          "不",
+          "吃",
+          "午饭"
+        ]
+      ],
+      "distractors": [
+        "时间",
+        "睡"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'time; period'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "时间",
+        "小时",
+        "分钟",
+        "星期"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我今天很忙。",
+      "answer": [
+        "I",
+        "am",
+        "very",
+        "busy",
+        "today"
+      ],
+      "also": [],
+      "distractors": [
+        "tired",
+        "time"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "爸爸早上六点起床。",
+      "listen": true,
+      "options": [
+        "Dad gets up at six in the morning.",
+        "Dad goes to bed at six in the evening.",
+        "Dad gets up at seven in the morning.",
+        "Mom gets up at six in the morning."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "What time do you go to bed on Sunday?",
+      "answer": [
+        "你",
+        "星期天",
+        "几",
+        "点",
+        "睡觉"
+      ],
+      "also": [
+        [
+          "星期天",
+          "你",
+          "几",
+          "点",
+          "睡觉"
+        ]
+      ],
+      "distractors": [
+        "起床",
+        "时候"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "The child went to sleep at nine.",
+      "before": "孩子九点",
+      "after": "了。",
+      "options": [
+        "睡",
+        "忙",
+        "时间",
+        "早"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "你几点起床？",
+      "answer": [
+        "What",
+        "time",
+        "do",
+        "you",
+        "get",
+        "up"
+      ],
+      "also": [],
+      "distractors": [
+        "go",
+        "bed"
+      ]
+    }
+  ]
+}

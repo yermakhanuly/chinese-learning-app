@@ -1,0 +1,261 @@
+{
+  "id": "hsk1-u07-l5",
+  "title": "Phone Calls",
+  "kind": "lesson",
+  "words": [
+    "电话",
+    "打电话",
+    "喂",
+    "手机",
+    "电脑",
+    "知道",
+    "说话"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "电话"
+    },
+    {
+      "type": "word",
+      "word": "打电话"
+    },
+    {
+      "type": "word",
+      "word": "喂"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "打电话",
+      "listen": false,
+      "options": [
+        "to make a phone call",
+        "phone number",
+        "cell phone",
+        "to talk"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "grammar",
+      "title": "给 + person + verb: doing something for or to someone",
+      "body": "To say who you call, put 给 and the person before the verb: 给妈妈打电话 means 'call Mom'. The same pattern works for doing things for someone, like cooking or buying. The person always comes right after 给, and the action comes after the person.",
+      "examples": [
+        {
+          "zh": "我给爸爸打电话。",
+          "en": "I call Dad."
+        },
+        {
+          "zh": "妈妈给我们做饭。",
+          "en": "Mom cooks for us."
+        },
+        {
+          "zh": "你给老师打电话吧。",
+          "en": "Call the teacher."
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I call Mom in the evening.",
+      "before": "我晚上给妈妈",
+      "after": "。",
+      "options": [
+        "打电话",
+        "电话",
+        "喂",
+        "手机"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "喂，请问你是谁？",
+      "listen": true,
+      "options": [
+        "Hello? May I ask who you are?",
+        "Hello? May I ask your name?",
+        "Goodbye, see you tomorrow.",
+        "Sorry, I'm busy."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "手机"
+    },
+    {
+      "type": "word",
+      "word": "电脑"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'computer'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "电脑",
+        "手机",
+        "电话",
+        "汉字"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "This computer is too expensive; I'm not buying it.",
+      "before": "这个",
+      "after": "太贵了，我不买。",
+      "options": [
+        "电脑",
+        "汉字",
+        "课",
+        "说话"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My cell phone is new.",
+      "answer": [
+        "我的",
+        "手机",
+        "是",
+        "新",
+        "的"
+      ],
+      "also": [],
+      "distractors": [
+        "电脑",
+        "很"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "知道"
+    },
+    {
+      "type": "word",
+      "word": "说话"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你知道她的电话吗？",
+      "listen": false,
+      "options": [
+        "Do you know her phone number?",
+        "Do you have her phone?",
+        "Is this her phone?",
+        "Did you call her?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Don't talk during class.",
+      "before": "上课的时候不要",
+      "after": "。",
+      "options": [
+        "说话",
+        "知道",
+        "认识",
+        "电脑"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "老师在说话。",
+      "listen": true,
+      "options": [
+        "The teacher is talking.",
+        "The teacher is making a phone call.",
+        "The teacher knows.",
+        "The teacher is writing."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我明天给你打电话。",
+      "answer": [
+        "I",
+        "will",
+        "call",
+        "you",
+        "tomorrow"
+      ],
+      "also": [],
+      "distractors": [
+        "me",
+        "yesterday"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Mom is calling Dad.",
+      "answer": [
+        "妈妈",
+        "在",
+        "给",
+        "爸爸",
+        "打电话"
+      ],
+      "also": [],
+      "distractors": [
+        "说话",
+        "手机"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'cell phone'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "手机",
+        "电脑",
+        "电话",
+        "杯子"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Do you know the teacher's phone number?",
+      "before": "你知道老师的",
+      "after": "吗？",
+      "options": [
+        "电话",
+        "电脑",
+        "说话",
+        "汉字"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "喂，你现在忙吗？",
+      "answer": [
+        "Hello",
+        "are",
+        "you",
+        "busy",
+        "now"
+      ],
+      "also": [],
+      "distractors": [
+        "is",
+        "today"
+      ]
+    }
+  ]
+}

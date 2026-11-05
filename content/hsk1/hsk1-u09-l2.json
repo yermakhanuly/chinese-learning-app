@@ -1,0 +1,222 @@
+{
+  "id": "hsk1-u09-l2",
+  "title": "Feeling Unwell",
+  "kind": "lesson",
+  "words": [
+    "觉得",
+    "病",
+    "生病",
+    "有点儿",
+    "休息"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "觉得"
+    },
+    {
+      "type": "word",
+      "word": "生病"
+    },
+    {
+      "type": "word",
+      "word": "病"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我觉得他是老师。",
+      "listen": false,
+      "options": [
+        "I think he is a teacher.",
+        "I know he is a teacher.",
+        "I think he is a student.",
+        "He thinks I am a teacher."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "He's ill, so he isn't going to school today.",
+      "before": "他",
+      "after": "了，今天不去上学。",
+      "options": [
+        "生病",
+        "觉得",
+        "认识",
+        "起床"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'illness; disease'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "病",
+        "饭",
+        "事",
+        "菜"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "有点儿"
+    },
+    {
+      "type": "grammar",
+      "title": "有点儿 + adjective: \"a bit ...\"",
+      "body": "Put 有点儿 right before an adjective to say something is \"a bit\" or \"slightly\" that way. It's usually used for things you don't like or that cause a problem: a bit cold, a bit expensive, a bit busy. Don't mix it up with 一点儿, which comes after a verb or adjective instead.",
+      "examples": [
+        {
+          "zh": "我有点儿冷。",
+          "en": "I'm a bit cold."
+        },
+        {
+          "zh": "今天有点儿热。",
+          "en": "It's a little hot today."
+        },
+        {
+          "zh": "这个有点儿贵。",
+          "en": "This one is a bit expensive."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "今天有点儿冷。",
+      "listen": true,
+      "options": [
+        "It's a little cold today.",
+        "It's very cold today.",
+        "It's a little hot today.",
+        "It was a bit cold yesterday."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "This piece of clothing is a bit expensive.",
+      "before": "这件衣服",
+      "after": "贵。",
+      "options": [
+        "有点儿",
+        "一点儿",
+        "一些",
+        "多少"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I feel a little cold.",
+      "answer": [
+        "我",
+        "觉得",
+        "有点儿",
+        "冷"
+      ],
+      "also": [],
+      "distractors": [
+        "热",
+        "一点儿"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "休息"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你今天在家休息吧。",
+      "listen": false,
+      "options": [
+        "Rest at home today.",
+        "Work at home today.",
+        "Stay at home tomorrow.",
+        "Sleep at school today."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to rest'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "休息",
+        "睡觉",
+        "起床",
+        "工作"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我生病了，想休息。",
+      "answer": [
+        "I",
+        "am",
+        "sick",
+        "and",
+        "want",
+        "to",
+        "rest"
+      ],
+      "also": [],
+      "distractors": [
+        "eat",
+        "not"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "你的病好了吗？",
+      "listen": true,
+      "options": [
+        "Are you over your illness?",
+        "Are you ill?",
+        "Do you feel cold?",
+        "Are you busy?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "You're ill, so rest at home.",
+      "before": "你生病了，在家",
+      "after": "吧。",
+      "options": [
+        "休息",
+        "上班",
+        "上课",
+        "觉得"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I think it's a bit hot today.",
+      "answer": [
+        "我",
+        "觉得",
+        "今天",
+        "有点儿",
+        "热"
+      ],
+      "also": [],
+      "distractors": [
+        "冷",
+        "很"
+      ]
+    }
+  ]
+}

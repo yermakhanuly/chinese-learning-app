@@ -1,0 +1,230 @@
+{
+  "id": "hsk1-u05-l3",
+  "title": "Cheap or Expensive?",
+  "kind": "lesson",
+  "words": [
+    "贵",
+    "便宜",
+    "新",
+    "好看",
+    "这些",
+    "那些",
+    "哪些"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "贵"
+    },
+    {
+      "type": "word",
+      "word": "便宜"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "这个太贵了。",
+      "listen": false,
+      "options": [
+        "This is too expensive.",
+        "This is too cheap.",
+        "This is very good-looking.",
+        "This is too small."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'cheap'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "便宜",
+        "贵",
+        "漂亮",
+        "好吃"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "新"
+    },
+    {
+      "type": "word",
+      "word": "好看"
+    },
+    {
+      "type": "fill",
+      "en": "This piece of clothing is very nice-looking.",
+      "before": "这件衣服很",
+      "after": "。",
+      "options": [
+        "好看",
+        "好吃",
+        "多少"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我想买新书。",
+      "listen": true,
+      "options": [
+        "I want to buy a new book.",
+        "I want to buy an expensive book.",
+        "I want to buy a new piece of clothing.",
+        "I want to sell a new book."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "这些"
+    },
+    {
+      "type": "word",
+      "word": "那些"
+    },
+    {
+      "type": "word",
+      "word": "哪些"
+    },
+    {
+      "type": "grammar",
+      "title": "这些 / 那些 / 哪些: these, those, which",
+      "body": "Add 些 to 这, 那 or 哪 to talk about more than one thing: 这些 'these', 那些 'those', 哪些 'which ones'. You can put a noun right after them, with no measure word like 个 or 件. They can also stand alone, like 'these' and 'those' in English.",
+      "examples": [
+        {
+          "zh": "这些书很便宜。",
+          "en": "These books are cheap."
+        },
+        {
+          "zh": "那些是我的衣服。",
+          "en": "Those are my clothes."
+        },
+        {
+          "zh": "你要哪些？",
+          "en": "Which ones do you want?"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你想买哪些？",
+      "listen": false,
+      "options": [
+        "Which ones do you want to buy?",
+        "Do you want to buy these?",
+        "What do you want to buy?",
+        "Do you want to buy those?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "These are my books.",
+      "before": "",
+      "after": "是我的书。",
+      "options": [
+        "这些",
+        "哪些",
+        "谁"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Those books are very cheap.",
+      "answer": [
+        "那些",
+        "书",
+        "很",
+        "便宜"
+      ],
+      "also": [],
+      "distractors": [
+        "贵",
+        "这些"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "这些苹果太贵了。",
+      "answer": [
+        "These",
+        "apples",
+        "are",
+        "too",
+        "expensive"
+      ],
+      "also": [],
+      "distractors": [
+        "cheap",
+        "those"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "那些衣服很好看。",
+      "listen": true,
+      "options": [
+        "Those clothes look very nice.",
+        "These clothes look very nice.",
+        "Those clothes are very cheap.",
+        "Those clothes are very new."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "How much is this piece of clothing? Too expensive!",
+      "before": "这件衣服多少钱？太",
+      "after": "了！",
+      "options": [
+        "贵",
+        "好吃",
+        "多"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My mom bought a new piece of clothing.",
+      "answer": [
+        "我",
+        "妈妈",
+        "买",
+        "了",
+        "一",
+        "件",
+        "新",
+        "衣服"
+      ],
+      "also": [],
+      "distractors": [
+        "书",
+        "贵"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'which ones?'",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "哪些",
+        "那些",
+        "这些",
+        "什么"
+      ],
+      "answer": 0
+    }
+  ]
+}

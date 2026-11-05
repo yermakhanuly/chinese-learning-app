@@ -1,0 +1,264 @@
+{
+  "id": "hsk1-u07-l3",
+  "title": "In Class",
+  "kind": "lesson",
+  "words": [
+    "课",
+    "上课",
+    "下课",
+    "同学",
+    "第",
+    "问",
+    "问题",
+    "读"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "课"
+    },
+    {
+      "type": "word",
+      "word": "上课"
+    },
+    {
+      "type": "word",
+      "word": "下课"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我们八点上课。",
+      "listen": false,
+      "options": [
+        "We have class at eight.",
+        "We finish class at eight.",
+        "We go to school at eight.",
+        "We get up at eight."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to finish class'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "上课",
+        "下课",
+        "上学",
+        "学习"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "Today there is Chinese class.",
+      "before": "今天有汉语",
+      "after": "。",
+      "options": [
+        "课",
+        "杯子",
+        "狗",
+        "钱"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "同学"
+    },
+    {
+      "type": "word",
+      "word": "第"
+    },
+    {
+      "type": "grammar",
+      "title": "Ordinal numbers with 第",
+      "body": "To say 'first', 'second', 'third' and so on, put 第 in front of a number. Then add a measure word like 个 or a word like 天. So 一个 is 'one', but 第一个 is 'the first one'.",
+      "examples": [
+        {
+          "zh": "今天是第一天。",
+          "en": "Today is the first day."
+        },
+        {
+          "zh": "他是第二个。",
+          "en": "He is the second one."
+        },
+        {
+          "zh": "我是第三个孩子。",
+          "en": "I am the third child."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他是我的同学。",
+      "listen": true,
+      "options": [
+        "He is my classmate.",
+        "He is my teacher.",
+        "He is my friend.",
+        "He is my younger brother."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Today is my first day of school.",
+      "before": "今天是我上学的",
+      "after": "一天。",
+      "options": [
+        "第",
+        "个",
+        "几",
+        "两"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My classmates are all Chinese.",
+      "answer": [
+        "我",
+        "的",
+        "同学",
+        "都",
+        "是",
+        "中国",
+        "人"
+      ],
+      "also": [],
+      "distractors": [
+        "也",
+        "老师"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "问"
+    },
+    {
+      "type": "word",
+      "word": "问题"
+    },
+    {
+      "type": "word",
+      "word": "读"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "老师，我想问一个问题。",
+      "listen": false,
+      "options": [
+        "Teacher, I want to ask a question.",
+        "Teacher, I have a classmate.",
+        "Teacher, I want to read a book.",
+        "Teacher, I don't have a question."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Please read this character aloud.",
+      "before": "请",
+      "after": "这个字。",
+      "options": [
+        "读",
+        "喝",
+        "穿",
+        "买"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "上课的时候，我可以问问题吗？",
+      "listen": true,
+      "options": [
+        "Can I ask questions during class?",
+        "Can I read books during class?",
+        "Can I go home after class?",
+        "Can I ask my classmate a question?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "下课了，我们吃饭吧。",
+      "answer": [
+        "Class",
+        "is",
+        "over",
+        "let's",
+        "eat"
+      ],
+      "also": [],
+      "distractors": [
+        "drink",
+        "start"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "He studies Chinese at university.",
+      "answer": [
+        "他",
+        "在",
+        "大学",
+        "读",
+        "中文"
+      ],
+      "also": [],
+      "distractors": [
+        "问",
+        "课"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I can't do the third question.",
+      "before": "第三个",
+      "after": "我不会。",
+      "options": [
+        "问题",
+        "同学",
+        "课",
+        "老师"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我爱汉语课。",
+      "listen": true,
+      "options": [
+        "I love Chinese class.",
+        "I love Chinese characters.",
+        "I love my Chinese teacher.",
+        "I love my classmates."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'classmate'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "老师",
+        "同学",
+        "学生",
+        "朋友"
+      ],
+      "answer": 1
+    }
+  ]
+}

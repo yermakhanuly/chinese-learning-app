@@ -59,7 +59,8 @@
     "db:stop": "supabase stop",
     "db:reset": "supabase db reset",
     "data:import": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/import-vocab.ts",
-    "data:topics": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=scripts/.env scripts/tag-topics.ts"
+    "data:topics": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=scripts/.env scripts/tag-topics.ts",
+    "content:draft": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=scripts/.env scripts/draft-lessons.ts"
   },
   "private": true,
   "jest": {

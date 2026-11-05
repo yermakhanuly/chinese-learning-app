@@ -1,0 +1,244 @@
+{
+  "id": "hsk1-u02-l2",
+  "title": "How Many?",
+  "kind": "lesson",
+  "words": [
+    "七",
+    "八",
+    "九",
+    "十",
+    "个",
+    "几",
+    "两"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "七"
+    },
+    {
+      "type": "word",
+      "word": "八"
+    },
+    {
+      "type": "word",
+      "word": "九"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "八",
+      "listen": false,
+      "options": [
+        "six",
+        "eight",
+        "nine",
+        "three"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "九",
+      "listen": true,
+      "options": [
+        "five",
+        "seven",
+        "nine",
+        "eight"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "word",
+      "word": "十"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'ten'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "七",
+        "十",
+        "六",
+        "九"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "七",
+      "listen": false,
+      "options": [
+        "one",
+        "four",
+        "eight",
+        "seven"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "word",
+      "word": "个"
+    },
+    {
+      "type": "word",
+      "word": "两"
+    },
+    {
+      "type": "grammar",
+      "title": "Counting people and things with 个",
+      "body": "In Chinese you can't put a number straight before a noun. You need a measure word in between, and 个 is the most common one: number + 个 + noun. For 'two' before a measure word, say 两, not 二. To ask 'how many?' (usually expecting a small number), put 几 in place of the number: 几个.",
+      "examples": [
+        {
+          "zh": "两个老师",
+          "en": "two teachers"
+        },
+        {
+          "zh": "我们是三个人。",
+          "en": "There are three of us."
+        },
+        {
+          "zh": "你们是几个人？",
+          "en": "How many of you are there?"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "There are ten of us.",
+      "before": "我们是十",
+      "after": "人。",
+      "options": [
+        "个",
+        "是",
+        "吗",
+        "们"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "两个老师",
+      "listen": false,
+      "options": [
+        "two teachers",
+        "two students",
+        "ten teachers",
+        "the second teacher"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "几"
+    },
+    {
+      "type": "fill",
+      "en": "How many of you are there?",
+      "before": "你们是",
+      "after": "个人？",
+      "options": [
+        "吗",
+        "几",
+        "什么",
+        "谁"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "九个学生",
+      "listen": true,
+      "options": [
+        "nine teachers",
+        "five students",
+        "nine students",
+        "ten students"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "There are eight of us.",
+      "answer": [
+        "我们",
+        "是",
+        "八",
+        "个",
+        "人"
+      ],
+      "also": [],
+      "distractors": [
+        "几",
+        "两"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他们是七个人。",
+      "answer": [
+        "There",
+        "are",
+        "seven",
+        "of",
+        "them"
+      ],
+      "also": [],
+      "distractors": [
+        "ten",
+        "us"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'how many'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "两",
+        "个",
+        "几",
+        "谁"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "fill",
+      "en": "They are two teachers.",
+      "before": "他们是",
+      "after": "个老师。",
+      "options": [
+        "二",
+        "两",
+        "几",
+        "十"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "How many of you are there?",
+      "answer": [
+        "你们",
+        "是",
+        "几",
+        "个",
+        "人"
+      ],
+      "also": [],
+      "distractors": [
+        "两",
+        "吗"
+      ]
+    }
+  ]
+}

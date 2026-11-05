@@ -1,0 +1,264 @@
+{
+  "id": "hsk1-u01-l5",
+  "title": "Being Polite",
+  "kind": "lesson",
+  "words": [
+    "对不起",
+    "没关系",
+    "请",
+    "请问",
+    "先生",
+    "女士",
+    "谁",
+    "哪",
+    "国"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "对不起"
+    },
+    {
+      "type": "word",
+      "word": "没关系"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "没关系",
+      "listen": false,
+      "options": [
+        "It doesn't matter",
+        "You're welcome",
+        "I'm sorry",
+        "Goodbye"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I'm sorry! — It doesn't matter.",
+      "before": "对不起！——",
+      "after": "。",
+      "options": [
+        "没关系",
+        "不客气",
+        "再见",
+        "谢谢"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "请"
+    },
+    {
+      "type": "word",
+      "word": "请问"
+    },
+    {
+      "type": "fill",
+      "en": "Excuse me, what is your name?",
+      "before": "",
+      "after": "问，您叫什么名字？",
+      "options": [
+        "请",
+        "对",
+        "叫",
+        "也"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "先生"
+    },
+    {
+      "type": "word",
+      "word": "女士"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "先生，请问您是老师吗？",
+      "listen": true,
+      "options": [
+        "Excuse me, sir, are you a teacher?",
+        "Excuse me, madam, are you a teacher?",
+        "Sorry, sir, I'm not a teacher.",
+        "Sir, are you a student?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'madam'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "女士",
+        "先生",
+        "老师",
+        "学生"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "谁"
+    },
+    {
+      "type": "word",
+      "word": "哪"
+    },
+    {
+      "type": "word",
+      "word": "国"
+    },
+    {
+      "type": "grammar",
+      "title": "Asking 'who?' and 'which country?'",
+      "body": "To ask 'who', put 谁 exactly where the answer would go: 他是老师 becomes 他是谁？ The word order doesn't change, and you don't add 吗. To ask where someone is from, say 哪国人 ('which-country person'): 你是哪国人？ The answer simply replaces 哪国 with the country: 我是中国人.",
+      "examples": [
+        {
+          "zh": "他是谁？",
+          "en": "Who is he?"
+        },
+        {
+          "zh": "你是哪国人？",
+          "en": "Which country are you from?"
+        },
+        {
+          "zh": "我是中国人。",
+          "en": "I'm Chinese."
+        }
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他是谁？",
+      "answer": [
+        "Who",
+        "is",
+        "he"
+      ],
+      "also": [],
+      "distractors": [
+        "What",
+        "are"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Which country are you from?",
+      "before": "你是",
+      "after": "国人？",
+      "options": [
+        "哪",
+        "谁",
+        "什么",
+        "吗"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "她是哪国人？",
+      "listen": true,
+      "options": [
+        "Which country is she from?",
+        "Who is she?",
+        "Is she Chinese?",
+        "What is her name?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'who'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "谁",
+        "哪",
+        "什么",
+        "呢"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Madam, excuse me, are you Chinese?",
+      "answer": [
+        "女士",
+        "请问",
+        "您",
+        "是",
+        "中国",
+        "人",
+        "吗"
+      ],
+      "also": [
+        [
+          "请问",
+          "女士",
+          "您",
+          "是",
+          "中国",
+          "人",
+          "吗"
+        ]
+      ],
+      "distractors": [
+        "先生",
+        "哪"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "对不起，我不认识他。",
+      "answer": [
+        "Sorry",
+        "I",
+        "don't",
+        "know",
+        "him"
+      ],
+      "also": [],
+      "distractors": [
+        "her",
+        "who"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Sir, which country are you from?",
+      "before": "先生，您是",
+      "after": "国人？",
+      "options": [
+        "哪",
+        "谁",
+        "什么",
+        "呢"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "请问，他是谁？",
+      "listen": false,
+      "options": [
+        "Excuse me, who is he?",
+        "Excuse me, which country is he from?",
+        "Sorry, I don't know him.",
+        "Excuse me, is he a teacher?"
+      ],
+      "answer": 0
+    }
+  ]
+}

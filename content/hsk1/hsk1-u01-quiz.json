@@ -1,0 +1,230 @@
+{
+  "id": "hsk1-u01-quiz",
+  "title": "Greetings & Introductions: quiz",
+  "kind": "quiz",
+  "words": [],
+  "steps": [
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "认识你很高兴。",
+      "listen": false,
+      "options": [
+        "Nice to meet you.",
+        "I'm very happy you're here.",
+        "Do you know me?",
+        "I know you very well."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'lady; madam'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "女士",
+        "先生",
+        "老师",
+        "学生"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "你是中国人吗？",
+      "listen": true,
+      "options": [
+        "Are you Chinese?",
+        "Are you a teacher?",
+        "Is he Chinese?",
+        "I am Chinese."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "What's your name?",
+      "before": "你叫什么",
+      "after": "？",
+      "options": [
+        "名字",
+        "人",
+        "国",
+        "老师"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I am not a student.",
+      "answer": [
+        "我",
+        "不",
+        "是",
+        "学生"
+      ],
+      "also": [],
+      "distractors": [
+        "吗",
+        "很"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "她是哪国人？",
+      "answer": [
+        "Which",
+        "country",
+        "is",
+        "she",
+        "from"
+      ],
+      "also": [],
+      "distractors": [
+        "he",
+        "what"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I'm sorry! — It doesn't matter.",
+      "before": "对不起！——",
+      "after": "。",
+      "options": [
+        "没关系",
+        "不客气",
+        "再见",
+        "谢谢"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "请问，您是老师吗？",
+      "listen": true,
+      "options": [
+        "Excuse me, are you a teacher?",
+        "Excuse me, are you a student?",
+        "Excuse me, who is the teacher?",
+        "Excuse me, what is your name?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I'm a student, and he is also a student.",
+      "before": "我是学生，他",
+      "after": "是学生。",
+      "options": [
+        "也",
+        "很",
+        "吗",
+        "呢"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Who is he?",
+      "answer": [
+        "他",
+        "是",
+        "谁"
+      ],
+      "also": [],
+      "distractors": [
+        "什么",
+        "吗"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我很好，你呢？",
+      "listen": false,
+      "options": [
+        "I'm fine, and you?",
+        "I'm fine, thank you.",
+        "You're fine, and me?",
+        "Are you fine?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "大家好，我们是学生。",
+      "answer": [
+        "Hello",
+        "everyone",
+        "we",
+        "are",
+        "students"
+      ],
+      "also": [],
+      "distractors": [
+        "they",
+        "teachers"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他们是中国人。",
+      "listen": true,
+      "options": [
+        "他们是中国人。",
+        "我们是中国人。",
+        "他们不是中国人。",
+        "她是中国人。"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Are you a teacher?",
+      "before": "你是老师",
+      "after": "？",
+      "options": [
+        "吗",
+        "呢",
+        "什么",
+        "谁"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Nice to meet you too.",
+      "answer": [
+        "认识",
+        "你",
+        "我",
+        "也",
+        "很",
+        "高兴"
+      ],
+      "also": [
+        [
+          "我",
+          "也",
+          "很",
+          "高兴",
+          "认识",
+          "你"
+        ]
+      ],
+      "distractors": [
+        "呢",
+        "吗"
+      ]
+    }
+  ]
+}

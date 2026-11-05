@@ -1,0 +1,228 @@
+{
+  "id": "hsk1-u09-l1",
+  "title": "How's the Weather?",
+  "kind": "lesson",
+  "words": [
+    "天气",
+    "怎么样",
+    "热",
+    "冷",
+    "雨",
+    "雪",
+    "下雨"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "天气"
+    },
+    {
+      "type": "word",
+      "word": "怎么样"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "今天天气怎么样？",
+      "listen": false,
+      "options": [
+        "How's the weather today?",
+        "What's the date today?",
+        "What day is it today?",
+        "Is the weather good today?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "热"
+    },
+    {
+      "type": "word",
+      "word": "冷"
+    },
+    {
+      "type": "fill",
+      "en": "It's very cold today.",
+      "before": "今天很",
+      "after": "。",
+      "options": [
+        "冷",
+        "热",
+        "雨",
+        "雪"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "昨天很热。",
+      "listen": true,
+      "options": [
+        "It was hot yesterday.",
+        "It was cold yesterday.",
+        "It's hot today.",
+        "It's cold today."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "雨"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "雨很大。",
+      "listen": false,
+      "options": [
+        "The rain is heavy.",
+        "The snow is heavy.",
+        "It's very hot.",
+        "The weather is nice."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "下雨"
+    },
+    {
+      "type": "grammar",
+      "title": "了 for a change: \"now it's…\"",
+      "body": "Put 了 at the end of a sentence to show that something has changed and is now true. 下雨 means \"to rain\", but 下雨了 means \"it's started raining\" or \"it's raining now\". With 不, it means \"not anymore\".",
+      "examples": [
+        {
+          "zh": "下雨了。",
+          "en": "It's raining (now)."
+        },
+        {
+          "zh": "天气冷了。",
+          "en": "The weather has gotten cold."
+        },
+        {
+          "zh": "我不忙了。",
+          "en": "I'm not busy anymore."
+        }
+      ]
+    },
+    {
+      "type": "word",
+      "word": "雪"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'snow'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "雪",
+        "雨",
+        "冷",
+        "热"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "It's raining.",
+      "answer": [
+        "下雨",
+        "了"
+      ],
+      "also": [],
+      "distractors": [
+        "雪",
+        "吗"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "It's snowing outside now.",
+      "before": "外边下雪",
+      "after": "。",
+      "options": [
+        "了",
+        "吗",
+        "呢",
+        "的"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "现在不下雨了。",
+      "listen": true,
+      "options": [
+        "It's not raining anymore.",
+        "It's raining now.",
+        "It's snowing now.",
+        "It didn't rain yesterday."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "明天天气怎么样？",
+      "answer": [
+        "How",
+        "will",
+        "the",
+        "weather",
+        "be",
+        "tomorrow"
+      ],
+      "also": [],
+      "distractors": [
+        "today",
+        "rain"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "It's very hot in the room.",
+      "answer": [
+        "房间",
+        "里",
+        "很",
+        "热"
+      ],
+      "also": [],
+      "distractors": [
+        "冷",
+        "外边"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "太冷了，我不去学校了。",
+      "listen": false,
+      "options": [
+        "It's too cold, so I'm not going to school.",
+        "It's too hot, so I'm not going to school.",
+        "It's too cold, but I'm going to school.",
+        "It's raining, so I'm not going to school."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "How's the weather where you are?",
+      "before": "你那儿天气",
+      "after": "？",
+      "options": [
+        "怎么样",
+        "什么",
+        "哪儿",
+        "几"
+      ],
+      "answer": 0
+    }
+  ]
+}

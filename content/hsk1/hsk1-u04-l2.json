@@ -1,0 +1,240 @@
+{
+  "id": "hsk1-u04-l2",
+  "title": "What Do You Want?",
+  "kind": "lesson",
+  "words": [
+    "要",
+    "想",
+    "苹果",
+    "水果",
+    "面包",
+    "鸡蛋"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "要"
+    },
+    {
+      "type": "word",
+      "word": "想"
+    },
+    {
+      "type": "grammar",
+      "title": "想 / 要 + verb: want to",
+      "body": "To say you want to do something, put 想 or 要 right before the verb. 想 is softer, like 'would like to'. 要 is firmer, like 'want to' or 'going to'. To say you don't want to do something, use 不想. 要 can also go straight before a thing: 我要茶 means 'I want tea.'",
+      "examples": [
+        {
+          "zh": "我想喝水。",
+          "en": "I'd like to drink some water."
+        },
+        {
+          "zh": "你要吃什么？",
+          "en": "What do you want to eat?"
+        },
+        {
+          "zh": "他不想吃饭。",
+          "en": "He doesn't want to eat."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我想喝茶。",
+      "listen": false,
+      "options": [
+        "I'd like to drink tea.",
+        "I'm drinking tea.",
+        "I don't drink tea.",
+        "I like tea."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "What do you want to eat?",
+      "before": "你",
+      "after": "吃什么？",
+      "options": [
+        "要",
+        "是",
+        "叫",
+        "认识"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "苹果"
+    },
+    {
+      "type": "word",
+      "word": "水果"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'fruit'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "水果",
+        "苹果",
+        "米饭",
+        "牛奶"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我要一个苹果。",
+      "listen": true,
+      "options": [
+        "I want an apple.",
+        "I want two apples.",
+        "I want some fruit.",
+        "I want some tea."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Apples are fruit.",
+      "before": "苹果是",
+      "after": "。",
+      "options": [
+        "水果",
+        "米饭",
+        "菜",
+        "牛奶"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "面包"
+    },
+    {
+      "type": "word",
+      "word": "鸡蛋"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "鸡蛋",
+      "listen": false,
+      "options": [
+        "egg",
+        "bread",
+        "apple",
+        "rice"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'bread'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "面包",
+        "鸡蛋",
+        "米饭",
+        "菜"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I want two eggs.",
+      "before": "我要两个",
+      "after": "。",
+      "options": [
+        "鸡蛋",
+        "牛奶",
+        "茶",
+        "水"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I don't want to eat bread.",
+      "answer": [
+        "我",
+        "不",
+        "想",
+        "吃",
+        "面包"
+      ],
+      "also": [],
+      "distractors": [
+        "喝",
+        "鸡蛋"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "你想喝牛奶吗？",
+      "answer": [
+        "Do",
+        "you",
+        "want",
+        "to",
+        "drink",
+        "milk"
+      ],
+      "also": [],
+      "distractors": [
+        "eat",
+        "tea"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "妈妈要两个鸡蛋。",
+      "listen": true,
+      "options": [
+        "Mom wants two eggs.",
+        "Mom wants two apples.",
+        "Mom wants some bread.",
+        "Dad wants two eggs."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My son wants to eat apples.",
+      "answer": [
+        "我",
+        "儿子",
+        "想",
+        "吃",
+        "苹果"
+      ],
+      "also": [],
+      "distractors": [
+        "喝",
+        "面包"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你们要什么？",
+      "listen": false,
+      "options": [
+        "What do you all want?",
+        "What do you all eat?",
+        "What are your names?",
+        "Who do you all know?"
+      ],
+      "answer": 0
+    }
+  ]
+}

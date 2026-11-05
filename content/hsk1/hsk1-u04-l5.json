@@ -1,0 +1,271 @@
+{
+  "id": "hsk1-u04-l5",
+  "title": "Ordering Food",
+  "kind": "lesson",
+  "words": [
+    "给",
+    "吧",
+    "再",
+    "一点儿",
+    "少",
+    "一些",
+    "只"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "给"
+    },
+    {
+      "type": "word",
+      "word": "吧"
+    },
+    {
+      "type": "grammar",
+      "title": "Suggestions with 吧",
+      "body": "Put 吧 at the end of a sentence to turn it into a friendly suggestion, like 'Let's…' or '…, why don't you?'. It also softens a request, so it sounds less like an order. Without 吧, the same sentence can sound blunt.",
+      "examples": [
+        {
+          "zh": "我们吃饺子吧。",
+          "en": "Let's eat dumplings."
+        },
+        {
+          "zh": "你喝茶吧。",
+          "en": "Have some tea."
+        },
+        {
+          "zh": "我们做饭吧。",
+          "en": "Let's cook."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我们吃饺子吧。",
+      "listen": false,
+      "options": [
+        "Let's eat dumplings.",
+        "Do we eat dumplings?",
+        "We ate dumplings.",
+        "We don't eat dumplings."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I'll cook for you.",
+      "before": "我",
+      "after": "你做饭。",
+      "options": [
+        "给",
+        "吧",
+        "吗",
+        "的"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "给我一个包子吧。",
+      "listen": true,
+      "options": [
+        "Give me a steamed bun, please.",
+        "Give me an egg, please.",
+        "I'll make steamed buns for you.",
+        "Do you have steamed buns?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "再"
+    },
+    {
+      "type": "word",
+      "word": "一点儿"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'again; once more'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "再",
+        "只",
+        "少",
+        "给"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Have a little more.",
+      "before": "你再吃",
+      "after": "吧。",
+      "options": [
+        "一点儿",
+        "谁",
+        "哪",
+        "吗"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I want to drink a little water.",
+      "answer": [
+        "我",
+        "想",
+        "喝",
+        "一点儿",
+        "水"
+      ],
+      "also": [],
+      "distractors": [
+        "再",
+        "吧"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "少"
+    },
+    {
+      "type": "word",
+      "word": "一些"
+    },
+    {
+      "type": "word",
+      "word": "只"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "少",
+      "listen": false,
+      "options": [
+        "few; less",
+        "again",
+        "only",
+        "some"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I only drink water.",
+      "before": "我",
+      "after": "喝水。",
+      "options": [
+        "只",
+        "少",
+        "一些",
+        "给"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我要一些饺子。",
+      "listen": true,
+      "options": [
+        "I want some dumplings.",
+        "I want a few apples.",
+        "I only want dumplings.",
+        "I don't want dumplings."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "少吃一点儿吧。",
+      "answer": [
+        "Eat",
+        "a",
+        "little",
+        "less"
+      ],
+      "also": [],
+      "distractors": [
+        "more",
+        "again"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Let's eat some noodles today.",
+      "answer": [
+        "今天",
+        "我们",
+        "吃",
+        "一些",
+        "面条儿",
+        "吧"
+      ],
+      "also": [
+        [
+          "我们",
+          "今天",
+          "吃",
+          "一些",
+          "面条儿",
+          "吧"
+        ]
+      ],
+      "distractors": [
+        "只",
+        "吗"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Mom, give me another egg, please.",
+      "before": "妈妈，",
+      "after": "给我一个鸡蛋吧。",
+      "options": [
+        "再",
+        "只",
+        "少",
+        "也"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他只吃一点儿米饭。",
+      "answer": [
+        "He",
+        "only",
+        "eats",
+        "a",
+        "little",
+        "rice"
+      ],
+      "also": [],
+      "distractors": [
+        "some",
+        "more"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "这个饭店的饺子很好吃，我们再吃一些吧。",
+      "listen": false,
+      "options": [
+        "This restaurant's dumplings are tasty, let's eat some more.",
+        "This restaurant's dumplings are tasty, let's eat a little less.",
+        "This restaurant only has dumplings, let's eat some.",
+        "This restaurant's dumplings aren't tasty, let's eat noodles."
+      ],
+      "answer": 0
+    }
+  ]
+}

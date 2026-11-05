@@ -1,0 +1,233 @@
+{
+  "id": "hsk1-u07-l4",
+  "title": "At Work",
+  "kind": "lesson",
+  "words": [
+    "工作",
+    "公司",
+    "上班",
+    "下班",
+    "回"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "工作"
+    },
+    {
+      "type": "word",
+      "word": "公司"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "公司",
+      "listen": false,
+      "options": [
+        "company",
+        "school",
+        "store",
+        "restaurant"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "My mom works at a company.",
+      "before": "我妈妈在",
+      "after": "工作。",
+      "options": [
+        "公司",
+        "名字",
+        "米饭"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "上班"
+    },
+    {
+      "type": "word",
+      "word": "下班"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to finish work'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "下班",
+        "上班",
+        "下课",
+        "上课"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他早上八点上班。",
+      "listen": true,
+      "options": [
+        "He goes to work at 8 in the morning.",
+        "He gets off work at 8 in the morning.",
+        "He goes to school at 8 in the morning.",
+        "He gets up at 8 in the morning."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "回"
+    },
+    {
+      "type": "grammar",
+      "title": "了 for completed actions",
+      "body": "To say that an action has already happened, add 了 after the verb or at the end of the sentence. Chinese verbs don't change form for the past, so 了 does this job. To say something did NOT happen, use 没有 before the verb and drop 了.",
+      "examples": [
+        {
+          "zh": "她下班了。",
+          "en": "She has finished work."
+        },
+        {
+          "zh": "我昨天买了一本书。",
+          "en": "I bought a book yesterday."
+        },
+        {
+          "zh": "爸爸回家了。",
+          "en": "Dad has gone home."
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Dad went home at six.",
+      "before": "爸爸六点",
+      "after": "家了。",
+      "options": [
+        "回",
+        "做",
+        "喝"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I went home at 6 pm.",
+      "answer": [
+        "我",
+        "下午",
+        "六",
+        "点",
+        "回",
+        "家",
+        "了"
+      ],
+      "also": [
+        [
+          "下午",
+          "六",
+          "点",
+          "我",
+          "回",
+          "家",
+          "了"
+        ]
+      ],
+      "distractors": [
+        "上班",
+        "吗"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to go back'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "回",
+        "做",
+        "叫",
+        "看"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我哥哥在公司工作。",
+      "answer": [
+        "My",
+        "older",
+        "brother",
+        "works",
+        "at",
+        "a",
+        "company"
+      ],
+      "also": [],
+      "distractors": [
+        "school",
+        "went"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你几点下班？",
+      "listen": false,
+      "options": [
+        "What time do you get off work?",
+        "What time do you go to work?",
+        "What time do you go home?",
+        "What time does class end?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "He bought a new piece of clothing yesterday.",
+      "before": "他昨天买",
+      "after": "一件新衣服。",
+      "options": [
+        "了",
+        "吗",
+        "呢"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "妈妈下班了吗？",
+      "listen": true,
+      "options": [
+        "Has Mom finished work?",
+        "Is Mom at work?",
+        "Has Mom gone home?",
+        "Is Mom busy?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My dad's company is very big.",
+      "answer": [
+        "我",
+        "爸爸",
+        "的",
+        "公司",
+        "很",
+        "大"
+      ],
+      "also": [],
+      "distractors": [
+        "小",
+        "工作"
+      ]
+    }
+  ]
+}

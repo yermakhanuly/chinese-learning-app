@@ -1,0 +1,220 @@
+{
+  "id": "hsk1-u10-l1",
+  "title": "Films and TV",
+  "kind": "lesson",
+  "words": [
+    "喜欢",
+    "电影",
+    "电影院",
+    "电视",
+    "玩"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "喜欢"
+    },
+    {
+      "type": "word",
+      "word": "电影"
+    },
+    {
+      "type": "grammar",
+      "title": "喜欢 + verb: liking to do something",
+      "body": "To say you like doing something, put the activity (a verb) straight after 喜欢. English adds '-ing' or 'to', but Chinese needs nothing extra. To say you don't like it, put 不 before 喜欢.",
+      "examples": [
+        {
+          "zh": "我喜欢看电影。",
+          "en": "I like watching movies."
+        },
+        {
+          "zh": "她喜欢做饭。",
+          "en": "She likes cooking."
+        },
+        {
+          "zh": "他不喜欢学习。",
+          "en": "He doesn't like studying."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我喜欢看电影。",
+      "listen": false,
+      "options": [
+        "I like watching movies.",
+        "I want to watch a movie.",
+        "I am watching a movie.",
+        "I don't like watching movies."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "He doesn't like watching movies.",
+      "before": "他不",
+      "after": "看电影。",
+      "options": [
+        "喜欢",
+        "电影",
+        "叫",
+        "是"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "电影院"
+    },
+    {
+      "type": "word",
+      "word": "电视"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'television'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "电视",
+        "电影",
+        "电脑",
+        "电话"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我们去电影院吧。",
+      "listen": true,
+      "options": [
+        "Let's go to the cinema.",
+        "Let's go to the hospital.",
+        "Let's go to the bookstore.",
+        "Let's watch TV."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My dad likes watching TV.",
+      "answer": [
+        "我",
+        "爸爸",
+        "喜欢",
+        "看",
+        "电视"
+      ],
+      "also": [],
+      "distractors": [
+        "电影",
+        "玩"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "玩"
+    },
+    {
+      "type": "fill",
+      "en": "The children are playing outside.",
+      "before": "孩子们在外边",
+      "after": "。",
+      "options": [
+        "玩",
+        "电视",
+        "电影",
+        "喜欢"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你喜欢玩手机吗？",
+      "listen": false,
+      "options": [
+        "Do you like playing on your phone?",
+        "Do you want to buy a phone?",
+        "Do you like making phone calls?",
+        "Is this your phone?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我妹妹不喜欢看电影。",
+      "answer": [
+        "My",
+        "younger",
+        "sister",
+        "doesn't",
+        "like",
+        "watching",
+        "movies"
+      ],
+      "also": [],
+      "distractors": [
+        "TV",
+        "likes"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我喜欢在家看电视。",
+      "listen": true,
+      "options": [
+        "I like watching TV at home.",
+        "I like watching movies at home.",
+        "I like reading at home.",
+        "I don't like watching TV at home."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Do you want to go to the cinema tomorrow?",
+      "answer": [
+        "你",
+        "明天",
+        "想",
+        "去",
+        "电影院",
+        "吗"
+      ],
+      "also": [
+        [
+          "明天",
+          "你",
+          "想",
+          "去",
+          "电影院",
+          "吗"
+        ]
+      ],
+      "distractors": [
+        "电视",
+        "喜欢"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to play; to have fun'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "玩",
+        "看",
+        "做",
+        "喜欢"
+      ],
+      "answer": 0
+    }
+  ]
+}

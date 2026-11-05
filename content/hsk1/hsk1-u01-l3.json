@@ -1,0 +1,231 @@
+{
+  "id": "hsk1-u01-l3",
+  "title": "We, You and They",
+  "kind": "lesson",
+  "words": [
+    "吗",
+    "们",
+    "我们",
+    "你们",
+    "他们",
+    "她们",
+    "大家"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "吗"
+    },
+    {
+      "type": "grammar",
+      "title": "Yes-no questions with 吗",
+      "body": "To turn a statement into a yes-no question, just add 吗 to the end. The word order stays exactly the same. To answer 'yes', you can repeat the verb (是) or say 对. To answer 'no', put 不 before the verb.",
+      "examples": [
+        {
+          "zh": "你是老师。",
+          "en": "You are a teacher."
+        },
+        {
+          "zh": "你是老师吗？",
+          "en": "Are you a teacher?"
+        },
+        {
+          "zh": "她是中国人吗？——不是。",
+          "en": "Is she Chinese? — No."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你是老师吗？",
+      "listen": false,
+      "options": [
+        "You are a teacher.",
+        "Are you a teacher?",
+        "Are you a student?",
+        "You are not a teacher."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "Is he a student?",
+      "before": "他是学生",
+      "after": "？",
+      "options": [
+        "们",
+        "是",
+        "吗",
+        "对"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "word",
+      "word": "们"
+    },
+    {
+      "type": "word",
+      "word": "我们"
+    },
+    {
+      "type": "word",
+      "word": "你们"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'we'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "你们",
+        "我们",
+        "我",
+        "你"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Are you (plural) students?",
+      "answer": [
+        "你们",
+        "是",
+        "学生",
+        "吗"
+      ],
+      "also": [],
+      "distractors": [
+        "我们",
+        "不"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "他们"
+    },
+    {
+      "type": "word",
+      "word": "她们"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'they' for a group of men or a mixed group?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "她们",
+        "我们",
+        "他们",
+        "你们"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "她们",
+      "listen": false,
+      "options": [
+        "she",
+        "they (all female)",
+        "we",
+        "you (plural)"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "word",
+      "word": "大家"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "大家好！",
+      "listen": true,
+      "options": [
+        "Hello, teacher!",
+        "Thank you, everyone!",
+        "Hello, everyone!",
+        "Goodbye, everyone!"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "fill",
+      "en": "Thank you, everyone!",
+      "before": "谢谢",
+      "after": "！",
+      "options": [
+        "大家",
+        "吗",
+        "他们",
+        "对"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他们不是中国人。",
+      "answer": [
+        "They",
+        "are",
+        "not",
+        "Chinese"
+      ],
+      "also": [],
+      "distractors": [
+        "We",
+        "is"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "你们是老师吗？",
+      "listen": true,
+      "options": [
+        "Are they teachers?",
+        "Are you a teacher?",
+        "We are teachers.",
+        "Are you (plural) teachers?"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "fill",
+      "en": "Are they students? — Yes, they are students.",
+      "before": "她们是学生吗？——对，",
+      "after": "是学生。",
+      "options": [
+        "我们",
+        "她们",
+        "你们",
+        "大家"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "We are not students, we are teachers.",
+      "answer": [
+        "我们",
+        "不",
+        "是",
+        "学生",
+        "我们",
+        "是",
+        "老师"
+      ],
+      "also": [],
+      "distractors": [
+        "吗",
+        "他们"
+      ]
+    }
+  ]
+}

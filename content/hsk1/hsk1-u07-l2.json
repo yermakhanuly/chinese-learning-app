@@ -1,0 +1,265 @@
+{
+  "id": "hsk1-u07-l2",
+  "title": "Learning Chinese",
+  "kind": "lesson",
+  "words": [
+    "学",
+    "学习",
+    "汉语",
+    "中文",
+    "汉字",
+    "字",
+    "说",
+    "写",
+    "会"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "学"
+    },
+    {
+      "type": "word",
+      "word": "学习"
+    },
+    {
+      "type": "word",
+      "word": "汉语"
+    },
+    {
+      "type": "fill",
+      "en": "I study Chinese at school.",
+      "before": "我在学校",
+      "after": "汉语。",
+      "options": [
+        "学习",
+        "吃",
+        "喝",
+        "买"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他在大学学汉语。",
+      "listen": true,
+      "options": [
+        "He studies Chinese at university.",
+        "He studies Chinese at middle school.",
+        "He is a Chinese teacher at university.",
+        "He eats at the university."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "中文"
+    },
+    {
+      "type": "word",
+      "word": "汉字"
+    },
+    {
+      "type": "word",
+      "word": "字"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "这本书是中文的。",
+      "listen": false,
+      "options": [
+        "This book is in Chinese.",
+        "This book is very expensive.",
+        "This book is new.",
+        "This book is my teacher's."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'Chinese character'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "汉字",
+        "中文",
+        "汉语",
+        "名字"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "这是什么字？",
+      "listen": false,
+      "options": [
+        "What character is this?",
+        "What is your name?",
+        "What book is this?",
+        "Who is this?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Chinese characters are very beautiful.",
+      "answer": [
+        "汉字",
+        "很",
+        "漂亮"
+      ],
+      "also": [],
+      "distractors": [
+        "中文",
+        "好吃"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "说"
+    },
+    {
+      "type": "word",
+      "word": "写"
+    },
+    {
+      "type": "word",
+      "word": "会"
+    },
+    {
+      "type": "grammar",
+      "title": "会 + verb: can (a learned skill)",
+      "body": "Put 会 before a verb to say you can do something because you have learned how, like speaking a language or cooking. To say you can't, use 不会. To ask, add 吗 at the end.",
+      "examples": [
+        {
+          "zh": "我会说汉语。",
+          "en": "I can speak Chinese."
+        },
+        {
+          "zh": "他不会写汉字。",
+          "en": "He can't write Chinese characters."
+        },
+        {
+          "zh": "你会做饭吗？",
+          "en": "Can you cook?"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I can speak Chinese.",
+      "before": "我会",
+      "after": "汉语。",
+      "options": [
+        "说",
+        "吃",
+        "喝",
+        "买"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他会写汉字。",
+      "listen": true,
+      "options": [
+        "He can write Chinese characters.",
+        "He can speak Chinese.",
+        "He wants to buy a book.",
+        "He is reading Chinese characters."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "你会说汉语吗？",
+      "answer": [
+        "Can",
+        "you",
+        "speak",
+        "Chinese"
+      ],
+      "also": [],
+      "distractors": [
+        "write",
+        "do"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to write'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "写",
+        "说",
+        "看",
+        "学"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "She can't write this character.",
+      "before": "她不会写这个",
+      "after": "。",
+      "options": [
+        "字",
+        "书",
+        "人",
+        "菜"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My younger sister studies Chinese at elementary school.",
+      "answer": [
+        "我",
+        "妹妹",
+        "在",
+        "小学",
+        "学习",
+        "中文"
+      ],
+      "also": [],
+      "distractors": [
+        "写",
+        "大学"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我爸爸想学汉语。",
+      "listen": false,
+      "options": [
+        "My dad wants to learn Chinese.",
+        "My dad can speak Chinese.",
+        "My dad is a Chinese teacher.",
+        "My dad wants to buy a Chinese book."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "My older brother is a university student; he can write a lot of Chinese characters.",
+      "before": "我哥哥是大学生，他",
+      "after": "写很多汉字。",
+      "options": [
+        "会",
+        "是",
+        "有",
+        "在"
+      ],
+      "answer": 0
+    }
+  ]
+}

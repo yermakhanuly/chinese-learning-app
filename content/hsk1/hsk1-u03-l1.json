@@ -1,0 +1,258 @@
+{
+  "id": "hsk1-u03-l1",
+  "title": "My Family",
+  "kind": "lesson",
+  "words": [
+    "的",
+    "家",
+    "爸爸",
+    "妈妈",
+    "哥哥",
+    "姐姐",
+    "弟弟",
+    "妹妹"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "的"
+    },
+    {
+      "type": "word",
+      "word": "爸爸"
+    },
+    {
+      "type": "word",
+      "word": "妈妈"
+    },
+    {
+      "type": "grammar",
+      "title": "Saying \"my\", \"your\", \"his\" with 的",
+      "body": "To show that something belongs to someone, put 的 after the person: 我的 means \"my\", 你的 means \"your\", 他的 means \"his\". It works like \"'s\" in English. With family members and other close relationships, 的 is usually left out, so \"my mom\" is simply 我妈妈.",
+      "examples": [
+        {
+          "zh": "我的名字",
+          "en": "my name"
+        },
+        {
+          "zh": "他的老师",
+          "en": "his teacher"
+        },
+        {
+          "zh": "我妈妈",
+          "en": "my mom"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我爸爸",
+      "listen": false,
+      "options": [
+        "my dad",
+        "my mom",
+        "your dad",
+        "his mom"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "She is my mom.",
+      "before": "她是我",
+      "after": "。",
+      "options": [
+        "爸爸",
+        "妈妈",
+        "哥哥"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'of; ~'s'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "的",
+        "吗",
+        "呢",
+        "们"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "家"
+    },
+    {
+      "type": "word",
+      "word": "哥哥"
+    },
+    {
+      "type": "word",
+      "word": "姐姐"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他是我哥哥。",
+      "listen": true,
+      "options": [
+        "He is my older brother.",
+        "He is my dad.",
+        "She is my older sister.",
+        "He is my teacher."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'home; family'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "家",
+        "国",
+        "人",
+        "年"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "What's your older sister's name?",
+      "before": "你",
+      "after": "叫什么名字？",
+      "options": [
+        "姐姐",
+        "哥哥",
+        "妈妈"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My older brother is a student.",
+      "answer": [
+        "我",
+        "哥哥",
+        "是",
+        "学生"
+      ],
+      "also": [],
+      "distractors": [
+        "姐姐",
+        "老师"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "弟弟"
+    },
+    {
+      "type": "word",
+      "word": "妹妹"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'younger sister'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "妹妹",
+        "姐姐",
+        "弟弟",
+        "妈妈"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我弟弟今年八岁。",
+      "listen": false,
+      "options": [
+        "My younger brother is 8 this year.",
+        "My younger sister is 8 this year.",
+        "My older brother is 8 this year.",
+        "My younger brother was 8 last year."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "妹妹",
+      "listen": true,
+      "options": [
+        "younger sister",
+        "older sister",
+        "younger brother",
+        "mom"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我爸爸是老师。",
+      "answer": [
+        "My",
+        "dad",
+        "is",
+        "a",
+        "teacher"
+      ],
+      "also": [],
+      "distractors": [
+        "mom",
+        "student"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Is he your younger brother?",
+      "before": "他是你",
+      "after": "弟弟吗？",
+      "options": [
+        "的",
+        "吗",
+        "呢"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Is your older sister a student?",
+      "answer": [
+        "你",
+        "姐姐",
+        "是",
+        "学生",
+        "吗"
+      ],
+      "also": [],
+      "distractors": [
+        "呢",
+        "哥哥"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我们家是中国人。",
+      "listen": true,
+      "options": [
+        "Our family is Chinese.",
+        "Our teacher is Chinese.",
+        "My dad is Chinese.",
+        "We are not Chinese."
+      ],
+      "answer": 0
+    }
+  ]
+}

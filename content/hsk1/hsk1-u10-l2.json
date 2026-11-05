@@ -1,0 +1,258 @@
+{
+  "id": "hsk1-u10-l2",
+  "title": "Music and Songs",
+  "kind": "lesson",
+  "words": [
+    "听",
+    "歌",
+    "唱",
+    "好听",
+    "见",
+    "听见",
+    "看见"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "听"
+    },
+    {
+      "type": "word",
+      "word": "歌"
+    },
+    {
+      "type": "word",
+      "word": "唱"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我喜欢听歌。",
+      "listen": false,
+      "options": [
+        "I like listening to songs.",
+        "I like singing songs.",
+        "I like watching films.",
+        "I like reading books."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to sing'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "听",
+        "唱",
+        "看",
+        "说"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "She really likes singing.",
+      "before": "她很喜欢",
+      "after": "歌。",
+      "options": [
+        "唱",
+        "吃",
+        "穿",
+        "坐"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "好听"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "妈妈唱歌很好听。",
+      "listen": true,
+      "options": [
+        "Dad sings beautifully.",
+        "Mom likes listening to songs.",
+        "Mom sings beautifully.",
+        "Mom doesn't like singing."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "中文歌很好听。",
+      "listen": false,
+      "options": [
+        "Chinese songs are hard to sing.",
+        "Chinese songs sound nice.",
+        "Chinese films are good to watch.",
+        "Chinese food is tasty."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I like listening to Chinese songs.",
+      "answer": [
+        "我",
+        "喜欢",
+        "听",
+        "中文",
+        "歌"
+      ],
+      "also": [],
+      "distractors": [
+        "唱",
+        "看"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "见"
+    },
+    {
+      "type": "fill",
+      "en": "See you tomorrow!",
+      "before": "明天",
+      "after": "！",
+      "options": [
+        "见",
+        "看",
+        "听",
+        "唱"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to meet'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "见",
+        "听",
+        "唱",
+        "叫"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "grammar",
+      "title": "见 after a verb: actually seeing or hearing",
+      "body": "看 means 'to look' and 听 means 'to listen'. They describe the action, not whether it worked. Add 见 after them to show the result: you really saw or heard something. So 看见 is 'to see' and 听见 is 'to hear'.",
+      "examples": [
+        {
+          "zh": "我看见他了。",
+          "en": "I saw him."
+        },
+        {
+          "zh": "你听见了吗？",
+          "en": "Did you hear it?"
+        },
+        {
+          "zh": "你看见我的猫了吗？",
+          "en": "Did you see my cat?"
+        }
+      ]
+    },
+    {
+      "type": "word",
+      "word": "听见"
+    },
+    {
+      "type": "word",
+      "word": "看见"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你听见了吗？",
+      "listen": false,
+      "options": [
+        "Did you see it?",
+        "Did you hear it?",
+        "Are you listening?",
+        "Do you like it?"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "I saw my teacher in the shop.",
+      "before": "我在商店里",
+      "after": "了我的老师。",
+      "options": [
+        "看见",
+        "听见",
+        "好听",
+        "唱歌"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我听见妹妹在唱歌。",
+      "listen": true,
+      "options": [
+        "I saw my younger sister singing.",
+        "I heard my younger brother singing.",
+        "My younger sister likes singing.",
+        "I heard my younger sister singing."
+      ],
+      "answer": 3
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "你看见我的手机了吗？",
+      "answer": [
+        "Did",
+        "you",
+        "see",
+        "my",
+        "phone"
+      ],
+      "also": [],
+      "distractors": [
+        "hear",
+        "your"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "In the evening I'm going singing with friends.",
+      "before": "晚上我和朋友去",
+      "after": "歌。",
+      "options": [
+        "唱",
+        "喝",
+        "看",
+        "写"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "He is listening to songs in his room.",
+      "answer": [
+        "他",
+        "在",
+        "房间",
+        "里",
+        "听",
+        "歌"
+      ],
+      "also": [],
+      "distractors": [
+        "唱",
+        "看见"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "id": "hsk1-u07-l1",
+  "title": "Going to School",
+  "kind": "lesson",
+  "words": [
+    "学校",
+    "小学",
+    "中学",
+    "大学",
+    "小学生",
+    "中学生",
+    "大学生",
+    "上学"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "学校"
+    },
+    {
+      "type": "word",
+      "word": "上学"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我们早上八点上学。",
+      "listen": false,
+      "options": [
+        "We get up at eight in the morning.",
+        "We go to school at eight in the morning.",
+        "We go to school at eight in the evening.",
+        "We eat breakfast at eight in the morning."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'school'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "学生",
+        "老师",
+        "学校",
+        "商店"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "grammar",
+      "title": "Using 上学 (to go to school)",
+      "body": "上学 is a verb meaning 'to go to school'. Time words go before it, and 不 goes right before it to say you don't go. To say which school someone attends, use 在 + school + 上学.",
+      "examples": [
+        {
+          "zh": "你们几点上学？",
+          "en": "What time do you go to school?"
+        },
+        {
+          "zh": "星期天我们不上学。",
+          "en": "We don't go to school on Sundays."
+        },
+        {
+          "zh": "她在中学上学。",
+          "en": "She goes to middle school."
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I don't go to school on Sunday.",
+      "before": "星期天我不",
+      "after": "。",
+      "options": [
+        "学校",
+        "上学",
+        "学生"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "word",
+      "word": "小学"
+    },
+    {
+      "type": "word",
+      "word": "中学"
+    },
+    {
+      "type": "word",
+      "word": "大学"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他妈妈是小学老师。",
+      "listen": true,
+      "options": [
+        "His mom is a middle school teacher.",
+        "His mom is a university teacher.",
+        "His mom is a primary school teacher.",
+        "His older sister is a primary school teacher."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'middle school'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "中学",
+        "小学",
+        "大学",
+        "中国"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "This university is very big.",
+      "answer": [
+        "这",
+        "个",
+        "大学",
+        "很",
+        "大"
+      ],
+      "also": [],
+      "distractors": [
+        "小学",
+        "小"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "小学生"
+    },
+    {
+      "type": "word",
+      "word": "中学生"
+    },
+    {
+      "type": "word",
+      "word": "大学生"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "大学生",
+      "listen": false,
+      "options": [
+        "middle school student",
+        "university student",
+        "primary school student",
+        "university teacher"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "My younger brother is seven; he's a primary school student.",
+      "before": "我弟弟七岁，是",
+      "after": "。",
+      "options": [
+        "大学生",
+        "中学生",
+        "小学生"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "她女儿是中学生。",
+      "answer": [
+        "Her",
+        "daughter",
+        "is",
+        "a",
+        "middle",
+        "school",
+        "student"
+      ],
+      "also": [],
+      "distractors": [
+        "son",
+        "university"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我是小学生，我哥哥是大学生。",
+      "listen": true,
+      "options": [
+        "I'm a primary school student, and my older brother is a university student.",
+        "I'm a university student, and my older brother is a primary school student.",
+        "I'm a middle school student, and my older brother is a university student.",
+        "I'm a primary school student, and my younger brother is a university student."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Our school is very big, and very beautiful too.",
+      "before": "我们的",
+      "after": "很大，也很漂亮。",
+      "options": [
+        "学生",
+        "学校",
+        "老师"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "My younger sister goes to middle school; she's a middle school student.",
+      "before": "我妹妹在",
+      "after": "上学，她是中学生。",
+      "options": [
+        "小学",
+        "大学",
+        "中学"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我爸爸是大学老师，我妈妈是小学老师。",
+      "listen": false,
+      "options": [
+        "My dad is a primary school teacher, and my mom is a university teacher.",
+        "My dad is a university teacher, and my mom is a primary school teacher.",
+        "My dad is a university student, and my mom is a primary school teacher.",
+        "My dad is a middle school teacher, and my mom is a primary school teacher."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Are you a university student?",
+      "answer": [
+        "你",
+        "是",
+        "大学生",
+        "吗"
+      ],
+      "also": [],
+      "distractors": [
+        "中学生",
+        "呢"
+      ]
+    }
+  ]
+}

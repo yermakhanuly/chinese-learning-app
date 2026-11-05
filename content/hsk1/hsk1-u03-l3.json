@@ -1,0 +1,249 @@
+{
+  "id": "hsk1-u03-l3",
+  "title": "This Is My Friend",
+  "kind": "lesson",
+  "words": [
+    "这",
+    "那",
+    "朋友",
+    "男朋友",
+    "女朋友",
+    "男",
+    "女",
+    "小朋友"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "这"
+    },
+    {
+      "type": "word",
+      "word": "那"
+    },
+    {
+      "type": "word",
+      "word": "朋友"
+    },
+    {
+      "type": "grammar",
+      "title": "这 and 那: this / that",
+      "body": "Use 这 for things or people near you ('this') and 那 for things or people farther away ('that'). To introduce someone, just say 这是… or 那是…. Before a noun, add 个: 这个 means 'this one' and 那个 means 'that one'.",
+      "examples": [
+        {
+          "zh": "这是我爸爸。",
+          "en": "This is my dad."
+        },
+        {
+          "zh": "那是我朋友。",
+          "en": "That is my friend."
+        },
+        {
+          "zh": "这个孩子是我儿子。",
+          "en": "This child is my son."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "这是我朋友。",
+      "listen": false,
+      "options": [
+        "That is my friend.",
+        "This is my friend.",
+        "Is this my friend?",
+        "This is your friend."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'that'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "这",
+        "哪",
+        "那",
+        "谁"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "fill",
+      "en": "That is my mom.",
+      "before": "",
+      "after": "是我妈妈。",
+      "options": [
+        "这",
+        "那",
+        "哪",
+        "谁"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "word",
+      "word": "男"
+    },
+    {
+      "type": "word",
+      "word": "女"
+    },
+    {
+      "type": "word",
+      "word": "男朋友"
+    },
+    {
+      "type": "word",
+      "word": "女朋友"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "这是我女朋友。",
+      "listen": true,
+      "options": [
+        "This is my girlfriend.",
+        "That is my girlfriend.",
+        "This is my boyfriend.",
+        "This is my friend."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "He is my boyfriend.",
+      "before": "他是我",
+      "after": "朋友。",
+      "options": [
+        "女",
+        "大",
+        "男",
+        "好"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "That is her boyfriend.",
+      "answer": [
+        "那",
+        "是",
+        "她",
+        "男朋友"
+      ],
+      "also": [],
+      "distractors": [
+        "这",
+        "女朋友"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "小朋友"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "小朋友",
+      "listen": false,
+      "options": [
+        "girlfriend",
+        "friend",
+        "teacher",
+        "child"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "这个小朋友六岁。",
+      "answer": [
+        "This",
+        "child",
+        "is",
+        "six",
+        "years",
+        "old"
+      ],
+      "also": [],
+      "distractors": [
+        "That",
+        "friend"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'female'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "男",
+        "女",
+        "大",
+        "多"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "那个小朋友是我弟弟。",
+      "listen": true,
+      "options": [
+        "This child is my younger brother.",
+        "That child is my older brother.",
+        "That child is my younger brother.",
+        "That friend is my younger brother."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Is this your friend?",
+      "answer": [
+        "这",
+        "是",
+        "你",
+        "朋友",
+        "吗"
+      ],
+      "also": [],
+      "distractors": [
+        "那",
+        "呢"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I have a girlfriend; she is Chinese.",
+      "before": "我有一个",
+      "after": "，她是中国人。",
+      "options": [
+        "男朋友",
+        "女朋友",
+        "小朋友",
+        "老师"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "这是我哥哥的女朋友。",
+      "listen": false,
+      "options": [
+        "That is my older brother's girlfriend.",
+        "This is my older sister's girlfriend.",
+        "This is my older brother's boyfriend.",
+        "This is my older brother's girlfriend."
+      ],
+      "answer": 3
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "id": "hsk1-u04-l1",
+  "title": "Eating and Drinking",
+  "kind": "lesson",
+  "words": [
+    "吃",
+    "喝",
+    "水",
+    "茶",
+    "牛奶",
+    "饭",
+    "米饭",
+    "菜"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "吃"
+    },
+    {
+      "type": "word",
+      "word": "喝"
+    },
+    {
+      "type": "word",
+      "word": "水"
+    },
+    {
+      "type": "grammar",
+      "title": "Word order: subject + verb + object",
+      "body": "A basic Chinese sentence follows the same order as English: who does it, the action, then what it is done to. The verb never changes form, whoever the subject is. To say 'not', put 不 right before the verb.",
+      "examples": [
+        {
+          "zh": "我喝水。",
+          "en": "I drink water."
+        },
+        {
+          "zh": "她不喝水。",
+          "en": "She doesn't drink water."
+        },
+        {
+          "zh": "你吃什么？",
+          "en": "What are you eating?"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我喝水。",
+      "listen": false,
+      "options": [
+        "I drink water.",
+        "I eat rice.",
+        "You drink water.",
+        "I don't drink water."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Do you drink water?",
+      "before": "你",
+      "after": "水吗？",
+      "options": [
+        "喝",
+        "吃",
+        "是",
+        "叫"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "茶"
+    },
+    {
+      "type": "word",
+      "word": "牛奶"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我爸爸喝茶。",
+      "listen": true,
+      "options": [
+        "My dad drinks tea.",
+        "My dad drinks milk.",
+        "My mom drinks tea.",
+        "My dad drinks water."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'milk'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "茶",
+        "牛奶",
+        "水",
+        "米饭"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "word",
+      "word": "饭"
+    },
+    {
+      "type": "word",
+      "word": "米饭"
+    },
+    {
+      "type": "word",
+      "word": "菜"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "菜",
+      "listen": false,
+      "options": [
+        "tea",
+        "cooked rice",
+        "dish; vegetable",
+        "water"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I eat rice.",
+      "answer": [
+        "我",
+        "吃",
+        "米饭"
+      ],
+      "also": [],
+      "distractors": [
+        "喝",
+        "茶"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Do you eat rice?",
+      "before": "你吃",
+      "after": "吗？",
+      "options": [
+        "米饭",
+        "水",
+        "茶",
+        "牛奶"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "她不喝牛奶。",
+      "answer": [
+        "She",
+        "doesn't",
+        "drink",
+        "milk"
+      ],
+      "also": [],
+      "distractors": [
+        "tea",
+        "eat"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我和妈妈吃饭。",
+      "listen": true,
+      "options": [
+        "Mom and I are drinking tea.",
+        "Mom and I are having a meal.",
+        "Dad and I are having a meal.",
+        "Mom and I are drinking water."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我请你吃饭。",
+      "listen": false,
+      "options": [
+        "You're treating me to a meal.",
+        "Please have some tea.",
+        "I'll treat you to a meal.",
+        "I don't eat rice."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Teacher, do you eat Chinese food?",
+      "answer": [
+        "老师",
+        "您",
+        "吃",
+        "中国",
+        "菜",
+        "吗"
+      ],
+      "also": [],
+      "distractors": [
+        "喝",
+        "呢"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Please have some tea.",
+      "before": "请",
+      "after": "茶。",
+      "options": [
+        "吃",
+        "喝",
+        "是",
+        "有"
+      ],
+      "answer": 1
+    }
+  ]
+}

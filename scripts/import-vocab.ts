@@ -1,5 +1,6 @@
 /**
- * Loads HSK vocabulary, CC-CEDICT, Tatoeba example sentences and word topics into Supabase.
+ * Loads HSK vocabulary, CC-CEDICT, Tatoeba example sentences, word topics and the course
+ * (content/) into Supabase.
  *
  *   npm run data:import            # local Supabase (credentials read from `supabase status`)
  *
@@ -15,6 +16,7 @@ import { gunzipSync } from 'node:zlib';
 import { createClient } from '@supabase/supabase-js';
 
 import { parseCedictLine, parseHskEntry, type HskSourceEntry } from '../src/lib/vocab-parsers.ts';
+import { importLessons } from './import-lessons.ts';
 import { importSentencesAndTopics } from './import-sentences.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -97,6 +99,7 @@ async function main() {
   console.log(`✔ dictionary entries: ${entries.length}`);
 
   await importSentencesAndTopics(db, ROOT, unique, entries);
+  await importLessons(db, ROOT, unique, entries);
 
   // Summary per 2026 HSK level
   for (let level = 1; level <= 7; level++) {

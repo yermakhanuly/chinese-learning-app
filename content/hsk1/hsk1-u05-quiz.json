@@ -1,0 +1,218 @@
+{
+  "id": "hsk1-u05-quiz",
+  "title": "Shopping & Money: quiz",
+  "kind": "quiz",
+  "words": [],
+  "steps": [
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "这件衣服多少钱？",
+      "listen": false,
+      "options": [
+        "How much is this book?",
+        "How much is this piece of clothing?",
+        "Is this piece of clothing expensive?",
+        "Do you sell this piece of clothing?"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'cheap'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "贵",
+        "新",
+        "便宜",
+        "好看"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "这本书很贵。",
+      "listen": true,
+      "options": [
+        "This book is cheap.",
+        "This book is expensive.",
+        "That book is expensive.",
+        "This book is new."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "I want to buy a piece of clothing.",
+      "before": "我想买一",
+      "after": "衣服。",
+      "options": [
+        "本",
+        "件",
+        "个",
+        "块"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "How much is this cup?",
+      "answer": [
+        "这个",
+        "杯子",
+        "多少",
+        "钱"
+      ],
+      "also": [],
+      "distractors": [
+        "几",
+        "件"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "一千五百块",
+      "listen": false,
+      "options": [
+        "150 yuan",
+        "15,000 yuan",
+        "1,050 yuan",
+        "1,500 yuan"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "超市卖水果吗？",
+      "answer": [
+        "Does",
+        "the",
+        "supermarket",
+        "sell",
+        "fruit"
+      ],
+      "also": [],
+      "distractors": [
+        "buy",
+        "bookstore"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我要找书店。",
+      "listen": true,
+      "options": [
+        "商店",
+        "书店",
+        "超市",
+        "饭店"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "These clothes are too expensive, I won't buy them.",
+      "before": "这些衣服太",
+      "after": "了，我不买。",
+      "options": [
+        "便宜",
+        "贵",
+        "好看",
+        "新"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Can I buy these books?",
+      "answer": [
+        "我",
+        "可以",
+        "买",
+        "这些",
+        "书",
+        "吗"
+      ],
+      "also": [],
+      "distractors": [
+        "那些",
+        "卖"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "哪些是你的书？",
+      "listen": false,
+      "options": [
+        "These are your books.",
+        "Those are your books.",
+        "How many books do you have?",
+        "Which ones are your books?"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "那些杯子很便宜。",
+      "answer": [
+        "Those",
+        "cups",
+        "are",
+        "cheap"
+      ],
+      "also": [],
+      "distractors": [
+        "These",
+        "expensive"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'supermarket'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "商店",
+        "书店",
+        "超市",
+        "饭店"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "你穿这件衣服很好看。",
+      "listen": true,
+      "options": [
+        "You look good in this piece of clothing.",
+        "This piece of clothing is very cheap.",
+        "I want to buy this new piece of clothing.",
+        "Your clothes are very expensive."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "This cup is 8 yuan.",
+      "before": "这个杯子八",
+      "after": "。",
+      "options": [
+        "个",
+        "件",
+        "元",
+        "本"
+      ],
+      "answer": 2
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "id": "hsk1-u05-l2",
+  "title": "Books and Clothes",
+  "kind": "lesson",
+  "words": [
+    "百",
+    "千",
+    "本",
+    "件",
+    "书",
+    "衣服",
+    "穿"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "书"
+    },
+    {
+      "type": "word",
+      "word": "衣服"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "书",
+      "listen": false,
+      "options": [
+        "clothes",
+        "book",
+        "money",
+        "thing"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'clothes'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "书",
+        "东西",
+        "衣服",
+        "菜"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "word",
+      "word": "本"
+    },
+    {
+      "type": "word",
+      "word": "件"
+    },
+    {
+      "type": "grammar",
+      "title": "Measure words 本 and 件",
+      "body": "In Chinese, a number or 这/那 needs a measure word before the noun. You already know 个, which works for many things. Use 本 for books and other bound things. Use 件 for a piece of clothing on the upper body, and for many single items. The pattern is: number (or 这/那) + measure word + noun.",
+      "examples": [
+        {
+          "zh": "一本书",
+          "en": "one book"
+        },
+        {
+          "zh": "这件衣服",
+          "en": "this piece of clothing"
+        },
+        {
+          "zh": "我有两本书。",
+          "en": "I have two books."
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I want to buy a book.",
+      "before": "我要买一",
+      "after": "书。",
+      "options": [
+        "件",
+        "口",
+        "本",
+        "个"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "fill",
+      "en": "This piece of clothing is very pretty.",
+      "before": "这",
+      "after": "衣服很漂亮。",
+      "options": [
+        "本",
+        "件",
+        "口",
+        "岁"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我有三本书。",
+      "listen": true,
+      "options": [
+        "I have three books.",
+        "I have three pieces of clothing.",
+        "I have ten books.",
+        "I don't have any books."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "穿"
+    },
+    {
+      "type": "word",
+      "word": "百"
+    },
+    {
+      "type": "word",
+      "word": "千"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "穿",
+      "listen": false,
+      "options": [
+        "to buy",
+        "to sell",
+        "to wear",
+        "to eat"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'thousand'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "百",
+        "千",
+        "十",
+        "零"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "一百块",
+      "listen": true,
+      "options": [
+        "1,000 kuai",
+        "10 kuai",
+        "200 kuai",
+        "100 kuai"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "fill",
+      "en": "What clothes are you wearing today?",
+      "before": "今天你",
+      "after": "什么衣服？",
+      "options": [
+        "穿",
+        "吃",
+        "喝",
+        "做"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "How much is this book?",
+      "answer": [
+        "这",
+        "本",
+        "书",
+        "多少",
+        "钱"
+      ],
+      "also": [],
+      "distractors": [
+        "件",
+        "几"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "妈妈给我买了两本书。",
+      "answer": [
+        "Mom",
+        "bought",
+        "me",
+        "two",
+        "books"
+      ],
+      "also": [],
+      "distractors": [
+        "clothes",
+        "three"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "那本书三百块钱。",
+      "listen": false,
+      "options": [
+        "That book is 3,000 kuai.",
+        "That book is 300 kuai.",
+        "That piece of clothing is 300 kuai.",
+        "That book is 30 kuai."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "This piece of clothing is one thousand kuai.",
+      "answer": [
+        "这",
+        "件",
+        "衣服",
+        "一",
+        "千",
+        "块"
+      ],
+      "also": [],
+      "distractors": [
+        "百",
+        "本"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他没有钱买衣服。",
+      "listen": true,
+      "options": [
+        "He has no money to buy books.",
+        "He has money to buy clothes.",
+        "He has no money to buy clothes.",
+        "He doesn't want to buy clothes."
+      ],
+      "answer": 2
+    }
+  ]
+}

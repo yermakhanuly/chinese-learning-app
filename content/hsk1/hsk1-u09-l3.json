@@ -1,0 +1,222 @@
+{
+  "id": "hsk1-u09-l3",
+  "title": "Seeing a Doctor",
+  "kind": "lesson",
+  "words": [
+    "看病",
+    "医生",
+    "医院",
+    "能",
+    "不要"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "看病"
+    },
+    {
+      "type": "word",
+      "word": "医生"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "医生",
+      "listen": false,
+      "options": [
+        "doctor",
+        "teacher",
+        "student",
+        "hospital"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I'm sick and want to go see a doctor.",
+      "before": "我生病了，想去",
+      "after": "。",
+      "options": [
+        "看病",
+        "医生",
+        "学生"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "医院"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'hospital'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "医院",
+        "医生",
+        "学校",
+        "商店"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我妈妈是医生。",
+      "listen": true,
+      "options": [
+        "My mom is a doctor.",
+        "My mom is a teacher.",
+        "My mom is at the hospital.",
+        "My mom is sick."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "能"
+    },
+    {
+      "type": "fill",
+      "en": "I'm sick, so I can't go to class today.",
+      "before": "我生病了，今天不",
+      "after": "去上课。",
+      "options": [
+        "能",
+        "是",
+        "有"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "不要"
+    },
+    {
+      "type": "grammar",
+      "title": "不要 + verb: don't …",
+      "body": "To tell someone not to do something, put 不要 right before the verb. You can say it alone, like a command, or put 你 or 你们 in front to make it clear who you mean. It works like 'don't' in English.",
+      "examples": [
+        {
+          "zh": "不要说话。",
+          "en": "Don't talk."
+        },
+        {
+          "zh": "你不要去。",
+          "en": "Don't go."
+        },
+        {
+          "zh": "晚上不要喝茶。",
+          "en": "Don't drink tea in the evening."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你生病了，不要去上班。",
+      "listen": false,
+      "options": [
+        "You're sick, don't go to work.",
+        "You're sick, you can go to work.",
+        "You're sick, you want to go to work.",
+        "You're sick, go to the hospital."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Don't eat too much.",
+      "answer": [
+        "不要",
+        "吃",
+        "太",
+        "多"
+      ],
+      "also": [],
+      "distractors": [
+        "能",
+        "少"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "医生说我要休息。",
+      "answer": [
+        "The",
+        "doctor",
+        "says",
+        "I",
+        "need",
+        "to",
+        "rest"
+      ],
+      "also": [],
+      "distractors": [
+        "hospital",
+        "can"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Where is the hospital?",
+      "before": "",
+      "after": "在哪儿？",
+      "options": [
+        "医院",
+        "医生",
+        "看病"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'can; to be able to'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "能",
+        "要",
+        "想",
+        "有"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我明天能去医院看病吗？",
+      "listen": true,
+      "options": [
+        "Can I go to the hospital to see a doctor tomorrow?",
+        "Can I go to school tomorrow?",
+        "I can't go to the hospital tomorrow.",
+        "Don't go to the hospital tomorrow."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My older brother is a doctor. He works at a hospital.",
+      "answer": [
+        "我",
+        "哥哥",
+        "是",
+        "医生",
+        "他",
+        "在",
+        "医院",
+        "工作"
+      ],
+      "also": [],
+      "distractors": [
+        "学校",
+        "能"
+      ]
+    }
+  ]
+}

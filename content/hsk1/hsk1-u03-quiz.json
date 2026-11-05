@@ -1,0 +1,230 @@
+{
+  "id": "hsk1-u03-quiz",
+  "title": "Family & Friends: quiz",
+  "kind": "quiz",
+  "words": [],
+  "steps": [
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我家有五口人。",
+      "listen": false,
+      "options": [
+        "I have five friends.",
+        "My family has five dogs.",
+        "There are five people in my family.",
+        "I have five older brothers."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'younger sister'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "姐姐",
+        "妹妹",
+        "弟弟",
+        "女儿"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "那是我的猫，它很漂亮。",
+      "listen": true,
+      "options": [
+        "This is my dog. It's very small.",
+        "That's my cat. It's very pretty.",
+        "That's my daughter. She's very pretty.",
+        "This is my cat. It's very big."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "I don't have an older brother; I have two older sisters.",
+      "before": "我",
+      "after": "哥哥，我有两个姐姐。",
+      "options": [
+        "没有",
+        "不",
+        "是",
+        "都"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "This is my dad and mom.",
+      "answer": [
+        "这",
+        "是",
+        "我",
+        "爸爸",
+        "和",
+        "妈妈"
+      ],
+      "also": [],
+      "distractors": [
+        "那",
+        "哥哥"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他们都是我的朋友。",
+      "answer": [
+        "They",
+        "are",
+        "all",
+        "my",
+        "friends"
+      ],
+      "also": [],
+      "distractors": [
+        "both",
+        "we"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "女儿",
+      "listen": true,
+      "options": [
+        "儿子",
+        "孩子",
+        "女朋友",
+        "女儿"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "fill",
+      "en": "She has two children: a son and a daughter.",
+      "before": "她有两个孩子，一个儿子和一个",
+      "after": "。",
+      "options": [
+        "女朋友",
+        "女儿",
+        "妹妹",
+        "儿子"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你有男朋友吗？",
+      "listen": false,
+      "options": [
+        "Do you have a girlfriend?",
+        "Do you have a boyfriend?",
+        "Is he your friend?",
+        "Do you have a younger brother?"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My cats are all very small.",
+      "answer": [
+        "我",
+        "的",
+        "猫",
+        "都",
+        "很",
+        "小"
+      ],
+      "also": [],
+      "distractors": [
+        "狗",
+        "大"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "This is my friend; that is my teacher.",
+      "before": "这是我朋友，",
+      "after": "是我的老师。",
+      "options": [
+        "它",
+        "都",
+        "那",
+        "和"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我没有猫，我有狗。",
+      "answer": [
+        "I",
+        "don't",
+        "have",
+        "a",
+        "cat",
+        "I",
+        "have",
+        "a",
+        "dog"
+      ],
+      "also": [],
+      "distractors": [
+        "cats",
+        "isn't"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "小朋友，你几岁？",
+      "listen": true,
+      "options": [
+        "Child, how old are you?",
+        "Child, what's your name?",
+        "Friend, how old are you?",
+        "Teacher, how old are you?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'it'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "他",
+        "她",
+        "它",
+        "这"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My older brother's girlfriend is very pretty.",
+      "answer": [
+        "我",
+        "哥哥",
+        "的",
+        "女朋友",
+        "很",
+        "漂亮"
+      ],
+      "also": [],
+      "distractors": [
+        "男朋友",
+        "弟弟"
+      ]
+    }
+  ]
+}

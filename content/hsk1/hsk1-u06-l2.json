@@ -1,0 +1,280 @@
+{
+  "id": "hsk1-u06-l2",
+  "title": "Morning to Night",
+  "kind": "lesson",
+  "words": [
+    "早上",
+    "上午",
+    "中午",
+    "下午",
+    "晚上",
+    "白天",
+    "早",
+    "晚"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "早上"
+    },
+    {
+      "type": "word",
+      "word": "上午"
+    },
+    {
+      "type": "word",
+      "word": "中午"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "中午",
+      "listen": false,
+      "options": [
+        "evening",
+        "noon",
+        "afternoon",
+        "early morning"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "grammar",
+      "title": "Time words go before the verb",
+      "body": "In Chinese, words that say when something happens, like 早上 or 中午, come before the verb, never at the end of the sentence as in English. Put the time word right after the person: 我 + time + verb. You can also start the sentence with the time word.",
+      "examples": [
+        {
+          "zh": "我早上喝牛奶。",
+          "en": "I drink milk in the morning."
+        },
+        {
+          "zh": "他中午吃饺子。",
+          "en": "He eats dumplings at noon."
+        },
+        {
+          "zh": "上午我在家。",
+          "en": "I'm at home in the morning."
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I drink milk in the morning.",
+      "before": "我",
+      "after": "喝牛奶。",
+      "options": [
+        "中午",
+        "早上",
+        "晚上"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "word",
+      "word": "下午"
+    },
+    {
+      "type": "word",
+      "word": "晚上"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'evening'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "下午",
+        "上午",
+        "晚上",
+        "中午"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'morning (before noon)'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "上午",
+        "下午",
+        "中午",
+        "晚上"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I drink tea in the afternoon.",
+      "answer": [
+        "我",
+        "下午",
+        "喝",
+        "茶"
+      ],
+      "also": [
+        [
+          "下午",
+          "我",
+          "喝",
+          "茶"
+        ]
+      ],
+      "distractors": [
+        "晚上",
+        "吃"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "白天"
+    },
+    {
+      "type": "word",
+      "word": "早"
+    },
+    {
+      "type": "word",
+      "word": "晚"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "早！",
+      "listen": false,
+      "options": [
+        "Goodbye!",
+        "Thank you!",
+        "Good morning!",
+        "Sorry!"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "fill",
+      "en": "It's too late now.",
+      "before": "现在太",
+      "after": "了。",
+      "options": [
+        "早",
+        "晚",
+        "小",
+        "贵"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "白天",
+      "listen": true,
+      "options": [
+        "晚上",
+        "早上",
+        "下午",
+        "白天"
+      ],
+      "answer": 3
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "老师，早！",
+      "listen": true,
+      "options": [
+        "Goodbye, teacher!",
+        "Good morning, teacher!",
+        "Thank you, teacher!",
+        "Sorry, teacher!"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他早上七点喝茶。",
+      "answer": [
+        "He",
+        "drinks",
+        "tea",
+        "at",
+        "seven",
+        "in",
+        "the",
+        "morning"
+      ],
+      "also": [],
+      "distractors": [
+        "evening",
+        "eats"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "现在十一点了，太晚了。",
+      "listen": true,
+      "options": [
+        "It's eleven now. It's too early.",
+        "It's one now. It's too late.",
+        "It's eleven now. It's too late.",
+        "It's seven now. It's very early."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "fill",
+      "en": "Dad is at home in the morning, but not in the afternoon.",
+      "before": "爸爸上午在家，下午不",
+      "after": "家。",
+      "options": [
+        "是",
+        "在",
+        "有",
+        "做"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "We eat lunch at twelve noon.",
+      "answer": [
+        "我们",
+        "中午",
+        "十二",
+        "点",
+        "吃",
+        "午饭"
+      ],
+      "also": [
+        [
+          "中午",
+          "十二",
+          "点",
+          "我们",
+          "吃",
+          "午饭"
+        ]
+      ],
+      "distractors": [
+        "晚上",
+        "早饭"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "他白天不在家，晚上在家。",
+      "listen": false,
+      "options": [
+        "He's at home during the day, not in the evening.",
+        "He's not at home during the day, but he is in the evening.",
+        "He's not at home in the morning, but he is at noon.",
+        "He's at home all day and all evening."
+      ],
+      "answer": 1
+    }
+  ]
+}

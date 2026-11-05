@@ -1,0 +1,244 @@
+{
+  "id": "hsk1-u05-l1",
+  "title": "How Much Is It?",
+  "kind": "lesson",
+  "words": [
+    "买",
+    "卖",
+    "东西",
+    "钱",
+    "多少",
+    "块",
+    "元"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "买"
+    },
+    {
+      "type": "word",
+      "word": "卖"
+    },
+    {
+      "type": "word",
+      "word": "东西"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "买",
+      "listen": false,
+      "options": [
+        "to buy",
+        "to sell",
+        "to eat",
+        "to want"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I want to buy apples.",
+      "before": "我想",
+      "after": "苹果。",
+      "options": [
+        "买",
+        "卖",
+        "是",
+        "喝"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他卖东西。",
+      "listen": true,
+      "options": [
+        "He sells things.",
+        "He buys things.",
+        "He eats things.",
+        "He wants things."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "钱"
+    },
+    {
+      "type": "word",
+      "word": "多少"
+    },
+    {
+      "type": "grammar",
+      "title": "Asking prices: 多少钱？",
+      "body": "To ask how much something costs, say the thing and then add 多少钱 (literally 'how much money'). You can point with 这个 (this one) or 那个 (that one), or name the item. You don't need 是 or any other verb. You'll learn how to say the price in the answer in a moment.",
+      "examples": [
+        {
+          "zh": "这个多少钱？",
+          "en": "How much is this?"
+        },
+        {
+          "zh": "饺子多少钱？",
+          "en": "How much are the dumplings?"
+        },
+        {
+          "zh": "那个东西多少钱？",
+          "en": "How much is that thing?"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'money'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "钱",
+        "东西",
+        "茶",
+        "饭"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "How much is this apple?",
+      "before": "这个苹果",
+      "after": "钱？",
+      "options": [
+        "多少",
+        "几",
+        "什么",
+        "谁"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "块"
+    },
+    {
+      "type": "word",
+      "word": "元"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "五块钱",
+      "listen": false,
+      "options": [
+        "five yuan",
+        "fifteen yuan",
+        "fifty yuan",
+        "five apples"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "这个包子两块钱。",
+      "listen": true,
+      "options": [
+        "This bun is 2 kuai.",
+        "This bun is 12 kuai.",
+        "This apple is 2 kuai.",
+        "This bun is 20 kuai."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "This bread is 10 yuan.",
+      "before": "这个面包十",
+      "after": "。",
+      "options": [
+        "元",
+        "个",
+        "岁",
+        "号"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "饺子十二元。",
+      "listen": false,
+      "options": [
+        "The dumplings are 12 yuan.",
+        "The dumplings are 20 yuan.",
+        "The dumplings are 2 yuan.",
+        "I want 12 dumplings."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "How much is this thing?",
+      "answer": [
+        "这",
+        "个",
+        "东西",
+        "多少",
+        "钱"
+      ],
+      "also": [],
+      "distractors": [
+        "几",
+        "买"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我妈妈卖水果。",
+      "answer": [
+        "My",
+        "mom",
+        "sells",
+        "fruit"
+      ],
+      "also": [],
+      "distractors": [
+        "buys",
+        "eats"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I want to buy two apples.",
+      "answer": [
+        "我",
+        "想",
+        "买",
+        "两",
+        "个",
+        "苹果"
+      ],
+      "also": [],
+      "distractors": [
+        "卖",
+        "二"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "请问，饺子多少钱？",
+      "listen": false,
+      "options": [
+        "Excuse me, how much are the dumplings?",
+        "Excuse me, how many dumplings are there?",
+        "Excuse me, do you sell dumplings?",
+        "Excuse me, do you want dumplings?"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "id": "hsk1-u02-l4",
+  "title": "Days and Dates",
+  "kind": "lesson",
+  "words": [
+    "月",
+    "号",
+    "日",
+    "星期",
+    "星期天",
+    "星期日",
+    "今天",
+    "明天",
+    "昨天"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "月"
+    },
+    {
+      "type": "word",
+      "word": "号"
+    },
+    {
+      "type": "word",
+      "word": "星期"
+    },
+    {
+      "type": "grammar",
+      "title": "Dates: X月X号 and 星期几",
+      "body": "Chinese dates go from big to small: first the month, then the day. Put a number before 月 for the month and a number before 号 for the day, so 5月8号 is May 8th. To ask the date, swap the numbers for 几: 几月几号？ The days of the week are 星期 plus a number: 星期一 is Monday, up to 星期六, Saturday. To ask which day it is, say 星期几？",
+      "examples": [
+        {
+          "zh": "五月八号",
+          "en": "May 8th"
+        },
+        {
+          "zh": "几月几号？",
+          "en": "What's the date?"
+        },
+        {
+          "zh": "星期几？",
+          "en": "What day of the week is it?"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "5月8号",
+      "listen": false,
+      "options": [
+        "August 5th",
+        "May 8th",
+        "May 18th",
+        "March 8th"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "December 25th",
+      "before": "十二",
+      "after": "二十五号",
+      "options": [
+        "月",
+        "号",
+        "年",
+        "岁"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "日"
+    },
+    {
+      "type": "word",
+      "word": "星期天"
+    },
+    {
+      "type": "word",
+      "word": "星期日"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "星期日",
+      "listen": true,
+      "options": [
+        "Sunday",
+        "Saturday",
+        "Monday",
+        "Wednesday"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "一月一日",
+      "listen": false,
+      "options": [
+        "January 1st",
+        "January 11th",
+        "November 1st",
+        "July 1st"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'Sunday'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "星期六",
+        "星期一",
+        "星期天",
+        "星期五"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "fill",
+      "en": "May 1st is a Friday.",
+      "before": "五月一",
+      "after": "是星期五。",
+      "options": [
+        "日",
+        "月",
+        "年",
+        "岁"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "今天"
+    },
+    {
+      "type": "word",
+      "word": "明天"
+    },
+    {
+      "type": "word",
+      "word": "昨天"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "明天是星期六。",
+      "listen": false,
+      "options": [
+        "Yesterday was Saturday.",
+        "Today is Saturday.",
+        "Tomorrow is Saturday.",
+        "Tomorrow is Sunday."
+      ],
+      "answer": 2
+    },
+    {
+      "type": "fill",
+      "en": "Today is Friday, tomorrow is Saturday.",
+      "before": "今天星期五，",
+      "after": "星期六。",
+      "options": [
+        "明天",
+        "昨天",
+        "今年",
+        "去年"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "昨天是星期日。",
+      "listen": true,
+      "options": [
+        "Yesterday was Sunday.",
+        "Today is Sunday.",
+        "Tomorrow is Sunday.",
+        "Yesterday was Monday."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "What day of the week is it today?",
+      "answer": [
+        "今天",
+        "星期",
+        "几"
+      ],
+      "also": [],
+      "distractors": [
+        "明天",
+        "号"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "今天几月几号？",
+      "answer": [
+        "What",
+        "is",
+        "the",
+        "date",
+        "today"
+      ],
+      "also": [],
+      "distractors": [
+        "day",
+        "month"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "What day of the week was it yesterday?",
+      "before": "昨天是星期",
+      "after": "？",
+      "options": [
+        "几",
+        "什么",
+        "谁",
+        "多"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Tomorrow is not Sunday.",
+      "answer": [
+        "明天",
+        "不",
+        "是",
+        "星期天"
+      ],
+      "also": [],
+      "distractors": [
+        "昨天",
+        "号"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "老师，今天是三月十号吗？",
+      "listen": false,
+      "options": [
+        "Teacher, is today March 10th?",
+        "Teacher, is today October 3rd?",
+        "Teacher, was yesterday March 10th?",
+        "Teacher, today is March 10th."
+      ],
+      "answer": 0
+    }
+  ]
+}

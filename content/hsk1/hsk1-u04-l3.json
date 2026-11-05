@@ -1,0 +1,261 @@
+{
+  "id": "hsk1-u04-l3",
+  "title": "Chinese Food",
+  "kind": "lesson",
+  "words": [
+    "饺子",
+    "包子",
+    "面条儿",
+    "好吃",
+    "太",
+    "了",
+    "真",
+    "非常"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "饺子"
+    },
+    {
+      "type": "word",
+      "word": "包子"
+    },
+    {
+      "type": "word",
+      "word": "面条儿"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "饺子",
+      "listen": false,
+      "options": [
+        "dumplings",
+        "steamed buns",
+        "noodles",
+        "rice"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'noodles'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "面条儿",
+        "包子",
+        "饺子",
+        "面包"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我想吃包子。",
+      "listen": true,
+      "options": [
+        "I want to eat dumplings.",
+        "I want to eat steamed buns.",
+        "I want to eat noodles.",
+        "I want to eat bread."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "word",
+      "word": "好吃"
+    },
+    {
+      "type": "word",
+      "word": "真"
+    },
+    {
+      "type": "word",
+      "word": "非常"
+    },
+    {
+      "type": "fill",
+      "en": "Dumplings are tasty.",
+      "before": "饺子很",
+      "after": "。",
+      "options": [
+        "好吃",
+        "高兴",
+        "漂亮",
+        "小"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "这个包子真好吃！",
+      "listen": false,
+      "options": [
+        "This steamed bun is really tasty!",
+        "This steamed bun is too big!",
+        "These dumplings are really tasty!",
+        "I really love steamed buns!"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Mom's noodles are very tasty.",
+      "answer": [
+        "妈妈",
+        "的",
+        "面条儿",
+        "非常",
+        "好吃"
+      ],
+      "also": [],
+      "distractors": [
+        "太",
+        "饺子"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "太"
+    },
+    {
+      "type": "word",
+      "word": "了"
+    },
+    {
+      "type": "grammar",
+      "title": "太……了: too / so",
+      "body": "Put 太 before a describing word and 了 at the end of the sentence. It can mean \"too ...\" when something is more than you want, or \"so ...!\" when you are excited about something good. Don't forget the 了 at the end.",
+      "examples": [
+        {
+          "zh": "饺子太好吃了！",
+          "en": "The dumplings are so tasty!"
+        },
+        {
+          "zh": "面条儿太多了。",
+          "en": "There are too many noodles."
+        },
+        {
+          "zh": "太好了！",
+          "en": "That's great!"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "This dish is so tasty!",
+      "before": "这个菜太好吃",
+      "after": "！",
+      "options": [
+        "了",
+        "吗",
+        "呢",
+        "的"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "饺子太多了。",
+      "listen": true,
+      "options": [
+        "There are too many dumplings.",
+        "The dumplings are too big.",
+        "The dumplings are so tasty.",
+        "There aren't many dumplings."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "包子太大了。",
+      "answer": [
+        "The",
+        "bun",
+        "is",
+        "too",
+        "big"
+      ],
+      "also": [],
+      "distractors": [
+        "small",
+        "very"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'too'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "太",
+        "真",
+        "非常",
+        "很"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Dad wants to eat noodles.",
+      "answer": [
+        "爸爸",
+        "想",
+        "吃",
+        "面条儿"
+      ],
+      "also": [],
+      "distractors": [
+        "喝",
+        "包子"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "My dad loves eating steamed buns very much.",
+      "before": "我爸爸",
+      "after": "爱吃包子。",
+      "options": [
+        "非常",
+        "了",
+        "吗",
+        "呢"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你的面条儿好吃吗？",
+      "listen": false,
+      "options": [
+        "Are your noodles tasty?",
+        "Do you want noodles?",
+        "Are your dumplings tasty?",
+        "Do you like noodles?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "中国菜真好吃！",
+      "listen": true,
+      "options": [
+        "Chinese food is really tasty!",
+        "There is too much Chinese food!",
+        "Chinese tea is really good!",
+        "I really want Chinese food!"
+      ],
+      "answer": 0
+    }
+  ]
+}

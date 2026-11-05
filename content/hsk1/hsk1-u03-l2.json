@@ -1,0 +1,274 @@
+{
+  "id": "hsk1-u03-l2",
+  "title": "Family Members",
+  "kind": "lesson",
+  "words": [
+    "有",
+    "没有",
+    "口",
+    "和",
+    "家人",
+    "孩子",
+    "儿子",
+    "女儿"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "有"
+    },
+    {
+      "type": "word",
+      "word": "没有"
+    },
+    {
+      "type": "grammar",
+      "title": "有 / 没有: to have",
+      "body": "有 means 'to have'. Put it after the person: 我有… = I have… To say you don't have something, use 没有. Never say 不有. To ask a yes/no question, just add 吗 at the end.",
+      "examples": [
+        {
+          "zh": "我有一个姐姐。",
+          "en": "I have an older sister."
+        },
+        {
+          "zh": "我没有哥哥。",
+          "en": "I don't have an older brother."
+        },
+        {
+          "zh": "你有弟弟吗？",
+          "en": "Do you have a younger brother?"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我有哥哥。",
+      "listen": false,
+      "options": [
+        "I have an older brother.",
+        "I don't have an older brother.",
+        "I am an older brother.",
+        "I have a younger brother."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I don't have a younger sister.",
+      "before": "我",
+      "after": "妹妹。",
+      "options": [
+        "没有",
+        "不",
+        "不是",
+        "很"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "口"
+    },
+    {
+      "type": "word",
+      "word": "和"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我家有三口人。",
+      "listen": false,
+      "options": [
+        "There are three people in my family.",
+        "There are four people in my family.",
+        "I have three older brothers.",
+        "My home has three rooms."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I have an older brother and an older sister.",
+      "before": "我有哥哥",
+      "after": "姐姐。",
+      "options": [
+        "和",
+        "也",
+        "很",
+        "的"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "你家有几口人？",
+      "listen": true,
+      "options": [
+        "How many people are in your family?",
+        "How old are you?",
+        "Do you have a younger sister?",
+        "Who is in your family?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "家人"
+    },
+    {
+      "type": "word",
+      "word": "孩子"
+    },
+    {
+      "type": "word",
+      "word": "儿子"
+    },
+    {
+      "type": "word",
+      "word": "女儿"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'child'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "孩子",
+        "儿子",
+        "女儿",
+        "弟弟"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他有两个女儿。",
+      "listen": true,
+      "options": [
+        "He has two daughters.",
+        "He has two sons.",
+        "He has two children.",
+        "He has two older sisters."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "She has a son and a daughter.",
+      "answer": [
+        "她",
+        "有",
+        "儿子",
+        "和",
+        "女儿"
+      ],
+      "also": [
+        [
+          "她",
+          "有",
+          "女儿",
+          "和",
+          "儿子"
+        ]
+      ],
+      "distractors": [
+        "没有",
+        "孩子"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他们是我的家人。",
+      "answer": [
+        "They",
+        "are",
+        "my",
+        "family"
+      ],
+      "also": [],
+      "distractors": [
+        "is",
+        "have",
+        "child"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "My son is three this year.",
+      "before": "我",
+      "after": "今年三岁。",
+      "options": [
+        "儿子",
+        "女儿",
+        "爸爸",
+        "妹妹"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "他们是你的家人吗？",
+      "listen": false,
+      "options": [
+        "Are they your family?",
+        "Are they your teachers?",
+        "Are they your children?",
+        "Do you have family?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "There are five people in my family.",
+      "answer": [
+        "我",
+        "家",
+        "有",
+        "五",
+        "口",
+        "人"
+      ],
+      "also": [],
+      "distractors": [
+        "个",
+        "没有"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我没有弟弟。",
+      "listen": true,
+      "options": [
+        "I don't have a younger brother.",
+        "I have a younger brother.",
+        "I don't have an older brother.",
+        "I don't have a younger sister."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他没有孩子。",
+      "answer": [
+        "He",
+        "doesn't",
+        "have",
+        "children"
+      ],
+      "also": [],
+      "distractors": [
+        "has",
+        "child"
+      ]
+    }
+  ]
+}

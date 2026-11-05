@@ -1,0 +1,233 @@
+{
+  "id": "hsk1-u08-l1",
+  "title": "Where Is It?",
+  "kind": "lesson",
+  "words": [
+    "哪儿",
+    "这儿",
+    "那儿",
+    "哪里",
+    "这里",
+    "那里",
+    "住"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "哪儿"
+    },
+    {
+      "type": "word",
+      "word": "这儿"
+    },
+    {
+      "type": "word",
+      "word": "那儿"
+    },
+    {
+      "type": "grammar",
+      "title": "Asking where: …在哪儿？",
+      "body": "To ask where someone or something is, say the person or thing first, then 在哪儿？ The word 在 means 'to be at', so you don't need 是 here. To answer, swap 哪儿 for a place, like 这儿 (here) or 那儿 (there).",
+      "examples": [
+        {
+          "zh": "你在哪儿？",
+          "en": "Where are you?"
+        },
+        {
+          "zh": "我的手机在哪儿？",
+          "en": "Where is my phone?"
+        },
+        {
+          "zh": "书店在那儿。",
+          "en": "The bookstore is there."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你的手机在哪儿？",
+      "listen": false,
+      "options": [
+        "Where is your phone?",
+        "Where is your computer?",
+        "Is your phone here?",
+        "Your phone is there."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "My book is here.",
+      "before": "我的书在",
+      "after": "。",
+      "options": [
+        "这儿",
+        "哪儿",
+        "谁",
+        "什么"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "猫在那儿。",
+      "listen": true,
+      "options": [
+        "The cat is there.",
+        "The dog is there.",
+        "The cat is here.",
+        "Where is the cat?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "哪里"
+    },
+    {
+      "type": "word",
+      "word": "这里"
+    },
+    {
+      "type": "word",
+      "word": "那里"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'there'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "那里",
+        "这里",
+        "哪里",
+        "什么"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Excuse me, where is the bookstore?",
+      "answer": [
+        "请问",
+        "书店",
+        "在",
+        "哪里"
+      ],
+      "also": [],
+      "distractors": [
+        "这里",
+        "谁"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "老师在这里。",
+      "listen": true,
+      "options": [
+        "The teacher is here.",
+        "The teacher is there.",
+        "Where is the teacher?",
+        "The teacher is at school."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Our school is here.",
+      "before": "我们的学校在",
+      "after": "。",
+      "options": [
+        "这里",
+        "哪里",
+        "谁",
+        "几"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "住"
+    },
+    {
+      "type": "fill",
+      "en": "Where do you live?",
+      "before": "你住在",
+      "after": "？",
+      "options": [
+        "哪儿",
+        "这儿",
+        "什么",
+        "谁"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我住在这儿。",
+      "answer": [
+        "I",
+        "live",
+        "here"
+      ],
+      "also": [],
+      "distractors": [
+        "there",
+        "where"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "他们住在那里。",
+      "listen": false,
+      "options": [
+        "They live there.",
+        "They live here.",
+        "Where do they live?",
+        "They work there."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My dad's company is there.",
+      "answer": [
+        "我",
+        "爸爸",
+        "的",
+        "公司",
+        "在",
+        "那儿"
+      ],
+      "also": [],
+      "distractors": [
+        "哪儿",
+        "住"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "你的朋友住在哪里？",
+      "answer": [
+        "Where",
+        "does",
+        "your",
+        "friend",
+        "live"
+      ],
+      "also": [],
+      "distractors": [
+        "is",
+        "there"
+      ]
+    }
+  ]
+}

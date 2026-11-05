@@ -1,0 +1,256 @@
+{
+  "id": "hsk1-u06-l1",
+  "title": "What Time Is It?",
+  "kind": "lesson",
+  "words": [
+    "现在",
+    "点",
+    "分",
+    "半",
+    "一半",
+    "小时",
+    "分钟"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "现在"
+    },
+    {
+      "type": "word",
+      "word": "点"
+    },
+    {
+      "type": "word",
+      "word": "分"
+    },
+    {
+      "type": "grammar",
+      "title": "Telling time: X点Y分 and X点半",
+      "body": "To say the time, put the hour before 点 (o'clock) and the minutes before 分. For half past, just say 点半. For 2 o'clock, say 两点, not 二点. To ask the time, say 现在几点？",
+      "examples": [
+        {
+          "zh": "现在两点。",
+          "en": "It's two o'clock now."
+        },
+        {
+          "zh": "现在八点十分。",
+          "en": "It's 8:10 now."
+        },
+        {
+          "zh": "现在九点半。",
+          "en": "It's half past nine now."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "现在三点。",
+      "listen": false,
+      "options": [
+        "It's three o'clock now.",
+        "It's 3:30 now.",
+        "It's March now.",
+        "It's the 3rd today."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "What time is it now?",
+      "before": "现在几",
+      "after": "？",
+      "options": [
+        "点",
+        "个",
+        "岁",
+        "块"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "现在八点十分。",
+      "listen": true,
+      "options": [
+        "It's 8:10 now.",
+        "It's 10:08 now.",
+        "It's 8:00 now.",
+        "It's 10:00 now."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "半"
+    },
+    {
+      "type": "word",
+      "word": "一半"
+    },
+    {
+      "type": "fill",
+      "en": "It's half past six now.",
+      "before": "现在六点",
+      "after": "。",
+      "options": [
+        "半",
+        "一半",
+        "分钟",
+        "小时"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "这个苹果我吃一半，你吃一半。",
+      "listen": false,
+      "options": [
+        "I'll eat half of this apple, and you eat half.",
+        "I'll eat this whole apple.",
+        "You eat this apple, and I'll eat the bread.",
+        "This apple is half price."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "小时"
+    },
+    {
+      "type": "word",
+      "word": "分钟"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'minute'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "分钟",
+        "小时",
+        "现在",
+        "一半"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "An hour has sixty minutes.",
+      "before": "一个小时有六十",
+      "after": "。",
+      "options": [
+        "分钟",
+        "小时",
+        "点",
+        "岁"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "一个半小时",
+      "listen": true,
+      "options": [
+        "an hour and a half",
+        "half an hour",
+        "one thirty",
+        "one hour"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Mom is cooking right now.",
+      "before": "妈妈",
+      "after": "在做饭。",
+      "options": [
+        "现在",
+        "小时",
+        "分钟",
+        "一半"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "做这个菜要二十分钟。",
+      "listen": false,
+      "options": [
+        "It takes twenty minutes to make this dish.",
+        "It takes two hours to make this dish.",
+        "This dish costs twenty kuai.",
+        "I want twenty dishes."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I eat breakfast at half past seven.",
+      "answer": [
+        "我",
+        "七",
+        "点",
+        "半",
+        "吃",
+        "早饭"
+      ],
+      "also": [
+        [
+          "七",
+          "点",
+          "半",
+          "我",
+          "吃",
+          "早饭"
+        ]
+      ],
+      "distractors": [
+        "分钟",
+        "小时"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "现在十二点十五分，我们吃午饭吧。",
+      "answer": [
+        "It's",
+        "12:15",
+        "now",
+        "let's",
+        "have",
+        "lunch"
+      ],
+      "also": [],
+      "distractors": [
+        "dinner",
+        "half"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Half of the students are Chinese.",
+      "answer": [
+        "一半",
+        "的",
+        "学生",
+        "是",
+        "中国",
+        "人"
+      ],
+      "also": [],
+      "distractors": [
+        "半",
+        "点"
+      ]
+    }
+  ]
+}

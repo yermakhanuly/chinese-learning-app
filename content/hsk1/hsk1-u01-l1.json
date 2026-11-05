@@ -1,0 +1,229 @@
+{
+  "id": "hsk1-u01-l1",
+  "title": "Hello and Goodbye",
+  "kind": "lesson",
+  "words": [
+    "你",
+    "好",
+    "我",
+    "您",
+    "再见",
+    "谢谢",
+    "不客气"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "你"
+    },
+    {
+      "type": "word",
+      "word": "好"
+    },
+    {
+      "type": "word",
+      "word": "您"
+    },
+    {
+      "type": "grammar",
+      "title": "Saying hello: 你好 and 您好",
+      "body": "To say hello, put 'you' in front of 好 (good): 你好. Use 你好 with friends, classmates and people your own age. Use 您好 to be more polite, for example with older people, teachers or customers. Both simply mean 'Hello!'",
+      "examples": [
+        {
+          "zh": "你好!",
+          "en": "Hello! (casual)"
+        },
+        {
+          "zh": "您好!",
+          "en": "Hello! (polite)"
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你好!",
+      "listen": false,
+      "options": [
+        "Hello!",
+        "Goodbye!",
+        "Thank you!",
+        "You're welcome!"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'you (polite)'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "您",
+        "你",
+        "好"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Hello! (polite, to an older person)",
+      "before": "",
+      "after": "好!",
+      "options": [
+        "您",
+        "我",
+        "好"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "我"
+    },
+    {
+      "type": "word",
+      "word": "谢谢"
+    },
+    {
+      "type": "word",
+      "word": "不客气"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我",
+      "listen": false,
+      "options": [
+        "I; me",
+        "you",
+        "good",
+        "goodbye"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "谢谢",
+      "listen": true,
+      "options": [
+        "Thank you",
+        "You're welcome",
+        "Goodbye",
+        "Hello"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "谢谢你!",
+      "answer": [
+        "Thank",
+        "you"
+      ],
+      "also": [],
+      "distractors": [
+        "welcome",
+        "Hello"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "再见"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'goodbye'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "再见",
+        "谢谢",
+        "不客气",
+        "您好"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Thanks! — You're welcome!",
+      "before": "——谢谢!——",
+      "after": "!",
+      "options": [
+        "不客气",
+        "再见",
+        "您好",
+        "我"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "不客气",
+      "listen": true,
+      "options": [
+        "You're welcome",
+        "Thank you",
+        "Goodbye",
+        "Good"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'I; me'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "我",
+        "你",
+        "您",
+        "好"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Thank you! (polite)",
+      "answer": [
+        "谢谢",
+        "您"
+      ],
+      "also": [],
+      "distractors": [
+        "你",
+        "不客气"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Hello! (to a friend)",
+      "answer": [
+        "你",
+        "好"
+      ],
+      "also": [],
+      "distractors": [
+        "您",
+        "我"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "再见!",
+      "listen": false,
+      "options": [
+        "Goodbye!",
+        "Hello!",
+        "Thank you!",
+        "You're welcome!"
+      ],
+      "answer": 0
+    }
+  ]
+}

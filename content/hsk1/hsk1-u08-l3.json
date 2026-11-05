@@ -1,0 +1,255 @@
+{
+  "id": "hsk1-u08-l3",
+  "title": "Coming and Going",
+  "kind": "lesson",
+  "words": [
+    "去",
+    "来",
+    "到",
+    "外",
+    "边",
+    "外边",
+    "这边",
+    "那边"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "去"
+    },
+    {
+      "type": "word",
+      "word": "来"
+    },
+    {
+      "type": "grammar",
+      "title": "去 / 来 + place",
+      "body": "To say you go somewhere, put the place right after 去: 去学校 = go to school. To say someone comes somewhere, put the place after 来: 来我家 = come to my home. 去 is movement away from where the speaker is, 来 is movement toward the speaker. No extra word like 'to' is needed.",
+      "examples": [
+        {
+          "zh": "我去学校。",
+          "en": "I'm going to school."
+        },
+        {
+          "zh": "你明天来我家吗？",
+          "en": "Are you coming to my home tomorrow?"
+        },
+        {
+          "zh": "他们去中国。",
+          "en": "They're going to China."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我去学校。",
+      "listen": false,
+      "options": [
+        "I'm going to school.",
+        "I'm at school.",
+        "I'm coming home.",
+        "I study at school."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Are you coming to my home tomorrow?",
+      "before": "你明天",
+      "after": "我家吗？",
+      "options": [
+        "来",
+        "是",
+        "有",
+        "叫"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "到"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我到学校了。",
+      "listen": true,
+      "options": [
+        "I've arrived at school.",
+        "I'm going to school.",
+        "I'm at home.",
+        "I'm studying at school."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "外"
+    },
+    {
+      "type": "word",
+      "word": "边"
+    },
+    {
+      "type": "word",
+      "word": "外边"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'outside'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "外",
+        "里",
+        "上",
+        "前"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "边",
+      "listen": false,
+      "options": [
+        "side",
+        "inside",
+        "front",
+        "top"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "这边"
+    },
+    {
+      "type": "word",
+      "word": "那边"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "请到这边来。",
+      "listen": true,
+      "options": [
+        "Please come over here.",
+        "Please go over there.",
+        "Please come to my home.",
+        "Please sit down."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'over there'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "那边",
+        "这边",
+        "外边",
+        "哪儿"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Teacher, we're over here!",
+      "before": "老师，我们在",
+      "after": "！",
+      "options": [
+        "这边",
+        "去",
+        "到",
+        "来"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Mom is outside.",
+      "before": "妈妈在",
+      "after": "。",
+      "options": [
+        "外边",
+        "去",
+        "来",
+        "到"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I'm going to the supermarket tomorrow.",
+      "answer": [
+        "我",
+        "明天",
+        "去",
+        "超市"
+      ],
+      "also": [
+        [
+          "明天",
+          "我",
+          "去",
+          "超市"
+        ]
+      ],
+      "distractors": [
+        "来",
+        "那边"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他们在那边吃饭。",
+      "answer": [
+        "They",
+        "are",
+        "eating",
+        "over",
+        "there"
+      ],
+      "also": [],
+      "distractors": [
+        "here",
+        "go"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My dad has arrived at the company.",
+      "answer": [
+        "我",
+        "爸爸",
+        "到",
+        "公司",
+        "了"
+      ],
+      "also": [],
+      "distractors": [
+        "去",
+        "外边"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "外边有一只狗。",
+      "listen": false,
+      "options": [
+        "There's a dog outside.",
+        "There's a cat outside.",
+        "There's a dog over here.",
+        "The dog is at home."
+      ],
+      "answer": 0
+    }
+  ]
+}

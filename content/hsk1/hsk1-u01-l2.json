@@ -1,0 +1,253 @@
+{
+  "id": "hsk1-u01-l2",
+  "title": "Who Are You?",
+  "kind": "lesson",
+  "words": [
+    "是",
+    "不",
+    "他",
+    "她",
+    "老师",
+    "学生",
+    "中国",
+    "人",
+    "对"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "是"
+    },
+    {
+      "type": "word",
+      "word": "不"
+    },
+    {
+      "type": "word",
+      "word": "老师"
+    },
+    {
+      "type": "grammar",
+      "title": "是 sentences: A 是 B",
+      "body": "To say that someone is something, put 是 between the two parts: A 是 B. 是 never changes, whoever you are talking about. To say 'is not', put 不 right before 是: A 不是 B.",
+      "examples": [
+        {
+          "zh": "我是老师。",
+          "en": "I am a teacher."
+        },
+        {
+          "zh": "我不是老师。",
+          "en": "I am not a teacher."
+        },
+        {
+          "zh": "您是老师。",
+          "en": "You are a teacher."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我是老师。",
+      "listen": false,
+      "options": [
+        "I am a teacher.",
+        "I am not a teacher.",
+        "You are a teacher.",
+        "Hello, teacher."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I am not a teacher.",
+      "before": "我",
+      "after": "老师。",
+      "options": [
+        "不是",
+        "是",
+        "您",
+        "好"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "学生"
+    },
+    {
+      "type": "word",
+      "word": "他"
+    },
+    {
+      "type": "word",
+      "word": "她"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'student'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "学生",
+        "老师",
+        "他",
+        "她"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他不是老师。",
+      "listen": true,
+      "options": [
+        "He is not a teacher.",
+        "He is a teacher.",
+        "I am not a teacher.",
+        "He is not a student."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "She is a student.",
+      "answer": [
+        "她",
+        "是",
+        "学生"
+      ],
+      "also": [],
+      "distractors": [
+        "他",
+        "老师"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "中国"
+    },
+    {
+      "type": "word",
+      "word": "人"
+    },
+    {
+      "type": "word",
+      "word": "对"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "中国人",
+      "listen": false,
+      "options": [
+        "Chinese person",
+        "China",
+        "Chinese teacher",
+        "Chinese student"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Right, I am Chinese.",
+      "before": "对，我是中国",
+      "after": "。",
+      "options": [
+        "人",
+        "好",
+        "您",
+        "不"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'right; correct'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "对",
+        "不",
+        "我",
+        "人"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他不是中国人。",
+      "answer": [
+        "He",
+        "is",
+        "not",
+        "Chinese"
+      ],
+      "also": [],
+      "distractors": [
+        "She",
+        "a"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "您好，老师！",
+      "listen": true,
+      "options": [
+        "Hello, teacher!",
+        "Hello, student!",
+        "Thank you, teacher!",
+        "Goodbye, teacher!"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "He is a teacher, I am a student.",
+      "before": "他是老师，",
+      "after": "是学生。",
+      "options": [
+        "我",
+        "是",
+        "不",
+        "人"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I'm not a teacher, I'm a student.",
+      "answer": [
+        "我",
+        "不",
+        "是",
+        "老师",
+        "我",
+        "是",
+        "学生"
+      ],
+      "also": [],
+      "distractors": [
+        "他",
+        "对"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "不对，她是中国人。",
+      "listen": false,
+      "options": [
+        "That's not right, she is Chinese.",
+        "Right, she is Chinese.",
+        "She is not Chinese.",
+        "Thank you, she is Chinese."
+      ],
+      "answer": 0
+    }
+  ]
+}

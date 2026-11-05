@@ -1,0 +1,241 @@
+{
+  "id": "hsk1-u09-quiz",
+  "title": "Weather & Health: quiz",
+  "kind": "quiz",
+  "words": [],
+  "steps": [
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "今天天气怎么样？",
+      "listen": false,
+      "options": [
+        "How is the weather today?",
+        "Will it rain today?",
+        "Is it cold today?",
+        "What day is it today?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'doctor'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "医生",
+        "医院",
+        "老师",
+        "学生"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "明天会下雨吗？",
+      "listen": true,
+      "options": [
+        "Will it rain tomorrow?",
+        "Will it snow tomorrow?",
+        "Did it rain yesterday?",
+        "Will it be hot tomorrow?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "You are sick, you need to rest more.",
+      "before": "你生病了，要多",
+      "after": "。",
+      "options": [
+        "休息",
+        "工作",
+        "上班",
+        "学习"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I think it's a bit cold today.",
+      "answer": [
+        "我",
+        "觉得",
+        "今天",
+        "有点儿",
+        "冷"
+      ],
+      "also": [
+        [
+          "今天",
+          "我",
+          "觉得",
+          "有点儿",
+          "冷"
+        ]
+      ],
+      "distractors": [
+        "热",
+        "雪"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "你生病了，不要去上班。",
+      "answer": [
+        "You",
+        "are",
+        "sick",
+        "don't",
+        "go",
+        "to",
+        "work"
+      ],
+      "also": [],
+      "distractors": [
+        "school",
+        "rain"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "医院",
+      "listen": true,
+      "options": [
+        "医院",
+        "医生",
+        "休息",
+        "下雨"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "外边下雪了。",
+      "listen": false,
+      "options": [
+        "It's raining outside.",
+        "It's snowing outside.",
+        "It's cold outside.",
+        "It's hot outside."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "fill",
+      "en": "My mum is a doctor; she works at a hospital.",
+      "before": "我妈妈是",
+      "after": "，她在医院工作。",
+      "options": [
+        "医生",
+        "老师",
+        "学生",
+        "医院"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to rest'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "休息",
+        "睡觉",
+        "看病",
+        "生病"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Can you go to the hospital tomorrow?",
+      "answer": [
+        "你",
+        "明天",
+        "能",
+        "去",
+        "医院",
+        "吗"
+      ],
+      "also": [
+        [
+          "明天",
+          "你",
+          "能",
+          "去",
+          "医院",
+          "吗"
+        ]
+      ],
+      "distractors": [
+        "医生",
+        "呢"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "今天太热了，我不想吃饭。",
+      "listen": true,
+      "options": [
+        "It's too hot today, I don't want to eat.",
+        "It's too cold today, I don't want to eat.",
+        "It's too hot today, I want to drink water.",
+        "I'm a bit sick today, I don't want to eat."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "How is the weather today?",
+      "before": "今天天气",
+      "after": "？",
+      "options": [
+        "怎么样",
+        "什么",
+        "几",
+        "怎么"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "昨天下雪了，非常冷。",
+      "answer": [
+        "It",
+        "snowed",
+        "yesterday",
+        "it",
+        "was",
+        "very",
+        "cold"
+      ],
+      "also": [],
+      "distractors": [
+        "rained",
+        "hot"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "他生病了，今天在家休息。",
+      "listen": false,
+      "options": [
+        "He is sick and is resting at home today.",
+        "He is sick and went to the hospital today.",
+        "He is a doctor and is at home today.",
+        "He is tired and is sleeping at home today."
+      ],
+      "answer": 0
+    }
+  ]
+}

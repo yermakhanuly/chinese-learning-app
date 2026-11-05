@@ -1,0 +1,260 @@
+{
+  "id": "hsk1-u08-l4",
+  "title": "Getting Around",
+  "kind": "lesson",
+  "words": [
+    "坐",
+    "开",
+    "开车",
+    "车",
+    "出租车",
+    "火车",
+    "飞机",
+    "怎么"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "车"
+    },
+    {
+      "type": "word",
+      "word": "坐"
+    },
+    {
+      "type": "word",
+      "word": "出租车"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "出租车",
+      "listen": false,
+      "options": [
+        "taxi",
+        "train",
+        "airplane",
+        "bus"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "I take a taxi to the store.",
+      "before": "我",
+      "after": "出租车去商店。",
+      "options": [
+        "坐",
+        "吃",
+        "喝",
+        "买"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "This is my new car.",
+      "before": "这是我的新",
+      "after": "。",
+      "options": [
+        "车",
+        "书",
+        "手机",
+        "衣服"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "火车"
+    },
+    {
+      "type": "word",
+      "word": "飞机"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他们坐飞机去中国。",
+      "listen": true,
+      "options": [
+        "They are going to China by plane.",
+        "They are going to China by train.",
+        "They are coming from China by plane.",
+        "They take a taxi to school."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'train'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "火车",
+        "飞机",
+        "出租车",
+        "车"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Dad is taking a plane to China tomorrow.",
+      "before": "爸爸明天坐",
+      "after": "去中国。",
+      "options": [
+        "飞机",
+        "椅子",
+        "桌子",
+        "电脑"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "开"
+    },
+    {
+      "type": "word",
+      "word": "开车"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "爸爸开车去公司。",
+      "listen": false,
+      "options": [
+        "Dad drives to work.",
+        "Dad takes a taxi to work.",
+        "Dad takes the train to work.",
+        "Dad is at work now."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "超市几点开？",
+      "listen": false,
+      "options": [
+        "What time does the supermarket open?",
+        "Where is the supermarket?",
+        "What does the supermarket sell?",
+        "Is the supermarket big?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "怎么"
+    },
+    {
+      "type": "grammar",
+      "title": "怎么 + verb: asking how",
+      "body": "To ask how someone does something, put 怎么 right before the verb. 怎么去 means 'how do (you) get there'. To answer, simply replace 怎么 with the way you do it, like 坐火车 or 开车.",
+      "examples": [
+        {
+          "zh": "你怎么去学校？",
+          "en": "How do you get to school?"
+        },
+        {
+          "zh": "我坐出租车去。",
+          "en": "I go by taxi."
+        },
+        {
+          "zh": "这个字怎么写？",
+          "en": "How do you write this character?"
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "How do you get to school?",
+      "before": "你",
+      "after": "去学校？",
+      "options": [
+        "怎么",
+        "什么",
+        "谁",
+        "几"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "How do we get to the bookstore?",
+      "answer": [
+        "我们",
+        "怎么",
+        "去",
+        "书店"
+      ],
+      "also": [],
+      "distractors": [
+        "什么",
+        "坐"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我坐火车去。",
+      "answer": [
+        "I",
+        "go",
+        "by",
+        "train"
+      ],
+      "also": [],
+      "distractors": [
+        "plane",
+        "drive"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "妈妈今天不开车。",
+      "listen": true,
+      "options": [
+        "Mom isn't driving today.",
+        "Mom isn't taking a taxi today.",
+        "Mom isn't working today.",
+        "Mom is driving today."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "What time does the train leave?",
+      "before": "火车几点",
+      "after": "？",
+      "options": [
+        "开",
+        "坐",
+        "吃",
+        "买"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My older brother drives to work.",
+      "answer": [
+        "我",
+        "哥哥",
+        "开车",
+        "去",
+        "上班"
+      ],
+      "also": [],
+      "distractors": [
+        "坐",
+        "飞机"
+      ]
+    }
+  ]
+}

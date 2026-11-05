@@ -1,0 +1,221 @@
+{
+  "id": "hsk1-u04-quiz",
+  "title": "Food & Drink: quiz",
+  "kind": "quiz",
+  "words": [],
+  "steps": [
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我想喝茶。",
+      "listen": false,
+      "options": [
+        "I want to drink tea.",
+        "I want to drink water.",
+        "I am drinking milk.",
+        "I don't like tea."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'breakfast'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "早饭",
+        "午饭",
+        "晚饭",
+        "饭店"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "这个菜太好吃了！",
+      "listen": true,
+      "options": [
+        "This dish is so delicious!",
+        "This dish is not tasty.",
+        "This fruit is very good.",
+        "I want this dish."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "He eats dinner at a restaurant.",
+      "before": "他在",
+      "after": "吃晚饭。",
+      "options": [
+        "饭店",
+        "早饭",
+        "水果",
+        "做饭"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Mom is cooking.",
+      "answer": [
+        "妈妈",
+        "在",
+        "做饭"
+      ],
+      "also": [],
+      "distractors": [
+        "吃",
+        "喝"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我要两个包子。",
+      "answer": [
+        "I",
+        "want",
+        "two",
+        "steamed",
+        "buns"
+      ],
+      "also": [],
+      "distractors": [
+        "three",
+        "bread"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Please give me a little more water.",
+      "before": "请再给我",
+      "after": "水。",
+      "options": [
+        "一点儿",
+        "只",
+        "太",
+        "非常"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "鸡蛋",
+      "listen": true,
+      "options": [
+        "鸡蛋",
+        "面包",
+        "饺子",
+        "苹果"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我只喝了一点儿牛奶。",
+      "listen": false,
+      "options": [
+        "I only drank a little milk.",
+        "I drank a lot of milk.",
+        "I don't drink milk.",
+        "I want a little milk."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Let's eat dumplings.",
+      "answer": [
+        "我们",
+        "吃",
+        "饺子",
+        "吧"
+      ],
+      "also": [],
+      "distractors": [
+        "喝",
+        "吗"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Apples are fruit.",
+      "before": "苹果是",
+      "after": "。",
+      "options": [
+        "水果",
+        "鸡蛋",
+        "面条儿",
+        "饭店"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "中国的面条儿非常好吃。",
+      "answer": [
+        "Chinese",
+        "noodles",
+        "are",
+        "very",
+        "delicious"
+      ],
+      "also": [],
+      "distractors": [
+        "tea",
+        "not"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "你想吃什么？",
+      "listen": true,
+      "options": [
+        "What do you want to eat?",
+        "What do you want to drink?",
+        "What are you cooking?",
+        "Who wants to eat?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "For lunch she only ate some fruit.",
+      "before": "她午饭只吃了",
+      "after": "水果。",
+      "options": [
+        "一些",
+        "太",
+        "再",
+        "真"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "The dishes Dad makes are really tasty.",
+      "answer": [
+        "爸爸",
+        "做",
+        "的",
+        "菜",
+        "真",
+        "好吃"
+      ],
+      "also": [],
+      "distractors": [
+        "太",
+        "喝"
+      ]
+    }
+  ]
+}

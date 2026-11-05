@@ -1,0 +1,259 @@
+{
+  "id": "hsk1-u04-l4",
+  "title": "Three Meals",
+  "kind": "lesson",
+  "words": [
+    "早饭",
+    "午饭",
+    "晚饭",
+    "做",
+    "做饭",
+    "饭店",
+    "在"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "早饭"
+    },
+    {
+      "type": "word",
+      "word": "午饭"
+    },
+    {
+      "type": "word",
+      "word": "晚饭"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "晚饭",
+      "listen": false,
+      "options": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "rice"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'lunch'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "早饭",
+        "午饭",
+        "晚饭",
+        "米饭"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我不吃早饭。",
+      "listen": true,
+      "options": [
+        "I don't eat breakfast.",
+        "I don't eat lunch.",
+        "I don't drink tea.",
+        "I don't eat dinner."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "做"
+    },
+    {
+      "type": "word",
+      "word": "做饭"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "妈妈做饭。",
+      "listen": false,
+      "options": [
+        "Mom cooks.",
+        "Mom eats.",
+        "Mom drinks tea.",
+        "Mom wants rice."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Dad makes dinner.",
+      "before": "爸爸",
+      "after": "晚饭。",
+      "options": [
+        "做",
+        "喝",
+        "是",
+        "叫"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "饭店"
+    },
+    {
+      "type": "word",
+      "word": "在"
+    },
+    {
+      "type": "grammar",
+      "title": "在 + place + verb",
+      "body": "To say where you do something, put 在 and the place before the verb. English puts the place at the end ('eat at home'), but Chinese says the place first. The order is: person + 在 + place + verb.",
+      "examples": [
+        {
+          "zh": "我在家吃饭。",
+          "en": "I eat at home."
+        },
+        {
+          "zh": "他在饭店吃午饭。",
+          "en": "He eats lunch at a restaurant."
+        },
+        {
+          "zh": "我们在中国吃饺子。",
+          "en": "We eat dumplings in China."
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "We eat lunch at a restaurant.",
+      "before": "我们",
+      "after": "饭店吃午饭。",
+      "options": [
+        "在",
+        "是",
+        "有",
+        "要"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I eat breakfast at home.",
+      "answer": [
+        "我",
+        "在",
+        "家",
+        "吃",
+        "早饭"
+      ],
+      "also": [],
+      "distractors": [
+        "饭店",
+        "做"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他们在饭店吃晚饭。",
+      "listen": true,
+      "options": [
+        "They eat dinner at a restaurant.",
+        "They cook dinner at home.",
+        "They eat lunch at a restaurant.",
+        "They eat breakfast at home."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "妈妈在家做饭。",
+      "answer": [
+        "Mom",
+        "cooks",
+        "at",
+        "home"
+      ],
+      "also": [],
+      "distractors": [
+        "restaurant",
+        "eats"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'restaurant'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "饭店",
+        "米饭",
+        "早饭",
+        "做饭"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我们在家做饺子。",
+      "answer": [
+        "We",
+        "make",
+        "dumplings",
+        "at",
+        "home"
+      ],
+      "also": [],
+      "distractors": [
+        "eat",
+        "restaurant"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Are you eating dinner at home today?",
+      "answer": [
+        "你",
+        "今天",
+        "在",
+        "家",
+        "吃",
+        "晚饭",
+        "吗"
+      ],
+      "also": [
+        [
+          "今天",
+          "你",
+          "在",
+          "家",
+          "吃",
+          "晚饭",
+          "吗"
+        ]
+      ],
+      "distractors": [
+        "呢",
+        "饭店"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "The dumplings at this restaurant are very tasty.",
+      "before": "这个饭店的饺子",
+      "after": "好吃。",
+      "options": [
+        "很",
+        "是",
+        "在",
+        "有"
+      ],
+      "answer": 0
+    }
+  ]
+}

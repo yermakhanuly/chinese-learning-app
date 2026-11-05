@@ -11,6 +11,7 @@ import { Screen } from '@/components/screen';
 import { PressableLink } from '@/components/pressable-link';
 import { ThemedText } from '@/components/themed-text';
 import { Radius, Spacing } from '@/constants/theme';
+import { nextLesson, useCourse, useProgress } from '@/hooks/use-course';
 import { hskLevelLabel, useHskLevelCounts } from '@/hooks/use-hsk-level-counts';
 import { useProfile } from '@/hooks/use-profile';
 import { useTheme } from '@/hooks/use-theme';
@@ -24,6 +25,7 @@ export default function HomeScreen() {
   return (
     <Screen title={name ? `你好, ${name}!` : '你好!'} subtitle="Nǐ hǎo! Welcome to HSK Chinese.">
       <HomeSearch />
+      <TodaysLesson />
       {session ? (
         profile ? (
           <Card title="Your plan">
@@ -33,7 +35,7 @@ export default function HomeScreen() {
               {labelFor(SELF_LEVELS, profile.self_level)}
             </ThemedText>
             <ThemedText themeColor="textSecondary">
-              Daily target: {labelFor(DAILY_GOALS, profile.daily_goal_minutes)} a day. Lessons arrive in Phase 3.
+              Daily target: {labelFor(DAILY_GOALS, profile.daily_goal_minutes)} a day.
             </ThemedText>
           </Card>
         ) : null
@@ -54,6 +56,32 @@ export default function HomeScreen() {
       )}
       <VocabularyCard />
     </Screen>
+  );
+}
+
+/** The next lesson on the learner's path (guests: the first lesson). */
+function TodaysLesson() {
+  const { data: profile } = useProfile();
+  const course = useCourse(1);
+  const progress = useProgress().data;
+  if (!course.data?.length) return null;
+  const lesson = nextLesson(course.data, progress, profile?.start_lesson_id);
+  if (!lesson) {
+    return (
+      <Card title="HSK 1 complete! 🎉">
+        <ThemedText themeColor="textSecondary">You finished every HSK 1 lesson. HSK 2 is on its way.</ThemedText>
+      </Card>
+    );
+  }
+  const unit = course.data.find((u) => u.id === lesson.unit_id)!;
+  return (
+    <Card title="Today's lesson">
+      <ThemedText type="label">{lesson.title}</ThemedText>
+      <ThemedText themeColor="textSecondary">
+        Unit {unit.position}: {unit.title} · {lesson.minutes} min
+      </ThemedText>
+      <Button label="Start" onPress={() => router.push({ pathname: '/lesson', params: { id: lesson.id } })} />
+    </Card>
   );
 }
 

@@ -1,0 +1,267 @@
+{
+  "id": "hsk1-u08-l2",
+  "title": "In My Room",
+  "kind": "lesson",
+  "words": [
+    "上",
+    "下",
+    "里",
+    "前",
+    "后",
+    "桌子",
+    "椅子",
+    "房间"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "桌子"
+    },
+    {
+      "type": "word",
+      "word": "上"
+    },
+    {
+      "type": "grammar",
+      "title": "Location words: 桌子上, 房间里",
+      "body": "To say where something is, put the thing first, then the location word right after it. 桌子上 means 'on the table' (literally 'table-on'), which is the opposite order from English. Use 在 before the place to say where something is: 书在桌子上. You can also start with the place and use 有 to say what is there: 桌子上有一个杯子. Soon you'll meet 里 (inside), as in 房间里, 'in the room'.",
+      "examples": [
+        {
+          "zh": "书在桌子上。",
+          "en": "The book is on the table."
+        },
+        {
+          "zh": "桌子上有一个杯子。",
+          "en": "There is a cup on the table."
+        },
+        {
+          "zh": "我的手机在桌子上。",
+          "en": "My phone is on the table."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "书在桌子上。",
+      "listen": false,
+      "options": [
+        "The book is on the table.",
+        "The cup is on the table.",
+        "The book is in the room.",
+        "There is a table in the bookstore."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "The cup is on the table.",
+      "before": "杯子在桌子",
+      "after": "。",
+      "options": [
+        "上",
+        "是",
+        "有",
+        "吗"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "房间"
+    },
+    {
+      "type": "word",
+      "word": "里"
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "妈妈在房间里。",
+      "listen": true,
+      "options": [
+        "Mom is in the room.",
+        "Mom is at home.",
+        "Dad is in the room.",
+        "Mom is at the store."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My cat is in the room.",
+      "answer": [
+        "我",
+        "的",
+        "猫",
+        "在",
+        "房间",
+        "里"
+      ],
+      "also": [],
+      "distractors": [
+        "上",
+        "有"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "椅子"
+    },
+    {
+      "type": "word",
+      "word": "下"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'chair'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "椅子",
+        "桌子",
+        "杯子",
+        "房间"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "The dog is sleeping under the chair.",
+      "before": "狗在椅子",
+      "after": "睡觉。",
+      "options": [
+        "下",
+        "上",
+        "里"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "猫在桌子下。",
+      "listen": false,
+      "options": [
+        "The cat is on the table.",
+        "The cat is under the table.",
+        "The cat is in the room.",
+        "The cat is under the chair."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "word",
+      "word": "前"
+    },
+    {
+      "type": "word",
+      "word": "后"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "下课后，我回家。",
+      "listen": false,
+      "options": [
+        "After class, I go home.",
+        "Before class, I go home.",
+        "After class, I go to school.",
+        "After work, I go home."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Before class, I eat breakfast.",
+      "before": "上课",
+      "after": "，我吃早饭。",
+      "options": [
+        "前",
+        "后",
+        "里",
+        "上"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "你的手机在桌子上吗？",
+      "answer": [
+        "Is",
+        "your",
+        "phone",
+        "on",
+        "the",
+        "table"
+      ],
+      "also": [],
+      "distractors": [
+        "under",
+        "chair"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "三年前，我住在中国。",
+      "listen": true,
+      "options": [
+        "Three years ago, I lived in China.",
+        "In three years, I will live in China.",
+        "Three days ago, I was in China.",
+        "Three years ago, I worked in China."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "There is a desk and chairs in my room.",
+      "answer": [
+        "我",
+        "的",
+        "房间",
+        "里",
+        "有",
+        "桌子",
+        "和",
+        "椅子"
+      ],
+      "also": [
+        [
+          "我",
+          "的",
+          "房间",
+          "里",
+          "有",
+          "椅子",
+          "和",
+          "桌子"
+        ]
+      ],
+      "distractors": [
+        "在",
+        "上"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "下班后，爸爸做饭。",
+      "answer": [
+        "After",
+        "work",
+        "Dad",
+        "cooks"
+      ],
+      "also": [],
+      "distractors": [
+        "Before",
+        "Mom"
+      ]
+    }
+  ]
+}

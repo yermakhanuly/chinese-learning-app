@@ -1,0 +1,232 @@
+{
+  "id": "hsk1-u02-l1",
+  "title": "Zero to Six",
+  "kind": "lesson",
+  "words": [
+    "零",
+    "一",
+    "二",
+    "三",
+    "四",
+    "五",
+    "六"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "零"
+    },
+    {
+      "type": "word",
+      "word": "一"
+    },
+    {
+      "type": "word",
+      "word": "二"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "二",
+      "listen": false,
+      "options": [
+        "one",
+        "two",
+        "three",
+        "zero"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'zero'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "一",
+        "二",
+        "零",
+        "四"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "word",
+      "word": "三"
+    },
+    {
+      "type": "word",
+      "word": "四"
+    },
+    {
+      "type": "grammar",
+      "title": "Counting and reading numbers digit by digit",
+      "body": "To count, just say the numbers in order: 一、二、三、四… For long numbers like years or phone numbers, Chinese often reads each digit one at a time. So the year 2026 is read 二零二六, 'two zero two six'. 零 is used for the digit 0.",
+      "examples": [
+        {
+          "zh": "一、二、三、四",
+          "en": "one, two, three, four"
+        },
+        {
+          "zh": "二零二六",
+          "en": "2026 (read digit by digit)"
+        },
+        {
+          "zh": "不是四，是三。",
+          "en": "It's not four, it's three."
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "one, two, three, four",
+      "before": "一、二、",
+      "after": "、四",
+      "options": [
+        "三",
+        "五",
+        "六",
+        "零"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "四",
+      "listen": true,
+      "options": [
+        "four",
+        "three",
+        "two",
+        "one"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "五"
+    },
+    {
+      "type": "word",
+      "word": "六"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "六",
+      "listen": false,
+      "options": [
+        "four",
+        "five",
+        "six",
+        "three"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "五",
+      "listen": true,
+      "options": [
+        "五",
+        "四",
+        "六",
+        "三"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "four, five, six",
+      "before": "四、五、",
+      "after": "",
+      "options": [
+        "六",
+        "三",
+        "二",
+        "一"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "One, two, three, four",
+      "answer": [
+        "一",
+        "二",
+        "三",
+        "四"
+      ],
+      "also": [],
+      "distractors": [
+        "六",
+        "零"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "二零二六",
+      "answer": [
+        "two",
+        "zero",
+        "two",
+        "six"
+      ],
+      "also": [],
+      "distractors": [
+        "one",
+        "four"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "老师，是五吗？",
+      "listen": true,
+      "options": [
+        "Teacher, is it five?",
+        "Teacher, is it four?",
+        "Teacher, it's five.",
+        "Student, is it five?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Teacher, is it five?",
+      "answer": [
+        "老师",
+        "是",
+        "五",
+        "吗"
+      ],
+      "also": [],
+      "distractors": [
+        "六",
+        "呢"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "不是四，是六。",
+      "answer": [
+        "It's",
+        "not",
+        "four",
+        "it's",
+        "six"
+      ],
+      "also": [],
+      "distractors": [
+        "five",
+        "is"
+      ]
+    }
+  ]
+}

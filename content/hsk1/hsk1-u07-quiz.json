@@ -1,0 +1,222 @@
+{
+  "id": "hsk1-u07-quiz",
+  "title": "School & Work: quiz",
+  "kind": "quiz",
+  "words": [],
+  "steps": [
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我在大学学习汉语。",
+      "listen": false,
+      "options": [
+        "I study Chinese at university.",
+        "I teach Chinese at a middle school.",
+        "I write Chinese characters at school.",
+        "I go to university by phone."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'to get off work'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "下班",
+        "上班",
+        "下课",
+        "上课"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "你会说汉语吗？",
+      "listen": true,
+      "options": [
+        "Can you speak Chinese?",
+        "Can you write Chinese?",
+        "Do you know this Chinese character?",
+        "Are you studying Chinese?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "My older brother works at a company.",
+      "before": "我哥哥在公司",
+      "after": "。",
+      "options": [
+        "工作",
+        "上学",
+        "下课",
+        "同学"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "My younger sister is a primary school student.",
+      "answer": [
+        "我",
+        "妹妹",
+        "是",
+        "小学生"
+      ],
+      "also": [],
+      "distractors": [
+        "中学",
+        "大学生"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他们下午四点下课。",
+      "answer": [
+        "They",
+        "finish",
+        "class",
+        "at",
+        "four",
+        "in",
+        "the",
+        "afternoon"
+      ],
+      "also": [],
+      "distractors": [
+        "morning",
+        "start"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我晚上给妈妈打电话。",
+      "listen": true,
+      "options": [
+        "I call Mom in the evening.",
+        "I call Mom in the morning.",
+        "I buy Mom a phone in the evening.",
+        "Mom calls me in the evening."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Can you write this Chinese character?",
+      "before": "这个汉字你会",
+      "after": "吗？",
+      "options": [
+        "写",
+        "上班",
+        "喝",
+        "回"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "老师，我有一个问题。",
+      "listen": false,
+      "options": [
+        "Teacher, I have a question.",
+        "Teacher, I have a classmate.",
+        "Teacher, I have a class.",
+        "Teacher, I have a computer."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'computer'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "电脑",
+        "手机",
+        "电话",
+        "汉字"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Do you know his phone number?",
+      "answer": [
+        "你",
+        "知道",
+        "他",
+        "的",
+        "电话",
+        "吗"
+      ],
+      "also": [],
+      "distractors": [
+        "说话",
+        "汉字"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I go to work at 8 in the morning and get off work at 5 in the afternoon.",
+      "before": "我早上八点",
+      "after": "，下午五点下班。",
+      "options": [
+        "上班",
+        "下班",
+        "睡觉",
+        "回"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "他们都是大学生。",
+      "answer": [
+        "They",
+        "are",
+        "all",
+        "university",
+        "students"
+      ],
+      "also": [],
+      "distractors": [
+        "school",
+        "teachers"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他们下班回家了。",
+      "listen": true,
+      "options": [
+        "They got off work and went home.",
+        "They finished class and went to school.",
+        "They went to work at the company.",
+        "They called home."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "喂，你现在在做什么？",
+      "listen": false,
+      "options": [
+        "Hello? What are you doing now?",
+        "Hello? Where are you working now?",
+        "Hello? Who are you calling now?",
+        "Hello? What are you studying now?"
+      ],
+      "answer": 0
+    }
+  ]
+}

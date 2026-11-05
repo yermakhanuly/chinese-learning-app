@@ -1,0 +1,256 @@
+{
+  "id": "hsk1-u10-l3",
+  "title": "Weekend Fun",
+  "kind": "lesson",
+  "words": [
+    "读书",
+    "有的",
+    "有些",
+    "些",
+    "好玩儿"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "读书"
+    },
+    {
+      "type": "word",
+      "word": "好玩儿"
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我喜欢读书。",
+      "listen": false,
+      "options": [
+        "I like reading.",
+        "I like writing.",
+        "I like watching films.",
+        "I like listening to music."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "Your cat is really fun!",
+      "before": "你的猫真",
+      "after": "！",
+      "options": [
+        "好玩儿",
+        "好吃",
+        "好听",
+        "便宜"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "我弟弟不喜欢读书。",
+      "listen": true,
+      "options": [
+        "My younger brother likes reading.",
+        "My younger brother doesn't like reading.",
+        "My older brother doesn't like reading.",
+        "My younger brother doesn't like writing."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "word",
+      "word": "些"
+    },
+    {
+      "type": "word",
+      "word": "有些"
+    },
+    {
+      "type": "fill",
+      "en": "I want to buy some fruit.",
+      "before": "我想买",
+      "after": "水果。",
+      "options": [
+        "些",
+        "本",
+        "件",
+        "口"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'some'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "这些",
+        "那些",
+        "有些",
+        "哪些"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我哥哥今天有些忙。",
+      "listen": false,
+      "options": [
+        "My older brother is a bit busy today.",
+        "My older brother is very busy today.",
+        "My older brother isn't busy today.",
+        "My older sister is a bit busy today."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "有些书很好玩儿。",
+      "listen": true,
+      "options": [
+        "Some films are fun.",
+        "Some books are fun.",
+        "These books are fun.",
+        "Some books are expensive."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "word",
+      "word": "有的"
+    },
+    {
+      "type": "grammar",
+      "title": "有的……有的……: some … others …",
+      "body": "To split a group into parts, put 有的 before each part: 有的 + what some do, 有的 + what others do. The group comes first, at the start of the sentence. You can say just 有的, or 有的人 when talking about people.",
+      "examples": [
+        {
+          "zh": "我的朋友有的喜欢唱歌，有的喜欢看电影。",
+          "en": "Some of my friends like singing, others like watching films."
+        },
+        {
+          "zh": "学生们有的在看书，有的在写字。",
+          "en": "Some of the students are reading, others are writing characters."
+        },
+        {
+          "zh": "有的人喜欢喝茶，有的人喜欢喝牛奶。",
+          "en": "Some people like drinking tea, others like drinking milk."
+        }
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Some of my classmates like watching films, others like listening to songs.",
+      "before": "我的同学有的喜欢看电影，",
+      "after": "喜欢听歌。",
+      "options": [
+        "有的",
+        "都",
+        "也",
+        "这些"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Some of us like reading, others like watching TV.",
+      "answer": [
+        "我们",
+        "有的",
+        "喜欢",
+        "读书",
+        "有的",
+        "喜欢",
+        "看",
+        "电视"
+      ],
+      "also": [
+        [
+          "我们",
+          "有的",
+          "喜欢",
+          "看",
+          "电视",
+          "有的",
+          "喜欢",
+          "读书"
+        ]
+      ],
+      "distractors": [
+        "都",
+        "些"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "有些电影很好玩儿。",
+      "answer": [
+        "Some",
+        "films",
+        "are",
+        "fun"
+      ],
+      "also": [],
+      "distractors": [
+        "books",
+        "all",
+        "not"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "我们去超市买些东西吧。",
+      "answer": [
+        "Let's",
+        "go",
+        "to",
+        "the",
+        "supermarket",
+        "to",
+        "buy",
+        "some",
+        "things"
+      ],
+      "also": [],
+      "distractors": [
+        "sell",
+        "those"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "星期天，有的人在家看电视，有的人去电影院。",
+      "listen": false,
+      "options": [
+        "On Sundays, everyone watches TV at home.",
+        "On Sundays, some people watch TV at home, others go to the cinema.",
+        "On Sundays, some people read at home, others go to the bookshop.",
+        "On Sundays, nobody goes to the cinema."
+      ],
+      "answer": 1
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "I think reading is fun.",
+      "answer": [
+        "我",
+        "觉得",
+        "读书",
+        "很",
+        "好玩儿"
+      ],
+      "also": [],
+      "distractors": [
+        "有的",
+        "好吃"
+      ]
+    }
+  ]
+}

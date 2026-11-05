@@ -38,6 +38,15 @@ SUPABASE_SERVICE_ROLE_KEY=<secret key: projects api-keys --reveal> npm run data:
 
 `data:import` loads HSK words, CC-CEDICT, Tatoeba example sentences (downloaded to `data/raw/`, needs `bzip2`) and the word topics from `data/word-topics.json`.
 
+### Lessons (AI-drafted, checked automatically)
+
+```bash
+npm run content:draft   # Claude drafts content/hsk1/ (outline + one JSON per lesson); keeps existing files
+npm run data:import     # loads lessons (adds pinyin/traditional and word details)
+```
+
+Delete a lesson's JSON file and re-run `content:draft` to redraft it; or edit the JSON by hand. `src/lib/lessons.ts` describes the format and the checks (only words already taught, valid answers, every HSK word taught once).
+
 ### Word topics (AI-tagged, run once)
 
 ```bash

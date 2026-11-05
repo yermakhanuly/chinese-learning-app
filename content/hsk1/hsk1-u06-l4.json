@@ -1,0 +1,222 @@
+{
+  "id": "hsk1-u06-l4",
+  "title": "What Are You Doing?",
+  "kind": "lesson",
+  "words": [
+    "正在",
+    "看",
+    "事",
+    "还",
+    "天"
+  ],
+  "steps": [
+    {
+      "type": "word",
+      "word": "正在"
+    },
+    {
+      "type": "word",
+      "word": "看"
+    },
+    {
+      "type": "grammar",
+      "title": "正在 + verb: action in progress",
+      "body": "To say someone is doing something right now, put 正在 before the verb. It works like English 'am/is/are ...ing'. The verb itself never changes form. You can ask 'What are you doing?' with 你正在做什么？",
+      "examples": [
+        {
+          "zh": "我正在吃饭。",
+          "en": "I'm eating."
+        },
+        {
+          "zh": "他正在睡觉。",
+          "en": "He is sleeping."
+        },
+        {
+          "zh": "妈妈正在做饭。",
+          "en": "Mom is cooking."
+        }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "我正在看书。",
+      "listen": false,
+      "options": [
+        "I'm reading a book.",
+        "I want to buy a book.",
+        "I have a book.",
+        "I like books."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "He is reading a book.",
+      "before": "他正在",
+      "after": "书。",
+      "options": [
+        "看",
+        "喝",
+        "吃",
+        "睡"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "What are you doing?",
+      "answer": [
+        "你",
+        "正在",
+        "做",
+        "什么"
+      ],
+      "also": [],
+      "distractors": [
+        "看",
+        "吗"
+      ]
+    },
+    {
+      "type": "word",
+      "word": "事"
+    },
+    {
+      "type": "word",
+      "word": "还"
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'still'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "还",
+        "再",
+        "也",
+        "都"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What does this mean?",
+      "zh": "你有事吗？",
+      "listen": false,
+      "options": [
+        "Do you have something going on?",
+        "Do you have money?",
+        "Do you have time?",
+        "Do you have a book?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "他还没有起床。",
+      "listen": true,
+      "options": [
+        "He still hasn't gotten up.",
+        "He went to bed early.",
+        "He is sleeping again.",
+        "He gets up at seven."
+      ],
+      "answer": 0
+    },
+    {
+      "type": "word",
+      "word": "天"
+    },
+    {
+      "type": "fill",
+      "en": "I haven't slept for two days.",
+      "before": "我两",
+      "after": "没有睡觉了。",
+      "options": [
+        "天",
+        "点",
+        "号",
+        "岁"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "Which word means 'day'?",
+      "zh": "",
+      "listen": false,
+      "options": [
+        "天",
+        "年",
+        "月",
+        "点"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "build",
+      "direction": "zh-en",
+      "source": "今天我有很多事。",
+      "answer": [
+        "I",
+        "have",
+        "a",
+        "lot",
+        "to",
+        "do",
+        "today"
+      ],
+      "also": [],
+      "distractors": [
+        "time",
+        "eat"
+      ]
+    },
+    {
+      "type": "build",
+      "direction": "en-zh",
+      "source": "Mom is still reading.",
+      "answer": [
+        "妈妈",
+        "还",
+        "在",
+        "看",
+        "书"
+      ],
+      "also": [],
+      "distractors": [
+        "再",
+        "吗"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "What did you hear?",
+      "zh": "你正在看什么？",
+      "listen": true,
+      "options": [
+        "What are you looking at?",
+        "What are you eating?",
+        "What do you want to buy?",
+        "What are you drinking?"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "fill",
+      "en": "It's nine o'clock now, and he still hasn't gotten up.",
+      "before": "现在九点了，他",
+      "after": "没有起床。",
+      "options": [
+        "还",
+        "也",
+        "都",
+        "再"
+      ],
+      "answer": 0
+    }
+  ]
+}
