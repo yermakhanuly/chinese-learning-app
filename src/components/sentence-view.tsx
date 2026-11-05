@@ -7,6 +7,8 @@ import { ThemedText } from '@/components/themed-text';
 import { SpeakButton, pickScript, useScript } from '@/components/word-parts';
 import { Spacing } from '@/constants/theme';
 import type { Sentence } from '@/hooks/use-dictionary';
+import { useAddSentenceCard, useSentenceCards } from '@/hooks/use-review';
+import { useAuth } from '@/providers/auth';
 
 /**
  * An example sentence with pinyin above each word (when pinyin is on). Tapping a word opens it;
@@ -34,6 +36,31 @@ export function SentenceView({ sentence, highlight }: { sentence: Sentence; high
         </ThemedText>
       </ExternalLink>
     </View>
+  );
+}
+
+/** "Add to review" for an example sentence (signed-in learners); shows when it's already added. */
+export function AddSentenceToReview({ sentenceId }: { sentenceId: number }) {
+  const { session } = useAuth();
+  const added = useSentenceCards();
+  const add = useAddSentenceCard();
+  if (!session || !added.data) return null;
+  if (added.data.has(sentenceId)) {
+    return (
+      <ThemedText type="small" themeColor="success">
+        ✓ In your review
+      </ThemedText>
+    );
+  }
+  return (
+    <ThemedText
+      type="link"
+      role="button"
+      aria-label="Add sentence to review"
+      aria-disabled={add.isPending}
+      onPress={() => !add.isPending && add.mutate(sentenceId)}>
+      {add.isPending ? 'Adding…' : add.isError ? "Couldn't add. Try again" : '+ Add to review'}
+    </ThemedText>
   );
 }
 

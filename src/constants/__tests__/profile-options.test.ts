@@ -5,15 +5,16 @@ import {
   DAILY_GOALS,
   EXPLANATION_LANGUAGES,
   LEARNING_GOALS,
+  NEW_CARDS_PER_DAY,
   SCRIPTS,
   SELF_LEVELS,
   labelFor,
 } from '@/constants/profile-options';
 
-const migration = fs.readFileSync(
-  path.join(__dirname, '../../../supabase/migrations/20261105000000_profiles.sql'),
-  'utf8',
-);
+const migrations = path.join(__dirname, '../../../supabase/migrations');
+const migration = ['20261105000000_profiles.sql', '20261108000000_review.sql']
+  .map((f) => fs.readFileSync(path.join(migrations, f), 'utf8'))
+  .join('\n');
 
 /** The app's choices must match the database check constraints exactly, or saving fails. */
 function checkValues(column: string): string[] {
@@ -29,6 +30,7 @@ describe('profile options match the database', () => {
     ['daily_goal_minutes', DAILY_GOALS],
     ['script', SCRIPTS],
     ['explanation_language', EXPLANATION_LANGUAGES],
+    ['new_cards_per_day', NEW_CARDS_PER_DAY],
   ] as const)('%s', (column, options) => {
     expect(options.map((o) => String(o.value))).toEqual(checkValues(column));
   });

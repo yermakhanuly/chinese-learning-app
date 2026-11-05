@@ -15,6 +15,7 @@ import {
   DAILY_GOALS,
   EXPLANATION_LANGUAGES,
   LEARNING_GOALS,
+  NEW_CARDS_PER_DAY,
   SCRIPTS,
   SELF_LEVELS,
   type Option,
@@ -178,6 +179,15 @@ function LearningSettings({ profile }: { profile: Profile }) {
           options={short(DAILY_GOALS)}
           value={profile.daily_goal_minutes}
           onChange={(daily_goal_minutes) => update.mutate({ daily_goal_minutes })}
+        />
+      </Field>
+      <Field label="New review cards per day">
+        <ChoiceList
+          label="New review cards per day"
+          layout="grid"
+          options={short(NEW_CARDS_PER_DAY)}
+          value={profile.new_cards_per_day}
+          onChange={(new_cards_per_day) => update.mutate({ new_cards_per_day })}
         />
       </Field>
       <Field label="Characters">

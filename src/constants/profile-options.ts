@@ -5,6 +5,7 @@ export type SelfLevel = 'beginner' | 'elementary' | 'intermediate' | 'advanced';
 export type DailyGoal = 5 | 10 | 15 | 20 | 30;
 export type Script = 'simplified' | 'traditional';
 export type ExplanationLanguage = 'en';
+export type NewCardsPerDay = 5 | 10 | 20 | 30 | 50;
 
 export type Option<T> = { value: T; label: string; description?: string };
 
@@ -34,6 +35,14 @@ export const DAILY_GOALS: Option<DailyGoal>[] = [
 export const SCRIPTS: Option<Script>[] = [
   { value: 'simplified', label: 'Simplified', description: '简体 · Mainland China, Singapore' },
   { value: 'traditional', label: 'Traditional', description: '繁體 · Taiwan, Hong Kong' },
+];
+
+export const NEW_CARDS_PER_DAY: Option<NewCardsPerDay>[] = [
+  { value: 5, label: '5' },
+  { value: 10, label: '10' },
+  { value: 20, label: '20' },
+  { value: 30, label: '30' },
+  { value: 50, label: '50' },
 ];
 
 export const EXPLANATION_LANGUAGES: Option<ExplanationLanguage>[] = [{ value: 'en', label: 'English' }];

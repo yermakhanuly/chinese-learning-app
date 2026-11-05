@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { ImageManipulator, SaveFormat } from 'expo-image-manipulator';
 import * as ImagePicker from 'expo-image-picker';
 
-import type { DailyGoal, ExplanationLanguage, LearningGoal, Script, SelfLevel } from '@/constants/profile-options';
+import type { DailyGoal, ExplanationLanguage, LearningGoal, NewCardsPerDay, Script, SelfLevel } from '@/constants/profile-options';
 import { AVATAR_BUCKET, avatarPath, base64ToBytes } from '@/lib/avatar';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/providers/auth';
@@ -21,12 +21,14 @@ export type Profile = {
   /** Where the learner's path starts (placement test result). */
   start_lesson_id: string | null;
   placed_at: string | null;
+  /** New review cards introduced per day (Phase 4). */
+  new_cards_per_day: NewCardsPerDay;
 };
 
 export type ProfileUpdate = Partial<Omit<Profile, 'id'>>;
 
 const COLUMNS =
-  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at, start_lesson_id, placed_at';
+  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at, start_lesson_id, placed_at, new_cards_per_day';
 
 /** The signed-in learner's profile. Refetched when the app/tab regains focus, so edits sync across devices. */
 export function useProfile() {

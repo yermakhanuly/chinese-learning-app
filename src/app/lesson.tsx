@@ -16,6 +16,7 @@ import {
   correctAnswerText,
   grade,
   isExercise,
+  missedWords,
   progressFraction,
   score as scoreOf,
   startFlow,
@@ -58,6 +59,14 @@ function Player({ lesson }: { lesson: LessonContent }) {
   // Bumps on every move so a re-asked exercise mounts fresh.
   const [turn, setTurn] = useState(0);
 
+  const course = useCourse(1);
+  // What this lesson is about, for the mistake notebook: its new words, or (quiz) the unit's words.
+  const focus = useMemo(() => {
+    if (lesson.words.length) return new Set(lesson.words);
+    const unit = course.data?.find((u) => u.id === lesson.unit_id);
+    return new Set(unit?.lessons.flatMap((l) => l.words) ?? []);
+  }, [lesson, course.data]);
+
   const current = flow.queue[0];
   const step = current === undefined ? null : steps[current];
   const data = useMemo(
@@ -72,7 +81,9 @@ function Player({ lesson }: { lesson: LessonContent }) {
     setTurn((t) => t + 1);
   }
 
-  if (!step) return <Finished lesson={lesson} score={scoreOf(flow, steps)} />;
+  if (!step) {
+    return <Finished lesson={lesson} score={scoreOf(flow, steps)} missed={missedWords(flow, steps, lesson.readings, focus)} />;
+  }
 
   const exercise = isExercise(step);
   const canCheck = answer !== null && (!Array.isArray(answer) || answer.length > 0);
@@ -155,7 +166,7 @@ function Player({ lesson }: { lesson: LessonContent }) {
   );
 }
 
-function Finished({ lesson, score }: { lesson: LessonContent; score: number }) {
+function Finished({ lesson, score, missed }: { lesson: LessonContent; score: number; missed: string[] }) {
   const theme = useTheme();
   const insets = useSafeAreaInsets();
   const { session } = useAuth();
@@ -163,9 +174,10 @@ function Finished({ lesson, score }: { lesson: LessonContent; score: number }) {
   const course = useCourse(1);
   // Save once when this screen appears (signed-in learners only).
   const { mutate, isIdle } = complete;
+  const [missedOnce] = useState(missed);
   useEffect(() => {
-    if (session && isIdle) mutate({ lessonId: lesson.id, score });
-  }, [session, isIdle, mutate, lesson.id, score]);
+    if (session && isIdle) mutate({ lessonId: lesson.id, score, missed: missedOnce });
+  }, [session, isIdle, mutate, lesson.id, score, missedOnce]);
 
   const lessons = course.data ? allLessons(course.data) : [];
   const next = lessons[lessons.findIndex((l) => l.id === lesson.id) + 1];
@@ -194,6 +206,11 @@ function Finished({ lesson, score }: { lesson: LessonContent; score: number }) {
                 ? "Couldn't save your progress. Check your connection."
                 : 'Progress saved.'}
         </ThemedText>
+        {session && complete.isSuccess && lesson.words.length ? (
+          <ThemedText type="small" themeColor="textSecondary" style={styles.centerText}>
+            The new words are now in your Review deck.
+          </ThemedText>
+        ) : null}
         <View style={styles.finishButtons}>
           {next ? (
             <Button label={`Next: ${next.title}`} onPress={() => router.replace({ pathname: '/lesson', params: { id: next.id } })} />

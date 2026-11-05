@@ -4,7 +4,7 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { Card } from '@/components/card';
 import { PinyinToggle, SaveButton } from '@/components/dictionary-controls';
 import { Screen } from '@/components/screen';
-import { SentenceView } from '@/components/sentence-view';
+import { AddSentenceToReview, SentenceView } from '@/components/sentence-view';
 import { PressableLink } from '@/components/pressable-link';
 import { ThemedText } from '@/components/themed-text';
 import { FrequencyMeter, Hanzi, LevelBadge, Pinyin, SpeakButton, pickScript, useScript } from '@/components/word-parts';
@@ -137,6 +137,7 @@ function WordDetails({ word }: { word: WordDetail }) {
                   i > 0 && { borderTopColor: theme.border, borderTopWidth: StyleSheet.hairlineWidth },
                 ]}>
                 <SentenceView sentence={s} highlight={word.simplified} />
+                <AddSentenceToReview sentenceId={s.id} />
               </View>
             ))
           ) : (

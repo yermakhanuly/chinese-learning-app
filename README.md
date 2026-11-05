@@ -47,6 +47,10 @@ npm run data:import     # loads lessons (adds pinyin/traditional and word detail
 
 Delete a lesson's JSON file and re-run `content:draft` to redraft it; or edit the JSON by hand. `src/lib/lessons.ts` describes the format and the checks (only words already taught, valid answers, every HSK word taught once).
 
+### Review (spaced repetition)
+
+Cards live in `review_cards` and are created by the database: finishing a lesson (`complete_lesson`) adds its words, saving a word adds it (trigger), and learners add sentences and their own cards. Each word gets three cards (read, listen, recall). The app schedules them with [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) (FSRS-7, `src/lib/srs.ts`) and saves each answer through `record_review`, which also logs mistakes. `review_queue` builds the day's session: due cards, then new cards up to the learner's daily limit, one direction of a word per day.
+
 ### Word topics (AI-tagged, run once)
 
 ```bash
@@ -111,7 +115,7 @@ src/app/            screens (Expo Router: every file is a route)
 src/components/     shared UI (Screen, Card, SegmentedControl, tab bars)
 src/constants/      design tokens (colors incl. tone colors, spacing) and tab list
 src/hooks/          data + theme hooks
-src/lib/            pinyin, vocabulary parsers, Supabase client, auth helpers, storage
+src/lib/            pinyin, vocabulary parsers, lessons, review scheduling (FSRS), Supabase client, auth, storage
 src/providers/      login session (auth) and theme preference
 supabase/           Supabase config (cloud + local) + SQL migrations
 scripts/            data import, icon generation
@@ -123,4 +127,5 @@ e2e/                Playwright tests
 - HSK word lists: [complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary) (MIT). Levels use the **2026 HSK 3.0 syllabus** (`hsk_level`; 7 = levels 7–9); the 2021 standard and HSK 2.0 levels are stored too.
 - Dictionary: [CC-CEDICT](https://www.mdbg.net/chinese/dictionary?page=cc-cedict) (CC BY-SA 4.0) — attribution shown in the app's Profile → Credits.
 - Example sentences: [Tatoeba](https://tatoeba.org) (CC BY 2.0 FR) — each sentence links to its Tatoeba page.
+- Review scheduling: [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) (MIT).
 - Word audio (for now): the device's built-in Chinese voice.

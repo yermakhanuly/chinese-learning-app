@@ -56,8 +56,11 @@ function ThemedRoot() {
           <Stack.Screen name="word" options={WITH_HEADER} />
           <Stack.Screen name="words" options={WITH_HEADER} />
           <Stack.Screen name="saved" options={WITH_HEADER} />
-          {/* Lessons take the whole screen; the placement test is a sheet. */}
+          <Stack.Screen name="mistakes" options={WITH_HEADER} />
+          <Stack.Screen name="my-cards" options={WITH_HEADER} />
+          {/* Lessons and review sessions take the whole screen; the placement test is a sheet. */}
           <Stack.Screen name="lesson" options={{ presentation: 'fullScreenModal' }} />
+          <Stack.Screen name="review-session" options={{ presentation: 'fullScreenModal' }} />
           <Stack.Screen name="placement" options={{ presentation: 'modal' }} />
           <Stack.Screen name="sign-in" options={{ presentation: 'modal' }} />
           <Stack.Screen name="sign-up" options={{ presentation: 'modal' }} />

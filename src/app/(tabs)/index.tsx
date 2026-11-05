@@ -14,6 +14,7 @@ import { Radius, Spacing } from '@/constants/theme';
 import { nextLesson, useCourse, useProgress } from '@/hooks/use-course';
 import { hskLevelLabel, useHskLevelCounts } from '@/hooks/use-hsk-level-counts';
 import { useProfile } from '@/hooks/use-profile';
+import { useReviewSummary } from '@/hooks/use-review';
 import { useTheme } from '@/hooks/use-theme';
 import { useAuth } from '@/providers/auth';
 
@@ -26,6 +27,7 @@ export default function HomeScreen() {
     <Screen title={name ? `你好, ${name}!` : '你好!'} subtitle="Nǐ hǎo! Welcome to HSK Chinese.">
       <HomeSearch />
       <TodaysLesson />
+      {session ? <ReviewsDue /> : null}
       {session ? (
         profile ? (
           <Card title="Your plan">
@@ -56,6 +58,25 @@ export default function HomeScreen() {
       )}
       <VocabularyCard />
     </Screen>
+  );
+}
+
+/** Today's reviews (signed-in learners with cards). */
+function ReviewsDue() {
+  const { data } = useReviewSummary();
+  if (!data?.total) return null;
+  const today = data.due + data.new;
+  return (
+    <Card title="Review">
+      <ThemedText themeColor="textSecondary">
+        {today
+          ? `${today} ${today === 1 ? 'card' : 'cards'} to review today (${data.due} due, ${data.new} new).`
+          : 'All caught up for today. 🎉'}
+      </ThemedText>
+      {today ? (
+        <Button label="Start review" onPress={() => router.push({ pathname: '/review-session', params: { deck: 'all' } })} />
+      ) : null}
+    </Card>
   );
 }
 

@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import type { LearningGoal } from '@/constants/profile-options';
+import { useInvalidateReview } from '@/hooks/use-review';
 import type { Lesson, Step } from '@/lib/lessons';
 import type { Token } from '@/lib/sentences';
 import { supabase } from '@/lib/supabase';
@@ -92,15 +93,22 @@ export function useProgress() {
   });
 }
 
+/** Saves a finished lesson; the database also adds its words to review and logs the missed words. */
 export function useCompleteLesson() {
   const queryClient = useQueryClient();
   const { session } = useAuth();
+  const invalidateReview = useInvalidateReview();
   return useMutation({
-    mutationFn: async ({ lessonId, score }: { lessonId: string; score: number }) => {
-      const { error } = await supabase.rpc('complete_lesson', { p_lesson_id: lessonId, p_score: Math.round(score) });
+    mutationFn: async ({ lessonId, score, missed }: { lessonId: string; score: number; missed: string[] }) => {
+      const { error } = await supabase.rpc('complete_lesson', {
+        p_lesson_id: lessonId,
+        p_score: Math.round(score),
+        p_missed: missed.slice(0, 50),
+      });
       if (error) throw error;
     },
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['progress', session?.user.id] }),
+    onSuccess: () =>
+      Promise.all([queryClient.invalidateQueries({ queryKey: ['progress', session?.user.id] }), invalidateReview()]),
   });
 }
 

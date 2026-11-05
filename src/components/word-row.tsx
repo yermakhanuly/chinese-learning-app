@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { PressableLink } from '@/components/pressable-link';
@@ -8,8 +9,8 @@ import type { WordSummary } from '@/hooks/use-dictionary';
 import { useTheme } from '@/hooks/use-theme';
 import { useDisplayPreferences } from '@/providers/display-preferences';
 
-/** One word in a search result or list; opens the word page. */
-export function WordRow({ word }: { word: WordSummary }) {
+/** One word in a search result or list; opens the word page. `trailing` replaces the HSK badge. */
+export function WordRow({ word, trailing, extraLabel }: { word: WordSummary; trailing?: ReactNode; extraLabel?: string }) {
   const theme = useTheme();
   const script = useScript();
   const { showPinyin } = useDisplayPreferences();
@@ -17,7 +18,7 @@ export function WordRow({ word }: { word: WordSummary }) {
   return (
     <PressableLink
       href={{ pathname: '/word', params: { w: word.simplified } }}
-      aria-label={`${pickScript(script, word.simplified, word.traditional)}, ${word.pinyin}: ${meaning}`}
+      aria-label={`${pickScript(script, word.simplified, word.traditional)}, ${word.pinyin}: ${meaning}${extraLabel ? `, ${extraLabel}` : ''}`}
       style={({ pressed }) => [
         styles.row,
         { backgroundColor: theme.backgroundElement, borderColor: theme.border },
@@ -32,7 +33,7 @@ export function WordRow({ word }: { word: WordSummary }) {
           {meaning}
         </ThemedText>
       </View>
-      {word.hsk_level != null ? <LevelBadge level={word.hsk_level} /> : null}
+      {trailing ?? (word.hsk_level != null ? <LevelBadge level={word.hsk_level} /> : null)}
     </PressableLink>
   );
 }

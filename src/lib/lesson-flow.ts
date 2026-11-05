@@ -3,6 +3,7 @@
  * Mistakes are asked again at the end of the lesson; the score counts first tries only.
  */
 import { isCorrectBuild, type Step } from './lessons.ts';
+import { isHan, type Token } from './sentences.ts';
 
 /** Deterministic shuffle: the same seed always gives the same order (stable across re-renders). */
 export function seededShuffle<T>(items: T[], seed: string): T[] {
@@ -102,4 +103,37 @@ export function score(state: FlowState, steps: Step[]): number {
 export function progressFraction(state: FlowState, steps: Step[]): number {
   const total = steps.length + state.missed.length;
   return total ? state.done / total : 1;
+}
+
+const hasHan = (text: string) => [...text].some(isHan);
+
+/**
+ * The words an exercise tested, for the mistake notebook. `focus` is what the lesson is about (its
+ * new words; a unit quiz: the unit's words). Fill-in-the-blank → the missing word; a choice about one
+ * word → that word; otherwise the focus words that appear in the exercise's Chinese.
+ */
+export function testedWords(step: Step, readings: Record<string, Token[]>, focus: ReadonlySet<string>): string[] {
+  const inText = (text: string) => {
+    const tokens = readings[text]?.map((t) => t.s) ?? [];
+    return [...new Set(tokens.filter((w) => focus.has(w)))];
+  };
+  switch (step.type) {
+    case 'fill':
+      return [step.options[step.answer]];
+    case 'choice': {
+      const option = step.options[step.answer];
+      if (step.zh && (readings[step.zh]?.length ?? 0) <= 1 && hasHan(step.zh)) return [step.zh];
+      if (hasHan(option) && (readings[option]?.length ?? 1) <= 1) return [option];
+      return step.zh ? inText(step.zh) : [];
+    }
+    case 'build':
+      return inText(step.direction === 'en-zh' ? step.answer.join('') : step.source);
+    default:
+      return [];
+  }
+}
+
+/** Words of every exercise answered wrong in this lesson (each once). */
+export function missedWords(state: FlowState, steps: Step[], readings: Record<string, Token[]>, focus: ReadonlySet<string>) {
+  return [...new Set(state.missed.flatMap((i) => testedWords(steps[i], readings, focus)))];
 }

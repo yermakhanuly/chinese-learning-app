@@ -2,6 +2,7 @@ import { keepPreviousData, useInfiniteQuery, useMutation, useQuery, useQueryClie
 
 import { searchParams } from '@/lib/search';
 import type { Token } from '@/lib/sentences';
+import { useInvalidateReview } from '@/hooks/use-review';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/providers/auth';
 
@@ -274,6 +275,7 @@ export function useToggleSaved() {
   const { session } = useAuth();
   const userId = session?.user.id;
   const key = ['saved-words', userId];
+  const invalidateReview = useInvalidateReview();
 
   return useMutation({
     mutationFn: async ({ word, save }: { word: string; save: boolean }) => {
@@ -299,6 +301,7 @@ export function useToggleSaved() {
     onError: (_e, _v, context) => {
       if (context?.previous) queryClient.setQueryData(key, context.previous);
     },
-    onSettled: () => queryClient.invalidateQueries({ queryKey: key }),
+    // Saving a word also adds it to review (database trigger).
+    onSettled: () => Promise.all([queryClient.invalidateQueries({ queryKey: key }), invalidateReview()]),
   });
 }

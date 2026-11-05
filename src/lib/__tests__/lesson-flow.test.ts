@@ -1,4 +1,4 @@
-import { advance, correctAnswerText, grade, progressFraction, score, seededShuffle, startFlow } from '../lesson-flow';
+import { advance, correctAnswerText, grade, missedWords, progressFraction, score, seededShuffle, startFlow, testedWords } from '../lesson-flow';
 import type { Step } from '../lessons';
 
 const word: Step = { type: 'word', word: '你' };
@@ -45,5 +45,38 @@ describe('lesson flow', () => {
     expect(s.queue).toEqual([]);
     expect(score(s, steps)).toBe(50);
     expect(progressFraction(s, steps)).toBe(1);
+  });
+});
+
+describe('testedWords / missedWords', () => {
+  const tok = (...words: string[]) => words.map((s) => ({ s, t: s }));
+  const readings = {
+    你: tok('你'),
+    我是学生: tok('我', '是', '学生'),
+    你好: tok('你好'),
+    老师: tok('老师'),
+  };
+  const focus = new Set(['学生', '老师', '你']);
+
+  it('picks the word an exercise is about', () => {
+    expect(testedWords(choice, readings, focus)).toEqual(['你']);
+    const meaning: Step = { type: 'choice', prompt: 'Which is "teacher"?', zh: '', listen: false, options: ['学生', '老师'], answer: 1 };
+    expect(testedWords(meaning, readings, focus)).toEqual(['老师']);
+    const sentence: Step = { type: 'choice', prompt: '?', zh: '我是学生', listen: true, options: ['a', 'b'], answer: 0 };
+    expect(testedWords(sentence, readings, focus)).toEqual(['学生']);
+    const fill: Step = { type: 'fill', en: 'I am a student', before: '我是', after: '', options: ['老师', '学生'], answer: 1 };
+    expect(testedWords(fill, readings, focus)).toEqual(['学生']);
+    const tiles: Step = { type: 'build', direction: 'en-zh', source: 'I am a student', answer: ['我', '是', '学生'], also: [], distractors: [] };
+    expect(testedWords(tiles, readings, focus)).toEqual(['学生']);
+    expect(testedWords(word, readings, focus)).toEqual([]);
+  });
+
+  it('collects the words of missed exercises once', () => {
+    let s = startFlow(steps);
+    s = advance(s, steps, true); // word
+    s = advance(s, steps, false); // choice wrong
+    s = advance(s, steps, true);
+    s = advance(s, steps, false); // choice wrong again
+    expect(missedWords(s, steps, readings, focus)).toEqual(['你']);
   });
 });
