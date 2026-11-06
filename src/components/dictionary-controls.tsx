@@ -10,7 +10,7 @@ import { Radius, Spacing } from '@/constants/theme';
 import { useSavedWords, useToggleSaved } from '@/hooks/use-dictionary';
 import { useTheme } from '@/hooks/use-theme';
 import { useAuth } from '@/providers/auth';
-import { HANZI_SIZES, useDisplayPreferences, type HanziSize } from '@/providers/display-preferences';
+import { AUDIO_SPEEDS, type AudioSpeed, HANZI_SIZES, type HanziSize, useDisplayPreferences } from '@/providers/display-preferences';
 
 /** Bookmark toggle. Guests are sent to log in (saved words live in their account). */
 export function SaveButton({ word }: { word: string }) {
@@ -100,11 +100,11 @@ export function SearchField({ value, onClear, ref, ...rest }: SearchFieldProps) 
   );
 }
 
-/** Pinyin on/off, Hanzi size and tone colors: saved on this device. */
+/** Pinyin on/off, Hanzi size, tone colors and audio speed: saved on this device. */
 export function ReadingSettings() {
-  const { showPinyin, hanziSize, toneColors, update } = useDisplayPreferences();
+  const { showPinyin, hanziSize, toneColors, audioSpeed, update } = useDisplayPreferences();
   return (
-    <Card title="Reading">
+    <Card title="Reading and audio">
       <Field label="Pinyin">
         <SegmentedControl
           label="Pinyin"
@@ -133,6 +133,14 @@ export function ReadingSettings() {
           ]}
           value={toneColors ? 'on' : 'off'}
           onChange={(v) => update({ toneColors: v === 'on' })}
+        />
+      </Field>
+      <Field label="Audio speed">
+        <SegmentedControl<AudioSpeed>
+          label="Audio speed"
+          options={AUDIO_SPEEDS}
+          value={audioSpeed}
+          onChange={(v) => update({ audioSpeed: v })}
         />
       </Field>
     </Card>

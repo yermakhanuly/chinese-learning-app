@@ -1,11 +1,12 @@
-import { Stack, useLocalSearchParams } from 'expo-router';
+import { Stack, router, useLocalSearchParams } from 'expo-router';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { Card } from '@/components/card';
 import { CharacterChip } from '@/components/character/character-chip';
 import { PinyinToggle, SaveButton } from '@/components/dictionary-controls';
 import { Screen } from '@/components/screen';
-import { AddSentenceToReview, SentenceView } from '@/components/sentence-view';
+import { AddSentenceToReview, SayItLink, SentenceView } from '@/components/sentence-view';
+import { Button } from '@/components/button';
 import { PressableLink } from '@/components/pressable-link';
 import { ThemedText } from '@/components/themed-text';
 import { FrequencyMeter, Hanzi, LevelBadge, Pinyin, SpeakButton, pickScript, useScript } from '@/components/word-parts';
@@ -75,6 +76,14 @@ function WordDetails({ word }: { word: WordDetail }) {
         {word.source === 'hsk' ? <FrequencyMeter rank={word.frequency} /> : null}
         <View style={styles.spacer} />
         <SaveButton word={word.simplified} />
+      </View>
+      <View style={styles.actions}>
+        <Button
+          label="Practise saying it"
+          variant="secondary"
+          onPress={() => router.push({ pathname: '/pronounce', params: { text: word.simplified } })}
+          style={styles.flex}
+        />
       </View>
 
       <Card title="Meaning">
@@ -152,7 +161,10 @@ function WordDetails({ word }: { word: WordDetail }) {
                   i > 0 && { borderTopColor: theme.border, borderTopWidth: StyleSheet.hairlineWidth },
                 ]}>
                 <SentenceView sentence={s} highlight={word.simplified} />
-                <AddSentenceToReview sentenceId={s.id} />
+                <View style={styles.inline}>
+                  <AddSentenceToReview sentenceId={s.id} />
+                  <SayItLink text={s.simplified} meaning={s.english} />
+                </View>
               </View>
             ))
           ) : (

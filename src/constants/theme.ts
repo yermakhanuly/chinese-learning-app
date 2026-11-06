@@ -18,6 +18,7 @@ export const Colors = {
     tint: '#B8202E',
     onTint: '#FFFFFF',
     success: '#1E7A46',
+    warning: '#A15C07',
     danger: '#B42318',
     /** Tone colors for pinyin/hanzi (1–4, 5 = neutral). */
     tone1: '#C62828',
@@ -36,6 +37,7 @@ export const Colors = {
     tint: '#FF6B6B',
     onTint: '#16161A',
     success: '#4ADE80',
+    warning: '#FBBF24',
     danger: '#F87171',
     tone1: '#FF6B6B',
     tone2: '#FFA94D',

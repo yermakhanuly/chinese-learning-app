@@ -54,6 +54,12 @@ export default function LearnScreen() {
           {!session ? (
             <ThemedText themeColor="textSecondary">Lessons are free to try. Log in to save your progress.</ThemedText>
           ) : null}
+          <Card title="Listening & speaking 听说">
+            <ThemedText themeColor="textSecondary">
+              Tone trainer, listening quizzes and pronunciation checks with natural voices.
+            </ThemedText>
+            <Button label="Open listening & speaking" variant="secondary" onPress={() => router.push('/listening')} />
+          </Card>
           <Card title="Characters 汉字">
             <ThemedText themeColor="textSecondary">
               Stroke order, handwriting practice, recognition quizzes and look-alike drills.

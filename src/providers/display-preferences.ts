@@ -19,10 +19,18 @@ export const HANZI_SIZES: { value: HanziSize; label: string }[] = [
 /** Multiplier applied to every Hanzi font size. */
 export const HANZI_SCALE: Record<HanziSize, number> = { small: 0.85, medium: 1, large: 1.25, xlarge: 1.5 };
 
-type Prefs = { showPinyin: boolean; hanziSize: HanziSize; toneColors: boolean };
+/** Playback speed of recorded audio (and the device voice). */
+export type AudioSpeed = '1' | '0.75' | '0.5';
+export const AUDIO_SPEEDS: { value: AudioSpeed; label: string }[] = [
+  { value: '1', label: '1×' },
+  { value: '0.75', label: '0.75×' },
+  { value: '0.5', label: '0.5×' },
+];
+
+type Prefs = { showPinyin: boolean; hanziSize: HanziSize; toneColors: boolean; audioSpeed: AudioSpeed };
 
 const KEY = 'display-preferences';
-const DEFAULTS: Prefs = { showPinyin: true, hanziSize: 'medium', toneColors: true };
+const DEFAULTS: Prefs = { showPinyin: true, hanziSize: 'medium', toneColors: true, audioSpeed: '1' };
 
 const listeners = new Set<() => void>();
 let cached: Prefs | null = null;
@@ -35,11 +43,17 @@ function read(): Prefs {
       showPinyin: typeof parsed.showPinyin === 'boolean' ? parsed.showPinyin : DEFAULTS.showPinyin,
       hanziSize: parsed.hanziSize && parsed.hanziSize in HANZI_SCALE ? parsed.hanziSize : DEFAULTS.hanziSize,
       toneColors: typeof parsed.toneColors === 'boolean' ? parsed.toneColors : DEFAULTS.toneColors,
+      audioSpeed: AUDIO_SPEEDS.some((s) => s.value === parsed.audioSpeed) ? parsed.audioSpeed! : DEFAULTS.audioSpeed,
     };
   } catch {
     cached = DEFAULTS;
   }
   return cached;
+}
+
+/** Current audio speed as a number, for the audio player (outside React). */
+export function audioSpeed(): number {
+  return Number(read().audioSpeed);
 }
 
 function subscribe(listener: () => void) {

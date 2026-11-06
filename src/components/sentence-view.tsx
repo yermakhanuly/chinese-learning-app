@@ -39,6 +39,21 @@ export function SentenceView({ sentence, highlight }: { sentence: Sentence; high
   );
 }
 
+/** Opens pronunciation practice for a sentence (signed-in learners). */
+export function SayItLink({ text, meaning }: { text: string; meaning?: string }) {
+  const { session } = useAuth();
+  if (!session || [...text].length > 40) return null;
+  return (
+    <ThemedText
+      type="link"
+      role="button"
+      aria-label="Practise saying this sentence"
+      onPress={() => router.push({ pathname: '/pronounce', params: { text, ...(meaning ? { meaning } : {}) } })}>
+      🎤 Say it
+    </ThemedText>
+  );
+}
+
 /** "Add to review" for an example sentence (signed-in learners); shows when it's already added. */
 export function AddSentenceToReview({ sentenceId }: { sentenceId: number }) {
   const { session } = useAuth();

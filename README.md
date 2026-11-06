@@ -51,6 +51,26 @@ Delete a lesson's JSON file and re-run `content:draft` to redraft it; or edit th
 
 `npm run data:import` also loads stroke order and character details from [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) for every character in the HSK words (simplified and traditional forms, ~4,300). `npm run data:import -- --only=characters` reloads just those. Handwriting is checked in `src/lib/stroke-match.ts` (adapted from Hanzi Writer, MIT).
 
+### Audio and pronunciation (Azure Speech)
+
+Put `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION` in `scripts/.env` (git-ignored).
+
+```bash
+npm run audio:generate                    # neural voices for HSK 1–4 words, their example sentences, lesson
+                                          # sentences and tone syllables → data/audio/ (cache) → LOCAL storage
+SUPABASE_URL=… SUPABASE_SERVICE_ROLE_KEY=… npm run audio:generate -- --upload-only   # same files → cloud
+```
+
+The free tier allows 20 voice requests a minute, so the script puts many texts in one request and cuts the audio at the pauses (~30 minutes for ~7,300 clips). The app plays `audio/clips/<audioKey(text)>.mp3` when `audio/index.json` lists it, otherwise the device voice.
+
+Pronunciation scoring runs in the `pronounce` Edge Function (Azure key on the server, 60 checks per learner per day):
+
+```bash
+grep ^AZURE_ scripts/.env > supabase/functions/.env            # git-ignored; local only
+npx supabase functions serve --env-file supabase/functions/.env    # local
+npx supabase secrets set AZURE_SPEECH_KEY=… AZURE_SPEECH_REGION=…  # cloud (then: npx supabase functions deploy pronounce)
+```
+
 ### Review (spaced repetition)
 
 Cards live in `review_cards` and are created by the database: finishing a lesson (`complete_lesson`) adds its words, saving a word adds it (trigger), and learners add sentences and their own cards. Each word gets three cards (read, listen, recall). The app schedules them with [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) (FSRS-7, `src/lib/srs.ts`) and saves each answer through `record_review`, which also logs mistakes. `review_queue` builds the day's session: due cards, then new cards up to the learner's daily limit, one direction of a word per day.
@@ -131,6 +151,7 @@ e2e/                Playwright tests
 - HSK word lists: [complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary) (MIT). Levels use the **2026 HSK 3.0 syllabus** (`hsk_level`; 7 = levels 7–9); the 2021 standard and HSK 2.0 levels are stored too.
 - Dictionary: [CC-CEDICT](https://www.mdbg.net/chinese/dictionary?page=cc-cedict) (CC BY-SA 4.0) — attribution shown in the app's Profile → Credits.
 - Example sentences: [Tatoeba](https://tatoeba.org) (CC BY 2.0 FR) — each sentence links to its Tatoeba page.
+- Voices and pronunciation scoring: Azure AI Speech (neural voices Xiaoxiao and Yunxi).
 - Review scheduling: [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) (MIT).
 - Characters: [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) — stroke shapes and medians under the Arphic Public License, character details (radical, parts, origin) under the LGPL. Stroke checking adapted from [Hanzi Writer](https://github.com/chanind/hanzi-writer) (MIT).
 - Word audio (for now): the device's built-in Chinese voice.

@@ -14,7 +14,11 @@ export default defineConfig({
   timeout: 60_000,
   expect: { timeout: 10_000 },
   retries: process.env.CI ? 1 : 0,
-  use: { baseURL: 'http://localhost:8082' },
+  use: {
+    baseURL: 'http://localhost:8082',
+    // The pronunciation test also replaces getUserMedia with a synthetic tone.
+    permissions: ['microphone'],
+  },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
     { name: 'phone', use: { ...devices['Pixel 7'] } },

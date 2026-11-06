@@ -61,3 +61,5 @@ CLAUDE.md
 skills-lock.json
 AGENTS.md
 .claude/
+# generated neural audio cache (re-uploaded by npm run audio:generate -- --upload-only)
+/data/audio/

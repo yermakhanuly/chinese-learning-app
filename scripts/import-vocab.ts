@@ -8,7 +8,6 @@
  * For a cloud project set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY first.
  * Safe to re-run: words are upserted, dictionary entries are replaced.
  */
-import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -18,6 +17,7 @@ import { createClient } from '@supabase/supabase-js';
 
 import { parseCedictLine, parseHskEntry, type HskSourceEntry } from '../src/lib/vocab-parsers.ts';
 import { importCharacters } from './import-characters.ts';
+import { credentials } from './supabase-credentials.ts';
 import { importLessons } from './import-lessons.ts';
 import { importSentencesAndTopics } from './import-sentences.ts';
 
@@ -47,28 +47,9 @@ async function ensureSources() {
   }
 }
 
-function credentials(): { url: string; key: string } {
-  const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (url && key) return { url, key };
-
-  const out = execFileSync('npx', ['supabase', 'status', '-o', 'env'], { cwd: ROOT, encoding: 'utf8' });
-  const env = Object.fromEntries(
-    out
-      .split('\n')
-      .map((l) => /^([A-Z_]+)="?([^"]*)"?$/.exec(l.trim()))
-      .filter((m): m is RegExpExecArray => m !== null)
-      .map((m) => [m[1], m[2]]),
-  );
-  const localUrl = env.API_URL;
-  const localKey = env.SERVICE_ROLE_KEY ?? env.SECRET_KEY;
-  if (!localUrl || !localKey) throw new Error('Local Supabase is not running. Start it with `npm run db:start`.');
-  return { url: localUrl, key: localKey };
-}
-
 async function main() {
   await ensureSources();
-  const { url, key } = credentials();
+  const { url, key } = credentials(ROOT);
   const db = createClient(url, key, { auth: { persistSession: false } });
 
   // HSK words
