@@ -1,0 +1,35 @@
+{
+  "id": "g2-duration",
+  "level": 2,
+  "title": "Verb + time length: for how long",
+  "topic": "time-place",
+  "summary": "Lets you say how long an action lasts, as in 我学了两年汉语.",
+  "structure": ["Subject + Verb + 了 + Time length", "Subject + Verb + 了 + Time length + (的) + Object", "Subject + Verb + Object + Verb + 了 + Time length"],
+  "explanation": "A point in time (when) comes before the verb: 我八点上课. But a length of time (how long) comes AFTER the verb: 我睡了八个小时 'I slept for eight hours.' With an object, put the length between the verb and the object: 我学了两年汉语 'I studied Chinese for two years', or repeat the verb: 我学汉语学了两年.\n\nAsk with 多长时间 or 多久: 你学了多长时间？ Add 了 at the end too if it's still going on: 我学了两年了 'I've been learning for two years (and still am).'",
+  "examples": [
+    {"zh": "我睡了八个小时。", "en": "I slept for eight hours."},
+    {"zh": "我学了两年汉语。", "en": "I studied Chinese for two years."},
+    {"zh": "他等了你一个小时。", "en": "He waited an hour for you."},
+    {"zh": "我们休息五分钟吧。", "en": "Let's rest for five minutes."},
+    {"zh": "你学了多长时间汉语？", "en": "How long have you studied Chinese?"}
+  ],
+  "mistakes": [
+    {"wrong": "我两个小时看书了。", "right": "我看了两个小时书。", "why": "A length of time goes after the verb."},
+    {"wrong": "我学了汉语两年。", "right": "我学了两年汉语。", "why": "The time length goes between the verb and the object (or repeat the verb)."}
+  ],
+  "related": ["g2-duo-adjective", "g2-action-measure", "g2-cong-dao"],
+  "exercises": [
+    {"type": "order", "en": "I slept for nine hours.", "answer": ["我", "睡了", "九个", "小时"], "also": [], "why": "Verb + 了 + length of time."},
+    {"type": "pick", "prompt": "Which means 'I studied Chinese for one year'?", "options": ["我学了一年汉语。", "我一年学了汉语。", "我学了汉语一年。"], "answer": 0,
+     "why": ["Correct: verb + 了 + time + object.", "Before the verb, 一年 sounds like 'in one year'.", "The time length goes before the object."]},
+    {"type": "fill", "en": "Let's rest for five minutes.", "before": "我们休息", "after": "吧。", "options": ["五分钟", "五点", "第五"], "answer": 0,
+     "why": ["Correct: 五分钟 is a length of time.", "五点 is a clock time (five o'clock), not 'for five minutes'.", "第五 means 'fifth'."]},
+    {"type": "transform", "instruction": "Say how long: two hours.", "source": "他看电视了。", "options": ["他看了两个小时电视。", "他两个小时看电视了。", "他看电视两点了。"], "answer": 0,
+     "why": ["Correct: verb + 了 + time length + object.", "A length of time can't go before the verb.", "两点 is two o'clock, not two hours."]},
+    {"type": "fill", "en": "How long have you lived here?", "before": "你在这儿住了", "after": "？", "options": ["多长时间", "几点", "什么时候"], "answer": 0,
+     "why": ["Correct: 多长时间 asks how long.", "几点 asks what time.", "什么时候 asks when."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["他等了我半个小时。", "他半个小时等了我。", "他等了我半点。"], "answer": 0,
+     "why": ["Correct: verb + object (person) + time length.", "The length of time goes after the verb.", "半点 isn't a length of time; 'half an hour' is 半个小时."]}
+  ],
+  "words": ["多久"]
+}

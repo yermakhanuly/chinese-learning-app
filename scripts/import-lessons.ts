@@ -10,6 +10,8 @@ import { join } from 'node:path';
 
 import type { SupabaseClient } from '@supabase/supabase-js';
 
+import { lessonGrammarLinks } from './import-grammar.ts';
+
 import { checkCourse, chineseTexts, type Course, type Lesson, type Step } from '../src/lib/lessons.ts';
 import { buildLexicon, buildTradToSimp, tokenize, type Token } from '../src/lib/sentences.ts';
 import type { DictionaryRow, WordRow } from '../src/lib/vocab-parsers.ts';
@@ -34,6 +36,8 @@ export async function importLessons(db: SupabaseClient, root: string, words: Wor
   );
   const t2s = buildTradToSimp(cedict);
   const byWord = new Map(words.map((w) => [w.simplified, w]));
+  // Grammar notes link to their page in the grammar library.
+  const grammarLinks = lessonGrammarLinks(root);
 
   for (const dir of readdirSync(contentDir).filter((d) => /^hsk\d$/.test(d)).sort()) {
     const level = Number(dir.slice(3));
@@ -114,7 +118,10 @@ export async function importLessons(db: SupabaseClient, root: string, words: Wor
           title: l.title,
           kind: l.kind,
           words: l.words,
-          steps: l.steps,
+          steps: l.steps.map((s) => {
+            const grammarId = s.type === 'grammar' ? grammarLinks.get(`${l.id}|${s.title}`) : undefined;
+            return grammarId ? { ...s, grammar_id: grammarId } : s;
+          }),
           readings,
           word_details: wordDetails,
           minutes: Math.max(2, Math.round(l.steps.length * 0.35)),

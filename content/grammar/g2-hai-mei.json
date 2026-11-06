@@ -1,0 +1,35 @@
+{
+  "id": "g2-hai-mei",
+  "level": 2,
+  "title": "还没(有)…呢: not yet",
+  "topic": "negation",
+  "summary": "Lets you say something hasn't happened yet, as in 我还没吃饭呢.",
+  "structure": ["Subject + 还没(有) + Verb (+ Object) (+ 呢)", "…了吗？ — 还没呢。"],
+  "explanation": "还没(有) + verb means 'not yet': 我还没吃饭 'I haven't eaten yet.' 呢 at the end is very common and adds 'still waiting': 他还没来呢 'He's not here yet.' As with 没, there is no 了.\n\nIt's the natural answer to a 了吗 question when the thing hasn't happened yet: 你吃饭了吗？— 还没呢 'Not yet.'",
+  "examples": [
+    {"zh": "我还没吃饭呢。", "en": "I haven't eaten yet."},
+    {"zh": "他还没来。", "en": "He isn't here yet."},
+    {"zh": "你做完了吗？—还没呢。", "en": "Have you finished? — Not yet."},
+    {"zh": "电影还没开始。", "en": "The film hasn't started yet."},
+    {"zh": "我还没有去过上海。", "en": "I haven't been to Shanghai yet."}
+  ],
+  "mistakes": [
+    {"wrong": "我还没吃饭了。", "right": "我还没吃饭呢。", "why": "Don't use 了 with 没; end with 呢 if you like."},
+    {"wrong": "我没还吃饭。", "right": "我还没吃饭。", "why": "The order is 还 + 没."}
+  ],
+  "related": ["g1-meiyou-negation", "g2-hai", "g2-result-complements"],
+  "exercises": [
+    {"type": "fill", "en": "My younger brother hasn't got up yet.", "before": "我弟弟", "after": "起床呢。", "options": ["还没", "没还", "还不"], "answer": 0,
+     "why": ["Correct: 还没 + verb = not yet.", "The order is 还 then 没.", "还不 means 'still won't / still doesn't'."]},
+    {"type": "pick", "prompt": "Someone asks 你吃饭了吗？ and you haven't yet. You say:", "options": ["还没呢。", "还不了。", "没还呢。"], "answer": 0,
+     "why": ["Correct: 还没呢 = not yet.", "还不了 isn't said.", "Word order: 还没."]},
+    {"type": "transform", "instruction": "Say it hasn't happened yet.", "source": "电影开始了。", "options": ["电影还没开始。", "电影还没开始了。", "电影没还开始。"], "answer": 0,
+     "why": ["Correct: 还没 + verb, no 了.", "Drop 了 with 没.", "还 comes before 没."]},
+    {"type": "order", "en": "I haven't finished my homework yet.", "answer": ["我", "还没", "写完", "作业", "呢"], "also": [], "why": "还没 + verb, and 呢 at the end."},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["他还没回来呢。", "他没回来了呢。", "他还回来没。"], "answer": 0,
+     "why": ["Correct: 还没 + verb + 呢.", "Don't put 了 with 没.", "没 must come before the verb."]},
+    {"type": "fill", "en": "The teacher isn't here yet.", "before": "老师还没来", "after": "。", "options": ["呢", "了", "吗"], "answer": 0,
+     "why": ["Correct: 还没…呢.", "了 doesn't go with 没.", "吗 would make it a question."]}
+  ],
+  "words": ["作业", "上海"]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "g2-guo-experience",
+  "level": 2,
+  "title": "过: have done before",
+  "topic": "aspect",
+  "summary": "Lets you talk about things you have or haven't experienced, as in 我去过中国.",
+  "structure": ["Subject + Verb + 过 + (Object)", "Subject + 没 + Verb + 过 + (Object)", "Verb + 过 + Object + 吗 / 没有？"],
+  "explanation": "过 (guo, toneless) right after a verb means you have done it at some time in the past: 我去过中国 'I've been to China', 我吃过饺子 'I've eaten dumplings (before).' It's about experience, not one particular time.\n\nThe negative is 没 + verb + 过 — keep 过! 我没去过 'I've never been.' To ask: 你去过吗？ or 你去过没有？ Compare 了: 我去了 'I went (that time)'.",
+  "examples": [
+    {"zh": "我去过中国。", "en": "I've been to China."},
+    {"zh": "你吃过饺子吗？", "en": "Have you ever eaten dumplings?"},
+    {"zh": "我没看过这个电影。", "en": "I've never seen this film."},
+    {"zh": "他学过两年汉语。", "en": "He has studied Chinese for two years (at some point)."},
+    {"zh": "你坐过飞机没有？", "en": "Have you ever been on a plane?"}
+  ],
+  "mistakes": [
+    {"wrong": "我没去了中国。", "right": "我没去过中国。", "why": "For 'never', say 没 + verb + 过."},
+    {"wrong": "我过去中国。", "right": "我去过中国。", "why": "过 goes right after the verb."}
+  ],
+  "related": ["g1-le-completed", "g2-action-measure", "g1-meiyou-negation"],
+  "exercises": [
+    {"type": "fill", "en": "I've drunk Chinese tea before.", "before": "我喝", "after": "中国茶。", "options": ["过", "在", "着"], "answer": 0,
+     "why": ["Correct: verb + 过 = have done before.", "在 goes before verbs, not after.", "着 shows an ongoing state, not experience."]},
+    {"type": "transform", "instruction": "Make it negative ('never').", "source": "我去过机场。", "options": ["我没去过机场。", "我不去过机场。", "我没去机场过了。"], "answer": 0,
+     "why": ["Correct: 没 + verb + 过.", "过 sentences are negated with 没.", "过 stays right after the verb, and no 了."]},
+    {"type": "pick", "prompt": "Which asks 'Have you ever eaten dumplings?'", "options": ["你吃过饺子吗？", "你过吃饺子吗？", "你吃饺子过吗？"], "answer": 0,
+     "why": ["Correct: verb + 过 + object + 吗.", "过 goes after the verb.", "过 goes right after the verb, before the object."]},
+    {"type": "order", "en": "I've never seen this film.", "answer": ["我", "没", "看过", "这个电影"], "also": [], "why": "没 + verb + 过 + object."},
+    {"type": "pick", "prompt": "Which means 'I went to Beijing last year' (that one time)?", "options": ["我去年去了北京。", "我去年去过了北京吗。", "我去年过去北京。"], "answer": 0,
+     "why": ["Correct: one finished event = 了.", "This mixes 过, 了 and 吗.", "过去 means 'the past' or 'go over'."]},
+    {"type": "fill", "en": "Have you ever taken the subway?", "before": "你坐过地铁", "after": "？", "options": ["没有", "不", "了"], "answer": 0,
+     "why": ["Correct: … 过 … 没有？ asks about experience.", "不 doesn't form this question.", "了 doesn't make it a question."]}
+  ],
+  "words": ["北京"]
+}

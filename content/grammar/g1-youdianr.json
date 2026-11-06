@@ -1,0 +1,34 @@
+{
+  "id": "g1-youdianr",
+  "level": 1,
+  "title": "有点儿 + adjective: a bit (too)",
+  "topic": "adverbs",
+  "summary": "Lets you say something is a bit too much, usually in a negative way, as in 有点儿贵.",
+  "structure": ["Subject + 有点儿 + Adjective"],
+  "explanation": "有点儿 before an adjective means 'a bit, slightly', and it usually sounds like a mild complaint: 这件衣服有点儿贵 'This is a bit expensive.' 今天有点儿冷 'It's a bit cold today.'\n\nBecause it sounds negative, it fits words like 贵, 冷, 忙, 小 better than happy words. Don't confuse it with 一点儿, which comes AFTER an adjective or verb (an HSK 2 point).",
+  "examples": [
+    {"zh": "这件衣服有点儿贵。", "en": "This piece of clothing is a bit expensive."},
+    {"zh": "今天有点儿冷。", "en": "It's a bit cold today."},
+    {"zh": "我有点儿忙。", "en": "I'm a bit busy."},
+    {"zh": "这个房间有点儿小。", "en": "This room is a bit small."},
+    {"zh": "他今天有点儿不高兴。", "en": "He's a bit unhappy today."}
+  ],
+  "mistakes": [
+    {"wrong": "这个苹果贵有点儿。", "right": "这个苹果有点儿贵。", "why": "有点儿 goes before the adjective."},
+    {"wrong": "我有点儿很忙。", "right": "我有点儿忙。", "why": "Use 有点儿 or 很, not both."}
+  ],
+  "related": ["g1-tai-le", "g1-hen-adjectives", "g2-yidianr"],
+  "exercises": [
+    {"type": "fill", "en": "This restaurant is a bit expensive.", "before": "这个饭店", "after": "贵。", "options": ["有点儿", "一点儿", "很有点儿"], "answer": 0,
+     "why": ["Correct: 有点儿 + adjective = 'a bit (too)'.", "一点儿 goes after the adjective, not before.", "Don't combine 很 and 有点儿."]},
+    {"type": "pick", "prompt": "Which means 'I'm a bit busy today'?", "options": ["我今天有点儿忙。", "我今天忙有点儿。", "我有点儿今天忙。"], "answer": 0,
+     "why": ["Correct: 有点儿 right before 忙.", "有点儿 can't go after the adjective.", "Time comes before 有点儿, and 有点儿 sits right before the adjective."]},
+    {"type": "transform", "instruction": "Soften it: 'a bit' instead of 'too'.", "source": "今天太冷了。", "options": ["今天有点儿冷。", "今天有点儿冷了太。", "今天冷有点儿。"], "answer": 0,
+     "why": ["Correct: 有点儿 + adjective, no 太 or 了.", "Drop 太 … 了 when you use 有点儿.", "有点儿 goes before the adjective."]},
+    {"type": "order", "en": "This room is a bit small.", "answer": ["这个", "房间", "有点儿", "小"], "also": [], "why": "有点儿 goes right before the adjective."},
+    {"type": "pick", "prompt": "Which sentence sounds most natural?", "options": ["这本书有点儿贵。", "这本书有点儿便宜。", "这本书有点儿好。"], "answer": 0,
+     "why": ["Correct: 有点儿 suits slightly negative things like 'expensive'.", "有点儿 sounds like a complaint, so 'a bit cheap' sounds odd.", "有点儿好 is odd; say 很好 or 不错 for good things."]},
+    {"type": "fill", "en": "My mum is a bit unhappy.", "before": "我妈妈", "after": "不高兴。", "options": ["有点儿", "一点儿", "太"], "answer": 0,
+     "why": ["Correct: 有点儿 + 不高兴.", "一点儿 can't go before an adjective.", "太 needs 了 at the end and means 'too'."]}
+  ]
+}

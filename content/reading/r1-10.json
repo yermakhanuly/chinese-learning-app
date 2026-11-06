@@ -1,0 +1,107 @@
+{
+  "id": "r1-10",
+  "level": 1,
+  "kind": "story",
+  "title": "I was ill",
+  "title_zh": "我生病了",
+  "summary": "A student gets ill, sees a doctor and misses school.",
+  "speakers": [],
+  "names": [],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "昨天早上，我生病了。",
+      "en": "Yesterday morning I got ill."
+    },
+    {
+      "zh": "我没吃早饭，也没去学校。",
+      "en": "I didn't eat breakfast, and I didn't go to school."
+    },
+    {
+      "zh": "妈妈说：'我们去医院吧。'",
+      "en": "Mum said: 'Let's go to the hospital.'"
+    },
+    {
+      "zh": "我们坐出租车去了医院。",
+      "en": "We went to the hospital by taxi."
+    },
+    {
+      "zh": "医生说：'你要多喝水，多睡觉。'",
+      "en": "The doctor said: 'Drink lots of water and sleep a lot.'"
+    },
+    {
+      "zh": "医生还说：'这几天不要吃冷的东西。'",
+      "en": "The doctor also said: 'Don't eat cold things for the next few days.'"
+    },
+    {
+      "zh": "回家了，我睡了三个小时。",
+      "en": "Back home, I slept for three hours."
+    },
+    {
+      "zh": "下午，我的同学给我打电话。",
+      "en": "In the afternoon, my classmate phoned me."
+    },
+    {
+      "zh": "今天我好了，明天我去上学。",
+      "en": "Today I'm better; tomorrow I'll go to school."
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "What didn't the student do yesterday?",
+      "options": [
+        "Go to school",
+        "Go to the hospital",
+        "Sleep"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 也没去学校.",
+        "They did go to the hospital: 去了医院.",
+        "They slept for three hours."
+      ]
+    },
+    {
+      "prompt": "How did they get to the hospital?",
+      "options": [
+        "By taxi",
+        "On foot",
+        "By plane"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们坐出租车去了医院.",
+        "They took a taxi, not walked.",
+        "No plane — 出租车 is a taxi."
+      ]
+    },
+    {
+      "prompt": "What did the doctor say NOT to do?",
+      "options": [
+        "Eat cold things",
+        "Drink water",
+        "Sleep"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 不要吃冷的东西.",
+        "The doctor said to drink lots of water.",
+        "The doctor said to sleep a lot."
+      ]
+    },
+    {
+      "prompt": "Who phoned in the afternoon?",
+      "options": [
+        "A classmate",
+        "The doctor",
+        "Dad"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我的同学给我打电话.",
+        "The doctor didn't phone.",
+        "Dad isn't mentioned."
+      ]
+    }
+  ]
+}

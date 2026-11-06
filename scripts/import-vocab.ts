@@ -4,6 +4,8 @@
  *
  *   npm run data:import            # local Supabase (credentials read from `supabase status`)
  *   npm run data:import -- --only=characters   # only the characters step
+ *   npm run data:import -- --only=content      # only lessons, grammar and readings (content/)
+ *   npm run data:import -- --only=sentence-tokens   # recompute pinyin of the example sentences in place
  *
  * For a cloud project set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY first.
  * Safe to re-run: words are upserted, dictionary entries are replaced.
@@ -17,9 +19,10 @@ import { createClient } from '@supabase/supabase-js';
 
 import { parseCedictLine, parseHskEntry, type HskSourceEntry } from '../src/lib/vocab-parsers.ts';
 import { importCharacters } from './import-characters.ts';
+import { importGrammar } from './import-grammar.ts';
 import { credentials } from './supabase-credentials.ts';
 import { importLessons } from './import-lessons.ts';
-import { importSentencesAndTopics } from './import-sentences.ts';
+import { importSentencesAndTopics, retokenizeSentences } from './import-sentences.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RAW = join(ROOT, 'data', 'raw');
@@ -60,6 +63,15 @@ async function main() {
 
   const only = process.argv.find((a) => a.startsWith('--only='))?.slice('--only='.length);
   if (only === 'characters') return importCharacters(db, RAW, unique);
+  if (only === 'content') {
+    const cedict = readFileSync(CEDICT_FILE, 'utf8').split('\n').map(parseCedictLine).filter((e) => e !== null);
+    await importLessons(db, ROOT, unique, cedict);
+    return importGrammar(db, ROOT, unique, cedict);
+  }
+  if (only === 'sentence-tokens') {
+    const cedict = readFileSync(CEDICT_FILE, 'utf8').split('\n').map(parseCedictLine).filter((e) => e !== null);
+    return retokenizeSentences(db, ROOT, unique, cedict);
+  }
   if (only) throw new Error(`Unknown step: ${only}`);
   for (let i = 0; i < unique.length; i += BATCH) {
     const { error } = await db
@@ -88,6 +100,7 @@ async function main() {
   await importCharacters(db, RAW, unique);
   await importSentencesAndTopics(db, ROOT, unique, entries);
   await importLessons(db, ROOT, unique, entries);
+  await importGrammar(db, ROOT, unique, entries);
 
   // Summary per 2026 HSK level
   for (let level = 1; level <= 7; level++) {

@@ -66,7 +66,9 @@
     "data:import": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/import-vocab.ts",
     "data:topics": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=scripts/.env scripts/tag-topics.ts",
     "audio:generate": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=scripts/.env scripts/generate-audio.ts",
-    "content:draft": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=scripts/.env scripts/draft-lessons.ts"
+    "content:draft": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=scripts/.env scripts/draft-lessons.ts",
+    "content:grammar": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --env-file-if-exists=scripts/.env scripts/draft-grammar.ts",
+    "content:check": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-content.ts"
   },
   "private": true,
   "jest": {

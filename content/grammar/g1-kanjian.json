@@ -1,0 +1,34 @@
+{
+  "id": "g1-kanjian",
+  "level": 1,
+  "title": "看见 / 听见: see, hear",
+  "topic": "complements",
+  "summary": "Lets you say you actually saw or heard something by adding 见 after 看 or 听.",
+  "structure": ["Subject + 看见 / 听见 + Object", "Subject + 没看见 / 没听见"],
+  "explanation": "看 means 'look, watch' and 听 means 'listen'. Adding 见 shows the result: you actually SAW or HEARD it. So 我看了，没看见 means 'I looked, but didn't see it.'\n\nThe negative is 没: 我没听见 'I didn't hear (it).' Use 看 for watching TV or reading (看电视, 看书) and 看见 for noticing someone or something (我看见他了).",
+  "examples": [
+    {"zh": "我看见他了。", "en": "I saw him."},
+    {"zh": "你听见了吗？", "en": "Did you hear it?"},
+    {"zh": "我没听见。", "en": "I didn't hear."},
+    {"zh": "你看见我的手机了吗？", "en": "Have you seen my phone?"},
+    {"zh": "我看见她在外边。", "en": "I saw her outside."}
+  ],
+  "mistakes": [
+    {"wrong": "我不看见他。", "right": "我没看见他。", "why": "'Didn't see' is 没看见; 看见 is about a result, so use 没."},
+    {"wrong": "我看见电视。", "right": "我看电视。", "why": "Watching TV is 看; 看见 is for noticing something."}
+  ],
+  "related": ["g2-result-complements", "g1-le-completed", "g1-meiyou-negation"],
+  "exercises": [
+    {"type": "fill", "en": "Did you hear? It's raining.", "before": "你听", "after": "了吗？下雨了。", "options": ["见", "看", "到了吗"], "answer": 0,
+     "why": ["Correct: 听见 = 'hear'.", "听看 isn't a word.", "This doubles 了吗 and breaks the sentence."]},
+    {"type": "transform", "instruction": "Make it negative.", "source": "我看见老师了。", "options": ["我没看见老师。", "我不看见老师了。", "我没看见老师了。"], "answer": 0,
+     "why": ["Correct: 没看见, and drop 了.", "Use 没, not 不, for 'didn't see'.", "With 没, 了 must go."]},
+    {"type": "pick", "prompt": "Which means 'I'm watching TV'?", "options": ["我在看电视。", "我在看见电视。", "我在听见电视。"], "answer": 0,
+     "why": ["Correct: watching = 看.", "看见 is for noticing, not watching.", "听见 means 'hear'."]},
+    {"type": "order", "en": "Have you seen my older brother?", "answer": ["你", "看见", "我哥哥", "了吗"], "also": [], "why": "看见 + who you saw, and 了吗 at the end."},
+    {"type": "pick", "prompt": "Someone calls you, but it's noisy. You say:", "options": ["对不起，我没听见。", "对不起，我不听。", "对不起，我没看见。"], "answer": 0,
+     "why": ["Correct: 没听见 = 'didn't hear'.", "不听 means 'I won't listen' — rude here.", "看见 is about seeing."]},
+    {"type": "fill", "en": "I saw him at the shop yesterday.", "before": "我昨天在商店", "after": "他了。", "options": ["看见", "看", "听见"], "answer": 0,
+     "why": ["Correct: noticing someone = 看见.", "看 alone means 'look at, watch'; for 'saw (someone)' use 看见.", "听见 means 'heard'."]}
+  ]
+}

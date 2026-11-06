@@ -1,0 +1,226 @@
+{
+  "id": "g1-zhe-na",
+  "level": 1,
+  "title": "这, 那, 哪 (+些): this, that, which",
+  "topic": "basics",
+  "summary": "Lets you point to things near and far, one or many, and ask which one, as in 这个, 那些 and 哪些.",
+  "structure": [
+    "这 / 那 / 哪 + (Number) + Measure word + Noun",
+    "这些 / 那些 / 哪些 + Noun",
+    "这 / 那 + 是 + Noun"
+  ],
+  "explanation": "这 means \"this\" (near you), 那 means \"that\" (farther away), and 哪 means \"which?\" and is used to ask questions. Add 些 and they become plural: 这些 \"these\", 那些 \"those\", 哪些 \"which ones?\".\n\nBefore a noun, 这, 那 and 哪 normally need a measure word (a small counting word like 个, 本, 件): 这个人 \"this person\", 那本书 \"that book\", 哪件衣服 \"which piece of clothing?\". To add a number, put it right after 这 / 那 / 哪: 这三本书 \"these three books\". With 些, you don't need a measure word: 这些书, 那些人.\n\nOn their own, 这 and 那 can be the subject of a 是 sentence: 这是我的手机 \"This is my phone.\" 这个, 那个, 这些 and 那些 can also stand alone when the thing is clear: 那些很贵 \"Those are expensive.\"\n\nWatch out: 那 (that) and 哪 (which) look alike. 哪 has the 口 \"mouth\" part on the left, because it asks something. Since 哪 already makes a question, don't add 吗. Also, don't mix 些 with a number: say 这三本书, not 这些三本书.",
+  "examples": [
+    {
+      "zh": "这是我的手机。",
+      "en": "This is my phone."
+    },
+    {
+      "zh": "那个人是我们的老师。",
+      "en": "That person is our teacher."
+    },
+    {
+      "zh": "你喜欢哪本书？",
+      "en": "Which book do you like?"
+    },
+    {
+      "zh": "这些苹果很便宜，那些很贵。",
+      "en": "These apples are cheap; those are expensive."
+    },
+    {
+      "zh": "桌子上的书，哪些是你的？",
+      "en": "Which of the books on the table are yours?"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我想买那衣服。",
+      "right": "我想买那件衣服。",
+      "why": "Before a noun, 那 needs a measure word. For clothes, use 件."
+    },
+    {
+      "wrong": "我买了这些三本书。",
+      "right": "我买了这三本书。",
+      "why": "With a number, use 这 + number + measure word. 些 already means \"several\", so it doesn't go with a number."
+    },
+    {
+      "wrong": "你要哪个吗？",
+      "right": "你要哪个？",
+      "why": "哪 already makes the sentence a question, so you don't add 吗."
+    }
+  ],
+  "related": [
+    "g1-measure-words",
+    "g1-question-words",
+    "g1-shi",
+    "g1-numbers"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I want to buy that piece of clothing.",
+      "before": "我想买",
+      "after": "件衣服。",
+      "options": [
+        "那",
+        "那些",
+        "哪",
+        "那个"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 那 + measure word 件 + noun means \"that piece of clothing\".",
+        "那些 is plural and replaces the measure word, so it can't be followed by 件.",
+        "哪 means \"which\" and makes a question, but this sentence is a statement about \"that\" one.",
+        "那个 already has a measure word (个), so you can't add 件 too. Use only one measure word."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Which book do you like?",
+      "before": "你喜欢",
+      "after": "本书？",
+      "options": [
+        "哪",
+        "那",
+        "这些",
+        "什么"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 哪 + 本 + 书 asks \"which book?\".",
+        "那 means \"that\", not \"which\". 那 and 哪 look alike, but only 哪 asks a question.",
+        "这些 means \"these\" and replaces the measure word, so it can't come before 本. It also doesn't ask a question.",
+        "什么 means \"what\" and goes straight before a noun (什么书). It doesn't take a measure word like 本."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "These apples are delicious.",
+      "before": "",
+      "after": "苹果很好吃。",
+      "options": [
+        "这些",
+        "这个些",
+        "些",
+        "哪些"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 这些 + noun means \"these\", with no measure word needed.",
+        "Don't put 个 between 这 and 些. 这些 is one word.",
+        "些 can't be used alone here. It needs 这 or 那 in front to mean \"these\" or \"those\".",
+        "哪些 means \"which ones?\" and makes a question, but this sentence is a statement."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'Which students are coming tomorrow?'",
+      "options": [
+        "哪些学生明天来？",
+        "那些学生明天来。",
+        "哪些学生明天来吗？",
+        "哪个些学生明天来？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 哪些 + noun asks \"which ones?\" about more than one person.",
+        "那些 means \"those\", so this says \"Those students are coming tomorrow.\" It's not a question.",
+        "哪些 already makes a question, so you don't add 吗.",
+        "Don't put 个 inside 哪些. Use 哪个 for one and 哪些 for more than one."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "我要这两本书。",
+        "我要这些两本书。",
+        "我要两这本书。",
+        "我要这两书。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 这 + number + measure word + noun, as in 这两本书.",
+        "Don't use 些 with a number. Say 这两本书.",
+        "这 comes first, then the number: 这两本书, not 两这本书.",
+        "A measure word is needed after the number: 两本书, not 两书."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Ask which one (use 哪).",
+      "source": "你要这个。",
+      "options": [
+        "你要哪个？",
+        "你要哪个吗？",
+        "你要那个？",
+        "哪你要个？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: replace 这 with 哪 in the same spot, and the sentence becomes a question.",
+        "哪 already makes a question, so 吗 is not needed.",
+        "那 means \"that\", not \"which\". This only asks \"You want that one?\"",
+        "哪 and 个 stay together in the object's position: 你要哪个？"
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it plural: 'these books'.",
+      "source": "这本书很好看。",
+      "options": [
+        "这些书很好看。",
+        "这些本书很好看。",
+        "这本书们很好看。",
+        "些这书很好看。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 这些 replaces 这 + measure word, giving 这些书.",
+        "With 些 you drop the measure word, so 本 must go.",
+        "们 isn't added to things like 书. Use 这些 for the plural.",
+        "The order is 这些, not 些这."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "That is my teacher's phone.",
+      "answer": [
+        "那",
+        "是",
+        "我",
+        "老师的",
+        "手机"
+      ],
+      "also": [],
+      "why": "那 is the subject before 是, and the owner (我老师的) comes before the thing owned."
+    },
+    {
+      "type": "order",
+      "en": "Which apples do you want?",
+      "answer": [
+        "你",
+        "要",
+        "哪些",
+        "苹果"
+      ],
+      "also": [],
+      "why": "哪些 + noun sits where the answer would go, here after the verb 要, just like 这些苹果 would."
+    },
+    {
+      "type": "order",
+      "en": "Those three people are my friends.",
+      "answer": [
+        "那",
+        "三个",
+        "人",
+        "是",
+        "我的",
+        "朋友"
+      ],
+      "also": [],
+      "why": "The order is 那 + number + measure word + noun: 那三个人."
+    }
+  ]
+}

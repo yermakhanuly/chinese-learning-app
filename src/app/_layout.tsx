@@ -63,9 +63,15 @@ function ThemedRoot() {
           <Stack.Screen name="characters" options={WITH_HEADER} />
           <Stack.Screen name="listening" options={WITH_HEADER} />
           <Stack.Screen name="tones" options={WITH_HEADER} />
+          <Stack.Screen name="grammar" options={WITH_HEADER} />
+          <Stack.Screen name="grammar-point" options={WITH_HEADER} />
+          <Stack.Screen name="reading" options={WITH_HEADER} />
+          <Stack.Screen name="reading-text" options={WITH_HEADER} />
           {/* Lessons and review sessions take the whole screen; the placement test is a sheet. */}
           <Stack.Screen name="lesson" options={{ presentation: 'fullScreenModal' }} />
           <Stack.Screen name="review-session" options={{ presentation: 'fullScreenModal' }} />
+          <Stack.Screen name="grammar-practice" options={{ presentation: 'fullScreenModal' }} />
+          <Stack.Screen name="grammar-note" options={{ presentation: 'modal' }} />
           <Stack.Screen name="placement" options={{ presentation: 'modal' }} />
           <Stack.Screen name="character-quiz" options={{ presentation: 'modal', gestureEnabled: false }} />
           <Stack.Screen name="tone-quiz" options={{ presentation: 'modal' }} />

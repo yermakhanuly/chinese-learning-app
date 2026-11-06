@@ -1,0 +1,118 @@
+{
+  "id": "r2-05",
+  "level": 2,
+  "kind": "story",
+  "title": "My first flight",
+  "title_zh": "第一次坐飞机",
+  "summary": "A boy remembers the first time he took a plane.",
+  "speakers": [],
+  "names": [
+    "北京"
+  ],
+  "new_words": [
+    {
+      "word": "云",
+      "en": "cloud"
+    },
+    {
+      "word": "才",
+      "en": "only then, not until"
+    }
+  ],
+  "sentences": [
+    {
+      "zh": "小时候我没坐过飞机。",
+      "en": "As a child I had never been on a plane."
+    },
+    {
+      "zh": "十岁那年，我和爸爸妈妈去北京旅游，我第一次坐飞机。",
+      "en": "When I was ten, I went to Beijing on holiday with Mum and Dad; it was my first flight."
+    },
+    {
+      "zh": "飞机早上八点飞，我们五点就起床了。",
+      "en": "The plane left at eight, and we got up as early as five."
+    },
+    {
+      "zh": "虽然很早，但是我一点儿也不累。",
+      "en": "Although it was early, I wasn't tired at all."
+    },
+    {
+      "zh": "我们六点半就到机场了。",
+      "en": "We got to the airport by half past six."
+    },
+    {
+      "zh": "飞机上，我很喜欢看外面。",
+      "en": "On the plane, I loved looking outside."
+    },
+    {
+      "zh": "外面有很多白色的云，太漂亮了！",
+      "en": "Outside there were lots of white clouds — so beautiful!"
+    },
+    {
+      "zh": "飞了两个多小时，我们才到北京。",
+      "en": "Only after flying for over two hours did we arrive in Beijing."
+    },
+    {
+      "zh": "现在我已经坐过很多次飞机了，但是我还记得第一次。",
+      "en": "Now I've flown many times, but I still remember the first time."
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "How old was he on his first flight?",
+      "options": [
+        "Ten",
+        "Eight",
+        "Five"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 十岁那年.",
+        "Eight o'clock was the flight time.",
+        "Five o'clock was when they got up."
+      ]
+    },
+    {
+      "prompt": "When did they get up that day?",
+      "options": [
+        "At five",
+        "At eight",
+        "At half past six"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们五点就起床了.",
+        "Eight was when the plane left.",
+        "Half past six was when they reached the airport."
+      ]
+    },
+    {
+      "prompt": "What did he see outside the plane?",
+      "options": [
+        "White clouds",
+        "The sea",
+        "Mountains"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 外面有很多白色的云.",
+        "The sea isn't mentioned.",
+        "Mountains aren't mentioned."
+      ]
+    },
+    {
+      "prompt": "How long was the flight?",
+      "options": [
+        "Over two hours",
+        "Ten hours",
+        "Thirty minutes"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 飞了两个多小时.",
+        "It was 两个多小时, a little over two hours.",
+        "It took hours, not minutes."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "r2-03",
+  "level": 2,
+  "kind": "story",
+  "title": "A birthday present",
+  "title_zh": "生日礼物",
+  "summary": "A girl's birthday and the present her grandpa gave her.",
+  "speakers": [],
+  "names": [
+    "小美"
+  ],
+  "new_words": [
+    {
+      "word": "礼物",
+      "en": "present, gift"
+    },
+    {
+      "word": "蛋糕",
+      "en": "cake"
+    }
+  ],
+  "sentences": [
+    {
+      "zh": "上个星期六是我的生日，我十五岁了。",
+      "en": "Last Saturday was my birthday; I turned fifteen."
+    },
+    {
+      "zh": "那天我很快乐。",
+      "en": "I was very happy that day."
+    },
+    {
+      "zh": "早上，妈妈给我做了一个很大的蛋糕。",
+      "en": "In the morning Mum made me a very big cake."
+    },
+    {
+      "zh": "下午，我的好朋友小美来我家了。",
+      "en": "In the afternoon, my good friend Xiaomei came to my home."
+    },
+    {
+      "zh": "她送我一本书，是她自己在书店买的。",
+      "en": "She gave me a book; she bought it at a bookshop herself."
+    },
+    {
+      "zh": "晚上，爷爷奶奶也来了。",
+      "en": "In the evening, Grandpa and Grandma came too."
+    },
+    {
+      "zh": "爷爷送了我一块手表。",
+      "en": "Grandpa gave me a watch."
+    },
+    {
+      "zh": "我问爷爷：'这块手表是在哪儿买的？'",
+      "en": "I asked Grandpa: 'Where did you buy this watch?'"
+    },
+    {
+      "zh": "爷爷笑着说：'不是买的，是你奶奶送我的。'",
+      "en": "Grandpa smiled and said: 'I didn't buy it. Your grandma gave it to me.'"
+    },
+    {
+      "zh": "这是我最喜欢的礼物。",
+      "en": "It's my favourite present."
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "How old did she turn?",
+      "options": [
+        "Fifteen",
+        "Fifty",
+        "Five"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我十五岁了.",
+        "It's 十五, not 五十.",
+        "It's 十五 — fifteen."
+      ]
+    },
+    {
+      "prompt": "What did Xiaomei give her?",
+      "options": [
+        "A book",
+        "A watch",
+        "A cake"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 她送我一本书.",
+        "The watch was from Grandpa.",
+        "Mum made the cake."
+      ]
+    },
+    {
+      "prompt": "Where did Grandpa's watch come from?",
+      "options": [
+        "Grandma gave it to him",
+        "He bought it at a shop",
+        "Xiaomei gave it to him"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 是你奶奶送我的.",
+        "He says 不是买的 — it wasn't bought.",
+        "Xiaomei gave a book, not the watch."
+      ]
+    }
+  ]
+}

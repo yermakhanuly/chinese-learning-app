@@ -1,0 +1,35 @@
+{
+  "id": "g2-li",
+  "level": 2,
+  "title": "离: distance from",
+  "topic": "time-place",
+  "summary": "Lets you say how near or far one place is from another, as in 我家离学校很近.",
+  "structure": ["A + 离 + B + 很近 / 很远", "A + 离 + B + 有 + distance", "A + 离 + B + 远吗？"],
+  "explanation": "离 compares two places: A 离 B 很近 'A is close to B', A 离 B 很远 'A is far from B.' Literally 'A, from B, is close.' The first place is what you're talking about, the second is the reference point.\n\nTo ask, add 吗 or use 多远: 你家离这儿远吗？ / 离这儿多远？ Unlike 从, 离 doesn't describe movement; it only states the distance.",
+  "examples": [
+    {"zh": "我家离学校很近。", "en": "My home is close to school."},
+    {"zh": "机场离这儿很远。", "en": "The airport is far from here."},
+    {"zh": "你家离地铁站远吗？", "en": "Is your home far from the subway station?"},
+    {"zh": "这儿离商场有多远？", "en": "How far is the mall from here?"},
+    {"zh": "医院离公司不远，走路二十分钟。", "en": "The hospital isn't far from the office: ten minutes on foot."}
+  ],
+  "mistakes": [
+    {"wrong": "我家很近离学校。", "right": "我家离学校很近。", "why": "离 + place comes before 近 / 远."},
+    {"wrong": "我家从学校很近。", "right": "我家离学校很近。", "why": "For distance, use 离, not 从."}
+  ],
+  "related": ["g2-cong-dao", "g2-duo-adjective"],
+  "exercises": [
+    {"type": "fill", "en": "The station is very close to my home.", "before": "车站", "after": "我家很近。", "options": ["离", "从", "到"], "answer": 0,
+     "why": ["Correct: A 离 B 很近.", "从 is for movement from a place, not distance.", "到 means 'to, until'."]},
+    {"type": "pick", "prompt": "Which asks 'Is the hospital far from here?'", "options": ["医院离这儿远吗？", "医院远离这儿吗？", "离医院这儿远吗？"], "answer": 0,
+     "why": ["Correct: A 离 B 远吗？", "远 comes after 离 + place.", "The place you ask about comes first."]},
+    {"type": "order", "en": "The airport is far from the city... from here.", "answer": ["机场", "离", "这儿", "很远"], "also": [], "why": "A + 离 + B + 很远."},
+    {"type": "transform", "instruction": "Say the opposite (far → close).", "source": "公司离我家很远。", "options": ["公司离我家很近。", "公司离我家很不远近。", "公司很近离我家。"], "answer": 0,
+     "why": ["Correct: swap 远 for 近.", "Use just one adjective.", "离 + place must come before 近."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["我的学校离地铁站不远。", "我的学校不远离地铁站。", "我的学校从地铁站不远。"], "answer": 0,
+     "why": ["Correct: 离 + place + 不远.", "不远 goes after the place.", "Distance takes 离, not 从."]},
+    {"type": "fill", "en": "How far is your home from school?", "before": "你家离学校", "after": "？", "options": ["多远", "多少远", "几远"], "answer": 0,
+     "why": ["Correct: 多远 = how far.", "多少 doesn't go before adjectives.", "几 can't go before 远."]}
+  ],
+  "words": ["分钟"]
+}

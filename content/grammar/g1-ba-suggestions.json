@@ -1,0 +1,34 @@
+{
+  "id": "g1-ba-suggestions",
+  "level": 1,
+  "title": "吧: let's, suggestions",
+  "topic": "particles",
+  "summary": "Lets you make suggestions and soft requests by adding 吧, as in 我们走吧.",
+  "structure": ["我们 + Verb + 吧", "Verb + 吧", "Statement + 吧？"],
+  "explanation": "吧 at the end of a sentence softens it. With 我们 it means 'let's': 我们吃饭吧 'Let's eat.' After a request it sounds friendly rather than bossy: 你坐吧 'Have a seat.'\n\nAt the end of a statement with a rising voice, 吧 checks a guess: 你是老师吧？'You're a teacher, right?' — you think so and want it confirmed. 吗, by contrast, asks without guessing.",
+  "examples": [
+    {"zh": "我们吃饭吧。", "en": "Let's eat."},
+    {"zh": "你坐吧。", "en": "Have a seat."},
+    {"zh": "我们明天去吧。", "en": "Let's go tomorrow."},
+    {"zh": "你是中国人吧？", "en": "You're Chinese, right?"},
+    {"zh": "太晚了，我们回家吧。", "en": "It's too late, let's go home."}
+  ],
+  "mistakes": [
+    {"wrong": "吧我们去商店。", "right": "我们去商店吧。", "why": "吧 always goes at the end of the sentence."},
+    {"wrong": "我们吃饭吧吗？", "right": "我们吃饭吧。", "why": "Use 吧 or 吗, not both."}
+  ],
+  "related": ["g1-ma-questions", "g2-a-ne-particles", "g1-buyao"],
+  "exercises": [
+    {"type": "fill", "en": "Let's watch TV.", "before": "我们看电视", "after": "。", "options": ["吧", "吗", "了"], "answer": 0,
+     "why": ["Correct: 我们 … 吧 means 'let's'.", "吗 would ask 'Do we watch TV?'", "了 would say we watched it or that something changed."]},
+    {"type": "pick", "prompt": "You think your friend is a student and want to check. You say:", "options": ["你是学生吧？", "你是学生吗吧？", "吧你是学生？"], "answer": 0,
+     "why": ["Correct: statement + 吧？ checks a guess.", "Use either 吗 or 吧, never both.", "吧 goes at the end."]},
+    {"type": "transform", "instruction": "Turn it into a suggestion ('let's').", "source": "我们去饭店。", "options": ["我们去饭店吧。", "我们去饭店吗？", "吧我们去饭店。"], "answer": 0,
+     "why": ["Correct: add 吧 at the end.", "吗 turns it into a question, not a suggestion.", "吧 can't go at the start."]},
+    {"type": "order", "en": "Let's go home.", "answer": ["我们", "回家", "吧"], "also": [], "why": "吧 closes the sentence: 我们 + verb + 吧."},
+    {"type": "pick", "prompt": "Which sounds like a friendly invitation to sit down?", "options": ["请坐吧。", "坐吗？", "不要坐。"], "answer": 0,
+     "why": ["Correct: 请 and 吧 make the request warm and polite.", "坐吗 asks 'Sit?' and sounds odd as an invitation.", "不要坐 means 'Don't sit.'"]},
+    {"type": "fill", "en": "It's raining. Let's not go.", "before": "下雨了，我们不去", "after": "。", "options": ["吧", "吗", "呢"], "answer": 0,
+     "why": ["Correct: 吧 makes a suggestion, also a negative one.", "吗 would ask 'Aren't we going?'", "呢 here would ask 'and what about not going?' — not a suggestion."]}
+  ]
+}

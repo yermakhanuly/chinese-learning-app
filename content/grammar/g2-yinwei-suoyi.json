@@ -1,0 +1,35 @@
+{
+  "id": "g2-yinwei-suoyi",
+  "level": 2,
+  "title": "因为…所以…: because … so …",
+  "topic": "connectors",
+  "summary": "Lets you give reasons and results, as in 因为下雨，所以我没去, and answer 为什么.",
+  "structure": ["因为 + Reason，所以 + Result", "Result，因为 + Reason", "为什么…？—因为…"],
+  "explanation": "因为 introduces the reason and 所以 the result: 因为下雨，所以我没去 'Because it was raining, I didn't go.' Unlike English, Chinese happily uses both words in one sentence. You can also use just one of them.\n\nTo ask why, use 为什么: 你为什么不来？ Answer with 因为…: 因为我很忙. The reason can also come second: 我没去，因为下雨了.",
+  "examples": [
+    {"zh": "因为下雨，所以我没去。", "en": "Because it was raining, I didn't go."},
+    {"zh": "因为他生病了，所以没来上课。", "en": "He didn't come to class because he was ill."},
+    {"zh": "你为什么不吃？—因为我不饿。", "en": "Why aren't you eating? — Because I'm not hungry."},
+    {"zh": "我很累，所以想早点儿睡觉。", "en": "I'm tired, so I want to go to bed early."},
+    {"zh": "我喜欢学汉语，因为很有意思。", "en": "I like studying Chinese because it's interesting."}
+  ],
+  "mistakes": [
+    {"wrong": "所以下雨，因为我没去。", "right": "因为下雨，所以我没去。", "why": "因为 goes with the reason, 所以 with the result."},
+    {"wrong": "因为我很忙，我所以没去。", "right": "因为我很忙，所以我没去。", "why": "所以 starts the result part, before the subject."}
+  ],
+  "related": ["g2-suiran-danshi", "g1-question-words"],
+  "exercises": [
+    {"type": "fill", "en": "Because it's too expensive, I didn't buy it.", "before": "因为太贵了，", "after": "我没买。", "options": ["所以", "但是", "因为"], "answer": 0,
+     "why": ["Correct: 所以 introduces the result.", "但是 means 'but', which doesn't fit a result.", "因为 is already used for the reason."]},
+    {"type": "pick", "prompt": "Which asks 'Why are you late?' / 'Why didn't you come?'", "options": ["你为什么没来？", "你因为什么没来所以？", "为什么你没来所以？"], "answer": 0,
+     "why": ["Correct: 为什么 asks why.", "所以 doesn't belong in the question.", "所以 doesn't end a question."]},
+    {"type": "order", "en": "Because I'm ill, I'm not going to work.", "answer": ["因为", "我生病了", "所以", "不去上班"], "also": [], "why": "因为 + reason, 所以 + result."},
+    {"type": "transform", "instruction": "Join them with 因为…所以….", "source": "天气很好。我们去公园。", "options": ["因为天气很好，所以我们去公园。", "所以天气很好，因为我们去公园。", "因为我们去公园，所以天气很好。"], "answer": 0,
+     "why": ["Correct: reason first with 因为, then 所以.", "The two words are swapped.", "This makes the park the reason for good weather."]},
+    {"type": "fill", "en": "I didn't go out, because it was snowing.", "before": "我没出去，", "after": "下雪了。", "options": ["因为", "所以", "为什么"], "answer": 0,
+     "why": ["Correct: the reason can come second with 因为.", "所以 introduces a result, not a reason.", "为什么 asks why."]},
+    {"type": "pick", "prompt": "Someone asks 你为什么学汉语？ Which is a good answer?", "options": ["因为我喜欢中国。", "所以我喜欢中国。", "为什么我喜欢中国。"], "answer": 0,
+     "why": ["Correct: answer 为什么 with 因为.", "所以 introduces a result, not a reason.", "This repeats the question word."]}
+  ],
+  "words": ["饿", "公园", "早点儿"]
+}

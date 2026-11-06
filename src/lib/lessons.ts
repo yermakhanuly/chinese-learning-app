@@ -13,7 +13,14 @@ export type Step =
   /** Introduces a new word (pinyin, meaning, audio, example come from the dictionary). */
   | { type: 'word'; word: string }
   /** A short grammar explanation with examples. */
-  | { type: 'grammar'; title: string; body: string; examples: Example[] }
+  | {
+      type: 'grammar';
+      title: string;
+      body: string;
+      examples: Example[];
+      /** Added at import: the grammar library page this note expands on. */
+      grammar_id?: string;
+    }
   /**
    * Pick one option. `zh` is shown (or only played, when `listen`) above the prompt.
    * Options are English meanings or Chinese words, depending on the question.

@@ -1,0 +1,654 @@
+{
+  "points": [
+    {
+      "id": "g1-pronouns-greetings",
+      "level": 1,
+      "title": "我, 你, 您: people words and greetings",
+      "topic": "basics",
+      "summary": "Lets you say I, you, he, she and we (adding 们 for more than one person) and greet people politely with 你好 and 您好.",
+      "lesson_notes": [
+        "hsk1-u01-l1|Saying hello: 你好 and 您好"
+      ]
+    },
+    {
+      "id": "g1-shi",
+      "level": 1,
+      "title": "是: A is B",
+      "topic": "basics",
+      "summary": "Lets you link two nouns to say who or what someone or something is, as in 我是学生.",
+      "lesson_notes": [
+        "hsk1-u01-l2|是 sentences: A 是 B"
+      ]
+    },
+    {
+      "id": "g1-ma-questions",
+      "level": 1,
+      "title": "吗: yes-no questions",
+      "topic": "questions",
+      "summary": "Lets you turn any statement into a yes-no question by adding 吗 at the end, as in 你是老师吗？",
+      "lesson_notes": [
+        "hsk1-u01-l3|Yes-no questions with 吗"
+      ]
+    },
+    {
+      "id": "g1-ne-questions",
+      "level": 1,
+      "title": "呢: and you?",
+      "topic": "questions",
+      "summary": "Lets you bounce a question back or ask about someone else with a short phrase like 你呢？",
+      "lesson_notes": [
+        "hsk1-u01-l4|Asking \"And you?\" with 呢"
+      ]
+    },
+    {
+      "id": "g1-question-words",
+      "level": 1,
+      "title": "谁, 什么, 哪: who, what, which",
+      "topic": "questions",
+      "summary": "Lets you ask who, what and which by putting the question word where the answer will go, as in 他是谁？",
+      "lesson_notes": [
+        "hsk1-u01-l5|Asking 'who?' and 'which country?'"
+      ]
+    },
+    {
+      "id": "g1-bu-negation",
+      "level": 1,
+      "title": "不: not",
+      "topic": "negation",
+      "summary": "Lets you say no or not by putting 不 before a verb or adjective, as in 我不是老师 and 我不忙.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g1-numbers",
+      "level": 1,
+      "title": "Numbers and 第: counting and first, second",
+      "topic": "basics",
+      "summary": "Lets you count, read phone and room numbers digit by digit, and say first, second, third with 第.",
+      "lesson_notes": [
+        "hsk1-u02-l1|Counting and reading numbers digit by digit",
+        "hsk1-u07-l3|Ordinal numbers with 第"
+      ]
+    },
+    {
+      "id": "g1-measure-words",
+      "level": 1,
+      "title": "个, 本, 件: counting words",
+      "topic": "measure-words",
+      "summary": "Lets you count people and things with a number + counting word + noun, as in 三个人 and 两本书.",
+      "lesson_notes": [
+        "hsk1-u02-l2|Counting people and things with 个",
+        "hsk1-u05-l2|Measure words 本 and 件"
+      ]
+    },
+    {
+      "id": "g1-ji-duoshao",
+      "level": 1,
+      "title": "几 and 多少: how many, how old, how much",
+      "topic": "questions",
+      "summary": "Lets you ask about numbers, someone's age and prices with 几, 多大 and 多少钱.",
+      "lesson_notes": [
+        "hsk1-u02-l3|Asking someone's age",
+        "hsk1-u05-l1|Asking prices: 多少钱？"
+      ]
+    },
+    {
+      "id": "g1-dates-time",
+      "level": 1,
+      "title": "Dates and clock time: 月, 号, 星期, 点",
+      "topic": "time-place",
+      "summary": "Lets you say and ask the date, the day of the week and the time, as in 五月八号, 星期几 and 三点半.",
+      "lesson_notes": [
+        "hsk1-u02-l4|Dates: X月X号 and 星期几",
+        "hsk1-u06-l1|Telling time: X点Y分 and X点半"
+      ]
+    },
+    {
+      "id": "g1-de-possession",
+      "level": 1,
+      "title": "的: my, your, his",
+      "topic": "particles",
+      "summary": "Lets you show who something belongs to by putting 的 between the owner and the thing, as in 我的书.",
+      "lesson_notes": [
+        "hsk1-u03-l1|Saying \"my\", \"your\", \"his\" with 的"
+      ]
+    },
+    {
+      "id": "g1-you",
+      "level": 1,
+      "title": "有 / 没有: have, there is",
+      "topic": "verbs",
+      "summary": "Lets you say what someone has or doesn't have, and what there is in a place.",
+      "lesson_notes": [
+        "hsk1-u03-l2|有 / 没有: to have"
+      ]
+    },
+    {
+      "id": "g1-zhe-na",
+      "level": 1,
+      "title": "这, 那, 哪 (+些): this, that, which",
+      "topic": "basics",
+      "summary": "Lets you point to things near and far, one or many, and ask which one, as in 这个, 那些 and 哪些.",
+      "lesson_notes": [
+        "hsk1-u03-l3|这 and 那: this / that",
+        "hsk1-u05-l3|这些 / 那些 / 哪些: these, those, which"
+      ]
+    },
+    {
+      "id": "g1-he-ye-dou",
+      "level": 1,
+      "title": "和, 也, 都: and, also, all",
+      "topic": "adverbs",
+      "summary": "Lets you join two nouns with 和 and say also and all with 也 and 都, which come before the verb.",
+      "lesson_notes": [
+        "hsk1-u03-l4|都: all, both"
+      ]
+    },
+    {
+      "id": "g1-hen-adjectives",
+      "level": 1,
+      "title": "很 + adjective: describing people and things",
+      "topic": "basics",
+      "summary": "Lets you describe someone or something with an adjective, usually with 很 and no 是, as in 她很高.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g1-a-bu-a",
+      "level": 1,
+      "title": "A不A: yes-or-no with two options",
+      "topic": "questions",
+      "summary": "Lets you ask a yes-no question by saying the verb twice with 不 in between, as in 你去不去？",
+      "lesson_notes": []
+    },
+    {
+      "id": "g1-word-order",
+      "level": 1,
+      "title": "Word order: who + when + where + do what",
+      "topic": "basics",
+      "summary": "Lets you build sentences in the right order: subject, then time, then place, then verb and object.",
+      "lesson_notes": [
+        "hsk1-u04-l1|Word order: subject + verb + object",
+        "hsk1-u06-l2|Time words go before the verb"
+      ]
+    },
+    {
+      "id": "g1-xiang-yao",
+      "level": 1,
+      "title": "想 / 要 + verb: want to",
+      "topic": "verbs",
+      "summary": "Lets you say what you want or would like to do, as in 我想喝茶.",
+      "lesson_notes": [
+        "hsk1-u04-l2|想 / 要 + verb: want to"
+      ]
+    },
+    {
+      "id": "g1-tai-le",
+      "level": 1,
+      "title": "太…了: too, so",
+      "topic": "adverbs",
+      "summary": "Lets you say something is too much or react strongly, as in 太贵了 and 太好了！",
+      "lesson_notes": [
+        "hsk1-u04-l3|太……了: too / so"
+      ]
+    },
+    {
+      "id": "g1-zai-place-verb",
+      "level": 1,
+      "title": "在 + place + verb: doing something somewhere",
+      "topic": "time-place",
+      "summary": "Lets you say where an action happens by putting 在 + place before the verb, as in 我在家吃饭.",
+      "lesson_notes": [
+        "hsk1-u04-l4|在 + place + verb"
+      ]
+    },
+    {
+      "id": "g1-ba-suggestions",
+      "level": 1,
+      "title": "吧: let's, suggestions",
+      "topic": "particles",
+      "summary": "Lets you make suggestions and soft requests by adding 吧, as in 我们走吧.",
+      "lesson_notes": [
+        "hsk1-u04-l5|Suggestions with 吧"
+      ]
+    },
+    {
+      "id": "g1-keyi",
+      "level": 1,
+      "title": "可以: may, can (permission)",
+      "topic": "verbs",
+      "summary": "Lets you ask for and give permission, as in 我可以坐这儿吗？",
+      "lesson_notes": [
+        "hsk1-u05-l4|可以: may (asking permission)"
+      ]
+    },
+    {
+      "id": "g1-de-shihou",
+      "level": 1,
+      "title": "…的时候: when …",
+      "topic": "time-place",
+      "summary": "Lets you say when something happens by adding 的时候 after an action, as in 吃饭的时候.",
+      "lesson_notes": [
+        "hsk1-u06-l3|……的时候: when …"
+      ]
+    },
+    {
+      "id": "g1-zhengzai",
+      "level": 1,
+      "title": "正在 / 在 + verb: doing right now",
+      "topic": "aspect",
+      "summary": "Lets you say an action is happening right now, as in 他正在看书.",
+      "lesson_notes": [
+        "hsk1-u06-l4|正在 + verb: action in progress"
+      ]
+    },
+    {
+      "id": "g1-qu-lai-place",
+      "level": 1,
+      "title": "去 / 来 + place: go, come",
+      "topic": "verbs",
+      "summary": "Lets you say where someone goes or comes, as in 我去学校, and use handy words like 上学.",
+      "lesson_notes": [
+        "hsk1-u07-l1|Using 上学 (to go to school)",
+        "hsk1-u08-l3|去 / 来 + place"
+      ]
+    },
+    {
+      "id": "g1-hui-skill",
+      "level": 1,
+      "title": "会 + verb: can (a learned skill)",
+      "topic": "verbs",
+      "summary": "Lets you say what you know how to do, as in 我会说汉语.",
+      "lesson_notes": [
+        "hsk1-u07-l2|会 + verb: can (a learned skill)"
+      ]
+    },
+    {
+      "id": "g1-le-completed",
+      "level": 1,
+      "title": "了: completed actions",
+      "topic": "aspect",
+      "summary": "Lets you say an action has happened or is done, as in 我买了一本书.",
+      "lesson_notes": [
+        "hsk1-u07-l4|了 for completed actions"
+      ]
+    },
+    {
+      "id": "g1-meiyou-negation",
+      "level": 1,
+      "title": "没(有): didn't, haven't",
+      "topic": "negation",
+      "summary": "Lets you say something did not happen, using 没 or 没有 before the verb and dropping 了, as in 我没去.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g1-gei-person",
+      "level": 1,
+      "title": "给 + person + verb: for / to someone",
+      "topic": "verbs",
+      "summary": "Lets you say who an action is done for or to, as in 我给妈妈打电话.",
+      "lesson_notes": [
+        "hsk1-u07-l5|给 + person + verb: doing something for or to someone"
+      ]
+    },
+    {
+      "id": "g1-location-words",
+      "level": 1,
+      "title": "在哪儿 and 上, 里: where things are",
+      "topic": "time-place",
+      "summary": "Lets you ask and say where something is, using words like 上 and 里 after a noun, as in 书在桌子上.",
+      "lesson_notes": [
+        "hsk1-u08-l1|Asking where: …在哪儿？",
+        "hsk1-u08-l2|Location words: 桌子上, 房间里"
+      ]
+    },
+    {
+      "id": "g1-zenme",
+      "level": 1,
+      "title": "怎么 / 怎么样: how",
+      "topic": "questions",
+      "summary": "Lets you ask how to do something and how something is, as in 怎么去？ and 怎么样？",
+      "lesson_notes": [
+        "hsk1-u08-l4|怎么 + verb: asking how"
+      ]
+    },
+    {
+      "id": "g1-le-change",
+      "level": 1,
+      "title": "了: change (now it's…)",
+      "topic": "aspect",
+      "summary": "Lets you say a situation has changed by adding 了 at the end, as in 天冷了.",
+      "lesson_notes": [
+        "hsk1-u09-l1|了 for a change: \"now it's…\""
+      ]
+    },
+    {
+      "id": "g1-youdianr",
+      "level": 1,
+      "title": "有点儿 + adjective: a bit (too)",
+      "topic": "adverbs",
+      "summary": "Lets you say something is a bit too much, usually in a negative way, as in 有点儿贵.",
+      "lesson_notes": [
+        "hsk1-u09-l2|有点儿 + adjective: \"a bit ...\""
+      ]
+    },
+    {
+      "id": "g1-buyao",
+      "level": 1,
+      "title": "不要 + verb: don't",
+      "topic": "negation",
+      "summary": "Lets you tell someone not to do something, as in 不要说话.",
+      "lesson_notes": [
+        "hsk1-u09-l3|不要 + verb: don't …"
+      ]
+    },
+    {
+      "id": "g1-xihuan-verb",
+      "level": 1,
+      "title": "喜欢 + verb: like doing",
+      "topic": "verbs",
+      "summary": "Lets you say what you like or like doing, as in 我喜欢看书.",
+      "lesson_notes": [
+        "hsk1-u10-l1|喜欢 + verb: liking to do something"
+      ]
+    },
+    {
+      "id": "g1-kanjian",
+      "level": 1,
+      "title": "看见 / 听见: see, hear",
+      "topic": "complements",
+      "summary": "Lets you say you actually saw or heard something by adding 见 after 看 or 听.",
+      "lesson_notes": [
+        "hsk1-u10-l2|见 after a verb: actually seeing or hearing"
+      ]
+    },
+    {
+      "id": "g1-youde",
+      "level": 1,
+      "title": "有的…有的…: some … others …",
+      "topic": "basics",
+      "summary": "Lets you split a group into parts, as in 有的人喝茶，有的人喝咖啡.",
+      "lesson_notes": [
+        "hsk1-u10-l3|有的……有的……: some … others …"
+      ]
+    },
+    {
+      "id": "g2-big-numbers",
+      "level": 2,
+      "title": "百, 千, 万 and 两 vs 二: big numbers",
+      "topic": "basics",
+      "summary": "Lets you say big numbers and choose correctly between 两 and 二.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-haishi-questions",
+      "level": 2,
+      "title": "还是: A or B?",
+      "topic": "questions",
+      "summary": "Lets you ask someone to choose between two options, as in 你喝茶还是喝咖啡？",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-duo-adjective",
+      "level": 2,
+      "title": "多 + adjective: how tall, how long",
+      "topic": "questions",
+      "summary": "Lets you ask about size, distance and age with 多, as in 你多高？ and 有多远？",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-de-describing",
+      "level": 2,
+      "title": "的: describing nouns",
+      "topic": "particles",
+      "summary": "Lets you describe a noun with an adjective or an action before 的, as in 很好的朋友 and 我买的书.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-hai",
+      "level": 2,
+      "title": "还: still, also",
+      "topic": "adverbs",
+      "summary": "Lets you say something is still the case or add more, as in 他还在睡觉 and 我还想买一个.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-verb-reduplication",
+      "level": 2,
+      "title": "看看, 试试: doing something a little",
+      "topic": "verbs",
+      "summary": "Lets you make an action sound short and relaxed by saying the verb twice, as in 我看看.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-yidianr",
+      "level": 2,
+      "title": "一点儿 vs 有点儿: a little",
+      "topic": "adverbs",
+      "summary": "Lets you say a little more or less with 一点儿 after an adjective, as in 便宜一点儿, and tell it apart from 有点儿.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-neng",
+      "level": 2,
+      "title": "能: can (able to), vs 会 and 可以",
+      "topic": "verbs",
+      "summary": "Lets you say you are able to do something and choose between 能, 会 and 可以.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-bie",
+      "level": 2,
+      "title": "别: don't",
+      "topic": "negation",
+      "summary": "Lets you tell someone not to do something in a short, friendly way, as in 别走.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-gen-yiqi",
+      "level": 2,
+      "title": "跟…一起: together with",
+      "topic": "verbs",
+      "summary": "Lets you say who you do something with, as in 我跟朋友一起吃饭.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-dui",
+      "level": 2,
+      "title": "对: to, towards",
+      "topic": "verbs",
+      "summary": "Lets you say who an attitude or action is aimed at, as in 他对我很好.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-double-object",
+      "level": 2,
+      "title": "给, 送, 教 + person + thing",
+      "topic": "verbs",
+      "summary": "Lets you say who gets what, as in 我送他一本书.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-cong-dao",
+      "level": 2,
+      "title": "从…到…: from … to …",
+      "topic": "time-place",
+      "summary": "Lets you give starting and ending points in time and place, as in 从八点到十点.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-li",
+      "level": 2,
+      "title": "离: distance from",
+      "topic": "time-place",
+      "summary": "Lets you say how near or far one place is from another, as in 我家离学校很近.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-guo-experience",
+      "level": 2,
+      "title": "过: have done before",
+      "topic": "aspect",
+      "summary": "Lets you talk about things you have or haven't experienced, as in 我去过中国.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-action-measure",
+      "level": 2,
+      "title": "次, 遍: how many times",
+      "topic": "measure-words",
+      "summary": "Lets you say how many times you do something, as in 我去过两次.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-hai-mei",
+      "level": 2,
+      "title": "还没(有)…呢: not yet",
+      "topic": "negation",
+      "summary": "Lets you say something hasn't happened yet, as in 我还没吃饭呢.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-duration",
+      "level": 2,
+      "title": "Verb + time length: for how long",
+      "topic": "time-place",
+      "summary": "Lets you say how long an action lasts, as in 我学了两年汉语.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-shi-de",
+      "level": 2,
+      "title": "是…的: when, where, how it happened",
+      "topic": "particles",
+      "summary": "Lets you focus on when, where or how a past action happened, as in 我是坐飞机来的.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-zhe",
+      "level": 2,
+      "title": "着: an ongoing state",
+      "topic": "aspect",
+      "summary": "Lets you describe a state that continues, as in 门开着 and 他穿着红衣服.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-a-ne-particles",
+      "level": 2,
+      "title": "啊 and 呢: softer, livelier tone",
+      "topic": "particles",
+      "summary": "Lets you sound warmer and more natural with 啊, and stress something is happening now with 呢.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-kuaiyao-le",
+      "level": 2,
+      "title": "快要…了: about to",
+      "topic": "aspect",
+      "summary": "Lets you say something is going to happen very soon, as in 快要下雨了.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-xian-ranhou",
+      "level": 2,
+      "title": "先…然后…: first … then …",
+      "topic": "connectors",
+      "summary": "Lets you put actions in order, as in 我先吃饭，然后去学校.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-zai-you",
+      "level": 2,
+      "title": "再 / 又: again",
+      "topic": "adverbs",
+      "summary": "Lets you say again about the future with 再 and about the past with 又, as in 明天再来 and 他又来了.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-jiu-cai",
+      "level": 2,
+      "title": "就 / 才: early or late, easy or hard",
+      "topic": "adverbs",
+      "summary": "Lets you show something happened sooner or later than expected, as in 他七点就来了 and 他十点才来.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-bi",
+      "level": 2,
+      "title": "比: A is more … than B",
+      "topic": "comparison",
+      "summary": "Lets you compare two things, as in 今天比昨天冷.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-yiyang",
+      "level": 2,
+      "title": "跟…一样: the same as",
+      "topic": "comparison",
+      "summary": "Lets you say two things are the same, as in 我跟他一样高.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-meiyou-name",
+      "level": 2,
+      "title": "没有…那么: not as … as",
+      "topic": "comparison",
+      "summary": "Lets you say one thing is not as good, big or fast as another, as in 我没有他那么高.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-zui",
+      "level": 2,
+      "title": "最: the most",
+      "topic": "comparison",
+      "summary": "Lets you say something is the best, biggest or most, as in 他最高.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-result-complements",
+      "level": 2,
+      "title": "完, 好, 到, 懂, 错: result after a verb",
+      "topic": "complements",
+      "summary": "Lets you say what result an action had, as in 吃完了, 听懂了 and 写错了.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-direction-complements",
+      "level": 2,
+      "title": "进来, 出去, 回来: direction after a verb",
+      "topic": "complements",
+      "summary": "Lets you show which way a movement goes, as in 他走进来了.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-de-degree",
+      "level": 2,
+      "title": "得: how well you do something",
+      "topic": "complements",
+      "summary": "Lets you say how well or how fast someone does something, as in 他说得很好.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-yinwei-suoyi",
+      "level": 2,
+      "title": "因为…所以…: because … so …",
+      "topic": "connectors",
+      "summary": "Lets you give reasons and results, as in 因为下雨，所以我没去, and answer 为什么.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-suiran-danshi",
+      "level": 2,
+      "title": "虽然…但是…: although … but …",
+      "topic": "connectors",
+      "summary": "Lets you contrast two ideas, as in 虽然很贵，但是很好.",
+      "lesson_notes": []
+    },
+    {
+      "id": "g2-yibian",
+      "level": 2,
+      "title": "一边…一边…: while doing",
+      "topic": "connectors",
+      "summary": "Lets you say someone does two things at the same time, as in 他一边吃饭一边看电视.",
+      "lesson_notes": []
+    }
+  ]
+}

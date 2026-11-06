@@ -1,0 +1,153 @@
+{
+  "id": "g2-a-ne-particles",
+  "level": 2,
+  "title": "啊 and 呢: softer, livelier tone",
+  "topic": "particles",
+  "summary": "Lets you sound warmer and more natural with 啊, and stress something is happening now with 呢.",
+  "structure": [
+    "Sentence + 啊！",
+    "Sentence + 呢 (still, right now)",
+    "Noun + 呢？ (what about…?)"
+  ],
+  "explanation": "啊 at the end adds feeling and makes speech warmer: 好啊！'Sure!', 天气真好啊！'What lovely weather!' In questions it softens the tone: 你去哪儿啊？\n\n呢 has several jobs. After a statement it shows something is still going on: 他在睡觉呢 'He's (still) asleep.' After a noun it asks 'what about…?': 我很好，你呢？ It also softens question-word questions: 你在哪儿呢？",
+  "examples": [
+    {
+      "zh": "好啊，我们一起去吧！",
+      "en": "Sure, let's go together!"
+    },
+    {
+      "zh": "今天天气真好啊！",
+      "en": "What lovely weather today!"
+    },
+    {
+      "zh": "你去哪儿啊？",
+      "en": "Where are you off to?"
+    },
+    {
+      "zh": "他在睡觉呢。",
+      "en": "He's asleep."
+    },
+    {
+      "zh": "我是学生，你呢？",
+      "en": "I'm a student. What about you?"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "你是学生呢吗？",
+      "right": "你是学生吗？",
+      "why": "Use one question word at the end, not 呢 and 吗 together."
+    },
+    {
+      "wrong": "啊天气真好！",
+      "right": "天气真好啊！",
+      "why": "This 啊 of feeling goes at the end of the sentence."
+    }
+  ],
+  "related": [
+    "g1-ne-questions",
+    "g1-ba-suggestions",
+    "g1-zhengzai"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I'm fine. And you?",
+      "before": "我很好，你",
+      "after": "？",
+      "options": [
+        "呢",
+        "吗",
+        "吧"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: noun + 呢？ = 'what about …?'",
+        "你吗 isn't a question.",
+        "你吧 would be a guess, not 'and you?'"
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Your friend asks you to go to the cinema. You happily agree:",
+      "options": [
+        "好啊！",
+        "好吗？",
+        "好呢。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 好啊 = 'Sure!'",
+        "好吗 asks 'OK?' instead of agreeing.",
+        "好呢 doesn't sound like agreeing."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Add 'still / right now' feeling with 呢.",
+      "source": "妈妈在做饭。",
+      "options": [
+        "妈妈在做饭呢。",
+        "妈妈呢在做饭。",
+        "妈妈在做饭呢吗。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 呢 at the end.",
+        "呢 goes at the end here.",
+        "Don't add 吗 after 呢."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "What lovely weather today!",
+      "answer": [
+        "今天",
+        "天气",
+        "真好",
+        "啊"
+      ],
+      "also": [
+        [
+          "天气",
+          "今天",
+          "真好",
+          "啊"
+        ]
+      ],
+      "why": "啊 adds feeling at the very end."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sounds friendly and natural?",
+      "options": [
+        "你去哪儿啊？",
+        "你去哪儿吗？",
+        "你啊去哪儿？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 啊 softens a question-word question.",
+        "哪儿 already asks; don't add 吗.",
+        "啊 goes at the end."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Where's my phone?",
+      "before": "我的手机",
+      "after": "？",
+      "options": [
+        "呢",
+        "吧",
+        "了"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: thing + 呢？ asks where it is.",
+        "吧 would be a guess or a suggestion.",
+        "了 doesn't ask anything."
+      ]
+    }
+  ]
+}

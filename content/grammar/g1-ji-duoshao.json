@@ -1,0 +1,233 @@
+{
+  "id": "g1-ji-duoshao",
+  "level": 1,
+  "title": "几 and 多少: how many, how old, how much",
+  "topic": "questions",
+  "summary": "Lets you ask about numbers, someone's age and prices with 几, 多大 and 多少钱.",
+  "structure": [
+    "Subject + Verb + 几 + Measure word + Noun?",
+    "Subject + Verb + 多少 (+ Measure word) + Noun?",
+    "Person + (今年) + 几岁 / 多大?    Thing + 多少钱?"
+  ],
+  "explanation": "几 and 多少 both mean \"how many\". To ask a question, put them where the number would be in the answer. The word order stays the same as in a normal sentence, and you don't add 吗: 你家有几口人？ → 我家有三口人。\n\nUse 几 when you expect a small number (usually under 10). 几 always needs a measure word (a counting word like 个, 本, 口): 几个朋友, 几本书. Use 多少 when the number could be bigger, or when you have no idea. With 多少 the measure word is optional: 多少学生 or 多少个学生.\n\nFor age, ask a child 你几岁？ (literally \"how many years?\"). For teenagers and adults, 你多大？ (\"how big?\") is the normal question. It is often said with 今年: 你今年多大？ The answer is still a number + 岁: 我今年二十岁。\n\nFor prices, always use 多少钱: 这个多少钱？ The answer is a number + 块 (spoken) or 元 (written), often with 钱 at the end: 十块钱. Don't say 几钱. Remember: never add 吗 to a question that already has 几 or 多少.",
+  "examples": [
+    {
+      "zh": "你家有几口人？",
+      "en": "How many people are there in your family?"
+    },
+    {
+      "zh": "你女儿几岁了？",
+      "en": "How old is your daughter?"
+    },
+    {
+      "zh": "你今年多大？",
+      "en": "How old are you this year?"
+    },
+    {
+      "zh": "你们学校有多少学生？",
+      "en": "How many students does your school have?"
+    },
+    {
+      "zh": "请问，这件衣服多少钱？",
+      "en": "Excuse me, how much is this piece of clothing?"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "你有几孩子？",
+      "right": "你有几个孩子？",
+      "why": "几 must be followed by a measure word before the noun, here 个."
+    },
+    {
+      "wrong": "你家有几口人吗？",
+      "right": "你家有几口人？",
+      "why": "几 already makes it a question, so don't add 吗."
+    },
+    {
+      "wrong": "这本书几钱？",
+      "right": "这本书多少钱？",
+      "why": "Prices are always asked with 多少钱, not 几钱."
+    }
+  ],
+  "related": [
+    "g1-numbers",
+    "g1-measure-words",
+    "g1-question-words",
+    "g2-duo-adjective"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "How much is this piece of clothing?",
+      "before": "这件衣服",
+      "after": "钱？",
+      "options": [
+        "多少",
+        "几",
+        "多大",
+        "什么"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: prices are asked with 多少钱.",
+        "几 can't go straight before 钱; for prices always use 多少钱.",
+        "多大 asks about age or size, not price.",
+        "什么钱 means \"what money\", not \"how much money\"; use 多少钱."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "How many people are there in your family?",
+      "before": "你家有几",
+      "after": "人？",
+      "options": [
+        "口",
+        "本",
+        "件",
+        "岁"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 口 is the measure word for family members, so 几口人 asks how many people are in a family.",
+        "本 is the measure word for books, not people.",
+        "件 is used for clothes and matters, not people.",
+        "岁 means \"years old\"; it is for age, not for counting people."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "How old is your daughter this year?",
+      "before": "你女儿今年",
+      "after": "岁了？",
+      "options": [
+        "几",
+        "多大",
+        "什么",
+        "吗"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 几岁 is how you ask a child's age.",
+        "多大 already means \"how old\", so it doesn't take 岁 after it; say 多大 or 几岁, not both.",
+        "什么 means \"what\"; it can't ask about a number.",
+        "吗 doesn't go before 岁, and it can't ask \"how many\"."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "你有几个朋友？",
+        "你有几朋友？",
+        "你有几个朋友吗？",
+        "你有朋友几个？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 几 + measure word 个 + noun, in normal sentence order.",
+        "几 needs a measure word: 几个朋友.",
+        "Don't add 吗 to a question that already has 几.",
+        "几个 goes before the noun, just like a number: 几个朋友."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which is the natural way to ask an adult 'How old are you?'",
+      "options": [
+        "你今年多大？",
+        "你今年几岁？",
+        "你今年多少大？",
+        "你今年多大吗？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 多大 is the normal way to ask a teenager's or adult's age.",
+        "几岁 is fine grammar, but it's used for small children; it sounds odd to an adult.",
+        "多少 doesn't combine with 大; the fixed phrase is 多大.",
+        "Don't add 吗 to a question that already has 多大."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Turn it into a question asking about the number of students.",
+      "source": "我们学校有三百个学生。",
+      "options": [
+        "你们学校有多少学生？",
+        "你们学校有多少学生吗？",
+        "你们学校有学生多少？",
+        "你们学校有几学生？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 多少 replaces the big number, and the measure word can be left out after 多少.",
+        "Don't add 吗 when the question already has 多少.",
+        "多少 goes before the noun, where the number was: 多少学生.",
+        "For a big number like 300 use 多少; also 几 can't be used without a measure word."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Ask how much it costs.",
+      "source": "这个杯子十五块钱。",
+      "options": [
+        "这个杯子多少钱？",
+        "这个杯子几钱？",
+        "这个杯子多少钱吗？",
+        "这个杯子多大钱？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 多少钱 replaces the price 十五块钱.",
+        "Prices are asked with 多少钱, never 几钱.",
+        "Don't add 吗 to a question that already has 多少.",
+        "多大 asks about age or size; for prices use 多少钱."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "How many people are there in your family?",
+      "answer": [
+        "你",
+        "家",
+        "有",
+        "几",
+        "口",
+        "人"
+      ],
+      "also": [],
+      "why": "The question uses normal sentence order, with 几 + measure word 口 where the number would be."
+    },
+    {
+      "type": "order",
+      "en": "How much is this book?",
+      "answer": [
+        "这",
+        "本",
+        "书",
+        "多少",
+        "钱"
+      ],
+      "also": [],
+      "why": "The thing comes first (这本书), then 多少钱 at the end."
+    },
+    {
+      "type": "order",
+      "en": "How old is your son this year?",
+      "answer": [
+        "你",
+        "儿子",
+        "今年",
+        "多大"
+      ],
+      "also": [
+        [
+          "今年",
+          "你",
+          "儿子",
+          "多大"
+        ]
+      ],
+      "why": "Time words like 今年 go before or after the person, and 多大 comes at the end."
+    }
+  ]
+}

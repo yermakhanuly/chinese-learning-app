@@ -1,0 +1,151 @@
+{
+  "id": "g2-xian-ranhou",
+  "level": 2,
+  "title": "先…然后…: first … then …",
+  "topic": "connectors",
+  "summary": "Lets you put actions in order, as in 我先吃饭，然后去学校.",
+  "structure": [
+    "Subject + 先 + Verb，然后 + Verb",
+    "先…，再…"
+  ],
+  "explanation": "先 means 'first' and goes before the first verb; 然后 means 'then, after that' and starts the next part: 我先吃饭，然后去学校 'First I eat, then I go to school.' 先 always comes after the subject, never at the very start.\n\nFor plans, 再 is also used for 'then': 我们先吃饭，再看电影. 然后 can also join three or more steps: 先…，然后…，然后….",
+  "examples": [
+    {
+      "zh": "我先吃饭，然后去学校。",
+      "en": "First I eat, then I go to school."
+    },
+    {
+      "zh": "我们先去商店，然后回家。",
+      "en": "We'll go to the shop first, then go home."
+    },
+    {
+      "zh": "你先洗手，然后吃饭。",
+      "en": "Wash your hands first, then eat."
+    },
+    {
+      "zh": "他先看了看，然后买了。",
+      "en": "He had a look first, then bought it."
+    },
+    {
+      "zh": "我们先吃饭，再看电影吧。",
+      "en": "Let's eat first, then see a film."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "先我吃饭，然后去学校。",
+      "right": "我先吃饭，然后去学校。",
+      "why": "先 goes after the subject, right before the verb."
+    },
+    {
+      "wrong": "我先吃饭，我去学校然后。",
+      "right": "我先吃饭，然后去学校。",
+      "why": "然后 starts the second part."
+    }
+  ],
+  "related": [
+    "g2-zai-you",
+    "g2-yibian",
+    "g1-word-order"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Eat first, then play.",
+      "before": "你先吃饭，",
+      "after": "玩。",
+      "options": [
+        "然后",
+        "先",
+        "也"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 先…然后… = first … then ….",
+        "You already said 先; the second step takes 然后.",
+        "也 means 'also'."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "I'll take a shower first, then sleep.",
+      "answer": [
+        "我",
+        "先",
+        "洗澡",
+        "然后",
+        "睡觉"
+      ],
+      "also": [],
+      "why": "先 before the first verb, 然后 before the second."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "他先洗手，然后吃饭。",
+        "先他洗手，然后吃饭。",
+        "他洗手先，然后吃饭。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: subject + 先 + verb.",
+        "先 can't go before the subject.",
+        "先 goes before the verb."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Join them in order with 先…然后….",
+      "source": "我们去超市。我们回家。",
+      "options": [
+        "我们先去超市，然后回家。",
+        "我们然后去超市，先回家。",
+        "先我们去超市，回家然后。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 先 for the first step, 然后 for the next.",
+        "This reverses the order.",
+        "Both 先 and 然后 are in the wrong place."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Let's eat first, then go.",
+      "before": "我们",
+      "after": "吃饭，再走吧。",
+      "options": [
+        "先",
+        "然后",
+        "再"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 先 marks the first step.",
+        "然后 is for the second step.",
+        "再 is already used for the second step."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which puts the steps in order?",
+      "options": [
+        "我先起床，然后吃早饭。",
+        "我然后起床，先吃早饭。",
+        "我起床然后，吃早饭先。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 先 before the first verb, 然后 before the second.",
+        "This puts 然后 first.",
+        "Both words are at the end of their parts."
+      ]
+    }
+  ],
+  "words": [
+    "先",
+    "然后",
+    "洗澡"
+  ]
+}

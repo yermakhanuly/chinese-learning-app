@@ -1,0 +1,24 @@
+{
+  "texts": [
+    {"id": "r1-01", "level": 1, "kind": "story", "title": "My family", "summary": "Xiaoyu introduces her family and what everyone does.", "grammar": ["g1-you", "g1-shi", "g1-he-ye-dou"]},
+    {"id": "r1-02", "level": 1, "kind": "dialogue", "title": "Nice to meet you", "summary": "Two new classmates introduce themselves.", "grammar": ["g1-pronouns-greetings", "g1-ma-questions", "g1-ne-questions"]},
+    {"id": "r1-03", "level": 1, "kind": "dialogue", "title": "At the fruit shop", "summary": "A customer buys apples and asks about prices.", "grammar": ["g1-ji-duoshao", "g1-tai-le", "g1-measure-words"]},
+    {"id": "r1-04", "level": 1, "kind": "story", "title": "My day", "summary": "A student describes a normal school day from morning to night.", "grammar": ["g1-word-order", "g1-zai-place-verb", "g1-dates-time"]},
+    {"id": "r1-05", "level": 1, "kind": "dialogue", "title": "What shall we do tomorrow?", "summary": "Two friends make plans for the weekend.", "grammar": ["g1-xiang-yao", "g1-ba-suggestions", "g1-qu-lai-place"]},
+    {"id": "r1-06", "level": 1, "kind": "story", "title": "It's raining", "summary": "The weather changes, and so do the plans.", "grammar": ["g1-le-change", "g1-hen-adjectives", "g1-youdianr"]},
+    {"id": "r1-07", "level": 1, "kind": "dialogue", "title": "At the restaurant", "summary": "Ordering dumplings and noodles for two.", "grammar": ["g1-xiang-yao", "g1-question-words", "g1-keyi"]},
+    {"id": "r1-08", "level": 1, "kind": "story", "title": "My good friend", "summary": "A boy describes his best friend and what they like doing.", "grammar": ["g1-hui-skill", "g1-xihuan-verb", "g1-youde"]},
+    {"id": "r1-09", "level": 1, "kind": "dialogue", "title": "A phone call", "summary": "A mother calls home and asks what everyone is doing.", "grammar": ["g1-zhengzai", "g1-zenme", "g1-de-shihou"]},
+    {"id": "r1-10", "level": 1, "kind": "story", "title": "I was ill", "summary": "A student gets ill, sees a doctor and misses school.", "grammar": ["g1-le-completed", "g1-meiyou-negation", "g1-buyao"]},
+    {"id": "r2-01", "level": 2, "kind": "story", "title": "My hobbies", "summary": "Someone talks about running, football and listening to music.", "grammar": ["g2-zui", "g2-yibian", "g2-action-measure"]},
+    {"id": "r2-02", "level": 2, "kind": "dialogue", "title": "Where's the subway station?", "summary": "A visitor asks a passer-by the way to the subway.", "grammar": ["g2-li", "g2-duo-adjective", "g2-direction-complements"]},
+    {"id": "r2-03", "level": 2, "kind": "story", "title": "A birthday present", "summary": "A girl's birthday and the present her grandpa gave her.", "grammar": ["g2-shi-de", "g2-double-object", "g2-de-describing"]},
+    {"id": "r2-04", "level": 2, "kind": "dialogue", "title": "Buying trousers", "summary": "Trying on trousers and asking for a cheaper price.", "grammar": ["g2-verb-reduplication", "g2-bi", "g2-yidianr"]},
+    {"id": "r2-05", "level": 2, "kind": "story", "title": "My first flight", "summary": "A boy remembers the first time he took a plane.", "grammar": ["g2-guo-experience", "g2-suiran-danshi", "g2-jiu-cai"]},
+    {"id": "r2-06", "level": 2, "kind": "dialogue", "title": "Saturday plans", "summary": "Two friends decide between football and a film.", "grammar": ["g2-haishi-questions", "g2-gen-yiqi", "g2-xian-ranhou"]},
+    {"id": "r2-07", "level": 2, "kind": "story", "title": "My new school", "summary": "A student describes her new school and the way there.", "grammar": ["g2-cong-dao", "g2-li", "g2-yiyang"]},
+    {"id": "r2-08", "level": 2, "kind": "dialogue", "title": "At the doctor's", "summary": "A patient with a headache sees a doctor.", "grammar": ["g2-yinwei-suoyi", "g2-bie", "g2-duration"]},
+    {"id": "r2-09", "level": 2, "kind": "story", "title": "Learning Chinese", "summary": "A foreign student talks about two years of studying Chinese.", "grammar": ["g2-de-degree", "g2-duration", "g2-result-complements"]},
+    {"id": "r2-10", "level": 2, "kind": "dialogue", "title": "The holiday trip", "summary": "A couple plan how to travel for the holidays.", "grammar": ["g2-kuaiyao-le", "g2-haishi-questions", "g2-hai-mei"]}
+  ]
+}

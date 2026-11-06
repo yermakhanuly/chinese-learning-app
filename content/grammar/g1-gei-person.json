@@ -1,0 +1,35 @@
+{
+  "id": "g1-gei-person",
+  "level": 1,
+  "title": "给 + person + verb: for / to someone",
+  "topic": "verbs",
+  "summary": "Lets you say who an action is done for or to, as in 我给妈妈打电话.",
+  "structure": ["Subject + 给 + Person + Verb (+ Object)", "Subject + 给 + Person + Thing"],
+  "explanation": "给 + person goes BEFORE the verb to say who the action is for or aimed at: 我给妈妈打电话 'I phone Mum', 他给我做饭 'He cooks for me.' English puts 'to Mum / for me' at the end; Chinese puts it before the verb.\n\nOn its own, 给 is also a verb, 'to give': 他给我一本书 'He gives me a book.'",
+  "examples": [
+    {"zh": "我给妈妈打电话。", "en": "I'm phoning Mum."},
+    {"zh": "爸爸给我们做饭。", "en": "Dad cooks for us."},
+    {"zh": "你给他写信吧。", "en": "Write him a letter."},
+    {"zh": "老师给我们上课。", "en": "The teacher gives us a lesson."},
+    {"zh": "他给我一本书。", "en": "He gives me a book."}
+  ],
+  "mistakes": [
+    {"wrong": "我打电话给妈妈。", "right": "我给妈妈打电话。", "why": "With most verbs, 给 + person goes before the verb (打电话给 is heard, but 给妈妈打电话 is the standard order)."},
+    {"wrong": "我给打电话妈妈。", "right": "我给妈妈打电话。", "why": "The person comes right after 给."}
+  ],
+  "related": ["g2-double-object", "g1-word-order"],
+  "exercises": [
+    {"type": "fill", "en": "I'll cook for you.", "before": "我", "after": "你做饭。", "options": ["给", "是", "在"], "answer": 0,
+     "why": ["Correct: 给 + person + verb = do something for them.", "是 can't introduce the person.", "在 introduces a place, not a person."]},
+    {"type": "order", "en": "My son phones me every day.", "answer": ["我儿子", "每天", "给", "我", "打电话"], "also": [], "why": "给 + person goes before the verb 打电话."},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["她给朋友买了一件衣服。", "她买了一件衣服给朋友在。", "她给买了朋友一件衣服。"], "answer": 0,
+     "why": ["Correct: 给 + person + verb + object.", "The stray 在 makes this wrong.", "The person must come right after 给."]},
+    {"type": "transform", "instruction": "Say you do it for your mum (妈妈).", "source": "我做饭。", "options": ["我给妈妈做饭。", "我做饭给妈妈在。", "我做给妈妈饭。"], "answer": 0,
+     "why": ["Correct: 给 + person before the verb.", "The ending 在 is wrong, and 给妈妈 should come before the verb.", "给妈妈 can't sit inside 做饭."]},
+    {"type": "fill", "en": "He gives me a book.", "before": "他", "after": "我一本书。", "options": ["给", "在", "有"], "answer": 0,
+     "why": ["Correct: 给 alone means 'give'.", "在 means 'at', not 'give'.", "有 means 'have'."]},
+    {"type": "pick", "prompt": "Which means 'The teacher teaches us Chinese'?", "options": ["老师给我们上汉语课。", "老师上汉语课我们给。", "给老师我们上汉语课。"], "answer": 0,
+     "why": ["Correct: 给我们 before the verb 上.", "给我们 can't go at the end.", "给 introduces who it's for (我们), not the teacher."]}
+  ],
+  "words": ["信", "每天"]
+}

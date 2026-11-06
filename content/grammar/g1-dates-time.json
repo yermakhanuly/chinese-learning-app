@@ -1,0 +1,217 @@
+{
+  "id": "g1-dates-time",
+  "level": 1,
+  "title": "Dates and clock time: 月, 号, 星期, 点",
+  "topic": "time-place",
+  "summary": "Lets you say and ask the date, the day of the week and the time, as in 五月八号, 星期几 and 三点半.",
+  "structure": [
+    "(Subject +) X月 + X号 (+ 星期X)",
+    "(Subject +) 星期 + 一 / 二 … 六 / 天",
+    "(现在 +) X点 (+ X分 / 半)"
+  ],
+  "explanation": "Chinese dates and times are built from numbers plus a few time words. 月 is the month, 号 is the day of the month, 星期 is the week, and 点 is o'clock. So 五月八号 is \"May 8th\", 星期三 is \"Wednesday\" and 三点半 is \"half past three\".\n\nAlways go from big to small: month, then day, then weekday, then part of the day, then the clock time. For example: 五月八号，星期五，上午九点. To ask, put 几 (\"which number\") where the number goes: 几月几号？ 星期几？ 几点？ When you just state a date or time, you usually don't need 是: 今天星期五。 But to say \"it's not\", you need 不是: 今天不是星期五。\n\nWeekdays are numbered from Monday: 星期一 is Monday, up to 星期六 (Saturday). Sunday is 星期天 or 星期日, never 星期七. For 2 o'clock, say 两点, not 二点. Minutes use 分 (八点十分 = 8:10), and 半 (\"half\") comes after 点: 七点半.\n\nTime words come before the verb, not at the end like in English: 我八点上课 (\"I have class at eight\"). In speech, people say 号 for the day of the month; 日 is used mostly in writing.",
+  "examples": [
+    {
+      "zh": "今天几月几号？",
+      "en": "What's the date today?"
+    },
+    {
+      "zh": "今天五月八号，星期五。",
+      "en": "Today is May 8th, Friday."
+    },
+    {
+      "zh": "现在几点？现在三点半。",
+      "en": "What time is it now? It's half past three."
+    },
+    {
+      "zh": "我明天上午九点上课。",
+      "en": "I have class at nine tomorrow morning."
+    },
+    {
+      "zh": "他星期六晚上七点十分来我家。",
+      "en": "He's coming to my home at 7:10 on Saturday evening."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "今天星期七。",
+      "right": "今天星期天。",
+      "why": "There is no 星期七. Sunday is 星期天 (or 星期日)."
+    },
+    {
+      "wrong": "现在二点。",
+      "right": "现在两点。",
+      "why": "For the hour \"two o'clock\", use 两, not 二: 两点."
+    },
+    {
+      "wrong": "我上课八点。",
+      "right": "我八点上课。",
+      "why": "In Chinese, the time comes before the verb, not at the end of the sentence."
+    }
+  ],
+  "related": [
+    "g1-numbers",
+    "g1-ji-duoshao",
+    "g1-word-order",
+    "g1-shi"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "What's the date today?",
+      "before": "今天几月几",
+      "after": "？",
+      "options": [
+        "号",
+        "点",
+        "分"
+      ],
+      "answer": 0,
+      "why": [
+        "号 marks the day of the month, so 几月几号 asks for the date.",
+        "点 is for clock time (o'clock). It can't follow 几月几 to give a date.",
+        "分 means minutes, not a day of the month. Use 号 for the date."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "What time is it now?",
+      "before": "现在",
+      "after": "点？",
+      "options": [
+        "几",
+        "多少",
+        "什么"
+      ],
+      "answer": 0,
+      "why": [
+        "几 asks for a small number, so 几点 is the normal way to ask the time.",
+        "多少 asks about larger amounts. It isn't used with 点 to ask the time.",
+        "什么 means \"what thing\". It isn't used to ask for a number, so 什么点 is wrong. Say 几点."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I get up at 7:30 in the morning.",
+      "before": "我早上七",
+      "after": "起床。",
+      "options": [
+        "点半",
+        "半点",
+        "个半"
+      ],
+      "answer": 0,
+      "why": [
+        "半 comes after 点: 七点半 means half past seven.",
+        "The order is wrong. 半 must come after 点, so it's 七点半, not 七半点.",
+        "个 is a measure word for counting things, not clock time. Use 点 for o'clock."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'Today is Sunday'?",
+      "options": [
+        "今天星期天。",
+        "今天星期七。",
+        "今天星期六。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct. Sunday is 星期天, and you don't need 是 when you state a day.",
+        "There is no 星期七. Sunday is 星期天 (or 星期日).",
+        "星期六 is Saturday, not Sunday. Weekdays count from Monday (星期一), so Sunday is 星期天."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "我们下午两点上课。",
+        "我们下午二点上课。",
+        "我们上课下午两点。",
+        "我们两点下午上课。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct. The time goes before the verb and runs from big to small: 下午 comes before 两点. It also uses 两 for 2 o'clock.",
+        "For 2 o'clock, use 两点, not 二点.",
+        "The time must come before the verb 上课, not after it.",
+        "Go from big to small: 下午 (afternoon) comes before 两点."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Turn it into a question asking which day of the week it is.",
+      "source": "明天星期五。",
+      "options": [
+        "明天星期几？",
+        "明天几星期？",
+        "明天星期什么？",
+        "明天星期五几？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct. Put 几 in the number's place: 星期几.",
+        "几 replaces the number, and the number comes after 星期. So it's 星期几, not 几星期. (几星期 means \"how many weeks\".)",
+        "Weekdays are numbers, so ask with 几, not 什么.",
+        "几 replaces 五. You don't keep both the number and 几."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it negative.",
+      "source": "今天五月八号。",
+      "options": [
+        "今天不是五月八号。",
+        "今天不五月八号。",
+        "今天五月八号不是。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct. The positive sentence can drop 是, but the negative needs 不是.",
+        "不 can't go straight before a date. You need 不是 here.",
+        "不是 must come before the date, not at the end of the sentence: 今天不是五月八号."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "I go to school at eight o'clock on Monday.",
+      "answer": [
+        "我",
+        "星期一",
+        "八点",
+        "去",
+        "学校"
+      ],
+      "also": [
+        [
+          "星期一",
+          "我",
+          "八点",
+          "去",
+          "学校"
+        ],
+        [
+          "星期一",
+          "八点",
+          "我",
+          "去",
+          "学校"
+        ]
+      ],
+      "why": "Time words go before the verb, from big to small (day, then hour), and they can come before or after the subject."
+    },
+    {
+      "type": "order",
+      "en": "Today is October 1st, Thursday.",
+      "answer": [
+        "今天",
+        "十月",
+        "一号",
+        "星期四"
+      ],
+      "also": [],
+      "why": "Dates go from big to small: month, then day, then weekday."
+    }
+  ]
+}

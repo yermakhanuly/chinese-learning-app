@@ -1,0 +1,231 @@
+{
+  "id": "g1-question-words",
+  "level": 1,
+  "title": "谁, 什么, 哪: who, what, which",
+  "topic": "questions",
+  "summary": "Lets you ask who, what and which by putting the question word where the answer will go, as in 他是谁？",
+  "structure": [
+    "Subject + 是 + 谁？",
+    "Subject + Verb + 什么 (+ Noun)？",
+    "Subject + Verb + 哪 + Measure word + Noun？"
+  ],
+  "explanation": "谁 means \"who\", 什么 means \"what\" and 哪 means \"which\". You use them to ask for a person, a thing or a choice.\n\nThe big rule: the word order stays the same as in the answer. Just put the question word where the answer will go. The answer 他是我的老师 becomes the question 他是谁？ The answer 我想喝茶 becomes 你想喝什么？ You don't move the question word to the front, as English does.\n\n什么 can stand alone (你想吃什么？) or go before a noun to mean \"what kind of\" (你叫什么名字？). 哪 needs a counting word (a measure word) after it, such as 个 or 本: 哪个苹果, 哪本书. 谁的 means \"whose\": 这是谁的手机？\n\nDon't add 吗 to these questions. The question word already makes it a question. Also watch two look-alikes: 哪 (which) and 那 (that) are written differently and said with different tones. And 哪儿 means \"where\", not \"which\".",
+  "examples": [
+    {
+      "zh": "他是谁？",
+      "en": "Who is he?"
+    },
+    {
+      "zh": "你叫什么名字？",
+      "en": "What's your name?"
+    },
+    {
+      "zh": "你想喝什么？",
+      "en": "What would you like to drink?"
+    },
+    {
+      "zh": "这是谁的手机？",
+      "en": "Whose phone is this?"
+    },
+    {
+      "zh": "你想买哪本书？",
+      "en": "Which book do you want to buy?"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "他是谁吗？",
+      "right": "他是谁？",
+      "why": "谁 already makes the sentence a question, so don't add 吗 at the end."
+    },
+    {
+      "wrong": "什么你想吃？",
+      "right": "你想吃什么？",
+      "why": "Chinese doesn't move the question word to the front. Put 什么 where the answer goes, after the verb."
+    },
+    {
+      "wrong": "你要哪苹果？",
+      "right": "你要哪个苹果？",
+      "why": "哪 needs a measure word such as 个 or 本 before the noun."
+    }
+  ],
+  "related": [
+    "g1-ma-questions",
+    "g1-zhe-na",
+    "g1-measure-words",
+    "g1-location-words"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "What's your name?",
+      "before": "你叫",
+      "after": "名字？",
+      "options": [
+        "什么",
+        "谁",
+        "哪",
+        "吗"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 什么 + noun asks \"what\": 什么名字 = what name.",
+        "谁 means \"who\". It can't describe the noun 名字.",
+        "哪 needs a measure word and means \"which\". It doesn't fit with 名字 here.",
+        "吗 goes at the end of a yes-no question, never in the middle before a noun."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Who is she?",
+      "before": "她是",
+      "after": "？",
+      "options": [
+        "谁",
+        "什么",
+        "哪",
+        "吗"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: to ask about a person, put 谁 where the answer goes.",
+        "什么 asks about things, not people.",
+        "哪 can't stand alone. It needs a measure word, and it means \"which\".",
+        "她是吗 is incomplete. 吗 needs a full statement before it, like 她是老师吗？"
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Which book do you want to buy?",
+      "before": "你想买",
+      "after": "本书？",
+      "options": [
+        "哪",
+        "那",
+        "什么",
+        "谁"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 哪 + measure word (本) + noun asks \"which book\".",
+        "那 means \"that\", not \"which\". The two look alike but are different words.",
+        "什么 doesn't take a measure word like 本. Say 什么书 for \"what book\".",
+        "谁 asks \"who\". For \"whose book\" you would need 谁的书 without 本."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "你想吃什么？",
+        "你想吃什么吗？",
+        "什么你想吃？",
+        "你想吃哪？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 什么 sits after the verb, where the answer goes.",
+        "Don't add 吗. 什么 already makes it a question.",
+        "Don't move 什么 to the front. It stays in the answer's position.",
+        "哪 needs a measure word and a noun, like 哪个. Here 什么 is the right word for \"what\"."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means \"Whose phone is this?\"",
+      "options": [
+        "这是谁的手机？",
+        "这是什么手机？",
+        "这是哪个手机？",
+        "这是谁的手机吗？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 谁的 means \"whose\".",
+        "什么手机 means \"what (kind of) phone\", not \"whose\".",
+        "哪个手机 means \"which phone\", not \"whose\".",
+        "Don't add 吗 to a question that already has 谁."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Ask \"Who is he?\" by replacing the answer with a question word.",
+      "source": "他是我的老师。",
+      "options": [
+        "他是谁？",
+        "谁他是？",
+        "他是谁吗？",
+        "他是什么？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 谁 replaces 我的老师 in the same position.",
+        "The word order must stay the same as in the statement: 他是谁, not 谁他是.",
+        "No 吗 is needed. 谁 already makes it a question.",
+        "什么 asks about things. Use 谁 for people."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Turn it into a question asking \"which apple\".",
+      "source": "我喜欢这个苹果。",
+      "options": [
+        "你喜欢哪个苹果？",
+        "你喜欢哪苹果？",
+        "哪个苹果你喜欢吗？",
+        "你喜欢那个苹果？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 哪个 replaces 这个 in the same place.",
+        "哪 needs the measure word 个 before 苹果.",
+        "Don't add 吗 to a 哪 question, and keep the statement's word order.",
+        "那 means \"that\", so this only asks \"You like that apple?\" Use 哪 for \"which\"."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "What do you want to drink?",
+      "answer": [
+        "你",
+        "想",
+        "喝",
+        "什么"
+      ],
+      "also": [],
+      "why": "什么 goes after the verb, where the answer (the drink) would go."
+    },
+    {
+      "type": "order",
+      "en": "Who is your teacher?",
+      "answer": [
+        "谁",
+        "是",
+        "你的",
+        "老师"
+      ],
+      "also": [
+        [
+          "你的",
+          "老师",
+          "是",
+          "谁"
+        ]
+      ],
+      "why": "谁 simply takes the place of the person in a 是 sentence, so it can come before or after 是."
+    },
+    {
+      "type": "order",
+      "en": "Which book do you want to read?",
+      "answer": [
+        "你",
+        "想",
+        "看",
+        "哪本",
+        "书"
+      ],
+      "also": [],
+      "why": "哪 + measure word + noun sits after the verb, where the answer goes."
+    }
+  ]
+}

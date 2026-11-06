@@ -1,0 +1,34 @@
+{
+  "id": "g1-a-bu-a",
+  "level": 1,
+  "title": "A不A: yes-or-no with two options",
+  "topic": "questions",
+  "summary": "Lets you ask a yes-no question by saying the verb twice with 不 in between, as in 你去不去？",
+  "structure": ["Subject + Verb + 不 + Verb (+ Object)？", "Subject + 有没有 + Object？"],
+  "explanation": "Besides adding 吗, you can ask a yes-no question by saying the verb (or describing word) twice with 不 in the middle: 你去不去？ 'Are you going or not?' It sounds a little more direct than 吗.\n\nDon't add 吗 to this kind of question: it is already a question. For 有, the middle word is 没: 有没有. To answer, repeat the verb: 去 or 不去.",
+  "examples": [
+    {"zh": "你去不去学校？", "en": "Are you going to school?"},
+    {"zh": "这个菜好吃不好吃？", "en": "Is this dish tasty?"},
+    {"zh": "你是不是老师？", "en": "Are you a teacher?"},
+    {"zh": "你有没有时间？", "en": "Do you have time?"},
+    {"zh": "你喜欢不喜欢喝茶？", "en": "Do you like drinking tea?"}
+  ],
+  "mistakes": [
+    {"wrong": "你去不去吗？", "right": "你去不去？", "why": "去不去 is already a question. Don't add 吗."},
+    {"wrong": "你有不有钱？", "right": "你有没有钱？", "why": "有 is negated with 没, so the question is 有没有."}
+  ],
+  "related": ["g1-ma-questions", "g1-bu-negation", "g1-you"],
+  "exercises": [
+    {"type": "fill", "en": "Do you have a younger brother?", "before": "你有", "after": "弟弟？", "options": ["没有", "不有", "不"], "answer": 0,
+     "why": ["Correct: the question form of 有 is 有没有.", "有 never takes 不, so 有不有 is wrong.", "有不 is not a word; the middle part must be 没."]},
+    {"type": "pick", "prompt": "Which question is correct?", "options": ["他忙不忙？", "他忙不忙吗？", "他不忙忙？"], "answer": 0,
+     "why": ["Correct: adjective + 不 + adjective asks yes or no.", "Don't add 吗 to an A不A question.", "The order is A + 不 + A, not 不 + A + A."]},
+    {"type": "transform", "instruction": "Ask the same question with A不A.", "source": "你喜欢猫吗？", "options": ["你喜欢不喜欢猫？", "你喜欢猫不喜欢吗？", "你不喜欢喜欢猫？"], "answer": 0,
+     "why": ["Correct: say the verb, then 不 + verb, and drop 吗.", "This keeps 吗, and 不喜欢 belongs right after 喜欢.", "The order is verb + 不 + verb."]},
+    {"type": "transform", "instruction": "Ask the same question with A不A.", "source": "她是医生吗？", "options": ["她是不是医生？", "她是医生不是吗？", "她不是是医生？"], "answer": 0,
+     "why": ["Correct: 是不是 + the noun.", "This keeps 吗; A不A questions don't need it.", "The order is 是 + 不 + 是."]},
+    {"type": "order", "en": "Are you coming tomorrow?", "answer": ["你", "明天", "来不来"], "also": [["明天", "你", "来不来"]], "why": "Person and time first, then verb + 不 + verb at the end."},
+    {"type": "pick", "prompt": "Which is a good answer to 你去不去？", "options": ["不去。", "不是。", "没有。"], "answer": 0,
+     "why": ["Correct: answer by repeating the verb, here with 不: 不去.", "不是 answers a 是不是 question, not 去不去.", "没有 answers 有没有, not 去不去."]}
+  ]
+}

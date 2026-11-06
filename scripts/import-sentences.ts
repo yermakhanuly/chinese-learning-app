@@ -199,3 +199,50 @@ export async function importSentencesAndTopics(
   await insertAll(db, 'word_topics', rows);
   console.log(`✔ word topics: ${rows.length}`);
 }
+
+/**
+ * Recomputes pinyin, simplified and traditional text of the sentences already in the database from
+ * the Tatoeba originals, and updates only the rows that changed. Rows keep their ids, so learners'
+ * sentence review cards are kept (a full re-import deletes and re-inserts sentences).
+ *
+ *   npm run data:import -- --only=sentence-tokens
+ */
+export async function retokenizeSentences(db: SupabaseClient, root: string, words: WordRow[], cedict: DictionaryRow[]) {
+  const raw = join(root, 'data', 'raw');
+  await ensureTatoeba(raw);
+  const lex = buildLexicon(
+    words.map((w) => ({ simplified: w.simplified, traditional: w.traditional, pinyin: w.pinyin, level: w.hsk_level })),
+    cedict,
+  );
+  const t2s = buildTradToSimp(cedict);
+  const original = new Map<number, string>();
+  for (const [idText, , text] of tsvRows(join(raw, FILES.cmn.name))) original.set(Number(idText), text.trim());
+
+  let changed = 0;
+  let failed = 0;
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await db.from('sentences').select('id, simplified, tokens').order('id').range(from, from + 999);
+    if (error) throw new Error(`reading sentences: ${error.message}`);
+    for (const row of data as { id: number; simplified: string; tokens: Token[] }[]) {
+      const text = original.get(row.id);
+      const tokens = text ? tokenize(text, lex, t2s) : null;
+      const same = (a: Token[], b: Token[]) => a.length === b.length && a.every((t, i) => t.s === b[i].s && t.t === b[i].t && t.p === b[i].p);
+      if (!tokens || same(tokens, row.tokens)) continue;
+      const { error: updateError } = await db
+        .from('sentences')
+        .update({
+          simplified: tokens.map((t) => t.s).join(''),
+          traditional: tokens.map((t) => t.t).join(''),
+          tokens,
+          difficulty: difficulty(tokens, lex),
+        })
+        .eq('id', row.id);
+      if (updateError) {
+        failed++;
+        console.warn(`  sentence ${row.id}: ${updateError.message}`);
+      } else changed++;
+    }
+    if (data.length < 1000) break;
+  }
+  console.log(`✔ sentence pinyin: ${changed} sentences updated${failed ? `, ${failed} failed` : ''}`);
+}

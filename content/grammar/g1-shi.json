@@ -1,0 +1,207 @@
+{
+  "id": "g1-shi",
+  "level": 1,
+  "title": "是: A is B",
+  "topic": "basics",
+  "summary": "Lets you link two nouns to say who or what someone or something is, as in 我是学生.",
+  "structure": [
+    "A + 是 + B",
+    "A + 不是 + B",
+    "A + 是 + B + 吗？"
+  ],
+  "explanation": "是 links two nouns, much like 'am / is / are' in English. Use it to say who someone is or what something is: 我是学生 means 'I am a student.'\n\nThe pattern is simple: A + 是 + B. 是 never changes its form. The same 是 works for I, you, he and they, and for past, present or future. To say 'is not', put 不 right in front of it: 我不是老师. To ask a yes-no question, add 吗 at the end: 你是学生吗？\n\nUse 是 to name jobs (他是医生), where someone is from (我是中国人), family and friends (她是我妈妈), and to point at things (这是我的书).\n\nThe big trap: English uses 'is' before describing words too ('I am busy'), but Chinese does not. With describing words like 忙, 高兴 or 漂亮, drop 是 and usually use 很: 我很忙, not 我是忙. Also, 是 is always negated with 不, never with 没有.",
+  "examples": [
+    {
+      "zh": "我是学生。",
+      "en": "I am a student."
+    },
+    {
+      "zh": "他是老师。",
+      "en": "He is a teacher."
+    },
+    {
+      "zh": "这是我的手机。",
+      "en": "This is my phone."
+    },
+    {
+      "zh": "她不是医生，她是老师。",
+      "en": "She isn't a doctor; she's a teacher."
+    },
+    {
+      "zh": "我妈妈是中国人，我爸爸也是中国人。",
+      "en": "My mom is Chinese, and my dad is Chinese too."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我是很忙。",
+      "right": "我很忙。",
+      "why": "是 links two nouns. Before describing words like 忙 (busy), leave out 是 and use 很 instead."
+    },
+    {
+      "wrong": "我不学生。",
+      "right": "我不是学生。",
+      "why": "不 alone can't link two nouns. To say 'am not', you still need 是: 不是."
+    },
+    {
+      "wrong": "他老师。",
+      "right": "他是老师。",
+      "why": "In Chinese you can't simply put two nouns side by side to mean 'he is a teacher'. You need 是 to link them."
+    }
+  ],
+  "related": [
+    "g1-bu-negation",
+    "g1-ma-questions",
+    "g1-hen-adjectives",
+    "g1-de-possession"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I am a student.",
+      "before": "我",
+      "after": "学生。",
+      "options": [
+        "是",
+        "很",
+        "有"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 是 links two nouns, 我 (I) and 学生 (student).",
+        "很 goes before describing words like 忙 or 好, not before a noun like 学生.",
+        "有 means 'have'. 我有学生 would mean 'I have students', not 'I am a student'."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "He isn't a teacher; he's a doctor.",
+      "before": "他",
+      "after": "老师，他是医生。",
+      "options": [
+        "不是",
+        "不",
+        "是不"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 是 is negated with 不, which goes right before it: 不是.",
+        "不 alone can't link two nouns. You still need 是: 不是.",
+        "不 has to come before 是, not after it."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "我是中国人。",
+        "我中国人。",
+        "我在中国人。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 是 links 我 and 中国人 (a Chinese person).",
+        "是 is missing. You need it to link two nouns.",
+        "在 means 'to be at a place'. To say who you are, use 是."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "我很高兴。",
+        "我是高兴。",
+        "我是很高兴。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: with a describing word like 高兴 (happy), use 很 and no 是.",
+        "是 links nouns, not describing words. Say 我很高兴.",
+        "Don't put 是 before 很 + a describing word. Just say 我很高兴."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'Who is he?'",
+      "options": [
+        "他是谁？",
+        "谁他是？",
+        "他谁是？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: the question word 谁 takes the place of the answer, after 是 (他是老师 → 他是谁？).",
+        "Chinese keeps the normal order in questions. 谁 does not move to the front.",
+        "谁 has to come after 是, in the same spot as the answer would."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it negative.",
+      "source": "他是我的老师。",
+      "options": [
+        "他不是我的老师。",
+        "他没有是我的老师。",
+        "他是不我的老师。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: put 不 right before 是.",
+        "是 is always negated with 不, never with 没有.",
+        "不 must come before 是, not after it."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Turn it into a 吗 question.",
+      "source": "你是学生。",
+      "options": [
+        "你是学生吗？",
+        "你吗是学生？",
+        "你是吗学生？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: just add 吗 to the end of the sentence.",
+        "吗 always goes at the very end, not after the subject.",
+        "吗 always goes at the very end, not between 是 and the noun."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "This is my friend.",
+      "answer": [
+        "这",
+        "是",
+        "我的",
+        "朋友"
+      ],
+      "also": [],
+      "why": "The pattern is A + 是 + B: 这 (this) comes first, then 是, then 我的朋友."
+    },
+    {
+      "type": "order",
+      "en": "My mom is a doctor.",
+      "answer": [
+        "我",
+        "妈妈",
+        "是",
+        "医生"
+      ],
+      "also": [],
+      "why": "The person (我妈妈) comes first, then 是, then what she is (医生)."
+    },
+    {
+      "type": "order",
+      "en": "She is not a teacher.",
+      "answer": [
+        "她",
+        "不",
+        "是",
+        "老师"
+      ],
+      "also": [],
+      "why": "不 goes directly before 是: A + 不是 + B."
+    }
+  ]
+}

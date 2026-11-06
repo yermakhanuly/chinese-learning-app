@@ -1,0 +1,157 @@
+{
+  "id": "g2-neng",
+  "level": 2,
+  "title": "能: can (able to), vs 会 and 可以",
+  "topic": "verbs",
+  "summary": "Lets you say you are able to do something and choose between 能, 会 and 可以.",
+  "structure": [
+    "Subject + 能 + Verb",
+    "Subject + 不能 + Verb",
+    "能 + Verb + 吗？"
+  ],
+  "explanation": "There are three words for 'can'. 会 = a learned skill (我会游泳 'I can swim'). 能 = being able, given the situation or your abilities (我今天不能去 'I can't go today', 他能吃很多 'He can eat a lot'). 可以 = permission (这里可以坐吗？).\n\n能 and 可以 overlap in requests: 你能帮我吗？ and 你可以帮我吗？ both mean 'Can you help me?' For 'not allowed', 不能 is also common: 这儿不能吃东西.",
+  "examples": [
+    {
+      "zh": "我今天不能去。",
+      "en": "I can't go today."
+    },
+    {
+      "zh": "你能帮我吗？",
+      "en": "Can you help me?"
+    },
+    {
+      "zh": "他一个人能吃三碗饭。",
+      "en": "He can eat three bowls of rice by himself."
+    },
+    {
+      "zh": "我会游泳，但是今天不能游。",
+      "en": "I can swim, but I can't swim today."
+    },
+    {
+      "zh": "这儿不能打电话。",
+      "en": "You can't make phone calls here."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我能说汉语，我学了两年。",
+      "right": "我会说汉语，我学了两年。",
+      "why": "A learned skill is 会."
+    },
+    {
+      "wrong": "我没能去明天。",
+      "right": "我明天不能去。",
+      "why": "Use 不能 for not being able to, and time comes before the verb."
+    }
+  ],
+  "related": [
+    "g1-hui-skill",
+    "g1-keyi"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I'm ill; I can't go to school today.",
+      "before": "我生病了，今天不",
+      "after": "去学校。",
+      "options": [
+        "能",
+        "会",
+        "是"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 不能 = not able, because of the situation.",
+        "不会 means you don't know how to go.",
+        "不是 means 'is not'."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I can swim (I learned how).",
+      "before": "我",
+      "after": "游泳。",
+      "options": [
+        "会",
+        "能",
+        "可以"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: a learned skill = 会.",
+        "能 is about ability in a situation; for a learned skill use 会.",
+        "可以 is permission."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which asks 'Can you help me?'",
+      "options": [
+        "你能帮我吗？",
+        "你会帮我吗吧？",
+        "你帮能我吗？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 能 + verb + 吗.",
+        "Don't stack 吗 and 吧; and 会 here would mean 'will you'.",
+        "能 goes before the verb."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Say it isn't allowed here.",
+      "source": "这儿可以吃东西。",
+      "options": [
+        "这儿不能吃东西。",
+        "这儿没能吃东西。",
+        "这儿能不吃东西。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 不能 = 'can't, not allowed'.",
+        "没能 is 'wasn't able to (in the past)'.",
+        "能不吃 means 'can do without eating'."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "Can you come tomorrow?",
+      "answer": [
+        "你",
+        "明天",
+        "能",
+        "来",
+        "吗"
+      ],
+      "also": [
+        [
+          "明天",
+          "你",
+          "能",
+          "来",
+          "吗"
+        ]
+      ],
+      "why": "Time before 能, and 能 before the verb."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which word fits? 'May I sit here?' 我___坐这儿吗？",
+      "options": [
+        "可以",
+        "会",
+        "能不"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: asking permission = 可以 (能 is also heard).",
+        "会 is a skill.",
+        "能不 makes no sense here."
+      ]
+    }
+  ],
+  "words": [
+    "碗"
+  ]
+}

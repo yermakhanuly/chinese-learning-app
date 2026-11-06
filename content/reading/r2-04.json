@@ -1,0 +1,132 @@
+{
+  "id": "r2-04",
+  "level": 2,
+  "kind": "dialogue",
+  "title": "Buying trousers",
+  "title_zh": "买裤子",
+  "summary": "Trying on trousers and asking for a cheaper price.",
+  "speakers": [
+    {
+      "name": "小丽",
+      "voice": "female"
+    },
+    {
+      "name": "先生",
+      "voice": "male"
+    }
+  ],
+  "names": [
+    "小丽"
+  ],
+  "new_words": [
+    {
+      "word": "试",
+      "en": "to try (on)"
+    },
+    {
+      "word": "短",
+      "en": "short"
+    }
+  ],
+  "sentences": [
+    {
+      "zh": "你好，我想买一条裤子。",
+      "en": "Hello, I'd like to buy a pair of trousers.",
+      "speaker": 0
+    },
+    {
+      "zh": "你看看这条黑色的，怎么样？",
+      "en": "Have a look at these black ones. What do you think?",
+      "speaker": 1
+    },
+    {
+      "zh": "不错。我可以试试吗？",
+      "en": "Not bad. Can I try them on?",
+      "speaker": 0
+    },
+    {
+      "zh": "可以，那边可以试。",
+      "en": "Sure, you can try them on over there.",
+      "speaker": 1
+    },
+    {
+      "zh": "这条有点儿长。有没有短一点儿的？",
+      "en": "These are a bit long. Do you have slightly shorter ones?",
+      "speaker": 0
+    },
+    {
+      "zh": "有，你试试这条白色的，比那条短一点儿。",
+      "en": "Yes, try these white ones; they're a bit shorter than those.",
+      "speaker": 1
+    },
+    {
+      "zh": "这条很好。多少钱？",
+      "en": "These are great. How much?",
+      "speaker": 0
+    },
+    {
+      "zh": "三百块。",
+      "en": "Three hundred yuan.",
+      "speaker": 1
+    },
+    {
+      "zh": "太贵了！便宜一点儿吧，两百怎么样？",
+      "en": "Too expensive! Make it a bit cheaper — how about two hundred?",
+      "speaker": 0
+    },
+    {
+      "zh": "两百五，不能再便宜了。",
+      "en": "Two hundred and fifty; I can't go any lower.",
+      "speaker": 1
+    },
+    {
+      "zh": "好吧，我要了。",
+      "en": "All right, I'll take them.",
+      "speaker": 0
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "What was wrong with the black trousers?",
+      "options": [
+        "A bit too long",
+        "A bit too short",
+        "Too expensive"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 这条有点儿长.",
+        "She wants shorter ones, so they weren't too short.",
+        "The price comes up with the white ones."
+      ]
+    },
+    {
+      "prompt": "What colour are the trousers she buys?",
+      "options": [
+        "White",
+        "Black",
+        "Red"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 你试试这条白色的 — and she takes them.",
+        "The black ones were too long.",
+        "Red isn't mentioned."
+      ]
+    },
+    {
+      "prompt": "How much does she finally pay?",
+      "options": [
+        "250 yuan",
+        "300 yuan",
+        "200 yuan"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 两百五 — 250, and she says 我要了.",
+        "300 was the first price.",
+        "200 was her offer; he didn't accept it."
+      ]
+    }
+  ]
+}

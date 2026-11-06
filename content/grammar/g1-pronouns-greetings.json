@@ -1,0 +1,212 @@
+{
+  "id": "g1-pronouns-greetings",
+  "level": 1,
+  "title": "我, 你, 您: people words and greetings",
+  "topic": "basics",
+  "summary": "Lets you say I, you, he, she and we (adding 们 for more than one person) and greet people politely with 你好 and 您好.",
+  "structure": [
+    "Pronoun + 们 (more than one person): 我们, 你们, 他们, 她们",
+    "你好 / 您好 / 老师好 (Person + 好 = Hello)",
+    "Pronoun + Verb (+ Object): 我是学生。"
+  ],
+  "explanation": "Chinese person words are simple: 我 = I / me, 你 = you, 他 = he / him, 她 = she / her, 它 = it. They never change form, so 我 is both 'I' and 'me': 我爱她 (I love her), 她爱我 (she loves me).\n\nTo talk about more than one person, just add 们: 我们 = we / us, 你们 = you (all), 他们 = they (men or mixed groups), 她们 = they (all women). Don't add 们 when there is a number: say 三个朋友, not 三个朋友们.\n\n您 is a polite 'you' for teachers, older people and people you want to respect. To greet someone, say 你好 (hello) or, more politely, 您好. You can also put a person word in front of 好: 老师好 (hello, teacher), 大家好 (hello, everyone), 你们好 (hello, all of you).\n\nTwo things learners mix up: 他 and 她 sound exactly the same, so only the character shows if it's a man or a woman. And 您 normally has no plural: for a group, say 你们好 or 大家好, not 您们好.",
+  "examples": [
+    {
+      "zh": "你好！",
+      "en": "Hello!"
+    },
+    {
+      "zh": "老师，您好！",
+      "en": "Hello, teacher!"
+    },
+    {
+      "zh": "我是学生，他是老师。",
+      "en": "I'm a student, and he's a teacher."
+    },
+    {
+      "zh": "我们是同学。",
+      "en": "We are classmates."
+    },
+    {
+      "zh": "她是我妈妈，我很爱她。",
+      "en": "She is my mom, and I love her very much."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "您们好！",
+      "right": "你们好！",
+      "why": "您 normally has no plural form. To greet a group, say 你们好 or 大家好."
+    },
+    {
+      "wrong": "我有三个朋友们。",
+      "right": "我有三个朋友。",
+      "why": "Don't use 们 when a number already shows there is more than one."
+    },
+    {
+      "wrong": "他是我妈妈。",
+      "right": "她是我妈妈。",
+      "why": "他 and 她 sound the same, but in writing 他 is for men and 她 is for women."
+    }
+  ],
+  "related": [
+    "g1-shi",
+    "g1-de-possession",
+    "g1-ma-questions",
+    "g1-ne-questions"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Hello, teacher!",
+      "before": "老师，",
+      "after": "好！",
+      "options": [
+        "您",
+        "您们",
+        "它",
+        "我"
+      ],
+      "answer": 0,
+      "why": [
+        "您 is the polite 'you', perfect for greeting a teacher.",
+        "您 normally has no plural, and here you greet one teacher, so use 您.",
+        "它 means 'it' and is used for animals and things, not people.",
+        "我 means 'I'; a greeting uses 'you' (你 or 您) + 好."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "We are good friends.",
+      "before": "",
+      "after": "是好朋友。",
+      "options": [
+        "我们",
+        "我",
+        "我们们",
+        "您们"
+      ],
+      "answer": 0,
+      "why": [
+        "我们 = we: 我 + 们 for more than one person.",
+        "我 means only 'I'; add 们 to say 'we'.",
+        "们 is added only once: 我们, not 我们们.",
+        "您们 is not used, and it would mean 'you', not 'we'."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "She is my mom.",
+      "before": "",
+      "after": "是我妈妈。",
+      "options": [
+        "她",
+        "他",
+        "她们",
+        "它"
+      ],
+      "answer": 0,
+      "why": [
+        "她 is 'she', the right word for a woman like Mom.",
+        "他 sounds the same but is written for men; Mom needs 她.",
+        "她们 means 'they' (several women), but Mom is one person.",
+        "它 means 'it' and is for animals and things, not people."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "她是我妹妹。",
+        "他是我妹妹。",
+        "它是我妹妹。",
+        "我有两个妹妹们。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: a younger sister is a woman, so use 她.",
+        "他 is written for men; a sister needs 她.",
+        "它 is for animals and things, not people.",
+        "Don't add 们 after a number: say 两个妹妹."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "You meet your friend's grandmother. Which greeting is the most polite?",
+      "options": [
+        "您好！",
+        "你好！",
+        "您们好！",
+        "好你！"
+      ],
+      "answer": 0,
+      "why": [
+        "您好 uses the polite 您, best for older people.",
+        "你好 is fine for friends, but 您好 is more polite for an older person.",
+        "您 normally has no plural, and you greet only one person.",
+        "The person word comes first: 你好 / 您好, not 好你."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it about more than one person.",
+      "source": "他是学生。",
+      "options": [
+        "他们是学生。",
+        "他们是学生们。",
+        "他是学生们。",
+        "他们们是学生。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: add 们 to the pronoun: 他 → 他们.",
+        "After 他们 there is no need to add 们 to 学生 too; say 他们是学生.",
+        "The 们 goes on the person word: 他们, not on 学生.",
+        "们 is added only once: 他们, not 他们们."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it polite (you are speaking to an older person).",
+      "source": "你是老师吗？",
+      "options": [
+        "您是老师吗？",
+        "您们是老师吗？",
+        "你们是老师吗？",
+        "是老师您吗？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: just replace 你 with the polite 您.",
+        "您 normally has no plural, and you are talking to one person.",
+        "你们 means 'you all'; it is plural, not polite.",
+        "The pronoun stays at the start, before 是: 您是老师吗？"
+      ]
+    },
+    {
+      "type": "order",
+      "en": "We are her classmates.",
+      "answer": [
+        "我们",
+        "是",
+        "她",
+        "的",
+        "同学"
+      ],
+      "also": [],
+      "why": "The person word comes first, then 是, then 她的 + noun."
+    },
+    {
+      "type": "order",
+      "en": "Hello, I am a student.",
+      "answer": [
+        "你好",
+        "我",
+        "是",
+        "学生"
+      ],
+      "also": [],
+      "why": "The greeting 你好 comes first, then the person word 我 + 是 + noun."
+    }
+  ]
+}

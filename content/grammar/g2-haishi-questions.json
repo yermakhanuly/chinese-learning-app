@@ -1,0 +1,145 @@
+{
+  "id": "g2-haishi-questions",
+  "level": 2,
+  "title": "还是: A or B?",
+  "topic": "questions",
+  "summary": "Lets you ask someone to choose between two options, as in 你喝茶还是喝咖啡？",
+  "structure": [
+    "(Subject +) A + 还是 + B？"
+  ],
+  "explanation": "还是 means 'or' in questions: 你喝茶还是喝咖啡？'Do you drink tea or coffee?' The answer picks one option. Because 还是 already makes a question, don't add 吗.\n\nIn statements, 'or' is 或者 (HSK 3), not 还是. So use 还是 only when you're asking someone to choose.",
+  "examples": [
+    {
+      "zh": "你喝茶还是喝咖啡？",
+      "en": "Would you like tea or coffee?"
+    },
+    {
+      "zh": "你是老师还是学生？",
+      "en": "Are you a teacher or a student?"
+    },
+    {
+      "zh": "我们今天去还是明天去？",
+      "en": "Shall we go today or tomorrow?"
+    },
+    {
+      "zh": "你要红色的还是白色的？",
+      "en": "Do you want the red one or the white one?"
+    },
+    {
+      "zh": "他坐地铁还是打车？",
+      "en": "Is he taking the subway or a taxi?"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "你喝茶还是喝咖啡吗？",
+      "right": "你喝茶还是喝咖啡？",
+      "why": "还是 already makes a question; don't add 吗."
+    },
+    {
+      "wrong": "你要这个和那个？",
+      "right": "你要这个还是那个？",
+      "why": "和 means 'and'. To ask 'this or that?', use 还是."
+    }
+  ],
+  "related": [
+    "g1-ma-questions",
+    "g1-a-bu-a",
+    "g2-hai"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Are you going by bus or by subway?",
+      "before": "你坐公交车",
+      "after": "坐地铁？",
+      "options": [
+        "还是",
+        "和",
+        "也"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 还是 asks someone to choose.",
+        "和 means 'and', not 'or'.",
+        "也 means 'also'."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which question is correct?",
+      "options": [
+        "你喜欢猫还是狗？",
+        "你喜欢猫还是狗吗？",
+        "你喜欢还是猫狗？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: A 还是 B？",
+        "Don't add 吗 to a 还是 question.",
+        "还是 goes between the two options."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Ask: today OR tomorrow?",
+      "source": "你今天来吗？",
+      "options": [
+        "你今天来还是明天来？",
+        "你今天来还是明天来吗？",
+        "你今天还是明天来吗吧？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 今天来 还是 明天来, with no 吗.",
+        "Drop 吗 when you use 还是.",
+        "Don't stack 吗 and 吧."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "Are you a teacher or a student?",
+      "answer": [
+        "你",
+        "是",
+        "老师",
+        "还是",
+        "学生"
+      ],
+      "also": [],
+      "why": "还是 goes between the two choices."
+    },
+    {
+      "type": "pick",
+      "prompt": "Someone asks 你要红茶还是绿茶？ A good answer is:",
+      "options": [
+        "我要绿茶。",
+        "是的。",
+        "我要还是。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: answer by choosing one.",
+        "是的 (yes) doesn't answer an either-or question.",
+        "还是 is not an answer."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Should we eat at home or at a restaurant?",
+      "before": "我们在家吃",
+      "after": "去饭馆吃？",
+      "options": [
+        "还是",
+        "和",
+        "都"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 还是 offers a choice.",
+        "和 links nouns ('and'); it can't offer a choice.",
+        "都 means 'all'."
+      ]
+    }
+  ]
+}

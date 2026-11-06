@@ -1,0 +1,111 @@
+{
+  "id": "r1-06",
+  "level": 1,
+  "kind": "story",
+  "title": "It's raining",
+  "title_zh": "下雨了",
+  "summary": "The weather changes, and so do the plans.",
+  "speakers": [],
+  "names": [],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "今天是星期天。",
+      "en": "Today is Sunday."
+    },
+    {
+      "zh": "早上天气很好，不冷也不热。",
+      "en": "In the morning the weather was lovely, neither cold nor hot."
+    },
+    {
+      "zh": "我和朋友想去外边玩。",
+      "en": "My friend and I wanted to go out and play."
+    },
+    {
+      "zh": "中午，天气不好了。",
+      "en": "At noon the weather turned bad."
+    },
+    {
+      "zh": "下雨了，也有点儿冷。",
+      "en": "It started raining, and it got a bit cold."
+    },
+    {
+      "zh": "我们不去外边了。",
+      "en": "We aren't going out any more."
+    },
+    {
+      "zh": "我们在家看电视，喝热茶。",
+      "en": "We're watching TV at home and drinking hot tea."
+    },
+    {
+      "zh": "下午四点，雨小了。",
+      "en": "At four in the afternoon, the rain eased."
+    },
+    {
+      "zh": "朋友说：'我们去商店吧！'",
+      "en": "My friend said: 'Let's go to the shop!'"
+    },
+    {
+      "zh": "我说：'太好了！'",
+      "en": "I said: 'Great!'"
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "What was the weather like in the morning?",
+      "options": [
+        "Nice: not cold, not hot",
+        "Rainy",
+        "Very cold"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 早上天气很好，不冷也不热.",
+        "The rain started at noon.",
+        "It only got a bit cold after noon."
+      ]
+    },
+    {
+      "prompt": "Why didn't they go out at noon?",
+      "options": [
+        "It started raining",
+        "They were ill",
+        "The shop was closed"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 下雨了…我们不去外边了.",
+        "Nobody is ill.",
+        "The shop isn't mentioned until later."
+      ]
+    },
+    {
+      "prompt": "What did they do at home?",
+      "options": [
+        "Watched TV and drank hot tea",
+        "Cooked dinner",
+        "Wrote characters"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们在家看电视，喝热茶.",
+        "Cooking isn't mentioned.",
+        "Writing isn't mentioned."
+      ]
+    },
+    {
+      "prompt": "What happened at four o'clock?",
+      "options": [
+        "The rain eased",
+        "It started snowing",
+        "They went to bed"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 下午四点，雨小了.",
+        "No snow is mentioned.",
+        "They wanted to go to the shop."
+      ]
+    }
+  ]
+}

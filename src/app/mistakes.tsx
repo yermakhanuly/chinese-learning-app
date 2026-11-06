@@ -4,10 +4,12 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { Button } from '@/components/button';
 import { Card } from '@/components/card';
 import { PinyinToggle } from '@/components/dictionary-controls';
+import { PressableLink } from '@/components/pressable-link';
 import { Screen } from '@/components/screen';
 import { ThemedText } from '@/components/themed-text';
 import { WordRow } from '@/components/word-row';
 import { Radius, Spacing } from '@/constants/theme';
+import { useGrammarMistakes, type GrammarMistake } from '@/hooks/use-grammar';
 import { useMistakeNotebook, type NotebookEntry } from '@/hooks/use-review';
 import { useTheme } from '@/hooks/use-theme';
 import { useAuth } from '@/providers/auth';
@@ -16,6 +18,7 @@ import { useAuth } from '@/providers/auth';
 export default function MistakesScreen() {
   const { session } = useAuth();
   const notebook = useMistakeNotebook();
+  const grammar = useGrammarMistakes().data ?? [];
   const entries = notebook.data ?? [];
   const weak = entries.filter((e) => e.weak);
   const others = entries.filter((e) => !e.weak);
@@ -35,10 +38,11 @@ export default function MistakesScreen() {
             <ThemedText themeColor="danger">Couldn&apos;t load your notebook. Check your connection.</ThemedText>
             <Button label="Retry" variant="secondary" onPress={() => notebook.refetch()} />
           </Card>
-        ) : !entries.length ? (
+        ) : !entries.length && !grammar.length ? (
           <Card title="No mistakes yet">
             <ThemedText themeColor="textSecondary">
-              Words you get wrong in lessons, or mark &quot;Again&quot; in review, are collected here.
+              Words you get wrong in lessons, grammar exercises you miss, and cards you mark &quot;Again&quot; in review are
+              collected here.
             </ThemedText>
           </Card>
         ) : (
@@ -60,6 +64,7 @@ export default function MistakesScreen() {
                 <EntryList entries={others} />
               </>
             ) : null}
+            {grammar.length ? <GrammarMistakes items={grammar} /> : null}
           </>
         )}
       </Screen>
@@ -83,6 +88,34 @@ function EntryList({ entries }: { entries: NotebookEntry[] }) {
   );
 }
 
+function GrammarMistakes({ items }: { items: GrammarMistake[] }) {
+  const theme = useTheme();
+  return (
+    <>
+      <ThemedText type="heading">Grammar</ThemedText>
+      <View role="list" style={styles.list}>
+        {items.map((g) => (
+          <View key={g.grammar_id} role="listitem" style={[styles.grammar, { borderColor: theme.border, backgroundColor: theme.backgroundElement }]}>
+            <PressableLink href={{ pathname: '/grammar-point', params: { id: g.grammar_id } }}>
+              <ThemedText type="link">{g.title}</ThemedText>
+            </PressableLink>
+            <ThemedText type="small" themeColor="textSecondary">
+              HSK {g.hsk_level} · missed {g.misses} {g.misses === 1 ? 'time' : 'times'}
+            </ThemedText>
+            {g.exercises?.length ? (
+              <Button
+                label={`Practise the ${g.exercises.length} missed ${g.exercises.length === 1 ? 'exercise' : 'exercises'}`}
+                variant="secondary"
+                onPress={() => router.push({ pathname: '/grammar-practice', params: { id: g.grammar_id, only: g.exercises!.join(',') } })}
+              />
+            ) : null}
+          </View>
+        ))}
+      </View>
+    </>
+  );
+}
+
 function MissBadge({ entry }: { entry: NotebookEntry }) {
   const theme = useTheme();
   return (
@@ -97,5 +130,6 @@ function MissBadge({ entry }: { entry: NotebookEntry }) {
 const styles = StyleSheet.create({
   loading: { marginTop: Spacing.six },
   list: { gap: Spacing.two },
+  grammar: { borderWidth: StyleSheet.hairlineWidth, borderRadius: Radius.medium, padding: Spacing.three, gap: Spacing.two },
   badge: { borderWidth: 1, borderRadius: Radius.small, paddingHorizontal: Spacing.two, paddingVertical: Spacing.half },
 });

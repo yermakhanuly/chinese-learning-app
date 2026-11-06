@@ -1,0 +1,119 @@
+{
+  "id": "r2-06",
+  "level": 2,
+  "kind": "dialogue",
+  "title": "Saturday plans",
+  "title_zh": "星期六做什么",
+  "summary": "Two friends decide between football and a film.",
+  "speakers": [
+    {
+      "name": "小明",
+      "voice": "male"
+    },
+    {
+      "name": "小丽",
+      "voice": "female"
+    }
+  ],
+  "names": [
+    "小明",
+    "小丽"
+  ],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "小丽，星期六你有时间吗？",
+      "en": "Xiaoli, are you free on Saturday?",
+      "speaker": 0
+    },
+    {
+      "zh": "有啊。你想做什么？",
+      "en": "Yes. What do you want to do?",
+      "speaker": 1
+    },
+    {
+      "zh": "我们去踢足球还是去看电影？",
+      "en": "Shall we play football or see a film?",
+      "speaker": 0
+    },
+    {
+      "zh": "听说星期六天气很好，我们去踢足球吧。",
+      "en": "I heard the weather will be nice on Saturday; let's play football.",
+      "speaker": 1
+    },
+    {
+      "zh": "好啊！我跟我哥哥一起去，可以吗？",
+      "en": "Great! Can my brother come with us?",
+      "speaker": 0
+    },
+    {
+      "zh": "可以啊，人多很有意思。",
+      "en": "Sure — more people is more fun.",
+      "speaker": 1
+    },
+    {
+      "zh": "踢完球，我们再去看电影，怎么样？",
+      "en": "After football, let's see a film, how about that?",
+      "speaker": 0
+    },
+    {
+      "zh": "好。那我们几点在哪儿见？",
+      "en": "OK. So what time and where shall we meet?",
+      "speaker": 1
+    },
+    {
+      "zh": "早上九点，在学校门口见。",
+      "en": "Nine in the morning, at the school gate.",
+      "speaker": 0
+    },
+    {
+      "zh": "好的，别忘了你的球！",
+      "en": "OK, don't forget your ball!",
+      "speaker": 1
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "What will they do first on Saturday?",
+      "options": [
+        "Play football",
+        "See a film",
+        "Go shopping"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们去踢足球吧 — and the film comes after (踢完球…再去看电影).",
+        "The film comes after football.",
+        "Shopping isn't mentioned."
+      ]
+    },
+    {
+      "prompt": "Who is coming with them?",
+      "options": [
+        "Xiaoming's older brother",
+        "Xiaoli's mum",
+        "Nobody else"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我跟我哥哥一起去.",
+        "Xiaoli's mum isn't mentioned.",
+        "Xiaoming asks to bring his brother."
+      ]
+    },
+    {
+      "prompt": "Where will they meet?",
+      "options": [
+        "At the school gate",
+        "At the cinema",
+        "At Xiaoli's home"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 在学校门口见.",
+        "They go to the cinema later.",
+        "They meet at the school, not at home."
+      ]
+    }
+  ]
+}

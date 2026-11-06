@@ -1,0 +1,223 @@
+{
+  "id": "g1-ma-questions",
+  "level": 1,
+  "title": "吗: yes-no questions",
+  "topic": "questions",
+  "summary": "Lets you turn any statement into a yes-no question by adding 吗 at the end, as in 你是老师吗？",
+  "structure": [
+    "Statement + 吗？",
+    "Subject + Verb (+ Object) + 吗？",
+    "Subject + 不 + Verb (+ Object) + 吗？"
+  ],
+  "explanation": "吗 is a little word that turns a statement into a yes-no question. 你是老师。 means \"You are a teacher.\" Add 吗 at the end and you get 你是老师吗？ \"Are you a teacher?\"\n\nYou don't change the word order at all. Just keep the sentence as it is and put 吗 right at the end, before the question mark. This works with any verb: 你喝茶吗？ \"Do you drink tea?\" or 你有手机吗？ \"Do you have a phone?\"\n\nChinese has no single word for \"yes\" or \"no\". To answer, repeat the verb: 是 / 不是, 喝 / 不喝, 有 / 没有. So for 你喜欢狗吗？ you answer 喜欢 or 不喜欢, not 是.\n\nDon't put 吗 in a question that already has a question word like 什么, 谁 or 哪儿 (你喝什么？ is already a question). Also don't add it to A不A questions like 你是不是老师？. These questions already work on their own. And don't mix up 吗 with 呢: 呢 asks \"and you?\" or \"what about…?\", while 吗 asks for a yes or a no.",
+  "examples": [
+    {
+      "zh": "你是老师吗？",
+      "en": "Are you a teacher?"
+    },
+    {
+      "zh": "你喝茶吗？",
+      "en": "Do you drink tea?"
+    },
+    {
+      "zh": "你有手机吗？",
+      "en": "Do you have a mobile phone?"
+    },
+    {
+      "zh": "他是你的朋友吗？",
+      "en": "Is he your friend?"
+    },
+    {
+      "zh": "你今天晚上想看电影吗？",
+      "en": "Do you want to see a movie tonight?"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "你喝什么吗？",
+      "right": "你喝什么？",
+      "why": "什么 already makes this a question, so you don't add 吗. Use 吗 only to turn a statement into a yes-no question."
+    },
+    {
+      "wrong": "你是不是老师吗？",
+      "right": "你是不是老师？",
+      "why": "是不是 (the A不A form) is already a question. Use either 你是不是老师？ or 你是老师吗？, but not both together."
+    },
+    {
+      "wrong": "吗你是老师？",
+      "right": "你是老师吗？",
+      "why": "吗 always goes at the very end of the sentence, never at the start or in the middle."
+    }
+  ],
+  "related": [
+    "g1-a-bu-a",
+    "g1-question-words",
+    "g1-ne-questions",
+    "g1-shi"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Are you a student?",
+      "before": "你是学生",
+      "after": "？",
+      "options": [
+        "吗",
+        "呢",
+        "什么"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: adding 吗 at the end turns the statement into a yes-no question.",
+        "呢 asks \"and you?\" or \"what about…?\", not a plain yes-no question. Use 吗 here.",
+        "什么 means \"what\" and must stand where the unknown thing is. It can't be tacked onto the end of a statement to ask yes or no."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Do you like drinking tea?",
+      "before": "你喜欢",
+      "after": "吗？",
+      "options": [
+        "喝茶",
+        "喝什么",
+        "喝不喝"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 你喜欢喝茶 is a normal statement, so adding 吗 makes a yes-no question.",
+        "什么 already makes a question, so it can't be used together with 吗.",
+        "喝不喝 (the A不A form) is already a question, so it can't be used together with 吗."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "你是中国人吗？",
+        "你是中国人吗不是？",
+        "吗你是中国人？",
+        "你是不是中国人吗？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: the statement stays as it is, and 吗 goes at the end.",
+        "Nothing comes after 吗. It must be the last word of the question.",
+        "吗 can't start a sentence. It always goes at the end.",
+        "是不是 already makes a question, so you can't add 吗 as well."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means \"Does she work at a hospital?\"",
+      "options": [
+        "她在医院工作吗？",
+        "她在医院工作呢？",
+        "她在哪儿工作吗？",
+        "她吗在医院工作？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: a full statement plus 吗 at the end makes a yes-no question.",
+        "呢 doesn't make a yes-no question. Use 吗 to ask for a yes or a no.",
+        "哪儿 already asks \"where\", so 吗 can't be added. The sentence also doesn't mean \"at a hospital\".",
+        "吗 can't go in the middle of the sentence. Put it at the end."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Someone asks you 你喜欢狗吗？ Which is a natural \"yes\" answer?",
+      "options": [
+        "喜欢。",
+        "是。",
+        "有。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: to say yes, repeat the verb from the question, here 喜欢.",
+        "是 is not a general \"yes\". Use it only when the question has 是 in it.",
+        "有 means \"have\", and the question didn't use 有. Repeat the verb 喜欢 instead."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Turn it into a 吗 question.",
+      "source": "他是医生。",
+      "options": [
+        "他是医生吗？",
+        "他吗是医生？",
+        "他是医生呢？",
+        "他是什么医生吗？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: keep the statement as it is and add 吗 at the end.",
+        "吗 doesn't go after the subject. It goes at the very end of the sentence.",
+        "呢 doesn't make a yes-no question. Use 吗.",
+        "什么 already makes a question, so it can't be used with 吗."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Turn it into a 吗 question.",
+      "source": "你今天不上班。",
+      "options": [
+        "你今天不上班吗？",
+        "你今天上班不吗？",
+        "你今天吗不上班？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 吗 works with negative sentences too. Just add it at the end: \"Aren't you working today?\"",
+        "不 must stay before the verb 上班. Don't move it. Only add 吗 at the end.",
+        "吗 can't go in the middle of the sentence. It goes at the end."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "Do you know him?",
+      "answer": [
+        "你",
+        "认识",
+        "他",
+        "吗"
+      ],
+      "also": [],
+      "why": "Keep the normal statement order (subject + verb + object) and put 吗 at the end."
+    },
+    {
+      "type": "order",
+      "en": "Is this your phone?",
+      "answer": [
+        "这",
+        "是",
+        "你的",
+        "手机",
+        "吗"
+      ],
+      "also": [],
+      "why": "The statement 这是你的手机 stays in its normal order, and 吗 comes last."
+    },
+    {
+      "type": "order",
+      "en": "Are you going to the supermarket tomorrow?",
+      "answer": [
+        "你",
+        "明天",
+        "去",
+        "超市",
+        "吗"
+      ],
+      "also": [
+        [
+          "明天",
+          "你",
+          "去",
+          "超市",
+          "吗"
+        ]
+      ],
+      "why": "Time words like 明天 can go before or after the subject, but 吗 always stays at the end."
+    }
+  ]
+}

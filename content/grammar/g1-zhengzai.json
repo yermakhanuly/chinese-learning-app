@@ -1,0 +1,34 @@
+{
+  "id": "g1-zhengzai",
+  "level": 1,
+  "title": "正在 / 在 + verb: doing right now",
+  "topic": "aspect",
+  "summary": "Lets you say an action is happening right now, as in 他正在看书.",
+  "structure": ["Subject + 正在 + Verb (+ Object) (+ 呢)", "Subject + 在 + Verb (+ Object) (+ 呢)"],
+  "explanation": "To say something is in progress ('is doing'), put 正在 or just 在 before the verb: 他正在看书 'He is reading.' 正在 stresses 'right at this moment'; 在 is more everyday. 呢 at the end adds the same feeling and is common in speech: 他在睡觉呢.\n\nChinese verbs don't change form, so this is how you show 'is …ing'. To answer 'What are you doing?' (你在做什么？), use the same pattern.",
+  "examples": [
+    {"zh": "他正在看书。", "en": "He is reading."},
+    {"zh": "妈妈在做饭呢。", "en": "Mum is cooking."},
+    {"zh": "你在做什么？", "en": "What are you doing?"},
+    {"zh": "我正在打电话。", "en": "I'm on the phone right now."},
+    {"zh": "外边正在下雨。", "en": "It's raining outside."}
+  ],
+  "mistakes": [
+    {"wrong": "他看书正在。", "right": "他正在看书。", "why": "正在 goes before the verb, not after it."},
+    {"wrong": "我是在吃饭。", "right": "我在吃饭。", "why": "Don't add 是: 在 + verb is enough for 'am eating'."}
+  ],
+  "related": ["g1-zai-place-verb", "g2-zhe", "g1-le-completed"],
+  "exercises": [
+    {"type": "fill", "en": "Dad is watching TV.", "before": "爸爸", "after": "看电视。", "options": ["正在", "是", "了"], "answer": 0,
+     "why": ["Correct: 正在 + verb means 'is doing right now'.", "是 doesn't show an action in progress.", "了 belongs after the verb and means it's done."]},
+    {"type": "pick", "prompt": "Which answers '你在做什么？' (What are you doing?)", "options": ["我在写汉字。", "我写汉字在。", "我是写汉字。"], "answer": 0,
+     "why": ["Correct: 在 + verb says what you're doing now.", "在 goes before the verb.", "是 doesn't express 'am doing'."]},
+    {"type": "transform", "instruction": "Say it is happening right now (use 正在).", "source": "老师上课。", "options": ["老师正在上课。", "老师上课正在。", "老师上正在课。"], "answer": 0,
+     "why": ["Correct: put 正在 before the verb.", "正在 can't go at the end.", "正在 can't go inside 上课; it goes before the whole verb."]},
+    {"type": "order", "en": "My younger sister is sleeping.", "answer": ["我妹妹", "正在", "睡觉", "呢"], "also": [], "why": "Subject + 正在 + verb, and 呢 can close the sentence."},
+    {"type": "fill", "en": "They're eating right now.", "before": "他们在吃饭", "after": "。", "options": ["呢", "吗", "吧"], "answer": 0,
+     "why": ["Correct: 呢 at the end goes with 在 + verb for 'right now'.", "吗 would make it a question.", "吧 would make it a suggestion or a guess."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["外边在下雨。", "外边下雨在。", "外边是下雨。"], "answer": 0,
+     "why": ["Correct: 在 + 下雨 = 'it's raining'.", "在 goes before the verb.", "是 can't show 'is raining'."]}
+  ]
+}

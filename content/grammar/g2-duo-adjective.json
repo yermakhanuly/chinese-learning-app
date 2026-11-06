@@ -1,0 +1,146 @@
+{
+  "id": "g2-duo-adjective",
+  "level": 2,
+  "title": "多 + adjective: how tall, how long",
+  "topic": "questions",
+  "summary": "Lets you ask about size, distance and age with 多, as in 你多高？ and 有多远？",
+  "structure": [
+    "Subject + (有) + 多 + Adjective？",
+    "多大 (age)",
+    "多长时间 (how long)"
+  ],
+  "explanation": "多 + adjective asks 'how …?': 你多高？'How tall are you?', 这儿离机场多远？'How far is it to the airport?' You can put 有 before 多: 他有多高？\n\n多大 asks someone's age (for adults and young people): 你今年多大？ 多长时间 asks how long something takes: 你学了多长时间汉语？ The adjectives are usually the 'big' ones: 高, 远, 长, 大.",
+  "examples": [
+    {
+      "zh": "你多高？",
+      "en": "How tall are you?"
+    },
+    {
+      "zh": "这儿离机场多远？",
+      "en": "How far is it from here to the airport?"
+    },
+    {
+      "zh": "你今年多大？",
+      "en": "How old are you this year?"
+    },
+    {
+      "zh": "你学了多长时间汉语？",
+      "en": "How long have you studied Chinese?"
+    },
+    {
+      "zh": "那条路有多长？",
+      "en": "How long is that road?"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "你高多？",
+      "right": "你多高？",
+      "why": "多 goes before the adjective."
+    },
+    {
+      "wrong": "你多少高？",
+      "right": "你多高？",
+      "why": "多少 asks 'how many'; for 'how tall', use 多 + 高."
+    }
+  ],
+  "related": [
+    "g1-ji-duoshao",
+    "g2-li",
+    "g2-duration"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "How far is the station from here?",
+      "before": "车站离这儿",
+      "after": "远？",
+      "options": [
+        "多",
+        "多少",
+        "几"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 多 + adjective = 'how …'.",
+        "多少 asks for an amount, not 'how far'.",
+        "几 asks 'how many' with small numbers."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which asks a young adult's age?",
+      "options": [
+        "你多大？",
+        "你多少大？",
+        "你大多？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 多大 asks age.",
+        "多少 doesn't go before adjectives.",
+        "多 comes before 大."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Ask how long it takes (时间).",
+      "source": "你坐地铁去学校。",
+      "options": [
+        "你坐地铁去学校要多长时间？",
+        "你坐地铁去学校要多少长？",
+        "你多坐地铁去学校时间？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 要多长时间？ asks how long.",
+        "多少长 isn't said; use 多长时间.",
+        "多 has to go right before 长."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "How tall is your younger brother?",
+      "answer": [
+        "你弟弟",
+        "有",
+        "多",
+        "高"
+      ],
+      "also": [],
+      "why": "(有) + 多 + adjective at the end."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which question is correct?",
+      "options": [
+        "这条路有多长？",
+        "这条路有多少长？",
+        "这条路长多有？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 有多长？",
+        "多少 isn't used with adjectives.",
+        "The order is 有 + 多 + adjective."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "How old is your grandpa?",
+      "before": "你爷爷今年",
+      "after": "岁了？",
+      "options": [
+        "多少",
+        "多",
+        "几"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: for older people, 多少岁 is the natural way to ask age.",
+        "多 alone can't go before 岁; say 多少岁 (or 多大 without 岁).",
+        "几岁 is for small children; for a grandpa it sounds odd."
+      ]
+    }
+  ]
+}

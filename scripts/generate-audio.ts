@@ -42,11 +42,11 @@ const escapeXml = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').
 /** Everything that should have audio. */
 async function collectItems(db: SupabaseClient): Promise<Item[]> {
   const items = new Map<string, Item>();
-  const add = (text: string, kind: Kind, hsk_level: number | null, ssml = escapeXml(text)) => {
+  const add = (text: string, kind: Kind, hsk_level: number | null, ssml = escapeXml(text), voiceFor?: string) => {
     const key = audioKey(text);
     if (items.has(key) || !text.trim()) return;
     // Words in the female voice; sentences alternate (by key) so both voices are heard.
-    const voice = kind === 'sentence' && parseInt(key[15], 16) % 2 ? MALE : FEMALE;
+    const voice = voiceFor ?? (kind === 'sentence' && parseInt(key[15], 16) % 2 ? MALE : FEMALE);
     items.set(key, { key, text, kind, voice, ssml, hsk_level });
   };
 
@@ -84,6 +84,25 @@ async function collectItems(db: SupabaseClient): Promise<Item[]> {
     const level = l.units.hsk_level;
     for (const text of Object.keys(l.readings)) add(text, allWords.has(text) ? 'word' : 'sentence', level);
     for (const d of Object.values(l.word_details)) if (d.example) add(d.example.simplified, 'sentence', level);
+  }
+
+  // Graded readings: dialogue lines in each speaker's voice, stories alternating.
+  const { data: texts, error: textError } = await db.from('reading_texts').select('hsk_level, speakers, sentences');
+  if (textError) throw textError;
+  for (const t of texts as { hsk_level: number; speakers: { voice: 'female' | 'male' }[]; sentences: { zh: string; speaker?: number }[] }[]) {
+    for (const s of t.sentences) {
+      const speaker = s.speaker !== undefined ? t.speakers[s.speaker] : undefined;
+      add(s.zh, 'sentence', t.hsk_level, escapeXml(s.zh), speaker ? (speaker.voice === 'male' ? MALE : FEMALE) : undefined);
+    }
+  }
+
+  // Grammar library: examples, corrected mistakes and the sentences exercises play.
+  const { data: points, error: grammarError } = await db.from('grammar_points').select('hsk_level, examples, mistakes, exercises');
+  if (grammarError) throw grammarError;
+  for (const g of points as { hsk_level: number; examples: { zh: string }[]; mistakes: { right: string }[]; exercises: { type: string; source?: string }[] }[]) {
+    for (const e of g.examples) add(e.zh, 'sentence', g.hsk_level);
+    for (const m of g.mistakes) add(m.right, 'sentence', g.hsk_level);
+    for (const ex of g.exercises) if (ex.type === 'transform' && ex.source) add(ex.source, 'sentence', g.hsk_level);
   }
 
   for (const p of TONE_PAIRS) for (const w of p.words) add(w, 'word', words.get(w) ?? null);

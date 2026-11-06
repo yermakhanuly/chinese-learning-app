@@ -1,0 +1,151 @@
+{
+  "id": "g2-cong-dao",
+  "level": 2,
+  "title": "从…到…: from … to …",
+  "topic": "time-place",
+  "summary": "Lets you give starting and ending points in time and place, as in 从八点到十点.",
+  "structure": [
+    "从 + Time + 到 + Time",
+    "从 + Place + 到 + Place + Verb",
+    "从 + Place + 来"
+  ],
+  "explanation": "从 means 'from' and 到 means 'to / until'. For time: 我从八点到十点上课 'I have class from 8 to 10.' For place: 从我家到学校很近 'It's close from my home to school.' The whole 从…到… part goes before the verb.\n\n从 + place + 来 says where someone comes from: 他从北京来 'He comes from Beijing.'",
+  "examples": [
+    {
+      "zh": "我从八点到十点上课。",
+      "en": "I have class from eight to ten."
+    },
+    {
+      "zh": "从我家到学校很近。",
+      "en": "It's close from my home to school."
+    },
+    {
+      "zh": "他从北京来。",
+      "en": "He comes from Beijing."
+    },
+    {
+      "zh": "从北京到上海要多长时间？",
+      "en": "How long does it take from Beijing to Shanghai?"
+    },
+    {
+      "zh": "商店从早上九点开门。",
+      "en": "The shop opens from nine in the morning."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我上课从八点到十点。",
+      "right": "我从八点到十点上课。",
+      "why": "从…到… goes before the verb."
+    },
+    {
+      "wrong": "他来从北京。",
+      "right": "他从北京来。",
+      "why": "从 + place comes before 来."
+    }
+  ],
+  "related": [
+    "g2-li",
+    "g1-word-order",
+    "g2-duration"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I work from Monday to Friday.",
+      "before": "我从星期一",
+      "after": "星期五工作。",
+      "options": [
+        "到",
+        "在",
+        "离"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 从…到… = from … to ….",
+        "在 doesn't mark an end point.",
+        "离 is for distance from a place."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "He comes from Beijing.",
+      "answer": [
+        "他",
+        "从",
+        "北京",
+        "来"
+      ],
+      "also": [],
+      "why": "从 + place before 来."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "从我家到机场很远。",
+        "我家从到机场很远。",
+        "到机场从我家很远。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 从 A 到 B.",
+        "从 must come before the starting place.",
+        "The starting point (从) comes first."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Add the time: from 9 to 11.",
+      "source": "我们上课。",
+      "options": [
+        "我们从九点到十一点上课。",
+        "我们上课从九点到十一点。",
+        "从九点我们上课到十一点了。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 从…到… before the verb.",
+        "The time can't go at the end.",
+        "从 and 到 stay together before the verb."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "She came back from school.",
+      "before": "她",
+      "after": "学校回来了。",
+      "options": [
+        "从",
+        "到",
+        "离"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 从 + place = 'from'.",
+        "到 means 'to', not 'from'.",
+        "离 is for distance."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'How long from here to the station?'",
+      "options": [
+        "从这儿到车站要多长时间？",
+        "这儿从车站到要多长时间？",
+        "从这儿车站到多长时间要？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 从这儿到车站 + 要多长时间.",
+        "从 and 到 are in the wrong places.",
+        "到 goes before 车站, and 要 before 多长时间."
+      ]
+    }
+  ],
+  "words": [
+    "北京",
+    "上海",
+    "开门"
+  ]
+}

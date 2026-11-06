@@ -1,0 +1,149 @@
+{
+  "id": "g2-yibian",
+  "level": 2,
+  "title": "一边…一边…: while doing",
+  "topic": "connectors",
+  "summary": "Lets you say someone does two things at the same time, as in 他一边吃饭一边看电视.",
+  "structure": [
+    "Subject + 一边 + Verb A + 一边 + Verb B"
+  ],
+  "explanation": "一边 A 一边 B means doing A and B at the same time: 他一边吃饭一边看电视 'He eats while watching TV.' Put 一边 before EACH verb. The subject comes first, only once.\n\nBoth actions should be things one person can do at once (listening and writing, walking and talking). For one action at a point in time, use …的时候 instead.",
+  "examples": [
+    {
+      "zh": "他一边吃饭一边看电视。",
+      "en": "He watches TV while eating."
+    },
+    {
+      "zh": "我喜欢一边听歌一边跑步。",
+      "en": "I like listening to music while running."
+    },
+    {
+      "zh": "我们一边走一边说话。",
+      "en": "We talked as we walked."
+    },
+    {
+      "zh": "她一边笑一边说：'太好了！'",
+      "en": "She laughed and said, 'Great!'"
+    },
+    {
+      "zh": "不要一边开车一边打电话。",
+      "en": "Don't talk on the phone while driving."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "他一边吃饭看电视。",
+      "right": "他一边吃饭一边看电视。",
+      "why": "Use 一边 before each of the two verbs."
+    },
+    {
+      "wrong": "一边他吃饭，一边他看电视。",
+      "right": "他一边吃饭一边看电视。",
+      "why": "The subject comes first, once; 一边 goes before the verbs."
+    }
+  ],
+  "related": [
+    "g1-de-shihou",
+    "g2-xian-ranhou",
+    "g1-zhengzai"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "She sings while cooking.",
+      "before": "她一边做饭",
+      "after": "唱歌。",
+      "options": [
+        "一边",
+        "然后",
+        "和"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 一边 before each verb.",
+        "然后 means 'then' — one after another, not at the same time.",
+        "和 links nouns, not two actions."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "We talked while walking.",
+      "answer": [
+        "我们",
+        "一边",
+        "走",
+        "一边",
+        "说话"
+      ],
+      "also": [],
+      "why": "Subject + 一边 A + 一边 B."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "他一边听歌一边看书。",
+        "他一边听歌看书。",
+        "一边他听歌一边看书。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct.",
+        "The second verb needs 一边 too.",
+        "The subject goes before the first 一边."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Say he does both at the same time.",
+      "source": "他喝咖啡。他看书。",
+      "options": [
+        "他一边喝咖啡一边看书。",
+        "他喝咖啡一边看书一边。",
+        "一边他喝咖啡，一边他看书。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct.",
+        "一边 goes before each verb, not after.",
+        "Say the subject once, at the start."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "A road sign warns:",
+      "options": [
+        "不要一边开车一边打电话。",
+        "不要开车一边打电话。",
+        "一边不要开车一边打电话。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 不要 + 一边 A 一边 B.",
+        "Each verb needs 一边.",
+        "不要 goes before the whole pattern."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I like listening to music while running.",
+      "before": "我喜欢",
+      "after": "听歌一边跑步。",
+      "options": [
+        "一边",
+        "先",
+        "在"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: the first verb also needs 一边.",
+        "先 means 'first' — one after another.",
+        "在 + verb means 'is doing', not 'while'."
+      ]
+    }
+  ],
+  "words": [
+    "一边",
+    "咖啡"
+  ]
+}

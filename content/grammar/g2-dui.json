@@ -1,0 +1,34 @@
+{
+  "id": "g2-dui",
+  "level": 2,
+  "title": "对: to, towards",
+  "topic": "verbs",
+  "summary": "Lets you say who an attitude or action is aimed at, as in 他对我很好.",
+  "structure": ["A + 对 + B + 很 + Adjective", "A + 对 + B + Verb (说, 笑)", "对…来说 (HSK 3)"],
+  "explanation": "对 + person goes before an adjective or verb to say who it is aimed at: 他对我很好 'He's good to me', 老师对学生说 'The teacher says to the students.' Like other such words, the 对 part comes BEFORE the verb or adjective.\n\nDon't confuse it with 对 'correct' (你说得对 'You're right') or 对不起 'sorry': the position tells you which one it is.",
+  "examples": [
+    {"zh": "他对我很好。", "en": "He's very good to me."},
+    {"zh": "老师对我们说：'明天考试。'", "en": "The teacher said to us: 'There's a test tomorrow.'"},
+    {"zh": "她对我笑了笑。", "en": "She smiled at me."},
+    {"zh": "运动对身体很好。", "en": "Exercise is good for the body."},
+    {"zh": "我对他说了'对不起'。", "en": "I said 'sorry' to him."}
+  ],
+  "mistakes": [
+    {"wrong": "他很好对我。", "right": "他对我很好。", "why": "对 + person goes before the adjective."},
+    {"wrong": "我说对他。", "right": "我对他说。", "why": "对 + person comes before 说."}
+  ],
+  "related": ["g2-gen-yiqi", "g1-gei-person"],
+  "exercises": [
+    {"type": "fill", "en": "My grandma is very kind to me.", "before": "我奶奶", "after": "我很好。", "options": ["对", "跟", "在"], "answer": 0,
+     "why": ["Correct: A 对 B 很好 = A is good to B.", "跟 means 'with', not 'to'.", "在 introduces places."]},
+    {"type": "pick", "prompt": "Which means 'Running is good for your health'?", "options": ["跑步对身体很好。", "跑步很好对身体。", "对跑步身体很好。"], "answer": 0,
+     "why": ["Correct: 对 + 身体 before 很好.", "对 can't go after the adjective.", "This would mean 'for running, the body is good'."]},
+    {"type": "order", "en": "She smiled at me.", "answer": ["她", "对", "我", "笑了笑"], "also": [], "why": "对 + person before the verb."},
+    {"type": "transform", "instruction": "Say who he said it to: 妈妈.", "source": "他说了'谢谢'。", "options": ["他对妈妈说了'谢谢'。", "他说了对妈妈'谢谢'。", "他说了'谢谢'妈妈对。"], "answer": 0,
+     "why": ["Correct: 对 + person before 说.", "对妈妈 can't sit between 说了 and what was said.", "对 can't go at the end."]},
+    {"type": "pick", "prompt": "In which sentence does 对 mean 'to / towards'?", "options": ["老师对学生很好。", "你说得对。", "对不起。"], "answer": 0,
+     "why": ["Correct: 对 + person before 很好.", "Here 对 means 'right, correct'.", "对不起 means 'sorry'."]},
+    {"type": "fill", "en": "Don't say that to her.", "before": "你别", "after": "她这样说。", "options": ["对", "给", "在"], "answer": 0,
+     "why": ["Correct: 对 + person + 说.", "给 + person + 说 isn't the usual way to say 'say to'.", "在 introduces a place."]}
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "id": "g1-de-possession",
+  "level": 1,
+  "title": "的: my, your, his",
+  "topic": "particles",
+  "summary": "Lets you show who something belongs to by putting 的 between the owner and the thing, as in 我的书.",
+  "structure": [
+    "Owner + 的 + Thing",
+    "这 / 那 + 是 + Owner + 的 + Thing",
+    "Thing + 是 + Owner + 的"
+  ],
+  "explanation": "的 shows who something belongs to. Put the owner first, then 的, then the thing: 我的书 means \"my book\", 你的手机 means \"your phone\", 老师的电脑 means \"the teacher's computer\". It works like \"'s\" or \"my, your, his\" in English.\n\nThe order is always owner, then 的, then thing, never the other way round. The owner can be a pronoun (我, 你, 他, 她, 我们…), a person (老师, 妈妈, 朋友) or the question word 谁: 谁的书？ means \"whose book?\".\n\nIf everyone already knows what thing you mean, you can drop it and end with 的: 这本书是我的。 means \"This book is mine.\" With family, close people and places like your home, Chinese often leaves out 的: 我妈妈 (my mom), 我朋友 (my friend), 我家 (my home). 我的妈妈 is also correct, just a bit more formal or emphatic.\n\nFor ordinary things, though, keep the 的: say 他的书, not 他书.",
+  "examples": [
+    {
+      "zh": "这是我的书。",
+      "en": "This is my book."
+    },
+    {
+      "zh": "你的手机在哪儿？",
+      "en": "Where is your phone?"
+    },
+    {
+      "zh": "那是老师的电脑。",
+      "en": "That is the teacher's computer."
+    },
+    {
+      "zh": "我朋友的猫很漂亮。",
+      "en": "My friend's cat is very pretty."
+    },
+    {
+      "zh": "这不是我的杯子，是他的。",
+      "en": "This isn't my cup. It's his."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "这是书我的。",
+      "right": "这是我的书。",
+      "why": "The owner always comes first: owner + 的 + thing. You can't put 我的 after the thing like in some other languages."
+    },
+    {
+      "wrong": "这是他书。",
+      "right": "这是他的书。",
+      "why": "For ordinary things you need 的 between the owner and the thing. 的 is usually dropped only with family, close people and places like 我家."
+    },
+    {
+      "wrong": "这是谁书？",
+      "right": "这是谁的书？",
+      "why": "\"Whose\" is 谁的. Without 的, 谁 just means \"who\"."
+    }
+  ],
+  "related": [
+    "g1-pronouns-greetings",
+    "g1-shi",
+    "g1-question-words",
+    "g2-de-describing"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "This is my book.",
+      "before": "这是",
+      "after": "书。",
+      "options": [
+        "我的",
+        "我",
+        "的我",
+        "我是"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: owner + 的 + thing, so 我的书 means \"my book\".",
+        "For ordinary things like a book you need 的: 我的书, not 我书.",
+        "的 goes after the owner, not before it: 我的, not 的我.",
+        "是 doesn't show ownership; use 的 between the owner and the thing."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "That is the teacher's computer.",
+      "before": "那是老师",
+      "after": "电脑。",
+      "options": [
+        "的",
+        "是",
+        "了",
+        "吗"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 老师的电脑 means \"the teacher's computer\". 的 links the owner and the thing.",
+        "The sentence already has 是. Ownership is shown with 的, not a second 是.",
+        "了 marks finished actions or a change. It can't show who owns something.",
+        "吗 makes yes-no questions and goes at the end of the sentence. It doesn't show ownership."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Whose is this book?",
+      "before": "这本书是",
+      "after": "？",
+      "options": [
+        "谁的",
+        "谁",
+        "的谁",
+        "什么的"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 谁的 means \"whose\", and you can end with it because \"book\" is already clear.",
+        "这本书是谁？ would mean \"Who is this book?\" You need 的 to ask about the owner.",
+        "的 comes after the owner word: 谁的, not 的谁.",
+        "什么 means \"what\", not \"who\". Ask about the owner with 谁的."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means \"This is my friend's phone\"?",
+      "options": [
+        "这是手机我朋友的。",
+        "这是我朋友手机的。",
+        "这是我朋友的手机。",
+        "这是朋友我的手机。"
+      ],
+      "answer": 2,
+      "why": [
+        "The thing can't come before the owner. The order is owner + 的 + thing.",
+        "的 must sit between the owner and the thing: 我朋友的手机.",
+        "Correct: 我朋友 (my friend) is the owner, then 的, then 手机.",
+        "\"My friend\" is 我朋友, with 我 first. 朋友我 is the wrong order."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "这是他书。",
+        "这是他的书。",
+        "这是书他的。",
+        "这是的他书。"
+      ],
+      "answer": 1,
+      "why": [
+        "For ordinary things you need 的: 他的书.",
+        "Correct: 他的书 means \"his book\". The owner comes first, then 的, then the thing.",
+        "The owner can't come after the thing. Say 他的书.",
+        "的 comes after the owner, not before it: 他的书."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Answer the question: say \"It's mine.\"",
+      "source": "这个杯子是谁的？",
+      "options": [
+        "这个杯子是我的。",
+        "这个杯子是我。",
+        "这个杯子是的我。",
+        "这个杯子是我是。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 我的 means \"mine\". You can leave out 杯子 because it's already clear.",
+        "这个杯子是我 would mean \"This cup is me.\" You need 的 to show it belongs to you.",
+        "的 goes after the owner: 我的, not 的我.",
+        "You only need one 是. Ownership is shown with 的: 是我的."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Change it to say \"This is my cat.\"",
+      "source": "这是猫。",
+      "options": [
+        "这是我的猫。",
+        "这是猫的我。",
+        "这是我是猫。",
+        "这是的我猫。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 我的猫 means \"my cat\". The pattern is owner + 的 + thing.",
+        "This puts the cat before the owner and reads like \"the cat's me\". Say 我的猫.",
+        "是 doesn't show ownership. Use 的 between 我 and 猫.",
+        "的 comes after the owner, not before it: 我的猫."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "Where is your phone?",
+      "answer": [
+        "你",
+        "的",
+        "手机",
+        "在",
+        "哪儿"
+      ],
+      "also": [],
+      "why": "Owner + 的 + thing (你的手机) comes first as one unit, followed by 在哪儿."
+    },
+    {
+      "type": "order",
+      "en": "That is the teacher's computer.",
+      "answer": [
+        "那",
+        "是",
+        "老师",
+        "的",
+        "电脑"
+      ],
+      "also": [],
+      "why": "After 那是 comes owner + 的 + thing: 老师的电脑."
+    }
+  ]
+}

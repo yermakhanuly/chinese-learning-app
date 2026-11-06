@@ -1,0 +1,146 @@
+{
+  "id": "g2-gen-yiqi",
+  "level": 2,
+  "title": "跟…一起: together with",
+  "topic": "verbs",
+  "summary": "Lets you say who you do something with, as in 我跟朋友一起吃饭.",
+  "structure": [
+    "Subject + 跟 + Person + 一起 + Verb",
+    "Subject + 一起 + Verb"
+  ],
+  "explanation": "跟 + person + 一起 + verb means 'do something together with someone': 我跟朋友一起吃饭 'I eat with my friend.' The whole 跟…一起 part goes BEFORE the verb, unlike English 'with my friend' at the end.\n\n一起 alone also works when the group is the subject: 我们一起去吧 'Let's go together.' 和 can replace 跟: 我和他一起学习.",
+  "examples": [
+    {
+      "zh": "我跟朋友一起吃饭。",
+      "en": "I'm eating with a friend."
+    },
+    {
+      "zh": "我们一起去吧。",
+      "en": "Let's go together."
+    },
+    {
+      "zh": "他跟妈妈一起去商场。",
+      "en": "He goes to the mall with his mum."
+    },
+    {
+      "zh": "你想跟我一起学汉语吗？",
+      "en": "Would you like to study Chinese with me?"
+    },
+    {
+      "zh": "星期天我和爷爷一起跑步。",
+      "en": "On Sundays I go running with my grandpa."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我吃饭跟朋友一起。",
+      "right": "我跟朋友一起吃饭。",
+      "why": "跟…一起 goes before the verb."
+    },
+    {
+      "wrong": "我一起跟他去。",
+      "right": "我跟他一起去。",
+      "why": "The order is 跟 + person + 一起."
+    }
+  ],
+  "related": [
+    "g1-he-ye-dou",
+    "g2-dui",
+    "g1-word-order"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I go to school with my classmates.",
+      "before": "我",
+      "after": "同学一起去学校。",
+      "options": [
+        "跟",
+        "对",
+        "给"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 跟 + person + 一起 = together with.",
+        "对 means 'towards', not 'with'.",
+        "给 means 'for / to'."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "I'm going shopping with my mum.",
+      "answer": [
+        "我",
+        "跟",
+        "妈妈",
+        "一起",
+        "去买东西"
+      ],
+      "also": [],
+      "why": "跟 + person + 一起 before the verb."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "他跟我一起看电影。",
+        "他看电影跟我一起。",
+        "他一起跟我看电影。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 跟我一起 before the verb.",
+        "跟…一起 can't go at the end.",
+        "一起 comes after the person."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Say you do it together with your friend (朋友).",
+      "source": "我去旅游。",
+      "options": [
+        "我跟朋友一起去旅游。",
+        "我去旅游跟朋友一起。",
+        "我朋友跟一起去旅游。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 跟朋友一起 before 去.",
+        "The 'with' part goes before the verb.",
+        "跟 must come before the person."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Let's eat together.",
+      "before": "我们",
+      "after": "吃饭吧。",
+      "options": [
+        "一起",
+        "跟",
+        "也"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 一起 = together.",
+        "跟 needs a person after it.",
+        "也 means 'also'."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which asks 'Do you want to go with me?'",
+      "options": [
+        "你想跟我一起去吗？",
+        "你想去跟我吗？",
+        "你跟想我去吗？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 想 + 跟我一起 + 去.",
+        "跟我 can't follow 去 like this.",
+        "想 goes before 跟."
+      ]
+    }
+  ]
+}

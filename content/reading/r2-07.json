@@ -1,0 +1,98 @@
+{
+  "id": "r2-07",
+  "level": 2,
+  "kind": "story",
+  "title": "My new school",
+  "title_zh": "我的新学校",
+  "summary": "A student describes her new school and the way there.",
+  "speakers": [],
+  "names": [],
+  "new_words": [
+    {
+      "word": "一样",
+      "en": "the same"
+    }
+  ],
+  "sentences": [
+    {
+      "zh": "今年我开始在高中学习。",
+      "en": "This year I started senior high school."
+    },
+    {
+      "zh": "我的新学校很大，有很多楼，很漂亮。",
+      "en": "My new school is big, with lots of buildings; it's beautiful."
+    },
+    {
+      "zh": "学校离我家有点儿远。",
+      "en": "The school is a bit far from my home."
+    },
+    {
+      "zh": "我每天早上坐地铁去学校，从我家到学校要四十分钟。",
+      "en": "Every morning I take the subway; it takes forty minutes from home to school."
+    },
+    {
+      "zh": "我们从八点到十二点上课，下午从两点到五点上课。",
+      "en": "We have classes from eight to twelve, and from two to five in the afternoon."
+    },
+    {
+      "zh": "我的新同学跟我一样，都很喜欢运动。",
+      "en": "My new classmates, like me, all love sport."
+    },
+    {
+      "zh": "我们班有四十个学生，男学生和女学生一样多。",
+      "en": "There are forty students in my class, with as many boys as girls."
+    },
+    {
+      "zh": "老师们对我们都很好。",
+      "en": "The teachers are all very nice to us."
+    },
+    {
+      "zh": "虽然学校离家很远，但是我非常喜欢我的新学校。",
+      "en": "Although it's far from home, I really like my new school."
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "How does she get to school?",
+      "options": [
+        "By subway",
+        "By bus",
+        "On foot"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我每天早上坐地铁去学校.",
+        "She takes the subway, not the bus.",
+        "It's too far to walk: forty minutes by subway."
+      ]
+    },
+    {
+      "prompt": "When are the afternoon classes?",
+      "options": [
+        "From two to five",
+        "From eight to twelve",
+        "From one to four"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 下午从两点到五点上课.",
+        "That's the morning classes.",
+        "It's 两点到五点."
+      ]
+    },
+    {
+      "prompt": "What is true about her class?",
+      "options": [
+        "There are as many boys as girls",
+        "There are more girls than boys",
+        "There are twenty students"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 男学生和女学生一样多.",
+        "The text says they're the same: 一样多.",
+        "There are 四十 (forty) students."
+      ]
+    }
+  ]
+}

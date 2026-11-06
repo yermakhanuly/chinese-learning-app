@@ -1,0 +1,34 @@
+{
+  "id": "g2-shi-de",
+  "level": 2,
+  "title": "是…的: when, where, how it happened",
+  "topic": "particles",
+  "summary": "Lets you focus on when, where or how a past action happened, as in 我是坐飞机来的.",
+  "structure": ["Subject + 是 + When / Where / How + Verb + 的", "Subject + 不是 + … + 的"],
+  "explanation": "When everyone already knows something happened, 是…的 focuses on the details: WHEN, WHERE, HOW or WITH WHOM. 你是什么时候来的？'When did you come?' — 我是昨天来的 'I came yesterday.' 我是坐飞机来的 'I came by plane.'\n\nPut 是 before the detail and 的 at the end. In speech 是 is often dropped (我昨天来的), but 的 stays. The negative is 不是…的: 我不是坐飞机来的.",
+  "examples": [
+    {"zh": "你是什么时候来的？", "en": "When did you come?"},
+    {"zh": "我是昨天来的。", "en": "I came yesterday."},
+    {"zh": "我是坐飞机来的。", "en": "I came by plane."},
+    {"zh": "这本书是在哪儿买的？", "en": "Where was this book bought?"},
+    {"zh": "我不是一个人去的，是跟朋友一起去的。", "en": "I didn't go alone; I went with a friend."}
+  ],
+  "mistakes": [
+    {"wrong": "我是坐飞机来了。", "right": "我是坐飞机来的。", "why": "The pattern ends with 的, not 了."},
+    {"wrong": "我坐是飞机来的。", "right": "我是坐飞机来的。", "why": "是 goes before the detail (坐飞机)."}
+  ],
+  "related": ["g1-le-completed", "g2-de-describing", "g1-question-words"],
+  "exercises": [
+    {"type": "fill", "en": "I came by taxi.", "before": "我是打车来", "after": "。", "options": ["的", "了", "过"], "answer": 0,
+     "why": ["Correct: 是…的 ends with 的.", "了 doesn't fit the 是…的 pattern.", "过 is for experience."]},
+    {"type": "pick", "prompt": "Which asks 'Where did you buy it?'", "options": ["你是在哪儿买的？", "你在哪儿买的了？", "你是买在哪儿的？"], "answer": 0,
+     "why": ["Correct: 是 + where + verb + 的.", "Don't add 了 after 的.", "在哪儿 goes before the verb."]},
+    {"type": "transform", "instruction": "Focus on HOW he came: by subway (坐地铁).", "source": "他来了。", "options": ["他是坐地铁来的。", "他是来坐地铁的了。", "他坐地铁是来了。"], "answer": 0,
+     "why": ["Correct: 是 + how + verb + 的.", "The detail goes before 来, and no 了.", "是 must come before the detail and 的 at the end."]},
+    {"type": "order", "en": "We came yesterday.", "answer": ["我们", "是", "昨天", "来", "的"], "also": [], "why": "是 + when + verb + 的."},
+    {"type": "pick", "prompt": "Someone asks 你是跟谁一起来的？ You came with your mum. You say:", "options": ["我是跟妈妈一起来的。", "我是跟妈妈一起来了。", "我跟妈妈是一起来。"], "answer": 0,
+     "why": ["Correct: answer with the same 是…的 pattern.", "End with 的, not 了.", "是 goes before the detail, and 的 is missing."]},
+    {"type": "fill", "en": "I didn't come by plane.", "before": "我", "after": "坐飞机来的。", "options": ["不是", "没是", "没"], "answer": 0,
+     "why": ["Correct: the negative is 不是…的.", "是 is never negated with 没.", "没 can't replace 是 in this pattern."]}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "g1-qu-lai-place",
+  "level": 1,
+  "title": "去 / 来 + place: go, come",
+  "topic": "verbs",
+  "summary": "Lets you say where someone goes or comes, as in 我去学校, and use handy words like 上学.",
+  "structure": ["Subject + 去 + Place", "Subject + 来 + Place", "Subject + 去 + Place + Verb"],
+  "explanation": "去 means 'go (away from here)' and 来 means 'come (towards here)'. The place comes straight after, with no word for 'to': 我去学校 'I go to school', 你来我家吧 'Come to my place.' Use 回 for 'go back': 回家 'go home'.\n\nTo say why you go, add the action after the place: 我去商店买东西 'I'm going to the shop to buy things.' Words like 上学 (go to school), 上班 (go to work) and 回家 already include the movement.",
+  "examples": [
+    {"zh": "我去学校。", "en": "I'm going to school."},
+    {"zh": "你什么时候来中国？", "en": "When are you coming to China?"},
+    {"zh": "他去商店买东西。", "en": "He's going to the shop to buy things."},
+    {"zh": "我们晚上回家。", "en": "We're going home in the evening."},
+    {"zh": "爸爸八点去上班。", "en": "Dad goes to work at eight."}
+  ],
+  "mistakes": [
+    {"wrong": "我去到学校。", "right": "我去学校。", "why": "去 already means 'go to'; no extra word for 'to' is needed."},
+    {"wrong": "我买东西去商店。", "right": "我去商店买东西。", "why": "Go to the place first, then say what you'll do there."}
+  ],
+  "related": ["g1-word-order", "g1-zai-place-verb", "g2-direction-complements"],
+  "exercises": [
+    {"type": "fill", "en": "Are you coming to my home tomorrow?", "before": "你明天", "after": "我家吗？", "options": ["来", "在", "是"], "answer": 0,
+     "why": ["Correct: 来 + place = 'come to'.", "在 means 'be at'; 'Are you at my home tomorrow?' doesn't fit.", "是 can't mean 'come'."]},
+    {"type": "order", "en": "I'm going to the hospital to see a doctor.", "answer": ["我", "去", "医院", "看病"], "also": [], "why": "去 + place first, then the purpose (看病)."},
+    {"type": "pick", "prompt": "Which means 'He went home'?", "options": ["他回家了。", "他去回家了。", "他家回了。"], "answer": 0,
+     "why": ["Correct: 回家 = 'go home'.", "回 already means 'go back'; don't add 去.", "The verb 回 goes before the place 家."]},
+    {"type": "transform", "instruction": "Add the purpose: to buy fruit (买水果).", "source": "我去超市。", "options": ["我去超市买水果。", "我买水果去超市。", "我去买超市水果。"], "answer": 0,
+     "why": ["Correct: place first, then the purpose.", "The place should come before what you'll do there.", "买 must go before 水果, after the place."]},
+    {"type": "fill", "en": "Mum goes to work at seven.", "before": "妈妈七点", "after": "。", "options": ["上班", "去在工作", "来工作在"], "answer": 0,
+     "why": ["Correct: 上班 = 'go to work'.", "Don't put 在 between 去 and 工作; 'go to work' is 上班 (or 去工作).", "The word order is wrong, and 在 isn't needed."]},
+    {"type": "pick", "prompt": "You're at school. Your friend is at home. You ask her to come to school:", "options": ["你来学校吧。", "你去学校吧。", "你在学校吧。"], "answer": 0,
+     "why": ["Correct: towards where you are = 来.", "去 means going away from you; you're already at school.", "在 means 'be at'; it doesn't ask her to come."]}
+  ]
+}

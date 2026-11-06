@@ -1,0 +1,26 @@
+{
+  "id": "r1-09", "level": 1, "kind": "dialogue", "title": "A phone call", "title_zh": "打电话",
+  "summary": "A mother calls home and asks what everyone is doing.",
+  "speakers": [{"name": "妈妈", "voice": "female"}, {"name": "儿子", "voice": "male"}],
+  "names": [], "new_words": [],
+  "sentences": [
+    {"zh": "喂，儿子，你在做什么呢？", "en": "Hello, son, what are you doing?", "speaker": 0},
+    {"zh": "妈妈，我正在看书呢。", "en": "Mum, I'm reading.", "speaker": 1},
+    {"zh": "你爸爸呢？他在家吗？", "en": "And your dad? Is he at home?", "speaker": 0},
+    {"zh": "在。他正在做饭。", "en": "Yes. He's cooking.", "speaker": 1},
+    {"zh": "你妹妹呢？", "en": "What about your sister?", "speaker": 0},
+    {"zh": "她在睡觉。妈妈，你在哪儿？", "en": "She's sleeping. Mum, where are you?", "speaker": 1},
+    {"zh": "我在公司，现在很忙。", "en": "I'm at the office; I'm very busy now.", "speaker": 0},
+    {"zh": "你什么时候回家？", "en": "When are you coming home?", "speaker": 1},
+    {"zh": "七点。吃饭的时候，不要看电视，好吗？", "en": "At seven. Don't watch TV while you eat, OK?", "speaker": 0},
+    {"zh": "好的，妈妈。再见！", "en": "OK, Mum. Bye!", "speaker": 1}
+  ],
+  "questions": [
+    {"prompt": "What is the son doing?", "options": ["Reading", "Cooking", "Sleeping"], "answer": 0,
+     "why": ["Right: 我正在看书呢.", "Dad is the one cooking.", "His sister is sleeping."]},
+    {"prompt": "Where is Mum?", "options": ["At the office", "At home", "At the shop"], "answer": 0,
+     "why": ["Right: 我在公司.", "She's calling home, so she isn't there.", "The shop isn't mentioned."]},
+    {"prompt": "What does Mum ask him not to do?", "options": ["Watch TV while eating", "Read books", "Sleep late"], "answer": 0,
+     "why": ["Right: 吃饭的时候，不要看电视.", "She doesn't mind him reading.", "Sleep isn't what she warns about."]}
+  ]
+}

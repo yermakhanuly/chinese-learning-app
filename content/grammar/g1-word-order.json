@@ -1,0 +1,33 @@
+{
+  "id": "g1-word-order",
+  "level": 1,
+  "title": "Word order: who + when + where + do what",
+  "topic": "basics",
+  "summary": "Lets you build sentences in the right order: subject, then time, then place, then verb and object.",
+  "structure": ["Subject + Time + Place + Verb + Object", "Time + Subject + Place + Verb + Object"],
+  "explanation": "Chinese word order is very regular. The basic order is the same as English, subject + verb + object: 我喝茶. But time and place come BEFORE the verb, not at the end as in English.\n\nSo 'I eat at home in the evening' is 我晚上在家吃饭: who (我), when (晚上), where (在家), what (吃饭). The time word may also go first, before the subject: 晚上我在家吃饭. Time always comes before place.",
+  "examples": [
+    {"zh": "我喝茶。", "en": "I drink tea."},
+    {"zh": "我明天去学校。", "en": "I'm going to school tomorrow."},
+    {"zh": "他晚上在家看书。", "en": "In the evening he reads at home."},
+    {"zh": "今天我们在饭店吃饭。", "en": "Today we're eating at a restaurant."},
+    {"zh": "妈妈早上在医院工作。", "en": "Mum works at the hospital in the mornings."}
+  ],
+  "mistakes": [
+    {"wrong": "我去学校明天。", "right": "我明天去学校。", "why": "Time words go before the verb, not at the end of the sentence."},
+    {"wrong": "我在家晚上吃饭。", "right": "我晚上在家吃饭。", "why": "Time comes before place."}
+  ],
+  "related": ["g1-zai-place-verb", "g1-qu-lai-place", "g1-dates-time"],
+  "exercises": [
+    {"type": "order", "en": "I'm going to the shop tomorrow.", "answer": ["我", "明天", "去", "商店"], "also": [["明天", "我", "去", "商店"]], "why": "Who, then when, then the verb and the place: time goes before the verb."},
+    {"type": "order", "en": "She works at a company in the afternoon.", "answer": ["她", "下午", "在", "公司", "工作"], "also": [["下午", "她", "在", "公司", "工作"]], "why": "Time before place, and both before the verb 工作."},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["我今天在家休息。", "我在家休息今天。", "我在家今天休息。"], "answer": 0,
+     "why": ["Correct: who + when + where + verb.", "Time can't go at the end; it comes before the verb.", "Time comes before place, not after it."]},
+    {"type": "pick", "prompt": "Which means 'We study Chinese at school'?", "options": ["我们在学校学习汉语。", "我们学习汉语在学校。", "在学校汉语我们学习。"], "answer": 0,
+     "why": ["Correct: the place (在学校) goes before the verb.", "In Chinese, 在 + place comes before the verb, not at the end.", "The object 汉语 comes after the verb, and the subject is near the front."]},
+    {"type": "fill", "en": "Dad watches TV at home in the evening.", "before": "爸爸", "after": "在家看电视。", "options": ["晚上", "在晚上", "晚"], "answer": 0,
+     "why": ["Correct: a time word like 晚上 goes straight before the place and verb, with no 在.", "Time words don't take 在: just 晚上.", "晚 means 'late'; 'in the evening' is 晚上."]},
+    {"type": "transform", "instruction": "Move the time word to the front of the sentence.", "source": "我明天去医院。", "options": ["明天我去医院。", "我去医院明天。", "我去明天医院。"], "answer": 0,
+     "why": ["Correct: a time word can go before the subject.", "The time word can go first, but never at the end.", "明天 can't sit between the verb and the place."]}
+  ]
+}

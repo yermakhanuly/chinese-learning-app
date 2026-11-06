@@ -1,0 +1,35 @@
+{
+  "id": "g2-double-object",
+  "level": 2,
+  "title": "给, 送, 教 + person + thing",
+  "topic": "verbs",
+  "summary": "Lets you say who gets what, as in 我送他一本书.",
+  "structure": ["Subject + 给 / 送 / 教 / 告诉 + Person + Thing"],
+  "explanation": "Some verbs take two objects: first the person, then the thing. 他给我一个苹果 'He gives me an apple', 我送她一本书 'I give her a book (as a present)', 王老师教我们汉语 'Teacher Wang teaches us Chinese', 告诉我你的名字 'Tell me your name.'\n\nThe person always comes first, right after the verb, then the thing. Don't put a 'to' word in between.",
+  "examples": [
+    {"zh": "他给我一个苹果。", "en": "He gives me an apple."},
+    {"zh": "我送她一本书。", "en": "I'm giving her a book as a present."},
+    {"zh": "张老师教我们汉语。", "en": "Teacher Zhang teaches us Chinese."},
+    {"zh": "请告诉我你的名字。", "en": "Please tell me your name."},
+    {"zh": "生日的时候，爸爸送了我一块手表。", "en": "On my birthday, Dad gave me a watch."}
+  ],
+  "mistakes": [
+    {"wrong": "我送一本书她。", "right": "我送她一本书。", "why": "The person comes before the thing."},
+    {"wrong": "他教汉语我们。", "right": "他教我们汉语。", "why": "教 + person + subject."}
+  ],
+  "related": ["g1-gei-person", "g2-dui"],
+  "exercises": [
+    {"type": "order", "en": "My friend gave me a book.", "answer": ["朋友", "送", "我", "一本书"], "also": [], "why": "Verb + person + thing."},
+    {"type": "fill", "en": "Tell me your phone number.", "before": "", "after": "我你的电话。", "options": ["告诉", "说话", "听"], "answer": 0,
+     "why": ["Correct: 告诉 + person + thing.", "说话 means 'talk' and doesn't take a person and a thing.", "听 means 'listen'."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["老师教我们唱歌。", "老师教唱歌我们。", "老师我们教唱歌。"], "answer": 0,
+     "why": ["Correct: 教 + person + what.", "The person comes before what is taught.", "教 must come before the person."]},
+    {"type": "transform", "instruction": "Say who gets it: 妹妹.", "source": "我送了一件衣服。", "options": ["我送了妹妹一件衣服。", "我送了一件衣服妹妹。", "我妹妹送了一件衣服。"], "answer": 0,
+     "why": ["Correct: 送了 + person + thing.", "The person goes before the thing.", "This makes 妹妹 the one who gave it."]},
+    {"type": "fill", "en": "Mum gave me 100 yuan.", "before": "妈妈给", "after": "一百块钱。", "options": ["我", "对我", "跟我"], "answer": 0,
+     "why": ["Correct: 给 + person + thing, no extra word.", "对 isn't used after 给 here.", "跟 means 'with'."]},
+    {"type": "pick", "prompt": "Which means 'He taught me to swim'?", "options": ["他教我游泳。", "他教游泳给我。", "他我教游泳。"], "answer": 0,
+     "why": ["Correct: 教 + person + skill.", "Don't put 给我 at the end; 教我 is enough.", "The verb comes before the person."]}
+  ],
+  "words": ["张", "块"]
+}

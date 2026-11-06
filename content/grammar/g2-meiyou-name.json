@@ -1,0 +1,145 @@
+{
+  "id": "g2-meiyou-name",
+  "level": 2,
+  "title": "没有…那么: not as … as",
+  "topic": "comparison",
+  "summary": "Lets you say one thing is not as good, big or fast as another, as in 我没有他那么高.",
+  "structure": [
+    "A + 没有 + B + (那么 / 这么) + Adjective"
+  ],
+  "explanation": "A 没有 B (那么) + adjective means 'A is not as … as B': 我没有他那么高 'I'm not as tall as him.' 那么 ('that') is optional but very common; use 这么 when B is right here.\n\nThis is the usual negative of a 比 sentence: 他比我高 → 我没有他高. Saying 不比 is possible but has a different, argumentative feel.",
+  "examples": [
+    {
+      "zh": "我没有他那么高。",
+      "en": "I'm not as tall as him."
+    },
+    {
+      "zh": "今天没有昨天那么冷。",
+      "en": "Today isn't as cold as yesterday."
+    },
+    {
+      "zh": "坐公交车没有坐地铁快。",
+      "en": "Taking the bus isn't as fast as the subway."
+    },
+    {
+      "zh": "我的汉语没有你这么好。",
+      "en": "My Chinese isn't as good as yours."
+    },
+    {
+      "zh": "这个饭馆没有那个饭馆贵。",
+      "en": "This restaurant isn't as expensive as that one."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我没有他很高。",
+      "right": "我没有他那么高。",
+      "why": "Use 那么, not 很, in this pattern."
+    },
+    {
+      "wrong": "我不有他那么高。",
+      "right": "我没有他那么高。",
+      "why": "The pattern uses 没有; 有 never takes 不."
+    }
+  ],
+  "related": [
+    "g2-bi",
+    "g2-yiyang",
+    "g1-you"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Yesterday wasn't as hot as today.",
+      "before": "昨天",
+      "after": "今天那么热。",
+      "options": [
+        "没有",
+        "不是",
+        "比"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: A 没有 B 那么 + adjective.",
+        "不是 doesn't compare like this.",
+        "比 would say yesterday was hotter."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Turn it around: 'I'm not as tall as him.'",
+      "source": "他比我高。",
+      "options": [
+        "我没有他高。",
+        "我不比他很高。",
+        "我没有他很高。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: A 没有 B + adjective.",
+        "不比 has a different meaning, and 很 doesn't fit.",
+        "Use 那么 or nothing, not 很."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "My room isn't as big as yours.",
+      "answer": [
+        "我的房间",
+        "没有",
+        "你的",
+        "那么",
+        "大"
+      ],
+      "also": [],
+      "why": "A + 没有 + B + 那么 + adjective."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "我跑得没有他那么快。",
+        "我跑得没有他很快。",
+        "我没跑得他那么快。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: this follows the pattern exactly.",
+        "Use 那么, not 很.",
+        "没有 goes before B (他), not before the verb."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "My Chinese isn't as good as yours (here).",
+      "before": "我的汉语没有你",
+      "after": "好。",
+      "options": [
+        "这么",
+        "很",
+        "非常"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 这么 / 那么 = so, as.",
+        "很 doesn't fit this pattern.",
+        "非常 doesn't fit this pattern."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'The subway isn't as cheap as the bus'?",
+      "options": [
+        "地铁没有公交车便宜。",
+        "公交车没有地铁便宜。",
+        "地铁比公交车便宜。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: A (地铁) 没有 B (公交车) 便宜.",
+        "This says the bus isn't as cheap.",
+        "This says the subway is cheaper."
+      ]
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/button';
 import { StrokeOrder, WritingPad } from '@/components/character/character-svg';
+import { BuildExercise, ChoiceExercise, FillExercise, LessonDataContext } from '@/components/lesson/lesson-parts';
 import { closeModal } from '@/components/close-button';
 import { ScrollLockProvider } from '@/components/scroll-lock';
 import { RubyText } from '@/components/ruby-text';
@@ -16,6 +17,8 @@ import { MaxContentWidth, Radius, Spacing } from '@/constants/theme';
 import { useHydrated } from '@/hooks/use-hydrated';
 import { recordReview, useInvalidateReview, useReviewQueue } from '@/hooks/use-review';
 import { useTheme } from '@/hooks/use-theme';
+import { exerciseToStep, explanation } from '@/lib/grammar';
+import { grade as gradeStep, type Answer } from '@/lib/lesson-flow';
 import { speakChinese } from '@/lib/speech';
 import {
   GRADES,
@@ -23,12 +26,14 @@ import {
   formatInterval,
   fromFsrsCard,
   getScheduler,
+  grammarExerciseIndex,
   isDeck,
   previewGrades,
   startSession,
   type CharacterContent,
   type CustomContent,
   type Grade,
+  type GrammarContent,
   type ReviewCardRow,
   type SentenceContent,
   type Session,
@@ -109,7 +114,8 @@ function Player({ cards, scheduler }: { cards: ReviewCardRow[]; scheduler: Await
     setAutoGrade(null);
   }
 
-  const writing = card.kind === 'character';
+  // Writing and grammar cards grade themselves (the pad / the exercise).
+  const writing = card.kind === 'character' || card.kind === 'grammar';
   const written = (grade: Grade) => {
     setAutoGrade(grade);
     setFlipped(true);
@@ -189,7 +195,11 @@ function Player({ cards, scheduler }: { cards: ReviewCardRow[]; scheduler: Await
                 onPress={() => rate(autoGrade)}
               />
             ) : (
-              <Button label="I don't remember" variant="secondary" onPress={() => written(1)} />
+              <Button
+                label={card.kind === 'grammar' ? "I don't know" : "I don't remember"}
+                variant="secondary"
+                onPress={() => written(1)}
+              />
             )
           ) : !next ? (
             <Button label="Show answer" onPress={() => setFlipped(true)} />
@@ -232,7 +242,9 @@ function Player({ cards, scheduler }: { cards: ReviewCardRow[]; scheduler: Await
 function cardLabel(card: ReviewCardRow): string {
   const repeat = card.state === 0 ? 'NEW' : card.state === 1 || card.state === 3 ? 'AGAIN' : 'REVIEW';
   const what =
-    card.kind === 'character'
+    card.kind === 'grammar'
+      ? 'GRAMMAR'
+      : card.kind === 'character'
       ? 'WRITE IT'
       : card.kind === 'custom'
         ? 'MY CARD'
@@ -268,6 +280,8 @@ function CardFace({
 }) {
   if (card.kind === 'character')
     return <WriteFace content={card.content as CharacterContent} flipped={flipped} onWritten={onWritten} />;
+  if (card.kind === 'grammar')
+    return <GrammarFace card={card} content={card.content as GrammarContent} flipped={flipped} onWritten={onWritten} />;
   if (card.kind === 'word')
     return <WordFace content={card.content as WordContent} direction={card.direction} flipped={flipped} />;
   if (card.kind === 'sentence')
@@ -409,6 +423,57 @@ function WriteFace({
   );
 }
 
+/** One exercise of the grammar point (a different one each review), graded on Check. */
+function GrammarFace({
+  card,
+  content,
+  flipped,
+  onWritten,
+}: {
+  card: ReviewCardRow;
+  content: GrammarContent;
+  flipped: boolean;
+  onWritten: (g: Grade) => void;
+}) {
+  const index = grammarExerciseIndex(card.id, card.reps, content.exercises.length);
+  const exercise = content.exercises[index];
+  const step = exerciseToStep(exercise);
+  const [answer, setAnswer] = useState<Answer | null>(null);
+  const [checked, setChecked] = useState(false);
+  const data = { readings: content.readings, wordDetails: {}, seed: `${card.id}-${card.reps}` };
+  const right = checked && answer !== null && gradeStep(step, answer);
+  const props = { index, answer, onChange: setAnswer, checked: checked || flipped };
+  const canCheck = answer !== null && (!Array.isArray(answer) || answer.length > 0);
+  return (
+    <LessonDataContext value={data}>
+      <View style={styles.grammarFace}>
+        <ThemedText type="subtitle">{content.title}</ThemedText>
+        {step.type === 'choice' ? <ChoiceExercise step={step} {...props} /> : null}
+        {step.type === 'fill' ? <FillExercise step={step} {...props} /> : null}
+        {step.type === 'build' ? <BuildExercise step={step} {...props} /> : null}
+        {!checked && !flipped ? (
+          <Button
+            label="Check"
+            disabled={!canCheck}
+            onPress={() => {
+              const ok = gradeStep(step, answer!);
+              setChecked(true);
+              onWritten(ok ? 3 : 1);
+            }}
+          />
+        ) : (
+          <View role="alert" style={styles.grammarResult}>
+            <ThemedText type="label" themeColor={right ? 'success' : 'danger'}>
+              {right ? 'Correct!' : 'Not quite'}
+            </ThemedText>
+            <ThemedText themeColor="textSecondary">{explanation(exercise, typeof answer === 'number' ? answer : null)}</ThemedText>
+          </View>
+        )}
+      </View>
+    </LessonDataContext>
+  );
+}
+
 function CustomFace({ content, flipped }: { content: CustomContent; flipped: boolean }) {
   useAutoplay(content.zh, flipped);
   return (
@@ -538,6 +603,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   grades: { flexDirection: 'row', gap: Spacing.two },
+  grammarFace: { gap: Spacing.three, alignSelf: 'stretch' },
+  grammarResult: { gap: Spacing.one },
   grade: {
     flex: 1,
     alignItems: 'center',

@@ -1,0 +1,228 @@
+{
+  "id": "g1-he-ye-dou",
+  "level": 1,
+  "title": "和, 也, 都: and, also, all",
+  "topic": "adverbs",
+  "summary": "Lets you join two nouns with 和 and say also and all with 也 and 都, which come before the verb.",
+  "structure": [
+    "Noun + 和 + Noun",
+    "Subject + 也 + Verb (+ Object)",
+    "Subject (two or more) + 都 + Verb (+ Object)"
+  ],
+  "explanation": "和 means \"and\", but only between nouns, that is, people and things: 我和你 (you and me), 茶和水 (tea and water). Don't use 和 to join two whole sentences. To say \"I'm a student and he's a teacher\", just put a comma between the two sentences: 我是学生，他是老师。\n\n也 means \"also, too\", and 都 means \"all, both\". Both words go right after the subject and before the verb, never at the start of the sentence and never after the verb: 我也是学生 (I'm a student too), 我们都是学生 (we are all students).\n\n都 sums up a group that has already been mentioned before it, so the subject needs to be more than one person or thing: 我们, 他们, 爸爸和妈妈. A common combination is 和 + 都: 我和他都喜欢猫 (he and I both like cats).\n\nYou can use both words together. The order is always 也都: 他们也都是老师 (they are all teachers too). To say \"not\", put 不 after them: 我也不喝 (I don't drink it either), 我们都不去 (none of us are going).",
+  "examples": [
+    {
+      "zh": "我和妈妈喝茶。",
+      "en": "My mom and I drink tea."
+    },
+    {
+      "zh": "我是学生，他也是学生。",
+      "en": "I'm a student, and he's a student too."
+    },
+    {
+      "zh": "我们都喜欢吃饺子。",
+      "en": "We all like eating dumplings."
+    },
+    {
+      "zh": "我爸爸和我妈妈都是老师。",
+      "en": "My dad and my mom are both teachers."
+    },
+    {
+      "zh": "我哥哥和弟弟也都在中国。",
+      "en": "My older brother and my younger brother are both in China too."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "也我喜欢猫。",
+      "right": "我也喜欢猫。",
+      "why": "也 never starts the sentence. It goes after the subject and before the verb."
+    },
+    {
+      "wrong": "我们是都中国人。",
+      "right": "我们都是中国人。",
+      "why": "都 goes before the verb, and 是 is the verb here. So 都 comes before 是."
+    },
+    {
+      "wrong": "我是学生和他是老师。",
+      "right": "我是学生，他是老师。",
+      "why": "和 only joins nouns like 我和他. It can't join two sentences. Use a comma instead."
+    }
+  ],
+  "related": [
+    "g1-shi",
+    "g1-bu-negation",
+    "g1-word-order",
+    "g2-hai"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "He likes drinking tea, and I like drinking tea too.",
+      "before": "他喜欢喝茶，我",
+      "after": "喜欢喝茶。",
+      "options": [
+        "也",
+        "和",
+        "都"
+      ],
+      "answer": 0,
+      "why": [
+        "也 means \"too\" and goes after the subject 我, before the verb 喜欢.",
+        "和 only joins two nouns, like 我和他. It can't stand before a verb.",
+        "都 means \"all/both\" and needs a subject of two or more. 我 is only one person."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "My friend and I are both students.",
+      "before": "我",
+      "after": "我朋友都是学生。",
+      "options": [
+        "和",
+        "也",
+        "都"
+      ],
+      "answer": 0,
+      "why": [
+        "和 joins the two nouns 我 and 我朋友, and 都 then says \"both\".",
+        "也 must come after the full subject and before the verb. It can't join 我 and 我朋友.",
+        "都 already appears before 是. It can't also join the two nouns; that is the job of 和."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "We are all Chinese.",
+      "before": "我们",
+      "after": "是中国人。",
+      "options": [
+        "都",
+        "和",
+        "很"
+      ],
+      "answer": 0,
+      "why": [
+        "都 means \"all\" and goes after the plural subject 我们, right before 是.",
+        "和 joins two nouns. Here there is only one subject, 我们, and a verb follows.",
+        "很 is used before adjectives like 好 or 大, not before 是."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "我们都喜欢猫。",
+        "我们喜欢都猫。",
+        "都我们喜欢猫。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 都 comes after the subject 我们 and before the verb 喜欢.",
+        "都 can't come after the verb. It must go before 喜欢.",
+        "都 never starts the sentence. Put it after the subject 我们."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'She is a teacher too'?",
+      "options": [
+        "也她是老师。",
+        "她是也老师。",
+        "她也是老师。",
+        "她和是老师。"
+      ],
+      "answer": 2,
+      "why": [
+        "也 can't start the sentence. It goes after the subject 她.",
+        "也 must come before the verb 是, not after it.",
+        "Correct: subject 她, then 也, then the verb 是.",
+        "和 means \"and\" between nouns. It doesn't mean \"too\" and can't come before a verb."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Add 都 to say that both of them are doctors.",
+      "source": "爸爸和妈妈是医生。",
+      "options": [
+        "爸爸和妈妈都是医生。",
+        "爸爸和妈妈是都医生。",
+        "都爸爸和妈妈是医生。",
+        "爸爸都和妈妈是医生。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 都 comes after the whole subject 爸爸和妈妈 and before the verb 是.",
+        "都 must come before the verb 是, not after it.",
+        "都 can't start the sentence. It sums up the people mentioned before it.",
+        "都 can't split 爸爸和妈妈. It goes after the whole subject."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Join the two sentences into one with 和.",
+      "source": "我喜欢苹果。我喜欢包子。",
+      "options": [
+        "我喜欢苹果和包子。",
+        "我喜欢苹果和我喜欢包子。",
+        "我和喜欢苹果包子。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 和 joins the two nouns 苹果 and 包子 after one verb.",
+        "和 can't join two whole sentences. Join just the nouns: 苹果和包子.",
+        "和 must stand between two nouns. Here it is placed before the verb 喜欢."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it negative so it means 'None of us drink tea.'",
+      "source": "我们都喝茶。",
+      "options": [
+        "我们都不喝茶。",
+        "我们都喝不茶。",
+        "不我们都喝茶。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 不 goes right before the verb, after 都: 都不喝.",
+        "不 must come before the verb 喝, not after it.",
+        "不 can't start the sentence. Put it after 都 and before the verb."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "Mom and Dad are both at home.",
+      "answer": [
+        "妈妈",
+        "和",
+        "爸爸",
+        "都",
+        "在",
+        "家"
+      ],
+      "also": [
+        [
+          "爸爸",
+          "和",
+          "妈妈",
+          "都",
+          "在",
+          "家"
+        ]
+      ],
+      "why": "和 joins the two nouns, and 都 comes after the whole subject, before the verb 在."
+    },
+    {
+      "type": "order",
+      "en": "He is also a student.",
+      "answer": [
+        "他",
+        "也",
+        "是",
+        "学生"
+      ],
+      "also": [],
+      "why": "也 goes after the subject and before the verb 是."
+    }
+  ]
+}

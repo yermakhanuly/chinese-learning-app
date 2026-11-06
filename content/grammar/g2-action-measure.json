@@ -1,0 +1,35 @@
+{
+  "id": "g2-action-measure",
+  "level": 2,
+  "title": "次, 遍: how many times",
+  "topic": "measure-words",
+  "summary": "Lets you say how many times you do something, as in 我去过两次.",
+  "structure": ["Verb + (了 / 过) + Number + 次", "Verb + Number + 次 + Object", "Verb + Number + 遍 (from start to end)"],
+  "explanation": "次 counts how many times an action happens. It goes AFTER the verb: 我去过两次 'I've been twice', 我看了三次 'I watched it three times.' With an object, the number + 次 usually comes before it: 我去过两次中国.\n\n遍 also counts times, but stresses doing the whole thing from start to finish: 请再说一遍 'Please say it once more', 这本书我看了三遍 'I read this book three times (all the way through).'",
+  "examples": [
+    {"zh": "我去过两次中国。", "en": "I've been to China twice."},
+    {"zh": "请再说一遍。", "en": "Please say it again."},
+    {"zh": "这个电影我看了三次。", "en": "I've seen this film three times."},
+    {"zh": "我每天跑步一次。", "en": "I go running once a day."},
+    {"zh": "这个字你写十遍。", "en": "Write this character ten times."}
+  ],
+  "mistakes": [
+    {"wrong": "我两次去过中国。", "right": "我去过两次中国。", "why": "Number + 次 comes after the verb."},
+    {"wrong": "请再说一个。", "right": "请再说一遍。", "why": "Counting actions uses 次 or 遍, not 个."}
+  ],
+  "related": ["g2-guo-experience", "g1-measure-words", "g2-zai-you"],
+  "exercises": [
+    {"type": "fill", "en": "I've been to Beijing three times.", "before": "我去过三", "after": "北京。", "options": ["次", "个", "本"], "answer": 0,
+     "why": ["Correct: 次 counts actions.", "个 counts things and people, not actions.", "本 counts books."]},
+    {"type": "pick", "prompt": "Your teacher spoke too fast. You say:", "options": ["请再说一遍。", "请再一遍说。", "请说再一个。"], "answer": 0,
+     "why": ["Correct: verb + 一遍.", "一遍 comes after the verb.", "Actions are counted with 遍, not 个."]},
+    {"type": "order", "en": "I've seen this film twice.", "answer": ["这个电影", "我", "看过", "两次"], "also": [["我", "看过", "两次", "这个电影"]], "why": "Number + 次 follows the verb."},
+    {"type": "transform", "instruction": "Say how many times: twice.", "source": "我去过那个饭馆。", "options": ["我去过两次那个饭馆。", "我两次去过那个饭馆。", "我去过那个饭馆二次。"], "answer": 0,
+     "why": ["Correct: verb + 过 + 两次 + object.", "两次 must come after the verb.", "Use 两, not 二, before a measure word."]},
+    {"type": "fill", "en": "Read the text once from start to finish.", "before": "你读一", "after": "吧。", "options": ["遍", "个", "块"], "answer": 0,
+     "why": ["Correct: 遍 = once through, start to end.", "个 doesn't count actions.", "块 is for money or pieces."]},
+    {"type": "pick", "prompt": "Which means 'I swim twice a week'?", "options": ["我每个星期游泳两次。", "我两次每个星期游泳。", "我每个星期两个游泳。"], "answer": 0,
+     "why": ["Correct: the number of times goes after the verb.", "两次 can't go before everything else.", "Actions are counted with 次, not 个."]}
+  ],
+  "words": ["遍", "北京"]
+}

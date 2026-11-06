@@ -1,0 +1,145 @@
+{
+  "id": "g2-zhe",
+  "level": 2,
+  "title": "着: an ongoing state",
+  "topic": "aspect",
+  "summary": "Lets you describe a state that continues, as in 门开着 and 他穿着红衣服.",
+  "structure": [
+    "Subject + Verb + 着",
+    "Subject + Verb + 着 + Object",
+    "Place + Verb + 着 + Thing"
+  ],
+  "explanation": "着 (zhe) after a verb describes a state that stays the same: 门开着 'The door is open', 他穿着红色的衣服 'He's wearing red', 她拿着一本书 'She's holding a book.' It paints a picture of how things are.\n\n正在 is about an action in progress ('is doing'); 着 is about the resulting state. With a place first, it describes a scene: 门口站着一个人 'Someone is standing at the door.'",
+  "examples": [
+    {
+      "zh": "门开着。",
+      "en": "The door is open."
+    },
+    {
+      "zh": "他穿着红色的衣服。",
+      "en": "He's wearing red clothes."
+    },
+    {
+      "zh": "她手里拿着一本书。",
+      "en": "She's holding a book in her hand."
+    },
+    {
+      "zh": "门口站着一个人。",
+      "en": "Someone is standing at the door."
+    },
+    {
+      "zh": "他笑着说：'你好！'",
+      "en": "He said with a smile: 'Hello!'"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "门着开。",
+      "right": "门开着。",
+      "why": "着 goes right after the verb."
+    },
+    {
+      "wrong": "门没开着了。",
+      "right": "门没开着。",
+      "why": "Don't put 了 with 没, and 着 stays."
+    }
+  ],
+  "related": [
+    "g1-zhengzai",
+    "g1-le-completed"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "The door is open.",
+      "before": "门",
+      "after": "。",
+      "options": [
+        "开着",
+        "着开",
+        "开了着"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: verb + 着 = an ongoing state.",
+        "着 goes after the verb.",
+        "Don't combine 了 and 着 like this."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'She's wearing a white dress'?",
+      "options": [
+        "她穿着白色的衣服。",
+        "她着穿白色的衣服。",
+        "她穿白色着的衣服。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 穿着 + clothes.",
+        "着 comes after the verb.",
+        "着 goes right after 穿, not inside the object."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "He's holding a book.",
+      "answer": [
+        "他",
+        "手里",
+        "拿着",
+        "一本书"
+      ],
+      "also": [],
+      "why": "Verb + 着 + object."
+    },
+    {
+      "type": "transform",
+      "instruction": "Describe the state with 着.",
+      "source": "门口有一个人站。",
+      "options": [
+        "门口站着一个人。",
+        "门口一个人着站。",
+        "站着门口一个人。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: place + verb + 着 + person.",
+        "着 goes after the verb 站.",
+        "The place comes first."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence describes a STATE rather than an action in progress?",
+      "options": [
+        "门开着。",
+        "他正在开门。",
+        "他在开车。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 开着 = it is (and stays) open.",
+        "正在开门 = he's opening it right now.",
+        "在开车 = he's driving (an action)."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "He said with a smile...",
+      "before": "他笑",
+      "after": "说：'没关系。'",
+      "options": [
+        "着",
+        "了",
+        "过"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: verb + 着 + another verb = doing B while A.",
+        "笑了说 isn't said.",
+        "过 is for past experience."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "id": "r2-08",
+  "level": 2,
+  "kind": "dialogue",
+  "title": "At the doctor's",
+  "title_zh": "看病",
+  "summary": "A patient with a headache sees a doctor.",
+  "speakers": [
+    {
+      "name": "医生",
+      "voice": "female"
+    },
+    {
+      "name": "大卫",
+      "voice": "male"
+    }
+  ],
+  "names": [
+    "大卫"
+  ],
+  "new_words": [
+    {
+      "word": "发烧",
+      "en": "to have a fever"
+    }
+  ],
+  "sentences": [
+    {
+      "zh": "你好，你哪儿不舒服？",
+      "en": "Hello, what seems to be the problem?",
+      "speaker": 0
+    },
+    {
+      "zh": "医生，我头疼，身体也很累。",
+      "en": "Doctor, I have a headache and I feel very tired.",
+      "speaker": 1
+    },
+    {
+      "zh": "头疼多长时间了？",
+      "en": "How long have you had the headache?",
+      "speaker": 0
+    },
+    {
+      "zh": "两天了。因为头疼，所以我昨天没去上班。",
+      "en": "Two days. Because of the headache, I didn't go to work yesterday.",
+      "speaker": 1
+    },
+    {
+      "zh": "你发烧吗？",
+      "en": "Do you have a fever?",
+      "speaker": 0
+    },
+    {
+      "zh": "不发烧。",
+      "en": "No fever.",
+      "speaker": 1
+    },
+    {
+      "zh": "你每天睡几个小时？",
+      "en": "How many hours do you sleep a day?",
+      "speaker": 0
+    },
+    {
+      "zh": "最近工作很忙，每天只睡五个小时。",
+      "en": "Work has been busy; I only sleep five hours a day.",
+      "speaker": 1
+    },
+    {
+      "zh": "你是因为太累了。这几天别工作了，在家休息吧。",
+      "en": "It's because you're too tired. Don't work for the next few days; rest at home.",
+      "speaker": 0
+    },
+    {
+      "zh": "要吃药吗？",
+      "en": "Do I need to take medicine?",
+      "speaker": 1
+    },
+    {
+      "zh": "吃一点儿药，每天吃两次。多喝水，早一点儿睡觉。",
+      "en": "Take a little medicine, twice a day. Drink lots of water and go to bed a bit earlier.",
+      "speaker": 0
+    },
+    {
+      "zh": "好的，谢谢医生！",
+      "en": "OK, thank you, doctor!",
+      "speaker": 1
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "How long has David had a headache?",
+      "options": [
+        "Two days",
+        "Five hours",
+        "Two weeks"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 两天了.",
+        "Five hours is how long he sleeps.",
+        "It's 两天, two days."
+      ]
+    },
+    {
+      "prompt": "Why does the doctor think he has a headache?",
+      "options": [
+        "He's too tired",
+        "He has a fever",
+        "He ate something bad"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 你是因为太累了.",
+        "He says he has no fever: 不发烧.",
+        "Food isn't mentioned."
+      ]
+    },
+    {
+      "prompt": "How often should he take the medicine?",
+      "options": [
+        "Twice a day",
+        "Five times a day",
+        "Once a week"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 每天吃两次.",
+        "Five is the hours he sleeps.",
+        "It's every day: 每天."
+      ]
+    },
+    {
+      "prompt": "What does the doctor tell him NOT to do?",
+      "options": [
+        "Work",
+        "Drink water",
+        "Sleep early"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 这几天别工作了.",
+        "She tells him to drink lots of water.",
+        "She tells him to go to bed early."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "g2-yidianr",
+  "level": 2,
+  "title": "一点儿 vs 有点儿: a little",
+  "topic": "adverbs",
+  "summary": "Lets you say a little more or less with 一点儿 after an adjective, as in 便宜一点儿, and tell it apart from 有点儿.",
+  "structure": ["Adjective + 一点儿 (comparing / asking for)", "Verb + 一点儿 + Noun", "有点儿 + Adjective (a bit too)"],
+  "explanation": "一点儿 comes AFTER an adjective and compares with something: 便宜一点儿 'a bit cheaper', 慢一点儿 'a little slower (please)'. It's very common in requests: 你说慢一点儿吧. After a verb it means 'a little (of)': 吃一点儿饭, 我会说一点儿汉语.\n\n有点儿 comes BEFORE an adjective and is a mild complaint: 有点儿贵 'a bit expensive'. Compare: 这个有点儿贵，有没有便宜一点儿的？'This is a bit expensive; is there a slightly cheaper one?'",
+  "examples": [
+    {"zh": "可以便宜一点儿吗？", "en": "Could it be a bit cheaper?"},
+    {"zh": "请你说慢一点儿。", "en": "Please speak a little more slowly."},
+    {"zh": "我会说一点儿汉语。", "en": "I can speak a little Chinese."},
+    {"zh": "这个有点儿贵。", "en": "This is a bit expensive."},
+    {"zh": "今天比昨天冷一点儿。", "en": "Today is a little colder than yesterday."}
+  ],
+  "mistakes": [
+    {"wrong": "请你说一点儿慢。", "right": "请你说慢一点儿。", "why": "一点儿 goes after the adjective."},
+    {"wrong": "这件衣服一点儿贵。", "right": "这件衣服有点儿贵。", "why": "Before an adjective, 'a bit (too)' is 有点儿."}
+  ],
+  "related": ["g1-youdianr", "g2-bi", "g2-verb-reduplication"],
+  "exercises": [
+    {"type": "fill", "en": "Could you speak a bit louder... a bit slower?", "before": "你能说慢", "after": "吗？", "options": ["一点儿", "有点儿", "很"], "answer": 0,
+     "why": ["Correct: adjective + 一点儿 in a request.", "有点儿 goes before an adjective and sounds like a complaint.", "很 doesn't go after the adjective."]},
+    {"type": "fill", "en": "This room is a bit small.", "before": "这个房间", "after": "小。", "options": ["有点儿", "一点儿", "小一点儿"], "answer": 0,
+     "why": ["Correct: 有点儿 + adjective = 'a bit (too)'.", "一点儿 can't go before the adjective.", "This repeats 小."]},
+    {"type": "pick", "prompt": "Bargaining: 'A bit cheaper?'", "options": ["便宜一点儿吧？", "有点儿便宜吧？", "一点儿便宜吧？"], "answer": 0,
+     "why": ["Correct: 便宜一点儿 = 'a bit cheaper'.", "有点儿便宜 says 'it's a bit (too) cheap'.", "一点儿 goes after the adjective."]},
+    {"type": "transform", "instruction": "Ask for a little faster.", "source": "你走得很慢。", "options": ["你走快一点儿吧。", "你有点儿快走吧。", "你一点儿走快吧。"], "answer": 0,
+     "why": ["Correct: adjective + 一点儿.", "有点儿 doesn't make requests.", "一点儿 goes after 快."]},
+    {"type": "order", "en": "I can speak a little Chinese.", "answer": ["我", "会", "说", "一点儿", "汉语"], "also": [], "why": "Verb + 一点儿 + noun."},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["今天有点儿热。", "今天一点儿热。", "今天热有点儿。"], "answer": 0,
+     "why": ["Correct: 有点儿 + adjective.", "一点儿 can't go before the adjective.", "有点儿 must go before the adjective."]}
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "g1-de-shihou",
+  "level": 1,
+  "title": "…的时候: when …",
+  "topic": "time-place",
+  "summary": "Lets you say when something happens by adding 的时候 after an action, as in 吃饭的时候.",
+  "structure": ["Action + 的时候，main sentence", "Subject + Action + 的时候，…"],
+  "explanation": "…的时候 means 'when …' or 'while …'. Unlike English, it comes AFTER the action: 吃饭的时候 is literally 'eat-rice's time', i.e. 'when (we) eat'.\n\nPut the whole 的时候 part first, like a time word, then the main sentence: 我吃饭的时候不看手机 'I don't look at my phone when I eat.'",
+  "examples": [
+    {"zh": "吃饭的时候不要说话。", "en": "Don't talk while eating."},
+    {"zh": "我在中国的时候，学习了汉语。", "en": "When I was in China, I studied Chinese."},
+    {"zh": "他睡觉的时候，我在看书。", "en": "While he was sleeping, I was reading."},
+    {"zh": "下雨的时候，我喜欢在家。", "en": "When it rains, I like to stay at home."},
+    {"zh": "你小的时候喜欢什么？", "en": "What did you like when you were little?"}
+  ],
+  "mistakes": [
+    {"wrong": "的时候吃饭，我看电视。", "right": "吃饭的时候，我看电视。", "why": "的时候 comes after the action, not before it."},
+    {"wrong": "吃饭时候，我看电视。", "right": "吃饭的时候，我看电视。", "why": "Don't drop 的: the pattern is action + 的时候."}
+  ],
+  "related": ["g1-word-order", "g1-dates-time", "g2-yibian"],
+  "exercises": [
+    {"type": "fill", "en": "When I'm busy, I don't eat breakfast.", "before": "我忙的", "after": "，不吃早饭。", "options": ["时候", "时间", "小时"], "answer": 0,
+     "why": ["Correct: …的时候 means 'when …'.", "时间 means 'time' as an amount ('I have no time'), not 'when'.", "小时 means 'hour'."]},
+    {"type": "order", "en": "When it snows, I don't go out.", "answer": ["下雪", "的时候", "我", "不", "出去"], "also": [["我", "下雪", "的时候", "不", "出去"]], "why": "The 的时候 part works like a time word and comes before the verb."},
+    {"type": "pick", "prompt": "Which means 'When I was little, I lived in Beijing'?", "options": ["我小的时候住在北京。", "的时候我小住在北京。", "我住在北京小的时候。"], "answer": 0,
+     "why": ["Correct: 小的时候 comes before the main verb.", "的时候 follows the description (小), not the other way round.", "The 'when' part can't go at the end."]},
+    {"type": "transform", "instruction": "Use 的时候 to say this happens while sleeping.", "source": "我不看手机。", "options": ["睡觉的时候，我不看手机。", "我不看手机，的时候睡觉。", "的时候睡觉，我不看手机。"], "answer": 0,
+     "why": ["Correct: action + 的时候 goes first.", "的时候 must come right after the action.", "的时候 can't go before the action."]},
+    {"type": "fill", "en": "Don't drink tea while you're ill.", "before": "生病", "after": "不要喝茶。", "options": ["的时候", "时候的", "了"], "answer": 0,
+     "why": ["Correct: action + 的时候.", "The order is 的 + 时候.", "了 says something happened, not 'while'."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["上课的时候，他在睡觉。", "上课时候的，他在睡觉。", "时候上课，他在睡觉。"], "answer": 0,
+     "why": ["Correct: 上课的时候 = 'during class'.", "的 comes before 时候, not after.", "时候 needs 的 and goes after the action."]}
+  ],
+  "words": ["北京", "出去"]
+}

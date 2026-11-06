@@ -1,0 +1,35 @@
+{
+  "id": "g2-de-describing",
+  "level": 2,
+  "title": "的: describing nouns",
+  "topic": "particles",
+  "summary": "Lets you describe a noun with an adjective or an action before 的, as in 很好的朋友 and 我买的书.",
+  "structure": ["很 + Adjective + 的 + Noun", "Verb phrase + 的 + Noun", "… + 的 (noun left out)"],
+  "explanation": "In Chinese, everything that describes a noun comes BEFORE it, linked with 的. With an adjective: 很好的朋友 'a very good friend', 漂亮的衣服 'pretty clothes'. A one-syllable adjective often goes straight on without 的: 好朋友, 新手机.\n\nA whole action can describe a noun too: 我买的书 'the book (that) I bought', 在那儿看书的人 'the person reading over there'. English uses 'that / who' after the noun; Chinese uses 的 before it. If the noun is clear, drop it: 我要红色的 'I want the red one.'",
+  "examples": [
+    {"zh": "他是我很好的朋友。", "en": "He's a very good friend of mine."},
+    {"zh": "这是我昨天买的书。", "en": "This is the book I bought yesterday."},
+    {"zh": "在门口等你的人是谁？", "en": "Who is the person waiting for you at the door?"},
+    {"zh": "我喜欢红色的。", "en": "I like the red one."},
+    {"zh": "她穿着一件漂亮的衣服。", "en": "She's wearing a pretty dress."}
+  ],
+  "mistakes": [
+    {"wrong": "书我买的很好看。", "right": "我买的书很好看。", "why": "The description (我买的) goes before the noun (书)."},
+    {"wrong": "她是很漂亮女孩儿。", "right": "她是很漂亮的女孩儿。", "why": "With 很 + adjective, you need 的 before the noun."}
+  ],
+  "related": ["g1-de-possession", "g1-hen-adjectives", "g2-shi-de"],
+  "exercises": [
+    {"type": "fill", "en": "This is the film I like.", "before": "这是我喜欢", "after": "电影。", "options": ["的", "了", "得"], "answer": 0,
+     "why": ["Correct: action + 的 + noun.", "了 shows completion; it can't link a description to a noun.", "得 comes after verbs to say how well, not before nouns."]},
+    {"type": "order", "en": "The person reading over there is my teacher.", "answer": ["在那儿", "看书", "的", "人", "是", "我的老师"], "also": [], "why": "The whole description comes before 的 + 人."},
+    {"type": "pick", "prompt": "Which means 'a very expensive phone'?", "options": ["很贵的手机", "手机很贵的", "很贵手机"], "answer": 0,
+     "why": ["Correct: 很 + adjective + 的 + noun.", "This reads 'the phone is very expensive (one)', not a description before a noun.", "After 很 + adjective you need 的."]},
+    {"type": "transform", "instruction": "Make it describe the noun: 'the clothes I bought'.", "source": "我买了衣服。", "options": ["我买的衣服", "衣服我买的", "我的买衣服"], "answer": 0,
+     "why": ["Correct: verb phrase + 的 + noun.", "The description goes before the noun.", "的 goes after the whole action 我买."]},
+    {"type": "pick", "prompt": "In a shop: 'I want the white one.'", "options": ["我要白色的。", "我要白色。", "我要的白色。"], "answer": 0,
+     "why": ["Correct: 白色的 = 'the white one'.", "白色 alone means 'the colour white'.", "的 comes after 白色."]},
+    {"type": "fill", "en": "She's my new classmate.", "before": "她是我", "after": "同学。", "options": ["新", "新得", "了新"], "answer": 0,
+     "why": ["Correct: a one-syllable adjective can go straight before the noun.", "得 doesn't link adjectives to nouns.", "了 doesn't belong here."]}
+  ],
+  "words": []
+}

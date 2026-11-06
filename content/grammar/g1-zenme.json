@@ -1,0 +1,35 @@
+{
+  "id": "g1-zenme",
+  "level": 1,
+  "title": "怎么 / 怎么样: how",
+  "topic": "questions",
+  "summary": "Lets you ask how to do something and how something is, as in 怎么去？ and 怎么样？",
+  "structure": ["Subject + 怎么 + Verb？", "Thing + 怎么样？", "…，怎么样？ (suggestion)"],
+  "explanation": "怎么 + verb asks HOW to do something: 这个字怎么写？'How do you write this character?', 你怎么去学校？'How do you get to school?'\n\n怎么样 at the end asks 'How is it?': 天气怎么样？'How's the weather?' After a suggestion it means 'How about it?': 我们明天去，怎么样？",
+  "examples": [
+    {"zh": "这个字怎么写？", "en": "How do you write this character?"},
+    {"zh": "你怎么去学校？", "en": "How do you get to school?"},
+    {"zh": "今天天气怎么样？", "en": "What's the weather like today?"},
+    {"zh": "这个饭店怎么样？", "en": "How is this restaurant?"},
+    {"zh": "我们晚上看电影，怎么样？", "en": "Let's see a film tonight, how about it?"}
+  ],
+  "mistakes": [
+    {"wrong": "这个字写怎么？", "right": "这个字怎么写？", "why": "怎么 goes before the verb."},
+    {"wrong": "你的老师怎么？", "right": "你的老师怎么样？", "why": "To ask what something or someone is like, use 怎么样."}
+  ],
+  "related": ["g1-question-words", "g1-ba-suggestions", "g1-ma-questions"],
+  "exercises": [
+    {"type": "fill", "en": "How do you say this in Chinese?", "before": "这个用汉语", "after": "说？", "options": ["怎么", "怎么样", "什么"], "answer": 0,
+     "why": ["Correct: 怎么 + verb asks how to do it.", "怎么样 asks what something is like; it doesn't go before a verb.", "什么 means 'what'; 什么说 isn't said."]},
+    {"type": "fill", "en": "How was the film?", "before": "那个电影", "after": "？", "options": ["怎么样", "怎么", "哪儿"], "answer": 0,
+     "why": ["Correct: thing + 怎么样？ asks what it was like.", "怎么 needs a verb after it.", "哪儿 asks where."]},
+    {"type": "pick", "prompt": "You suggest going home and ask what your friend thinks:", "options": ["我们回家，怎么样？", "我们回家，怎么？", "我们怎么样回家？"], "answer": 0,
+     "why": ["Correct: suggestion + 怎么样？", "怎么 alone at the end doesn't mean 'how about it'.", "This asks 'In what way do we go home?' — not a suggestion."]},
+    {"type": "order", "en": "How do you get to the hospital?", "answer": ["你", "怎么", "去", "医院"], "also": [], "why": "怎么 goes right before the verb."},
+    {"type": "transform", "instruction": "Ask how this character is read (读).", "source": "这个字我不会读。", "options": ["这个字怎么读？", "这个字读怎么？", "这个字怎么样读？"], "answer": 0,
+     "why": ["Correct: 怎么 + verb.", "怎么 must come before the verb.", "怎么样 doesn't go before verbs."]},
+    {"type": "pick", "prompt": "Which asks 'What's your new teacher like?'", "options": ["你的新老师怎么样？", "你的新老师怎么？", "怎么你的新老师？"], "answer": 0,
+     "why": ["Correct: 怎么样 asks what someone is like.", "Without 样, 怎么 asks how or why.", "The question word goes at the end here."]}
+  ],
+  "words": ["用"]
+}

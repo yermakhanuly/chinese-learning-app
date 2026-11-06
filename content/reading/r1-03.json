@@ -1,0 +1,116 @@
+{
+  "id": "r1-03",
+  "level": 1,
+  "kind": "dialogue",
+  "title": "At the fruit shop",
+  "title_zh": "买水果",
+  "summary": "A customer buys apples and asks about prices.",
+  "speakers": [
+    {
+      "name": "女士",
+      "voice": "female"
+    },
+    {
+      "name": "先生",
+      "voice": "male"
+    }
+  ],
+  "names": [],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "你好，请问苹果多少钱？",
+      "en": "Hello, how much are the apples?",
+      "speaker": 0
+    },
+    {
+      "zh": "这些苹果五块钱一个。",
+      "en": "These apples are five yuan each.",
+      "speaker": 1
+    },
+    {
+      "zh": "五块？太贵了！那些呢？",
+      "en": "Five yuan? That's too expensive! What about those?",
+      "speaker": 0
+    },
+    {
+      "zh": "那些便宜，两块钱一个。",
+      "en": "Those are cheap, two yuan each.",
+      "speaker": 1
+    },
+    {
+      "zh": "那些苹果好吃吗？",
+      "en": "Are those apples tasty?",
+      "speaker": 0
+    },
+    {
+      "zh": "很好吃！你看，也很大。",
+      "en": "Very tasty! Look, they're big too.",
+      "speaker": 1
+    },
+    {
+      "zh": "好，我要六个。",
+      "en": "OK, I'll take six.",
+      "speaker": 0
+    },
+    {
+      "zh": "六个十二块。你还要什么？",
+      "en": "Six is twelve yuan. Anything else?",
+      "speaker": 1
+    },
+    {
+      "zh": "不要了，谢谢。给你钱。",
+      "en": "No, thanks. Here's the money.",
+      "speaker": 0
+    },
+    {
+      "zh": "谢谢！再见！",
+      "en": "Thank you! Goodbye!",
+      "speaker": 1
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "Why doesn't she buy the first apples?",
+      "options": [
+        "They're too expensive",
+        "They're too small",
+        "They're not tasty"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 五块？太贵了！",
+        "Size isn't her complaint about the first apples.",
+        "She doesn't say they aren't tasty."
+      ]
+    },
+    {
+      "prompt": "How many apples does she buy?",
+      "options": [
+        "Six",
+        "Five",
+        "Two"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我要六个.",
+        "Five yuan was the price of the first apples.",
+        "Two yuan is the price of each apple she buys."
+      ]
+    },
+    {
+      "prompt": "How much does she pay?",
+      "options": [
+        "12 yuan",
+        "30 yuan",
+        "6 yuan"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 六个十二块 — six apples at two yuan each.",
+        "That would be six of the five-yuan apples.",
+        "Six is the number of apples, not the price."
+      ]
+    }
+  ]
+}

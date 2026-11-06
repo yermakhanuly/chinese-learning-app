@@ -1,0 +1,119 @@
+{
+  "id": "r1-05",
+  "level": 1,
+  "kind": "dialogue",
+  "title": "What shall we do tomorrow?",
+  "title_zh": "明天做什么",
+  "summary": "Two friends make plans for the weekend.",
+  "speakers": [
+    {
+      "name": "小明",
+      "voice": "male"
+    },
+    {
+      "name": "小月",
+      "voice": "female"
+    }
+  ],
+  "names": [
+    "小明",
+    "小月"
+  ],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "小月，明天是星期六，你想做什么？",
+      "en": "Xiaoyue, tomorrow is Saturday. What would you like to do?",
+      "speaker": 0
+    },
+    {
+      "zh": "我想去看电影。你呢？",
+      "en": "I'd like to see a film. And you?",
+      "speaker": 1
+    },
+    {
+      "zh": "我也想看电影！",
+      "en": "I want to see a film too!",
+      "speaker": 0
+    },
+    {
+      "zh": "那我们明天下午去吧。",
+      "en": "Then let's go tomorrow afternoon.",
+      "speaker": 1
+    },
+    {
+      "zh": "好的。几点去？",
+      "en": "OK. What time shall we go?",
+      "speaker": 0
+    },
+    {
+      "zh": "下午两点，在电影院前边见，怎么样？",
+      "en": "Two in the afternoon, meet in front of the cinema, how about that?",
+      "speaker": 1
+    },
+    {
+      "zh": "好。看了电影，我们去吃饭吧。",
+      "en": "OK. After the film, let's go and eat.",
+      "speaker": 0
+    },
+    {
+      "zh": "太好了！我想吃饺子。",
+      "en": "Great! I'd like to eat dumplings.",
+      "speaker": 1
+    },
+    {
+      "zh": "没问题。明天见！",
+      "en": "No problem. See you tomorrow!",
+      "speaker": 0
+    },
+    {
+      "zh": "明天见！",
+      "en": "See you tomorrow!",
+      "speaker": 1
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "What will they do tomorrow afternoon?",
+      "options": [
+        "See a film",
+        "Go to school",
+        "Go to the hospital"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们明天下午去（看电影）吧.",
+        "Tomorrow is Saturday; school isn't mentioned.",
+        "No one is ill in this dialogue."
+      ]
+    },
+    {
+      "prompt": "Where will they meet?",
+      "options": [
+        "In front of the cinema",
+        "At Xiaoming's home",
+        "At a restaurant"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 在电影院前边见.",
+        "They meet at the cinema, not at home.",
+        "The restaurant comes after the film."
+      ]
+    },
+    {
+      "prompt": "What does Xiaoyue want to eat?",
+      "options": [
+        "Dumplings",
+        "Noodles",
+        "Apples"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我想吃饺子.",
+        "Noodles aren't mentioned.",
+        "Apples aren't mentioned."
+      ]
+    }
+  ]
+}

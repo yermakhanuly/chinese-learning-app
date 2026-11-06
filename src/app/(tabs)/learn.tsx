@@ -54,6 +54,18 @@ export default function LearnScreen() {
           {!session ? (
             <ThemedText themeColor="textSecondary">Lessons are free to try. Log in to save your progress.</ThemedText>
           ) : null}
+          <Card title="Grammar 语法">
+            <ThemedText themeColor="textSecondary">
+              72 HSK 1–2 grammar points with patterns, examples, common mistakes and exercises.
+            </ThemedText>
+            <Button label="Open the grammar library" variant="secondary" onPress={() => router.push('/grammar')} />
+          </Card>
+          <Card title="Reading 阅读">
+            <ThemedText themeColor="textSecondary">
+              20 graded stories and dialogues with natural voices, tap-to-translate and questions.
+            </ThemedText>
+            <Button label="Open reading" variant="secondary" onPress={() => router.push('/reading')} />
+          </Card>
           <Card title="Listening & speaking 听说">
             <ThemedText themeColor="textSecondary">
               Tone trainer, listening quizzes and pronunciation checks with natural voices.

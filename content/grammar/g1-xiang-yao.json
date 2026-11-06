@@ -1,0 +1,34 @@
+{
+  "id": "g1-xiang-yao",
+  "level": 1,
+  "title": "想 / 要 + verb: want to",
+  "topic": "verbs",
+  "summary": "Lets you say what you want or would like to do, as in 我想喝茶.",
+  "structure": ["Subject + 想 + Verb (+ Object)", "Subject + 要 + Verb (+ Object)", "Subject + 不想 + Verb"],
+  "explanation": "想 + verb means 'would like to': 我想喝茶 'I'd like to drink tea.' It is soft and polite. 要 + verb is stronger: 'want to, be going to', as in 我要去中国 'I'm going to China.'\n\n要 can also go straight before a thing: 我要两个包子 'I'd like two steamed buns' (handy when ordering). For 'don't want to', say 不想. Avoid 不要 for this: 不要 + verb usually means 'Don't…!'",
+  "examples": [
+    {"zh": "我想喝茶。", "en": "I'd like to drink tea."},
+    {"zh": "我要去中国。", "en": "I'm going to China."},
+    {"zh": "你想吃什么？", "en": "What would you like to eat?"},
+    {"zh": "我要两个包子。", "en": "I'd like two steamed buns."},
+    {"zh": "今天我不想去学校。", "en": "I don't want to go to school today."}
+  ],
+  "mistakes": [
+    {"wrong": "我喝茶想。", "right": "我想喝茶。", "why": "想 goes before the verb, not at the end."},
+    {"wrong": "我不要去学校。", "right": "我不想去学校。", "why": "To say you don't want to do something, use 不想; 不要 + verb sounds like 'don't go!'."}
+  ],
+  "related": ["g1-buyao", "g1-hui-skill", "g1-keyi", "g1-xihuan-verb"],
+  "exercises": [
+    {"type": "fill", "en": "I'd like to watch a film.", "before": "我", "after": "看电影。", "options": ["想", "是", "很"], "answer": 0,
+     "why": ["Correct: 想 + verb means 'would like to'.", "是 links nouns; it can't mean 'want'.", "很 goes before describing words, not before a verb like 看."]},
+    {"type": "fill", "en": "I don't want to sleep.", "before": "我", "after": "睡觉。", "options": ["不想", "没想", "想不"], "answer": 0,
+     "why": ["Correct: 不想 + verb means 'don't want to'.", "没想 is about the past ('didn't think'), not about wanting now.", "不 goes before 想, not after it."]},
+    {"type": "pick", "prompt": "You're ordering food. Which is natural?", "options": ["我要两个包子。", "我想两个包子。", "我两个包子要。"], "answer": 0,
+     "why": ["Correct: 要 + thing is how you ask for something.", "想 needs a verb after it (我想吃两个包子); 想 + a thing means 'miss'.", "要 goes before what you want."]},
+    {"type": "transform", "instruction": "Make it negative ('doesn't want to').", "source": "他想去商店。", "options": ["他不想去商店。", "他没有想去商店。", "他想不去商店。"], "answer": 0,
+     "why": ["Correct: put 不 before 想.", "没有 is for things that didn't happen; wanting now takes 不.", "想不去 means 'want not to go'; the natural negative is 不想去."]},
+    {"type": "order", "en": "What would you like to eat?", "answer": ["你", "想", "吃", "什么"], "also": [], "why": "想 goes before the verb, and the question word 什么 stays where the answer would be, after the verb."},
+    {"type": "pick", "prompt": "Which means 'I'm going to buy a phone'?", "options": ["我要买手机。", "我买要手机。", "我要手机买。"], "answer": 0,
+     "why": ["Correct: 要 + verb + object.", "要 comes before the verb, not after it.", "The object 手机 comes after the verb 买."]}
+  ]
+}

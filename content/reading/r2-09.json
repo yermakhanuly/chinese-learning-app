@@ -1,0 +1,118 @@
+{
+  "id": "r2-09",
+  "level": 2,
+  "kind": "story",
+  "title": "Learning Chinese",
+  "title_zh": "学汉语",
+  "summary": "A foreign student talks about two years of studying Chinese.",
+  "speakers": [],
+  "names": [
+    "安娜"
+  ],
+  "new_words": [
+    {
+      "word": "难",
+      "en": "difficult"
+    },
+    {
+      "word": "一样",
+      "en": "the same"
+    }
+  ],
+  "sentences": [
+    {
+      "zh": "我叫安娜，我学了两年汉语了。",
+      "en": "My name is Anna, and I've been learning Chinese for two years."
+    },
+    {
+      "zh": "开始的时候，我觉得汉语很难。",
+      "en": "At the beginning, I thought Chinese was very hard."
+    },
+    {
+      "zh": "汉字很多，我经常写错。",
+      "en": "There are lots of characters, and I often wrote them wrong."
+    },
+    {
+      "zh": "老师说话说得很快，我听不懂。",
+      "en": "The teacher spoke very fast, and I couldn't understand."
+    },
+    {
+      "zh": "但是我每天都学习一个小时，还跟中国朋友一起说汉语。",
+      "en": "But I studied for an hour every day and spoke Chinese with Chinese friends."
+    },
+    {
+      "zh": "现在我说得不错了，老师说什么我都能听懂。",
+      "en": "Now I speak quite well, and I can understand everything the teacher says."
+    },
+    {
+      "zh": "我已经会写五百多个汉字了。",
+      "en": "I can already write over five hundred characters."
+    },
+    {
+      "zh": "虽然汉语很难，但是很有意思。",
+      "en": "Although Chinese is hard, it's very interesting."
+    },
+    {
+      "zh": "明年我想去中国学习，我希望能说得跟中国人一样好。",
+      "en": "Next year I want to study in China; I hope to speak as well as a Chinese person."
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "How long has Anna been learning Chinese?",
+      "options": [
+        "Two years",
+        "One hour",
+        "Five years"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我学了两年汉语了.",
+        "One hour is how long she studies each day.",
+        "It's 两年 — two years."
+      ]
+    },
+    {
+      "prompt": "What was hard for her at the beginning?",
+      "options": [
+        "Characters and understanding the teacher",
+        "Making friends",
+        "Finding a school"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: she wrote characters wrong and couldn't understand the fast speech.",
+        "She had Chinese friends to practise with.",
+        "Finding a school isn't mentioned."
+      ]
+    },
+    {
+      "prompt": "How many characters can she write now?",
+      "options": [
+        "Over 500",
+        "50",
+        "Over 5,000"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 五百多个汉字.",
+        "It's 五百, five hundred.",
+        "It's 五百多, not 五千."
+      ]
+    },
+    {
+      "prompt": "What does she want to do next year?",
+      "options": [
+        "Study in China",
+        "Teach Chinese",
+        "Stop studying"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 明年我想去中国学习.",
+        "She wants to study, not teach.",
+        "She says Chinese is interesting and wants to go on."
+      ]
+    }
+  ]
+}

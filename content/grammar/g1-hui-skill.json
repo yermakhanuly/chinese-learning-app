@@ -1,0 +1,34 @@
+{
+  "id": "g1-hui-skill",
+  "level": 1,
+  "title": "会 + verb: can (a learned skill)",
+  "topic": "verbs",
+  "summary": "Lets you say what you know how to do, as in 我会说汉语.",
+  "structure": ["Subject + 会 + Verb (+ Object)", "Subject + 不会 + Verb", "Subject + 会 + Verb + 吗？"],
+  "explanation": "会 + verb means 'can' in the sense of 'know how to', a skill you have learned: 我会说汉语 'I can speak Chinese', 他会开车 'He can drive.' The negative is 不会: 我不会做饭 'I can't cook.'\n\nFor permission ('may I?') Chinese uses 可以, not 会. 会 can also mean 'will (probably)', as in 明天会下雨 'It will rain tomorrow.'",
+  "examples": [
+    {"zh": "我会说汉语。", "en": "I can speak Chinese."},
+    {"zh": "他会开车。", "en": "He can drive."},
+    {"zh": "我不会做饭。", "en": "I can't cook."},
+    {"zh": "你会写汉字吗？", "en": "Can you write Chinese characters?"},
+    {"zh": "明天会下雨。", "en": "It will rain tomorrow."}
+  ],
+  "mistakes": [
+    {"wrong": "我可以开车，我学了。", "right": "我会开车，我学了。", "why": "A learned skill takes 会."},
+    {"wrong": "我没会做饭。", "right": "我不会做饭。", "why": "会 is negated with 不."}
+  ],
+  "related": ["g1-keyi", "g2-neng", "g1-xiang-yao"],
+  "exercises": [
+    {"type": "fill", "en": "My older brother can drive.", "before": "我哥哥", "after": "开车。", "options": ["会", "是", "在"], "answer": 0,
+     "why": ["Correct: 会 = 'know how to'.", "是 can't mean 'can'.", "在 + verb would mean 'is driving now'."]},
+    {"type": "transform", "instruction": "Make it negative.", "source": "我会唱歌。", "options": ["我不会唱歌。", "我没会唱歌。", "我会不唱歌。"], "answer": 0,
+     "why": ["Correct: 不会 = 'can't'.", "会 takes 不, not 没.", "不 goes before 会."]},
+    {"type": "pick", "prompt": "Which asks 'Can you write Chinese characters?'", "options": ["你会写汉字吗？", "你写会汉字吗？", "你会汉字写吗？"], "answer": 0,
+     "why": ["Correct: 会 + verb + object + 吗.", "会 goes before the verb.", "The object 汉字 comes after the verb 写."]},
+    {"type": "order", "en": "My daughter can't cook.", "answer": ["我女儿", "不", "会", "做饭"], "also": [], "why": "不会 goes before the verb."},
+    {"type": "pick", "prompt": "Which word fits? 我___说一点儿汉语。 ('I can speak a little Chinese.')", "options": ["会", "可以", "是"], "answer": 0,
+     "why": ["Correct: speaking a language is a learned skill: 会.", "可以 is for permission.", "是 doesn't go before verbs like this."]},
+    {"type": "fill", "en": "It will snow tomorrow.", "before": "明天", "after": "下雪。", "options": ["会", "可以", "在"], "answer": 0,
+     "why": ["Correct: 会 can also mean 'will probably'.", "可以 is permission; the weather doesn't ask permission.", "在 + verb is 'is happening now', not tomorrow."]}
+  ]
+}

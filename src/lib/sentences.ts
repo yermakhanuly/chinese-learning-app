@@ -51,12 +51,20 @@ export function buildLexicon(
   return { entries, maxLength };
 }
 
-/** Traditional → simplified character map, from dictionary entries (most frequent mapping wins). */
+/**
+ * Traditional → simplified character map, from dictionary entries (most frequent mapping wins).
+ * Characters that are themselves in everyday simplified use (么 in 什么, 份, 座, 宁…) are never
+ * mapped: they appear in traditional forms of rare words (麼 → 么 → 幺), and converting them
+ * would corrupt simplified text.
+ */
 export function buildTradToSimp(pairs: Iterable<{ traditional: string; simplified: string }>): Map<string, string> {
   const counts = new Map<string, Map<string, number>>();
+  // How often each character is used in simplified forms.
+  const kept = new Map<string, number>();
   for (const { traditional, simplified } of pairs) {
     const t = [...traditional];
     const s = [...simplified];
+    for (const sc of s) kept.set(sc, (kept.get(sc) ?? 0) + 1);
     if (t.length !== s.length) continue;
     t.forEach((tc, i) => {
       if (tc === s[i]) return;
@@ -66,7 +74,11 @@ export function buildTradToSimp(pairs: Iterable<{ traditional: string; simplifie
     });
   }
   const map = new Map<string, string>();
-  for (const [tc, m] of counts) map.set(tc, [...m.entries()].sort((a, b) => b[1] - a[1])[0][0]);
+  for (const [tc, m] of counts) {
+    const [best, n] = [...m.entries()].sort((a, b) => b[1] - a[1])[0];
+    if ((kept.get(tc) ?? 0) >= n) continue;
+    map.set(tc, best);
+  }
   return map;
 }
 
@@ -122,6 +134,15 @@ function contextReading(word: string, prev: string | undefined, next: string | u
     case '过':
       // Experience marker after a verb (去过), "to cross" after a pronoun or at the start.
       return prevIsHan && !PRONOUNS.has(prev!) ? 'guo' : 'guò';
+    case '教':
+      // On its own it's almost always the verb "to teach" (教室 / 教育 are separate words).
+      return 'jiāo';
+    case '到了':
+      // "arrived" + 了, not dàoliǎo ("in the end")
+      return 'dào le';
+    case '穿着':
+      // "wearing", not chuānzhuó ("clothing")
+      return 'chuān zhe';
     default:
       return fallback;
   }

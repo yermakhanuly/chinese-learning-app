@@ -1,0 +1,34 @@
+{
+  "id": "g1-location-words",
+  "level": 1,
+  "title": "在哪儿 and 上, 里: where things are",
+  "topic": "time-place",
+  "summary": "Lets you ask and say where something is, using words like 上 and 里 after a noun, as in 书在桌子上.",
+  "structure": ["Thing + 在 + Place (+ 上 / 里 / 外边)", "Thing + 在哪儿？", "Place + 有 + Thing"],
+  "explanation": "To say where something is, use thing + 在 + place: 书在桌子上 'The book is on the table.' Words like 上 (on), 里 (in), 下 (under), 前 (in front), 后 (behind) and 外边 (outside) come AFTER the noun: 桌子上 is literally 'table-on'.\n\nTo ask, use 在哪儿？: 你的手机在哪儿？ Big places and cities usually don't need 里: 他在中国, 我在学校.",
+  "examples": [
+    {"zh": "书在桌子上。", "en": "The book is on the table."},
+    {"zh": "猫在椅子下。", "en": "The cat is under the chair."},
+    {"zh": "你的手机在哪儿？", "en": "Where's your phone?"},
+    {"zh": "他们在房间里。", "en": "They're in the room."},
+    {"zh": "商店里有很多东西。", "en": "There are lots of things in the shop."}
+  ],
+  "mistakes": [
+    {"wrong": "书在桌子。", "right": "书在桌子上。", "why": "A thing like a table isn't a place by itself: add 上 (on) after it."},
+    {"wrong": "我的电脑是哪儿？", "right": "我的电脑在哪儿？", "why": "'Where is it?' uses 在, not 是."}
+  ],
+  "related": ["g1-zai-place-verb", "g1-you", "g1-question-words"],
+  "exercises": [
+    {"type": "fill", "en": "The apples are in the room.", "before": "苹果在房间", "after": "。", "options": ["里", "上里", "在"], "answer": 0,
+     "why": ["Correct: noun + 里 = 'in'.", "Use one location word, 里 for 'in'.", "在 is already there; the place needs 里 after it."]},
+    {"type": "pick", "prompt": "Which asks 'Where is your mum?'", "options": ["你的妈妈在哪儿？", "你的妈妈是哪儿？", "哪儿你的妈妈？"], "answer": 0,
+     "why": ["Correct: 在哪儿？", "是 doesn't ask where someone is.", "There's no verb; you need 在."]},
+    {"type": "order", "en": "My phone is on the table.", "answer": ["我的", "手机", "在", "桌子上"], "also": [], "why": "Thing + 在 + noun + 上."},
+    {"type": "transform", "instruction": "Say the same with 有 (place first).", "source": "一本书在桌子上。", "options": ["桌子上有一本书。", "桌子上是一本书在。", "有桌子上一本书。"], "answer": 0,
+     "why": ["Correct: place + 有 + thing.", "Don't mix 是 and 在 here.", "The place goes first, then 有."]},
+    {"type": "fill", "en": "The dog is outside.", "before": "狗在", "after": "。", "options": ["外边", "外边里", "里外边"], "answer": 0,
+     "why": ["Correct: 外边 = 'outside'.", "Don't stack 里 on top of 外边.", "里 doesn't go before 外边."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["他在中国。", "他在中国里。", "他是中国在。"], "answer": 0,
+     "why": ["Correct: countries and cities don't need 里.", "中国 is a country; leave out 里.", "The order is 在 + place."]}
+  ]
+}

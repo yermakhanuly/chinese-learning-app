@@ -1,0 +1,26 @@
+{
+  "id": "r1-02", "level": 1, "kind": "dialogue", "title": "Nice to meet you", "title_zh": "认识你很高兴",
+  "summary": "Two new classmates introduce themselves.",
+  "speakers": [{"name": "李月", "voice": "female"}, {"name": "大卫", "voice": "male"}],
+  "names": ["李月", "大卫"], "new_words": [{"word": "美国", "en": "the USA"}],
+  "sentences": [
+    {"zh": "你好！我叫李月。你叫什么名字？", "en": "Hi! I'm Li Yue. What's your name?", "speaker": 0},
+    {"zh": "你好！我叫大卫。", "en": "Hi! I'm David.", "speaker": 1},
+    {"zh": "大卫，你是哪国人？", "en": "David, what country are you from?", "speaker": 0},
+    {"zh": "我是美国人。你呢？", "en": "I'm American. And you?", "speaker": 1},
+    {"zh": "我是中国人。你是学生吗？", "en": "I'm Chinese. Are you a student?", "speaker": 0},
+    {"zh": "是，我是大学生。我在这儿学习汉语。", "en": "Yes, I'm a university student. I'm studying Chinese here.", "speaker": 1},
+    {"zh": "你的汉语很好！", "en": "Your Chinese is very good!", "speaker": 0},
+    {"zh": "谢谢！我会说一点儿，可以写一些汉字。", "en": "Thanks! I can speak a little and write some characters.", "speaker": 1},
+    {"zh": "认识你很高兴。", "en": "Nice to meet you.", "speaker": 0},
+    {"zh": "认识你，我也很高兴！", "en": "Nice to meet you too!", "speaker": 1}
+  ],
+  "questions": [
+    {"prompt": "Where is David from?", "options": ["The USA", "China", "The text doesn't say"], "answer": 0,
+     "why": ["Right: 我是美国人.", "Li Yue is the one from China.", "He says it: 我是美国人."]},
+    {"prompt": "What is David doing here?", "options": ["Studying Chinese", "Teaching Chinese", "Working at a company"], "answer": 0,
+     "why": ["Right: 我在这儿学习汉语.", "He's a student, not a teacher.", "He says he's a university student, not that he works."]},
+    {"prompt": "What does Li Yue think of David's Chinese?", "options": ["It's very good", "It's not good", "She doesn't say"], "answer": 0,
+     "why": ["Right: 你的汉语很好！", "She praises it: 很好.", "She does say: 你的汉语很好."]}
+  ]
+}

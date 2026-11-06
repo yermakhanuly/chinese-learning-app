@@ -1,0 +1,116 @@
+{
+  "id": "r1-07",
+  "level": 1,
+  "kind": "dialogue",
+  "title": "At the restaurant",
+  "title_zh": "在饭店",
+  "summary": "Ordering dumplings and noodles for two.",
+  "speakers": [
+    {
+      "name": "先生",
+      "voice": "male"
+    },
+    {
+      "name": "女士",
+      "voice": "female"
+    }
+  ],
+  "names": [],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "你好，请坐。你们想吃什么？",
+      "en": "Hello, please sit down. What would you like to eat?",
+      "speaker": 0
+    },
+    {
+      "zh": "请问，这里有饺子吗？",
+      "en": "Excuse me, do you have dumplings here?",
+      "speaker": 1
+    },
+    {
+      "zh": "有。我们的饺子很好吃。",
+      "en": "Yes. Our dumplings are delicious.",
+      "speaker": 0
+    },
+    {
+      "zh": "好，我要一些饺子。我的朋友想吃面条儿。",
+      "en": "Good, I'd like some dumplings. My friend would like noodles.",
+      "speaker": 1
+    },
+    {
+      "zh": "你们喝什么？",
+      "en": "What would you like to drink?",
+      "speaker": 0
+    },
+    {
+      "zh": "我们喝茶。我们下午还有课，现在很忙。",
+      "en": "We'll have tea. We have class this afternoon, so we're in a hurry.",
+      "speaker": 1
+    },
+    {
+      "zh": "好的，请你们坐一下。",
+      "en": "OK, please have a seat for a moment.",
+      "speaker": 0
+    },
+    {
+      "zh": "谢谢！多少钱？",
+      "en": "Thanks! How much is it?",
+      "speaker": 1
+    },
+    {
+      "zh": "四十五块。",
+      "en": "Forty-five yuan.",
+      "speaker": 0
+    },
+    {
+      "zh": "好的，给你。",
+      "en": "OK, here you are.",
+      "speaker": 1
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "What does the woman order for herself?",
+      "options": [
+        "Dumplings",
+        "Noodles",
+        "Rice"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我要一些饺子.",
+        "Her friend is the one who wants noodles.",
+        "Rice isn't mentioned."
+      ]
+    },
+    {
+      "prompt": "What do they drink?",
+      "options": [
+        "Tea",
+        "Water",
+        "Milk"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们喝茶.",
+        "Water isn't what they order.",
+        "Milk isn't mentioned."
+      ]
+    },
+    {
+      "prompt": "How much do they pay?",
+      "options": [
+        "45 yuan",
+        "15 yuan",
+        "40 yuan"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 四十五块.",
+        "Listen again: 四十五, not 十五.",
+        "It's 四十五 — forty-five."
+      ]
+    }
+  ]
+}

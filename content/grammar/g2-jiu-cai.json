@@ -1,0 +1,151 @@
+{
+  "id": "g2-jiu-cai",
+  "level": 2,
+  "title": "就 / 才: early or late, easy or hard",
+  "topic": "adverbs",
+  "summary": "Lets you show something happened sooner or later than expected, as in 他七点就来了 and 他十点才来.",
+  "structure": [
+    "Time + 就 + Verb + 了 (earlier than expected)",
+    "Time + 才 + Verb (later than expected, no 了)"
+  ],
+  "explanation": "就 and 才 go after a time word and before the verb, and they add the speaker's feeling. 就 = 'already, as early as': 他七点就来了 'He came as early as seven.' It usually has 了. 才 = 'not until, only then': 他十点才来 'He didn't come until ten.' 才 never takes 了.\n\n就 also means 'right away, then': 我就来 'I'm coming right now', 你去，我就去 'If you go, I'll go'.",
+  "examples": [
+    {
+      "zh": "他七点就来了。",
+      "en": "He came as early as seven."
+    },
+    {
+      "zh": "他十点才来。",
+      "en": "He didn't come until ten."
+    },
+    {
+      "zh": "我昨天十二点才睡觉。",
+      "en": "I didn't go to bed until twelve last night."
+    },
+    {
+      "zh": "八点上课，他七点就到了。",
+      "en": "Class is at eight; he was there by seven."
+    },
+    {
+      "zh": "等一下，我就来。",
+      "en": "Wait a moment, I'm coming."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "他十点才来了。",
+      "right": "他十点才来。",
+      "why": "才 doesn't take 了."
+    },
+    {
+      "wrong": "他就七点来了。",
+      "right": "他七点就来了。",
+      "why": "就 goes after the time word, before the verb."
+    }
+  ],
+  "related": [
+    "g2-kuaiyao-le",
+    "g2-xian-ranhou",
+    "g1-word-order"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Class starts at 8, but she arrived at 7 (early!).",
+      "before": "八点上课，她七点",
+      "after": "到了。",
+      "options": [
+        "就",
+        "才",
+        "再"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: earlier than expected = 就 … 了.",
+        "才 means later than expected.",
+        "再 means 'again'."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "He didn't get up until eleven.",
+      "before": "他十一点",
+      "after": "起床。",
+      "options": [
+        "才",
+        "就",
+        "又"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: later than expected = 才, with no 了.",
+        "就 would mean he got up early.",
+        "又 means 'again'."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "我昨天很晚才回家。",
+        "我昨天很晚才回家了。",
+        "我昨天才很晚回家。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: time + 才 + verb, no 了.",
+        "才 can't take 了.",
+        "才 goes after the time expression, right before the verb."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Show it was EARLIER than expected.",
+      "source": "他六点起床。",
+      "options": [
+        "他六点就起床了。",
+        "他六点才起床。",
+        "他就六点起床。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: time + 就 + verb + 了.",
+        "才 shows it was late.",
+        "就 goes after the time word."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "I didn't finish my homework until ten.",
+      "answer": [
+        "我",
+        "十点",
+        "才",
+        "写完",
+        "作业"
+      ],
+      "also": [],
+      "why": "Time + 才 + verb, with no 了."
+    },
+    {
+      "type": "pick",
+      "prompt": "Your friend calls: dinner is ready. You say 'Coming!':",
+      "options": [
+        "我就来！",
+        "我才来！",
+        "我来就！"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 就 = right away.",
+        "才来 means 'only now coming' and sounds like a complaint.",
+        "就 goes before the verb."
+      ]
+    }
+  ],
+  "words": [
+    "才",
+    "作业",
+    "又"
+  ]
+}

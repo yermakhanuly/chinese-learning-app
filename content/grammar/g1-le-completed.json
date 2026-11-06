@@ -1,0 +1,35 @@
+{
+  "id": "g1-le-completed",
+  "level": 1,
+  "title": "了: completed actions",
+  "topic": "aspect",
+  "summary": "Lets you say an action has happened or is done, as in 我买了一本书.",
+  "structure": ["Subject + Verb + 了 + (number) + Object", "Subject + Verb + Object + 了", "Subject + 没 + Verb (no 了)"],
+  "explanation": "了 right after a verb shows the action is done: 我买了一本书 'I bought a book.' When the object has a number or description (一本书), 了 goes right after the verb; with a simple object, 了 often goes at the end: 我吃饭了 'I've eaten.'\n\n了 is about completion, not about the past as such. For 'didn't', use 没 + verb and drop 了: 我没去. To ask, add 吗 or 没有: 你吃饭了吗？/ 你吃饭了没有？",
+  "examples": [
+    {"zh": "我买了一本书。", "en": "I bought a book."},
+    {"zh": "他吃饭了。", "en": "He has eaten."},
+    {"zh": "昨天我看了一个电影。", "en": "Yesterday I watched a film."},
+    {"zh": "你喝了几杯茶？", "en": "How many cups of tea did you drink?"},
+    {"zh": "我没去学校。", "en": "I didn't go to school."}
+  ],
+  "mistakes": [
+    {"wrong": "我没去了。", "right": "我没去。", "why": "When you say 没 (didn't), drop 了."},
+    {"wrong": "我昨天很忙了。", "right": "我昨天很忙。", "why": "Describing a past state doesn't need 了; 昨天 already says when."}
+  ],
+  "related": ["g1-meiyou-negation", "g1-le-change", "g2-guo-experience"],
+  "exercises": [
+    {"type": "fill", "en": "I bought two apples.", "before": "我买", "after": "两个苹果。", "options": ["了", "在", "吗"], "answer": 0,
+     "why": ["Correct: verb + 了 + number + object shows it's done.", "在 before a verb means 'is doing'; it can't go after 买.", "吗 goes at the end of a question."]},
+    {"type": "transform", "instruction": "Make it negative ('didn't').", "source": "他来了。", "options": ["他没来。", "他没来了。", "他不来了。"], "answer": 0,
+     "why": ["Correct: 没 + verb, no 了.", "With 没, 了 must go.", "不来了 means 'he's no longer coming'."]},
+    {"type": "pick", "prompt": "Which asks 'Have you eaten?'", "options": ["你吃饭了吗？", "你吃饭吗了？", "你了吃饭吗？"], "answer": 0,
+     "why": ["Correct: … 了吗？", "吗 is always last.", "了 goes after the verb or at the end, never before the verb."]},
+    {"type": "order", "en": "Yesterday I watched a film.", "answer": ["昨天", "我", "看了", "一个", "电影"], "also": [["我", "昨天", "看了", "一个", "电影"]], "why": "了 goes right after the verb when the object has a number."},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["我昨天没上班。", "我昨天没上班了。", "我昨天不上班了。"], "answer": 0,
+     "why": ["Correct: 没 + verb for 'didn't'.", "Drop 了 after 没.", "不上班了 means 'not going to work any more'."]},
+    {"type": "fill", "en": "She went to the bookshop and bought a book.", "before": "她去书店买", "after": "一本书。", "options": ["了", "吗", "在"], "answer": 0,
+     "why": ["Correct: 买了 + number + object.", "吗 belongs at the end of a question, not after a verb.", "在 can't follow the verb."]}
+  ],
+  "words": ["杯"]
+}

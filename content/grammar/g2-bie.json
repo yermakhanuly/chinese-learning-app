@@ -1,0 +1,149 @@
+{
+  "id": "g2-bie",
+  "level": 2,
+  "title": "别: don't",
+  "topic": "negation",
+  "summary": "Lets you tell someone not to do something in a short, friendly way, as in 别走.",
+  "structure": [
+    "别 + Verb (+ Object)",
+    "别 + Verb + 了",
+    "你 + 别 + …"
+  ],
+  "explanation": "别 + verb is a short, everyday way to say 'don't': 别走 'Don't go', 别忘了 'Don't forget.' It means the same as 不要 but sounds more casual and spoken.\n\n别 … 了 asks someone to STOP doing something already happening: 别说了 'Stop talking', 别玩手机了 'Stop playing on your phone.'",
+  "examples": [
+    {
+      "zh": "别走，我们一起吃饭吧。",
+      "en": "Don't go, let's eat together."
+    },
+    {
+      "zh": "别忘了带书。",
+      "en": "Don't forget to bring your book."
+    },
+    {
+      "zh": "你别说了。",
+      "en": "Stop talking."
+    },
+    {
+      "zh": "别玩手机了，快睡觉吧。",
+      "en": "Stop playing on your phone and go to sleep."
+    },
+    {
+      "zh": "外面下雨，别出去。",
+      "en": "It's raining outside; don't go out."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "走别。",
+      "right": "别走。",
+      "why": "别 goes before the verb."
+    },
+    {
+      "wrong": "你别没去。",
+      "right": "你别去。",
+      "why": "别 already means 'don't'; don't add another negative."
+    }
+  ],
+  "related": [
+    "g1-buyao",
+    "g1-ba-suggestions"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Don't forget my birthday.",
+      "before": "",
+      "after": "忘了我的生日。",
+      "options": [
+        "别",
+        "没",
+        "不是"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 别 = 'don't'.",
+        "没 means 'didn't'.",
+        "不是 means 'is not'."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Ask him to stop (别 … 了).",
+      "source": "他在看电视。",
+      "options": [
+        "别看电视了。",
+        "看电视别了。",
+        "别了看电视。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 别 + verb + 了 = 'stop doing'.",
+        "别 goes first, before the verb.",
+        "了 goes at the end."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'Don't go out, it's cold'?",
+      "options": [
+        "很冷，别出去。",
+        "很冷，出去别。",
+        "很冷，没出去别。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 别 + verb.",
+        "别 can't go after the verb.",
+        "Don't mix 没 and 别."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "Don't laugh at me.",
+      "answer": [
+        "你",
+        "别",
+        "笑",
+        "我"
+      ],
+      "also": [],
+      "why": "别 goes right before the verb."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which is the same as 不要走?",
+      "options": [
+        "别走。",
+        "没走。",
+        "走别。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 别 = 不要.",
+        "没走 means 'didn't leave'.",
+        "别 goes before the verb."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Stop playing; let's start class.",
+      "before": "别玩儿",
+      "after": "，我们上课吧。",
+      "options": [
+        "了",
+        "吗",
+        "的"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 别 … 了 = stop doing it.",
+        "吗 would make it a question.",
+        "的 doesn't work here."
+      ]
+    }
+  ],
+  "words": [
+    "带",
+    "玩儿"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "g1-you",
+  "level": 1,
+  "title": "有 / 没有: have, there is",
+  "topic": "verbs",
+  "summary": "Lets you say what someone has or doesn't have, and what there is in a place.",
+  "structure": ["Person + 有 + thing", "Person + 没有 + thing", "Place + 有 + thing"],
+  "explanation": "有 means 'to have': 我有一个哥哥 is 'I have an older brother.' Put a place first and the same 有 means 'there is / there are': 学校里有很多学生 is 'There are many students in the school.'\n\n有 is special: it is never negated with 不. 'Don't have' is always 没有: 我没有钱. To ask, add 吗 (你有手机吗？) or say 有没有 (你有没有手机？).",
+  "examples": [
+    {"zh": "我有一个哥哥。", "en": "I have an older brother."},
+    {"zh": "她没有男朋友。", "en": "She doesn't have a boyfriend."},
+    {"zh": "你有手机吗？", "en": "Do you have a mobile phone?"},
+    {"zh": "桌子上有一本书。", "en": "There is a book on the table."},
+    {"zh": "这里没有超市。", "en": "There is no supermarket here."}
+  ],
+  "mistakes": [
+    {"wrong": "我不有钱。", "right": "我没有钱。", "why": "有 is always negated with 没, never with 不: 没有."},
+    {"wrong": "房间里是一个人。", "right": "房间里有一个人。", "why": "To say 'there is someone in a place', use place + 有, not 是."}
+  ],
+  "related": ["g1-meiyou-negation", "g1-location-words", "g1-measure-words"],
+  "exercises": [
+    {"type": "fill", "en": "I don't have a car.", "before": "我", "after": "车。", "options": ["没有", "不有", "不是"], "answer": 0,
+     "why": ["Correct: 'don't have' is always 没有.", "有 can't take 不. Say 没有 instead.", "不是 means 'is not', not 'don't have'."]},
+    {"type": "fill", "en": "There are many people in the shop.", "before": "商店里", "after": "很多人。", "options": ["有", "是", "在"], "answer": 0,
+     "why": ["Correct: place + 有 + thing means 'there is / are'.", "是 links two nouns; it doesn't say what is in a place.", "在 comes after the person or thing (人在商店里), not before it."]},
+    {"type": "pick", "prompt": "Which sentence means 'Do you have a mobile phone?'", "options": ["你有手机吗？", "你是手机吗？", "你不有手机吗？"], "answer": 0,
+     "why": ["Correct: 有 + thing + 吗 asks whether someone has something.", "是 would mean 'Are you a mobile phone?'", "有 is never used with 不."]},
+    {"type": "transform", "instruction": "Make it negative.", "source": "我有手机。", "options": ["我没有手机。", "我不有手机。", "我有不手机。"], "answer": 0,
+     "why": ["Correct: 有 becomes 没有.", "有 can't be negated with 不.", "The negative word goes before 有, and it has to be 没."]},
+    {"type": "transform", "instruction": "Ask the same thing with 有没有.", "source": "你有钱吗？", "options": ["你有没有钱？", "你有没有钱吗？", "你没有有钱？"], "answer": 0,
+     "why": ["Correct: 有没有 already asks the question, so no 吗 is needed.", "有没有 is already a question; adding 吗 asks twice.", "The pattern is 有 + 没有, not 没有 + 有."]},
+    {"type": "order", "en": "There is someone in the room.", "answer": ["房间里", "有", "一个", "人"], "also": [], "why": "Start with the place, then 有, then what is there: place + 有 + thing."},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["我家有三口人。", "我家是三口人。", "我家三口人有。"], "answer": 0,
+     "why": ["Correct: 有 says how many people the family has.", "Use 有, not 是, for what a family or place has.", "有 comes before what is had, not at the end."]}
+  ]
+}

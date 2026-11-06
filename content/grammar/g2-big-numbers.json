@@ -1,0 +1,149 @@
+{
+  "id": "g2-big-numbers",
+  "level": 2,
+  "title": "百, 千, 万 and 两 vs 二: big numbers",
+  "topic": "basics",
+  "summary": "Lets you say big numbers and choose correctly between 两 and 二.",
+  "structure": [
+    "Number + 百 / 千 / 万",
+    "两 + Measure word + Noun",
+    "…零… (a gap in the number)"
+  ],
+  "explanation": "Big numbers are built like this: 一百 (100), 一千 (1,000), 一万 (10,000). Chinese counts in units of ten thousand, so 100,000 is 十万 'ten ten-thousands'. A missing digit in the middle is said as 零: 一百零五 (105).\n\nThere are two words for 2. Use 二 when counting or in numbers (一、二、三, 十二, 第二). Use 两 before a measure word: 两个人, 两本书. Before 百, 千 and 万 both are heard, but 两 is more common: 两千块.",
+  "examples": [
+    {
+      "zh": "这个手机两千块。",
+      "en": "This phone costs 2,000 yuan."
+    },
+    {
+      "zh": "我们学校有三千个学生。",
+      "en": "Our school has 3,000 students."
+    },
+    {
+      "zh": "我有两个哥哥。",
+      "en": "I have two older brothers."
+    },
+    {
+      "zh": "今天是十二号。",
+      "en": "Today is the 12th."
+    },
+    {
+      "zh": "他家离这儿一百零五米。",
+      "en": "His home is 105 metres from here."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我有二个妹妹。",
+      "right": "我有两个妹妹。",
+      "why": "Before a measure word like 个, say 两, not 二."
+    },
+    {
+      "wrong": "105 = 一百五",
+      "right": "105 = 一百零五",
+      "why": "一百五 means 150. For 105, fill the gap in the middle with 零."
+    }
+  ],
+  "related": [
+    "g1-numbers",
+    "g1-measure-words",
+    "g1-ji-duoshao"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I bought two books.",
+      "before": "我买了",
+      "after": "本书。",
+      "options": [
+        "两",
+        "二",
+        "第二"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 两 before a measure word.",
+        "二 isn't used before measure words like 本.",
+        "第二 means 'second', not 'two'."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which is 10,000?",
+      "options": [
+        "一万",
+        "十千",
+        "一千"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 10,000 has its own word, 万.",
+        "Chinese doesn't say 十千; 10,000 is 一万.",
+        "一千 is 1,000."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which is 305?",
+      "options": [
+        "三百零五",
+        "三百五",
+        "三零五百"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: the missing tens are said as 零.",
+        "三百五 means 350.",
+        "The order is hundreds first: 三百 + 零五."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Today is the 22nd.",
+      "before": "今天",
+      "after": "十二号。",
+      "options": [
+        "二",
+        "两",
+        "第二"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: in a number like 22, use 二.",
+        "两 is for counting things with a measure word.",
+        "第二 is 'second'; dates use plain numbers."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Say it as a price: 2,000 yuan.",
+      "source": "这个电脑很贵。",
+      "options": [
+        "这个电脑两千块。",
+        "这个电脑二千个块。",
+        "这个电脑千两块。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 两千块.",
+        "块 is the money word; don't add 个.",
+        "The order is number + 千."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "Our school has 3,000 students.",
+      "answer": [
+        "我们学校",
+        "有",
+        "三千个",
+        "学生"
+      ],
+      "also": [],
+      "why": "Number + 千 + measure word + noun, after 有."
+    }
+  ],
+  "words": [
+    "米"
+  ]
+}

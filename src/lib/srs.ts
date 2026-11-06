@@ -4,8 +4,10 @@
  */
 import { DefaultScheduler, Rating } from 'ts-fsrs';
 
-export type Direction = 'read' | 'listen' | 'recall' | 'write';
-export type CardKind = 'word' | 'sentence' | 'custom' | 'character';
+import type { GrammarExercise } from '@/lib/grammar';
+
+export type Direction = 'read' | 'listen' | 'recall' | 'write' | 'practice';
+export type CardKind = 'word' | 'sentence' | 'custom' | 'character' | 'grammar';
 export type Grade = 1 | 2 | 3 | 4;
 
 export const GRADES: { grade: Grade; label: string }[] = [
@@ -32,6 +34,15 @@ export type CharacterContent = {
   medians: number[][][];
 };
 
+export type GrammarContent = {
+  id: string;
+  title: string;
+  summary: string;
+  structure: string[];
+  exercises: GrammarExercise[];
+  readings: Record<string, { s: string; t: string; p?: string }[]>;
+};
+
 /** A row of `review_queue()`. */
 export type ReviewCardRow = {
   id: string;
@@ -51,7 +62,7 @@ export type ReviewCardRow = {
   lapses: number;
   scheduled_days: number;
   learning_step: number;
-  content: WordContent | SentenceContent | CustomContent | CharacterContent;
+  content: WordContent | SentenceContent | CustomContent | CharacterContent | GrammarContent;
 };
 
 type Scheduler = Awaited<ReturnType<typeof DefaultScheduler<'FSRS-7'>>>;
@@ -163,13 +174,20 @@ export function answerCard(session: Session, grade: Grade, updated: Partial<Revi
 }
 
 /** The learner's local midnight, so "new today" resets at their midnight, not UTC's. */
+/** Which exercise of a grammar card to show: a different one on each review. */
+export function grammarExerciseIndex(cardId: string, reps: number, count: number): number {
+  let h = 0;
+  for (const ch of cardId) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  return count ? (h + reps) % count : 0;
+}
+
 export function localDayStart(now = new Date()): string {
   const d = new Date(now);
   d.setHours(0, 0, 0, 0);
   return d.toISOString();
 }
 
-export type Deck = 'all' | 'saved' | 'sentences' | 'custom' | 'writing' | 'weak' | `level:${number}` | `unit:${string}`;
+export type Deck = 'all' | 'saved' | 'sentences' | 'custom' | 'writing' | 'grammar' | 'weak' | `level:${number}` | `unit:${string}`;
 
 export function isDeck(value: string | undefined): value is Deck {
   return (
@@ -178,6 +196,7 @@ export function isDeck(value: string | undefined): value is Deck {
     value === 'sentences' ||
     value === 'custom' ||
     value === 'writing' ||
+    value === 'grammar' ||
     value === 'weak' ||
     /^level:[1-7]$/.test(value ?? '') ||
     /^unit:hsk\d-u\d{2}$/.test(value ?? '')

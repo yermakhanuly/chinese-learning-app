@@ -1,0 +1,95 @@
+{
+  "id": "r1-08",
+  "level": 1,
+  "kind": "story",
+  "title": "My good friend",
+  "title_zh": "我的好朋友",
+  "summary": "A boy describes his best friend and what they like doing.",
+  "speakers": [],
+  "names": [
+    "小东"
+  ],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "我有一个好朋友，他叫小东。",
+      "en": "I have a good friend called Xiaodong."
+    },
+    {
+      "zh": "小东是我的同学，我们都十二岁。",
+      "en": "Xiaodong is my classmate; we're both twelve."
+    },
+    {
+      "zh": "他很高兴，也很喜欢说话。",
+      "en": "He's cheerful and loves talking."
+    },
+    {
+      "zh": "小东会说一点儿汉语，也会做饭。",
+      "en": "Xiaodong can speak a little Chinese, and he can cook."
+    },
+    {
+      "zh": "我不会做饭，我会唱歌。",
+      "en": "I can't cook; I can sing."
+    },
+    {
+      "zh": "下课的时候，我们喜欢在外边玩。",
+      "en": "After class, we like playing outside."
+    },
+    {
+      "zh": "我的同学有的喜欢看书，有的喜欢看电影。",
+      "en": "Some of my classmates like reading, others like films."
+    },
+    {
+      "zh": "我和小东都喜欢看电影。",
+      "en": "Xiaodong and I both like films."
+    },
+    {
+      "zh": "星期六，我们去电影院看电影。",
+      "en": "On Saturdays we go to the cinema."
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "How old are the two boys?",
+      "options": [
+        "Twelve",
+        "Ten",
+        "Twenty"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们都十二岁.",
+        "It's 十二, twelve.",
+        "It's 十二, not 二十."
+      ]
+    },
+    {
+      "prompt": "What can Xiaodong do that the writer can't?",
+      "options": [
+        "Cook",
+        "Sing",
+        "Read"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 小东…会做饭。我不会做饭.",
+        "The writer is the one who can sing.",
+        "Reading isn't compared."
+      ]
+    },
+    {
+      "prompt": "What do they both like?",
+      "options": [
+        "Films",
+        "Books",
+        "Cooking"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我和小东都喜欢看电影.",
+        "Some classmates like books; the two friends like films.",
+        "Only Xiaodong cooks."
+      ]
+    }
+  ]
+}

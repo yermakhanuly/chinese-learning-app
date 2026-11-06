@@ -1,0 +1,219 @@
+{
+  "id": "g1-measure-words",
+  "level": 1,
+  "title": "个, 本, 件: counting words",
+  "topic": "measure-words",
+  "summary": "Lets you count people and things with a number + counting word + noun, as in 三个人 and 两本书.",
+  "structure": [
+    "Number + 个 / 本 / 件 + Noun",
+    "这 / 那 / 几 + 个 / 本 / 件 + Noun"
+  ],
+  "explanation": "In English you can say \"three friends\" with nothing between the number and the noun. In Chinese you can't. You always need a small counting word in between. So \"three friends\" is 三个朋友, and \"two books\" is 两本书.\n\nEach counting word goes with certain nouns. 个 is the most common one. Use it for people (人, 朋友, 学生) and for many everyday things (苹果, 问题). 本 is for books and other bound things (书, 汉语书). 件 is for clothes (衣服) and for matters or things to do (事). When you learn a new noun, learn its counting word with it.\n\nYou also need the counting word after 这 (this), 那 (that) and 几 (how many): 这本书, 那件衣服, 几个人. If everyone already knows what you mean, you can drop the noun: 我要两个 (I want two).\n\nA common mix-up: for \"two\" before a counting word, say 两, not 二. So it's 两个人, never 二个人.",
+  "examples": [
+    {
+      "zh": "我有三个朋友。",
+      "en": "I have three friends."
+    },
+    {
+      "zh": "他买了两本书。",
+      "en": "He bought two books."
+    },
+    {
+      "zh": "这件衣服很漂亮。",
+      "en": "This piece of clothing is very pretty."
+    },
+    {
+      "zh": "你有几本汉语书？",
+      "en": "How many Chinese books do you have?"
+    },
+    {
+      "zh": "妈妈给我买了两件衣服。",
+      "en": "Mom bought me two pieces of clothing."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我有三朋友。",
+      "right": "我有三个朋友。",
+      "why": "A number can't go straight before a noun. You need a counting word in between, and for people it's 个."
+    },
+    {
+      "wrong": "我买了二本书。",
+      "right": "我买了两本书。",
+      "why": "Before a counting word, \"two\" is 两, not 二."
+    },
+    {
+      "wrong": "我买了两个书。",
+      "right": "我买了两本书。",
+      "why": "Books take the counting word 本, not 个."
+    }
+  ],
+  "related": [
+    "g1-numbers",
+    "g1-ji-duoshao",
+    "g1-zhe-na",
+    "g2-big-numbers"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I have three friends.",
+      "before": "我有三",
+      "after": "朋友。",
+      "options": [
+        "个",
+        "本",
+        "件"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: people, like 朋友, are counted with 个.",
+        "本 is for books, not people.",
+        "件 is for clothes and matters, not people."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "He bought two books.",
+      "before": "他买了两",
+      "after": "书。",
+      "options": [
+        "个",
+        "本",
+        "件"
+      ],
+      "answer": 1,
+      "why": [
+        "个 is very common, but books take their own counting word, 本.",
+        "Correct: 本 is the counting word for books.",
+        "件 is for clothes and matters, not books."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "This piece of clothing is very pretty.",
+      "before": "这",
+      "after": "衣服很漂亮。",
+      "options": [
+        "件",
+        "本",
+        "口"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: clothes are counted with 件, and 这 also needs a counting word after it.",
+        "本 is for books, not clothes.",
+        "口 is for the number of people in a family, not clothes."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I have two Chinese books.",
+      "before": "我有",
+      "after": "本汉语书。",
+      "options": [
+        "两",
+        "二",
+        "两个"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: before a counting word, \"two\" is 两.",
+        "二 can't go before a counting word. Use 两 instead.",
+        "You need only one counting word. 本 is already there, so adding 个 doubles it."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "我今天有一件事。",
+        "我今天有一事。",
+        "我今天有事一件。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: number + 件 + 事. Matters and things to do are counted with 件.",
+        "The counting word is missing. Say 一件事, not 一事.",
+        "The number and counting word must come before the noun: 一件事, not 事一件."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'I want two apples'?",
+      "options": [
+        "我要二个苹果。",
+        "我要两苹果。",
+        "我要两个苹果。",
+        "我要两本苹果。"
+      ],
+      "answer": 2,
+      "why": [
+        "Before a counting word, \"two\" is 两, not 二.",
+        "The counting word is missing. Put 个 between 两 and 苹果.",
+        "Correct: 两 + 个 + 苹果.",
+        "本 is for books. Apples are counted with 个."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Add 这 to say 'this book'.",
+      "source": "书很好看。",
+      "options": [
+        "这本书很好看。",
+        "这个书很好看。",
+        "本这书很好看。",
+        "这一书很好看。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 这 + 本 + 书, with 本 because it's a book.",
+        "Books take 本, not 个.",
+        "这 comes first, then the counting word: 这本书.",
+        "After 这 you need a counting word: 这本书."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Ask how many books he has, using 几.",
+      "source": "他有三本书。",
+      "options": [
+        "他有几书？",
+        "他有几本书？",
+        "他有几个本书？",
+        "他有本几书？"
+      ],
+      "answer": 1,
+      "why": [
+        "几 also needs a counting word after it: 几本书.",
+        "Correct: 几 takes the place of the number, and 本 stays: 几本书.",
+        "Use only one counting word. 本 is enough, and adding 个 doubles it.",
+        "The order is 几 + 本 + 书, not 本 + 几."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "Mom bought three apples.",
+      "answer": [
+        "妈妈",
+        "买了",
+        "三个",
+        "苹果"
+      ],
+      "also": [],
+      "why": "The number and counting word (三个) go right before the noun 苹果."
+    },
+    {
+      "type": "order",
+      "en": "That book is the teacher's.",
+      "answer": [
+        "那本",
+        "书",
+        "是",
+        "老师的"
+      ],
+      "also": [],
+      "why": "那 plus its counting word (那本) goes right before the noun 书."
+    }
+  ]
+}

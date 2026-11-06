@@ -1,0 +1,135 @@
+{
+  "id": "r2-10",
+  "level": 2,
+  "kind": "dialogue",
+  "title": "The holiday trip",
+  "title_zh": "去旅游",
+  "summary": "A couple plan how to travel for the holidays.",
+  "speakers": [
+    {
+      "name": "妻子",
+      "voice": "female"
+    },
+    {
+      "name": "丈夫",
+      "voice": "male"
+    }
+  ],
+  "names": [],
+  "new_words": [
+    {
+      "word": "放假",
+      "en": "to have a holiday, be off"
+    }
+  ],
+  "sentences": [
+    {
+      "zh": "快要放假了，我们去哪儿旅游？",
+      "en": "The holidays are coming soon. Where shall we travel?",
+      "speaker": 0
+    },
+    {
+      "zh": "我们去看我爷爷奶奶吧，我们一年没去了。",
+      "en": "Let's visit my grandparents; we haven't been for a year.",
+      "speaker": 1
+    },
+    {
+      "zh": "好啊。我们坐飞机去还是坐火车去？",
+      "en": "Good idea. Shall we fly or take the train?",
+      "speaker": 0
+    },
+    {
+      "zh": "坐飞机要两个小时，坐火车要八个小时。",
+      "en": "Flying takes two hours; the train takes eight.",
+      "speaker": 1
+    },
+    {
+      "zh": "坐飞机快多了，但是机票比火车票贵。",
+      "en": "Flying is much faster, but plane tickets cost more than train tickets.",
+      "speaker": 0
+    },
+    {
+      "zh": "没关系，我们坐飞机吧。你买机票了吗？",
+      "en": "Never mind, let's fly. Have you bought the tickets?",
+      "speaker": 1
+    },
+    {
+      "zh": "还没呢，我现在就在网上买。",
+      "en": "Not yet, I'll buy them online right now.",
+      "speaker": 0
+    },
+    {
+      "zh": "我们要给爷爷奶奶买什么？",
+      "en": "What should we buy for my grandparents?",
+      "speaker": 1
+    },
+    {
+      "zh": "奶奶喜欢喝茶，我们给她买一些好茶吧。",
+      "en": "Grandma likes tea; let's buy her some good tea.",
+      "speaker": 0
+    },
+    {
+      "zh": "好，爷爷也会很高兴的。",
+      "en": "OK, Grandpa will be happy too.",
+      "speaker": 1
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "Who will they visit?",
+      "options": [
+        "The husband's grandparents",
+        "The wife's parents",
+        "A friend in Beijing"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们去看我爷爷奶奶吧 — said by the husband.",
+        "Her parents aren't mentioned.",
+        "No friend is mentioned."
+      ]
+    },
+    {
+      "prompt": "How will they travel?",
+      "options": [
+        "By plane",
+        "By train",
+        "By car"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们坐飞机吧.",
+        "The train takes eight hours; they choose to fly.",
+        "A car isn't mentioned."
+      ]
+    },
+    {
+      "prompt": "Have they bought tickets yet?",
+      "options": [
+        "Not yet",
+        "Yes, last week",
+        "Yes, at the station"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 还没呢.",
+        "She says 还没呢 — not yet.",
+        "She will buy them online."
+      ]
+    },
+    {
+      "prompt": "What present will they take?",
+      "options": [
+        "Tea",
+        "Fruit",
+        "A watch"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我们给她买一些好茶吧.",
+        "Fruit isn't mentioned.",
+        "A watch isn't mentioned."
+      ]
+    }
+  ]
+}

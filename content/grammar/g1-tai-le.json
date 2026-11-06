@@ -1,0 +1,34 @@
+{
+  "id": "g1-tai-le",
+  "level": 1,
+  "title": "太…了: too, so",
+  "topic": "adverbs",
+  "summary": "Lets you say something is too much or react strongly, as in 太贵了 and 太好了！",
+  "structure": ["太 + adjective + 了", "不太 + adjective"],
+  "explanation": "太 + adjective + 了 means 'too …' (太贵了 'too expensive') or, with good things, 'so …!' (太好了！'Great!'). The 了 at the end is part of the pattern; the sentence sounds unfinished without it.\n\n不太 + adjective is a gentle 'not very': 不太好 'not so good'. It needs no 了.",
+  "examples": [
+    {"zh": "这件衣服太贵了。", "en": "This piece of clothing is too expensive."},
+    {"zh": "太好了！", "en": "Great!"},
+    {"zh": "今天太冷了。", "en": "It's so cold today."},
+    {"zh": "这个菜太好吃了！", "en": "This dish is so delicious!"},
+    {"zh": "我今天不太忙。", "en": "I'm not very busy today."}
+  ],
+  "mistakes": [
+    {"wrong": "这个太贵。", "right": "这个太贵了。", "why": "太 + adjective is normally closed with 了."},
+    {"wrong": "我不太忙了。", "right": "我不太忙。", "why": "不太 ('not very') doesn't take 了."}
+  ],
+  "related": ["g1-hen-adjectives", "g1-youdianr", "g1-le-change"],
+  "exercises": [
+    {"type": "fill", "en": "It's too hot!", "before": "太热", "after": "！", "options": ["了", "吗", "的"], "answer": 0,
+     "why": ["Correct: 太 + adjective + 了.", "吗 would make it a question.", "的 doesn't close the 太 pattern."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["这本书太贵了。", "这本书太了贵。", "这本书很太贵了。"], "answer": 0,
+     "why": ["Correct: 太 before the adjective, 了 at the end.", "了 goes after the adjective, not before it.", "Use 太 or 很, not both."]},
+    {"type": "transform", "instruction": "Say 'not very' instead.", "source": "今天太冷了。", "options": ["今天不太冷。", "今天不太冷了。", "今天太不冷。"], "answer": 0,
+     "why": ["Correct: 不太 + adjective, with no 了.", "不太 doesn't take 了.", "太不冷 isn't how 'not very cold' is said; use 不太冷."]},
+    {"type": "pick", "prompt": "Your friend says she can come to your party. You say:", "options": ["太好了！", "太好！", "不太好。"], "answer": 0,
+     "why": ["Correct: 太好了 means 'Great!'", "Without 了 it sounds cut off.", "不太好 means 'not so good' — the wrong reaction."]},
+    {"type": "order", "en": "This dish is so delicious!", "answer": ["这个", "菜", "太", "好吃", "了"], "also": [], "why": "太 goes before the adjective and 了 comes at the very end."},
+    {"type": "fill", "en": "This apple is too small.", "before": "这个苹果", "after": "小了。", "options": ["太", "很", "不太"], "answer": 0,
+     "why": ["Correct: 太 … 了 means 'too …'.", "很 doesn't take 了 at the end; 很小 is just 'small'.", "不太小 means 'not very small' and has no 了."]}
+  ]
+}

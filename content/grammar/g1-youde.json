@@ -1,0 +1,35 @@
+{
+  "id": "g1-youde",
+  "level": 1,
+  "title": "有的…有的…: some … others …",
+  "topic": "basics",
+  "summary": "Lets you split a group into parts, as in 有的人喝茶，有的人喝咖啡.",
+  "structure": ["有的 + Noun + …，有的 + (Noun) + …", "有的 + Noun + …"],
+  "explanation": "有的 means 'some (of them)'. Put it before a noun at the start of the sentence: 有的人喜欢猫 'Some people like cats.' Repeat it to contrast groups: 有的人喝茶，有的人喝咖啡 'Some drink tea, others drink coffee.'\n\nThe second noun can be dropped when it's clear: 有的学生去，有的不去. 有的 always comes before the verb, never after it.",
+  "examples": [
+    {"zh": "有的人喝茶，有的人喝咖啡。", "en": "Some people drink tea; others drink coffee."},
+    {"zh": "有的学生去，有的不去。", "en": "Some students are going, others aren't."},
+    {"zh": "有的菜很好吃。", "en": "Some dishes are delicious."},
+    {"zh": "我的朋友有的在中国，有的在美国。", "en": "Some of my friends are in China, some in America."},
+    {"zh": "这些书有的很贵，有的很便宜。", "en": "Some of these books are expensive, some cheap."}
+  ],
+  "mistakes": [
+    {"wrong": "人有的喜欢猫。", "right": "有的人喜欢猫。", "why": "有的 goes before the noun."},
+    {"wrong": "我喜欢有的菜。", "right": "有的菜我喜欢。", "why": "有的 + noun normally goes at the front of the sentence, before the verb."}
+  ],
+  "related": ["g1-he-ye-dou", "g1-you", "g1-zhe-na"],
+  "exercises": [
+    {"type": "fill", "en": "Some children like singing; others like reading.", "before": "有的孩子喜欢唱歌，", "after": "喜欢看书。", "options": ["有的", "都", "也"], "answer": 0,
+     "why": ["Correct: 有的…有的… contrasts two groups.", "都 means 'all', which doesn't fit 'some … others'.", "也 means 'also'; it doesn't make a second group."]},
+    {"type": "pick", "prompt": "Which means 'Some of my classmates are Chinese'?", "options": ["我的同学有的是中国人。", "我的同学是有的中国人。", "有的是我的同学中国人。"], "answer": 0,
+     "why": ["Correct: group + 有的 + 是 + noun.", "有的 must come before the verb 是.", "The word order is scrambled."]},
+    {"type": "order", "en": "Some people like cats.", "answer": ["有的", "人", "喜欢", "猫"], "also": [], "why": "有的 + noun first, then the verb."},
+    {"type": "transform", "instruction": "Say 'some', not 'all'.", "source": "学生都去了。", "options": ["有的学生去了。", "学生有的都去了。", "都有的学生去了。"], "answer": 0,
+     "why": ["Correct: 有的 + noun replaces 都.", "Don't use 有的 and 都 together.", "都 and 有的 contradict each other."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["这些苹果有的很大，有的很小。", "这些苹果很大有的，很小有的。", "有的这些苹果很大，很小。"], "answer": 0,
+     "why": ["Correct: 有的 before each description.", "有的 goes before, not after.", "The second group needs its own 有的."]},
+    {"type": "fill", "en": "Some days I'm busy.", "before": "", "after": "天我很忙。", "options": ["有的", "有", "一些的"], "answer": 0,
+     "why": ["Correct: 有的 + noun = 'some …'.", "有 alone means 'have / there is'.", "一些的 isn't said."]}
+  ],
+  "words": ["咖啡", "美国"]
+}

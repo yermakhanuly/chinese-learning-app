@@ -1,0 +1,151 @@
+{
+  "id": "g2-hai",
+  "level": 2,
+  "title": "还: still, also",
+  "topic": "adverbs",
+  "summary": "Lets you say something is still the case or add more, as in 他还在睡觉 and 我还想买一个.",
+  "structure": [
+    "Subject + 还 + Verb (still)",
+    "Subject + 还 + 要 / 想 + Verb (also, more)",
+    "还有… (and also)"
+  ],
+  "explanation": "还 (hái) goes before the verb. It has two main jobs. 'Still': 他还在睡觉 'He's still sleeping', 九点了，你还不起床？'It's nine and you're still not up?' 'Also / in addition': 我还想买一个 'I'd like to buy one more', 我会说汉语，还会说英语.\n\n还有 at the start of a sentence means 'also, and another thing'. In questions, 还 asks 'anything else?': 你还要什么？",
+  "examples": [
+    {
+      "zh": "他还在睡觉。",
+      "en": "He's still sleeping."
+    },
+    {
+      "zh": "我还想买一个。",
+      "en": "I'd like to buy one more."
+    },
+    {
+      "zh": "你还要什么？",
+      "en": "What else would you like?"
+    },
+    {
+      "zh": "九点了，你还不起床？",
+      "en": "It's nine o'clock, and you still aren't up?"
+    },
+    {
+      "zh": "我会说汉语，还会写汉字。",
+      "en": "I can speak Chinese, and I can also write characters."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "他睡觉还。",
+      "right": "他还在睡觉。",
+      "why": "还 goes before the verb."
+    },
+    {
+      "wrong": "我还是想买一个。",
+      "right": "我还想买一个。",
+      "why": "For 'one more', use 还. 还是想买 means 'I'd still rather buy one'."
+    }
+  ],
+  "related": [
+    "g2-haishi-questions",
+    "g2-hai-mei",
+    "g2-zai-you"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "It's late, but she's still working.",
+      "before": "很晚了，她",
+      "after": "在工作。",
+      "options": [
+        "还",
+        "也",
+        "都"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 还 = 'still'.",
+        "也 means 'also', not 'still'.",
+        "都 means 'all'."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "A waiter asks 'Anything else?'. Which is it?",
+      "options": [
+        "你还要什么？",
+        "你要还什么？",
+        "还你要什么？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 还 before the verb 要.",
+        "还 goes before the verb, not after.",
+        "还 comes after the subject."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Add 'still'.",
+      "source": "他不在家。",
+      "options": [
+        "他还不在家。",
+        "他不还在家。",
+        "他不在家还。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 还 comes before 不.",
+        "还 goes before the negative, not after it.",
+        "还 can't go at the end."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "I'd also like to drink a cup of coffee.",
+      "answer": [
+        "我",
+        "还",
+        "想",
+        "喝",
+        "一杯咖啡"
+      ],
+      "also": [],
+      "why": "还 goes before 想 + verb."
+    },
+    {
+      "type": "fill",
+      "en": "I bought apples, and also bananas.",
+      "before": "我买了苹果，",
+      "after": "买了香蕉。",
+      "options": [
+        "还",
+        "还是",
+        "和"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 还 + verb = 'also did'.",
+        "还是 is 'or' in questions.",
+        "和 links nouns, not two actions."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'He's still at school'?",
+      "options": [
+        "他还在学校。",
+        "他在还学校。",
+        "他在学校还是。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 还 before 在.",
+        "还 can't go between 在 and the place.",
+        "还是 doesn't mean 'still' at the end."
+      ]
+    }
+  ],
+  "words": [
+    "香蕉",
+    "杯"
+  ]
+}

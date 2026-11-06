@@ -1,0 +1,156 @@
+{
+  "id": "g2-de-degree",
+  "level": 2,
+  "title": "得: how well you do something",
+  "topic": "complements",
+  "summary": "Lets you say how well or how fast someone does something, as in 他说得很好.",
+  "structure": [
+    "Subject + Verb + 得 + (很) + Adjective",
+    "Subject + (Verb) + Object + Verb + 得 + Adjective",
+    "Verb + 得 + 不 + Adjective"
+  ],
+  "explanation": "得 (de) after a verb introduces HOW WELL the action is done: 他说得很好 'He speaks well', 你跑得很快 'You run fast.' Like plain adjectives, a 很 usually comes before the adjective.\n\nIf there's an object, say the verb twice or put the object first: 他说汉语说得很好 / 他汉语说得很好. Never put the object straight after 得. The negative puts 不 after 得: 我写得不好.",
+  "examples": [
+    {
+      "zh": "他说得很好。",
+      "en": "He speaks well."
+    },
+    {
+      "zh": "你跑得很快。",
+      "en": "You run fast."
+    },
+    {
+      "zh": "她汉语说得非常好。",
+      "en": "She speaks Chinese very well."
+    },
+    {
+      "zh": "我写汉字写得不好。",
+      "en": "I don't write characters well."
+    },
+    {
+      "zh": "你今天来得很早。",
+      "en": "You came early today."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "他说汉语得很好。",
+      "right": "他说汉语说得很好。",
+      "why": "得 can't follow the object; repeat the verb (or put the object first)."
+    },
+    {
+      "wrong": "我不写得好。",
+      "right": "我写得不好。",
+      "why": "不 goes after 得."
+    }
+  ],
+  "related": [
+    "g2-result-complements",
+    "g1-hen-adjectives",
+    "g2-zui"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "She sings very well.",
+      "before": "她唱",
+      "after": "很好。",
+      "options": [
+        "得",
+        "的",
+        "地"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: verb + 得 + how.",
+        "的 links descriptions to nouns.",
+        "地 goes before verbs, not after."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it negative.",
+      "source": "他跑得很快。",
+      "options": [
+        "他跑得不快。",
+        "他不跑得快。",
+        "他没跑得很快。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 不 goes after 得.",
+        "不 can't go before the verb here.",
+        "没 doesn't negate how well."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'He speaks Chinese very well'?",
+      "options": [
+        "他汉语说得很好。",
+        "他说汉语得很好。",
+        "他说得汉语很好。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: object first, then verb + 得.",
+        "The object can't come between the verb and 得.",
+        "Nothing goes between 得 and the description except 很 / 不."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "You came very early today.",
+      "answer": [
+        "你",
+        "今天",
+        "来得",
+        "很早"
+      ],
+      "also": [
+        [
+          "今天",
+          "你",
+          "来得",
+          "很早"
+        ]
+      ],
+      "why": "Verb + 得 + (很) + adjective."
+    },
+    {
+      "type": "pick",
+      "prompt": "Someone praises your Chinese. Which is what they said?",
+      "options": [
+        "你说得很好！",
+        "你说的很好得！",
+        "你很好说得！"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: verb + 得 + 很好.",
+        "The characters 的 and 得 are mixed up.",
+        "The verb comes before 得."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "He writes characters very nicely.",
+      "before": "他写汉字写",
+      "after": "很漂亮。",
+      "options": [
+        "得",
+        "了",
+        "过"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: repeat the verb + 得.",
+        "了 doesn't introduce how well.",
+        "过 is for experience."
+      ]
+    }
+  ],
+  "words": [
+    "地"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "g1-zai-place-verb",
+  "level": 1,
+  "title": "在 + place + verb: doing something somewhere",
+  "topic": "time-place",
+  "summary": "Lets you say where an action happens by putting 在 + place before the verb, as in 我在家吃饭.",
+  "structure": ["Subject + 在 + Place + Verb (+ Object)", "Subject + 在 + Place"],
+  "explanation": "To say where someone does something, put 在 + place BEFORE the verb: 我在家吃饭 'I eat at home.' English puts the place at the end; Chinese puts it in the middle.\n\nOn its own, 在 + place means 'to be at': 妈妈在医院 'Mum is at the hospital.' Don't use 是 for this. Negative: 不在 (他不在家).",
+  "examples": [
+    {"zh": "我在家吃饭。", "en": "I eat at home."},
+    {"zh": "他在学校学习汉语。", "en": "He studies Chinese at school."},
+    {"zh": "妈妈在医院工作。", "en": "Mum works at a hospital."},
+    {"zh": "我们在饭店吃午饭吧。", "en": "Let's have lunch at a restaurant."},
+    {"zh": "爸爸不在家。", "en": "Dad isn't at home."}
+  ],
+  "mistakes": [
+    {"wrong": "我吃饭在家。", "right": "我在家吃饭。", "why": "在 + place goes before the verb, not after it."},
+    {"wrong": "老师是学校。", "right": "老师在学校。", "why": "'To be at a place' is 在, not 是."}
+  ],
+  "related": ["g1-word-order", "g1-location-words", "g1-zhengzai"],
+  "exercises": [
+    {"type": "fill", "en": "My older sister works at a company.", "before": "我姐姐", "after": "公司工作。", "options": ["在", "是", "有"], "answer": 0,
+     "why": ["Correct: 在 + place before the verb says where she works.", "是 links two nouns; it can't mark a place.", "有 means 'have'; it doesn't say where."]},
+    {"type": "order", "en": "We watch films at home.", "answer": ["我们", "在", "家", "看", "电影"], "also": [], "why": "Who + 在 + place + verb + object."},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["他在商店买东西。", "他买东西在商店。", "他商店在买东西。"], "answer": 0,
+     "why": ["Correct: 在 + place comes before the verb 买.", "The place can't go at the end in Chinese.", "在 comes before the place, not after it."]},
+    {"type": "transform", "instruction": "Make it negative ('isn't at').", "source": "老师在学校。", "options": ["老师不在学校。", "老师没在学校是。", "老师在不学校。"], "answer": 0,
+     "why": ["Correct: 不在 means 'isn't at'.", "This adds a stray 是 at the end.", "不 goes before 在, not after it."]},
+    {"type": "pick", "prompt": "Which means 'Where do you live?'", "options": ["你住在哪儿？", "你哪儿住？", "你是哪儿住？"], "answer": 0,
+     "why": ["Correct: 住在 + place; 哪儿 asks where.", "With 住, the place comes after 住在.", "是 isn't used to ask where someone lives."]},
+    {"type": "fill", "en": "My friend is at the bookshop.", "before": "我朋友", "after": "书店。", "options": ["在", "去在", "是"], "answer": 0,
+     "why": ["Correct: 在 + place means 'is at'.", "去在 isn't a word; use 在 for 'is at' or 去 for 'goes to'.", "是 would mean 'my friend is a bookshop'."]}
+  ]
+}

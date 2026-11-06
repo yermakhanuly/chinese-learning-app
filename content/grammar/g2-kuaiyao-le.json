@@ -1,0 +1,34 @@
+{
+  "id": "g2-kuaiyao-le",
+  "level": 2,
+  "title": "快要…了: about to",
+  "topic": "aspect",
+  "summary": "Lets you say something is going to happen very soon, as in 快要下雨了.",
+  "structure": ["(Subject +) 快要 / 快 / 要 + Verb + 了", "快要 + Time / Number + 了"],
+  "explanation": "快要 + verb + 了 means 'about to, soon': 快要下雨了 'It's about to rain.' The 了 at the end is required. Shorter forms 快…了 and 要…了 mean the same: 我快到了 'I'm nearly there.'\n\nIt also works with times and numbers: 快要八点了 'It's almost eight', 他快二十岁了 'He's almost twenty.' Don't use 快要 with a specific time word like 明天; say 明天就要…了 instead (HSK 3).",
+  "examples": [
+    {"zh": "快要下雨了。", "en": "It's about to rain."},
+    {"zh": "我快到了。", "en": "I'm nearly there."},
+    {"zh": "电影快要开始了。", "en": "The film is about to start."},
+    {"zh": "快要八点了，你快起床吧。", "en": "It's almost eight, get up quickly."},
+    {"zh": "我们快要考试了。", "en": "We're about to have exams."}
+  ],
+  "mistakes": [
+    {"wrong": "快要下雨。", "right": "快要下雨了。", "why": "快要 needs 了 at the end."},
+    {"wrong": "下雨快要了。", "right": "快要下雨了。", "why": "快要 goes before the verb."}
+  ],
+  "related": ["g1-le-change", "g2-jiu-cai"],
+  "exercises": [
+    {"type": "fill", "en": "The train is about to leave.", "before": "火车快要开", "after": "。", "options": ["了", "的", "着"], "answer": 0,
+     "why": ["Correct: 快要…了.", "的 doesn't close this pattern.", "着 shows an ongoing state."]},
+    {"type": "pick", "prompt": "Which means 'It's almost my birthday'?", "options": ["我的生日快到了。", "我的生日快到。", "我的生日到快了。"], "answer": 0,
+     "why": ["Correct: 快 + verb + 了.", "Without 了 the pattern is incomplete.", "快 goes before the verb."]},
+    {"type": "transform", "instruction": "Say it's about to happen.", "source": "电影开始了。", "options": ["电影快要开始了。", "电影开始快要了。", "电影快要开始。"], "answer": 0,
+     "why": ["Correct: 快要 + verb + 了.", "快要 goes before the verb.", "You need 了 at the end."]},
+    {"type": "order", "en": "It's almost ten o'clock.", "answer": ["快要", "十点", "了"], "also": [], "why": "快要 + time + 了."},
+    {"type": "fill", "en": "I'm nearly home.", "before": "我", "after": "到家了。", "options": ["快", "很快的", "快的"], "answer": 0,
+     "why": ["Correct: 快 + verb + 了 = nearly.", "很快的 isn't this pattern.", "快的 doesn't work before a verb here."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["我们快要考试了。", "我们快要考试的。", "我们要快考试。"], "answer": 0,
+     "why": ["Correct: 快要 + verb + 了.", "The pattern ends with 了, not 的.", "The order is 快要, and 了 is missing."]}
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": "g2-result-complements",
+  "level": 2,
+  "title": "完, 好, 到, 懂, 错: result after a verb",
+  "topic": "complements",
+  "summary": "Lets you say what result an action had, as in 吃完了, 听懂了 and 写错了.",
+  "structure": [
+    "Verb + Result + 了",
+    "没 + Verb + Result",
+    "Verb + Result + 了吗？"
+  ],
+  "explanation": "A second word after the verb shows the RESULT: 吃完 'finish eating', 听懂 'understand (by listening)', 写错 'write wrongly', 找到 'find', 做好 'get it done well'. Usually 了 follows: 我吃完了.\n\nThe negative is 没 + verb + result, without 了: 我没听懂 'I didn't understand.' This is how Chinese separates trying (听 'listen') from succeeding (听懂 'understand').",
+  "examples": [
+    {
+      "zh": "我吃完了。",
+      "en": "I've finished eating."
+    },
+    {
+      "zh": "你听懂了吗？",
+      "en": "Did you understand?"
+    },
+    {
+      "zh": "我没听懂。",
+      "en": "I didn't understand."
+    },
+    {
+      "zh": "这个字我写错了。",
+      "en": "I wrote this character wrong."
+    },
+    {
+      "zh": "你找到手机了吗？",
+      "en": "Did you find your phone?"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我完吃了。",
+      "right": "我吃完了。",
+      "why": "The result word goes after the verb."
+    },
+    {
+      "wrong": "我没听懂了。",
+      "right": "我没听懂。",
+      "why": "Drop 了 after 没."
+    }
+  ],
+  "related": [
+    "g1-kanjian",
+    "g2-direction-complements",
+    "g2-de-degree"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Have you finished your homework?",
+      "before": "你的作业写",
+      "after": "了吗？",
+      "options": [
+        "完",
+        "到",
+        "错"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 写完 = finish writing.",
+        "写到 means 'write up to (a point)'.",
+        "写错 means 'write wrongly'."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I didn't understand what the teacher said.",
+      "before": "老师说什么，我没听",
+      "after": "。",
+      "options": [
+        "懂",
+        "完",
+        "好"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 听懂 = understand by listening.",
+        "听完 means 'finish listening'.",
+        "听好 means 'listen carefully'."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it negative.",
+      "source": "我找到了我的书。",
+      "options": [
+        "我没找到我的书。",
+        "我没找到了我的书。",
+        "我不找到我的书。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 没 + verb + result, no 了.",
+        "Drop 了 with 没.",
+        "Results are negated with 没."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "I wrote your name wrong.",
+      "answer": [
+        "我",
+        "写错了",
+        "你的",
+        "名字"
+      ],
+      "also": [],
+      "why": "Verb + result + 了, then the object."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'Have you finished eating?'",
+      "options": [
+        "你吃完了吗？",
+        "你完吃了吗？",
+        "你吃了完吗？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: verb + 完 + 了吗.",
+        "完 goes after the verb.",
+        "完 stays right after the verb, before 了."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "You looked for your keys but didn't find them. Which fits 'didn't find'?",
+      "options": [
+        "没找到",
+        "没找",
+        "不找到"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 找到 = find (success); 没找到 = didn't find.",
+        "没找 means you didn't even look.",
+        "Results take 没, not 不."
+      ]
+    }
+  ],
+  "words": [
+    "作业"
+  ]
+}

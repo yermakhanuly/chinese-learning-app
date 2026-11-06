@@ -94,3 +94,34 @@ describe('pickExamples', () => {
     expect(picked.map((p) => p.id)).toEqual([2, 5, 4]);
   });
 });
+
+describe('traditional → simplified map', () => {
+  it('never rewrites characters that are in everyday simplified use', () => {
+    const pairs = [
+      { traditional: '什麼', simplified: '什么' },
+      { traditional: '怎麼', simplified: '怎么' },
+      { traditional: '么', simplified: '幺' }, // a rare variant: 么 is also a traditional form of 幺
+      { traditional: '說', simplified: '说' },
+    ];
+    const map = buildTradToSimp(pairs);
+    expect(map.get('麼')).toBe('么');
+    expect(map.get('說')).toBe('说');
+    expect(map.has('么')).toBe(false);
+  });
+});
+
+describe('readings in context', () => {
+  const lex2 = buildLexicon(
+    [
+      { simplified: '教', traditional: '教', pinyin: 'jiào', level: 2 },
+      { simplified: '到了', traditional: '到了', pinyin: 'dào liǎo', level: null },
+      { simplified: '他', traditional: '他', pinyin: 'tā', level: 1 },
+      { simplified: '我', traditional: '我', pinyin: 'wǒ', level: 1 },
+    ],
+    [],
+  );
+  it('reads 教 on its own as jiāo (to teach) and 到了 as dào le', () => {
+    expect(tokenize('他教我', lex2, new Map())?.map((t) => t.p)).toEqual(['tā', 'jiāo', 'wǒ']);
+    expect(tokenize('他到了', lex2, new Map())?.map((t) => t.p)).toEqual(['tā', 'dàole']);
+  });
+});

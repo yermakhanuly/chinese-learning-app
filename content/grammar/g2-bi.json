@@ -1,0 +1,151 @@
+{
+  "id": "g2-bi",
+  "level": 2,
+  "title": "比: A is more … than B",
+  "topic": "comparison",
+  "summary": "Lets you compare two things, as in 今天比昨天冷.",
+  "structure": [
+    "A + 比 + B + Adjective",
+    "A + 比 + B + Adjective + 一点儿 / 得多 / number",
+    "A + 不比 + B + Adjective"
+  ],
+  "explanation": "A 比 B + adjective means 'A is more … than B': 今天比昨天冷 'Today is colder than yesterday.' Never put 很, 非常 or 太 before the adjective in a 比 sentence: 他比我很高 is wrong.\n\nTo say how much: 他比我高一点儿 'a bit taller', 他比我大两岁 'two years older'. 得多 or 多了 means 'much more': 今天比昨天冷多了. For 'not as … as', use 没有 (a separate point).",
+  "examples": [
+    {
+      "zh": "今天比昨天冷。",
+      "en": "Today is colder than yesterday."
+    },
+    {
+      "zh": "他比我高一点儿。",
+      "en": "He's a bit taller than me."
+    },
+    {
+      "zh": "哥哥比我大两岁。",
+      "en": "My older brother is two years older than me."
+    },
+    {
+      "zh": "坐地铁比打车便宜多了。",
+      "en": "Taking the subway is much cheaper than a taxi."
+    },
+    {
+      "zh": "这件衣服比那件漂亮。",
+      "en": "This piece of clothing is prettier than that one."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "他比我很高。",
+      "right": "他比我高。",
+      "why": "No 很 in a 比 sentence."
+    },
+    {
+      "wrong": "他高比我。",
+      "right": "他比我高。",
+      "why": "比 + B comes before the adjective."
+    }
+  ],
+  "related": [
+    "g2-yiyang",
+    "g2-meiyou-name",
+    "g2-zui",
+    "g2-yidianr"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "My home is bigger than yours.",
+      "before": "我家",
+      "after": "你家大。",
+      "options": [
+        "比",
+        "跟",
+        "很"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: A 比 B + adjective.",
+        "跟 needs 一样 to compare (the same as).",
+        "很 doesn't compare two things."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "今天比昨天热。",
+        "今天比昨天很热。",
+        "今天热比昨天。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: this follows the pattern exactly.",
+        "No 很 in a 比 sentence.",
+        "比 + B goes before the adjective."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Say it's MUCH more expensive.",
+      "source": "这个手机比那个贵。",
+      "options": [
+        "这个手机比那个贵多了。",
+        "这个手机比那个很贵。",
+        "这个手机比那个非常贵。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: adjective + 多了 = much more.",
+        "Don't use 很 in a 比 sentence.",
+        "Don't use 非常 in a 比 sentence."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "My younger sister is three years younger than me.",
+      "answer": [
+        "我妹妹",
+        "比",
+        "我",
+        "小",
+        "三岁"
+      ],
+      "also": [],
+      "why": "A 比 B + adjective + the difference."
+    },
+    {
+      "type": "fill",
+      "en": "The subway is a bit faster than the bus.",
+      "before": "地铁比公交车快",
+      "after": "。",
+      "options": [
+        "一点儿",
+        "有点儿",
+        "很"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: adjective + 一点儿 = a bit more.",
+        "有点儿 goes before an adjective, not after.",
+        "很 can't be used in a 比 sentence."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'I'm older than him'?",
+      "options": [
+        "我比他大。",
+        "他比我大。",
+        "我比他小。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: A (我) 比 B (他) 大.",
+        "This means he is older than me.",
+        "This means I'm younger."
+      ]
+    }
+  ],
+  "words": [
+    "件"
+  ]
+}

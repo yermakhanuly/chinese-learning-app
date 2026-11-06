@@ -1,0 +1,118 @@
+{
+  "id": "r2-02",
+  "level": 2,
+  "kind": "dialogue",
+  "title": "Where's the subway station?",
+  "title_zh": "去地铁站",
+  "summary": "A visitor asks a passer-by the way to the subway.",
+  "speakers": [
+    {
+      "name": "大卫",
+      "voice": "male"
+    },
+    {
+      "name": "女士",
+      "voice": "female"
+    }
+  ],
+  "names": [
+    "大卫"
+  ],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "不好意思，请问地铁站在哪儿？",
+      "en": "Excuse me, where's the subway station?",
+      "speaker": 0
+    },
+    {
+      "zh": "地铁站离这儿不太远。",
+      "en": "The subway station isn't far from here.",
+      "speaker": 1
+    },
+    {
+      "zh": "有多远？我可以走路去吗？",
+      "en": "How far is it? Can I walk there?",
+      "speaker": 0
+    },
+    {
+      "zh": "可以，走路十五分钟就到了。",
+      "en": "Yes, it's fifteen minutes on foot.",
+      "speaker": 1
+    },
+    {
+      "zh": "怎么走？",
+      "en": "Which way do I go?",
+      "speaker": 0
+    },
+    {
+      "zh": "你往前走，到了路口往右走。",
+      "en": "Go straight ahead, and at the crossing turn right.",
+      "speaker": 1
+    },
+    {
+      "zh": "往右走，再往哪儿走？",
+      "en": "Turn right, and then which way?",
+      "speaker": 0
+    },
+    {
+      "zh": "再走五分钟，你就能看到地铁站了。它在一个商场旁边。",
+      "en": "Walk five more minutes and you'll see the station. It's next to a shopping mall.",
+      "speaker": 1
+    },
+    {
+      "zh": "商场旁边，我记得了。太谢谢你了！",
+      "en": "Next to the mall, got it. Thank you so much!",
+      "speaker": 0
+    },
+    {
+      "zh": "不客气。慢走！",
+      "en": "You're welcome. Take care!",
+      "speaker": 1
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "How long does it take to walk to the station?",
+      "options": [
+        "About 15 minutes",
+        "About 5 minutes",
+        "About an hour"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 走路十五分钟就到了 (with the last five minutes included).",
+        "Five minutes is only the last part after turning right.",
+        "She says it isn't far."
+      ]
+    },
+    {
+      "prompt": "Which way does he turn at the crossing?",
+      "options": [
+        "Right",
+        "Left",
+        "He goes back"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 到了路口往右走.",
+        "It's 右, right.",
+        "He keeps going forward, then turns right."
+      ]
+    },
+    {
+      "prompt": "What is next to the station?",
+      "options": [
+        "A shopping mall",
+        "A hospital",
+        "A school"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 它在一个商场旁边.",
+        "No hospital is mentioned.",
+        "No school is mentioned."
+      ]
+    }
+  ]
+}

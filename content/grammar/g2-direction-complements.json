@@ -1,0 +1,148 @@
+{
+  "id": "g2-direction-complements",
+  "level": 2,
+  "title": "进来, 出去, 回来: direction after a verb",
+  "topic": "complements",
+  "summary": "Lets you show which way a movement goes, as in 他走进来了.",
+  "structure": [
+    "Verb + 来 / 去",
+    "Verb + 进 / 出 / 回 / 上 / 下 + 来 / 去",
+    "Verb + 进 / 回 + Place + 来 / 去"
+  ],
+  "explanation": "来 after a verb means movement TOWARDS the speaker, 去 means AWAY: 进来 'come in', 进去 'go in', 出来 'come out', 回去 'go back'. They can follow other verbs too: 走进来 'walk in', 跑出去 'run out', 拿回来 'bring back'.\n\nA place goes before 来 / 去: 他回家去了 'He went back home', 你进教室来吧 'Come into the classroom.' Ask yourself: where is the speaker? That decides 来 or 去.",
+  "examples": [
+    {
+      "zh": "请进来。",
+      "en": "Please come in."
+    },
+    {
+      "zh": "他走出去了。",
+      "en": "He walked out."
+    },
+    {
+      "zh": "妈妈什么时候回来？",
+      "en": "When is Mum coming back?"
+    },
+    {
+      "zh": "你下来吧，我在楼下。",
+      "en": "Come down, I'm downstairs."
+    },
+    {
+      "zh": "他跑进教室来了。",
+      "en": "He ran into the classroom."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "他回来家了。",
+      "right": "他回家来了。",
+      "why": "The place goes before 来 / 去."
+    },
+    {
+      "wrong": "我在外面，你出去吧。",
+      "right": "我在外面，你出来吧。",
+      "why": "Towards the speaker is 来: I'm outside, so you come OUT to me (出来)."
+    }
+  ],
+  "related": [
+    "g1-qu-lai-place",
+    "g2-result-complements"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I'm downstairs; come down.",
+      "before": "我在楼下，你",
+      "after": "吧。",
+      "options": [
+        "下来",
+        "下去",
+        "上来"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: down towards the speaker = 下来.",
+        "下去 is down and away from the speaker.",
+        "上来 means 'come up'."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "He's in the room. You go in.",
+      "before": "他在房间里，你",
+      "after": "吧。",
+      "options": [
+        "进去",
+        "进来",
+        "出去"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: the speaker is outside, so going in is 进去.",
+        "进来 would mean coming in towards the speaker.",
+        "出去 means 'go out'."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'Dad came back home'?",
+      "options": [
+        "爸爸回家来了。",
+        "爸爸回来家了。",
+        "爸爸家回来了。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: place before 来.",
+        "家 must come before 来.",
+        "回 comes before the place."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "She walked out of the classroom.",
+      "answer": [
+        "她",
+        "走出",
+        "教室",
+        "去了"
+      ],
+      "also": [],
+      "why": "Verb + direction + place + 去."
+    },
+    {
+      "type": "transform",
+      "instruction": "You're at home; ask your friend to come over.",
+      "source": "你去我家吧。",
+      "options": [
+        "你来我家吧。",
+        "你去我家来吧。",
+        "你来去我家吧。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: towards the speaker = 来.",
+        "Don't mix 去 and 来.",
+        "来 and 去 can't go together like this."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "The teacher is in the classroom and says to a student at the door:",
+      "options": [
+        "进来吧。",
+        "进去吧。",
+        "出来吧。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: come in towards the teacher = 进来.",
+        "进去 would mean the teacher is outside.",
+        "出来 means 'come out'."
+      ]
+    }
+  ],
+  "words": [
+    "楼下"
+  ]
+}

@@ -2,6 +2,7 @@
  * The screens of a lesson: new word, grammar note and the three exercise kinds.
  * Exercises report the learner's current answer through `onChange`; the player grades it.
  */
+import { router } from 'expo-router';
 import { createContext, use, useEffect, useMemo, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
@@ -24,7 +25,7 @@ export const LessonDataContext = createContext<LessonData>({ readings: {}, wordD
 const HAN = /[㐀-鿿]/;
 
 /** Chinese with pinyin when we have readings for it; plain text otherwise. */
-function Zh({ text, size = 22 }: { text: string; size?: number }) {
+export function Zh({ text, size = 22 }: { text: string; size?: number }) {
   const { readings } = use(LessonDataContext);
   const tokens = readings[text];
   if (tokens) return <RubyText tokens={tokens} size={size} />;
@@ -102,6 +103,14 @@ export function GrammarStep({ step }: { step: Extract<Step, { type: 'grammar' }>
           <ThemedText themeColor="textSecondary">{e.en}</ThemedText>
         </View>
       ))}
+      {step.grammar_id ? (
+        <ThemedText
+          type="link"
+          role="link"
+          onPress={() => router.push({ pathname: '/grammar-note', params: { id: step.grammar_id! } })}>
+          More about this in the grammar library →
+        </ThemedText>
+      ) : null}
     </View>
   );
 }

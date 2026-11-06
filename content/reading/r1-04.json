@@ -1,0 +1,97 @@
+{
+  "id": "r1-04",
+  "level": 1,
+  "kind": "story",
+  "title": "My day",
+  "title_zh": "我的一天",
+  "summary": "A student describes a normal school day from morning to night.",
+  "speakers": [],
+  "names": [],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "我是中学生。",
+      "en": "I'm a secondary school student."
+    },
+    {
+      "zh": "早上我六点半起床。",
+      "en": "In the morning I get up at half past six."
+    },
+    {
+      "zh": "我在家吃早饭，喝牛奶。",
+      "en": "I have breakfast at home and drink milk."
+    },
+    {
+      "zh": "七点半，我坐车去学校。",
+      "en": "At half past seven I take the bus to school."
+    },
+    {
+      "zh": "上午我们上课，我很喜欢汉语课。",
+      "en": "In the morning we have classes; I really like Chinese class."
+    },
+    {
+      "zh": "中午我和同学在学校吃午饭。",
+      "en": "At noon I have lunch at school with my classmates."
+    },
+    {
+      "zh": "下午四点下课，我回家。",
+      "en": "Classes finish at four in the afternoon, and I go home."
+    },
+    {
+      "zh": "晚上我在家看书，写汉字。",
+      "en": "In the evening I read and write characters at home."
+    },
+    {
+      "zh": "有时候我看一点儿电视。",
+      "en": "Sometimes I watch a little TV."
+    },
+    {
+      "zh": "十点我睡觉。",
+      "en": "At ten I go to bed."
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "When does the student get up?",
+      "options": [
+        "6:30",
+        "7:30",
+        "6:00"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 六点半起床.",
+        "7:30 is when they go to school.",
+        "It's 六点半 — half past six."
+      ]
+    },
+    {
+      "prompt": "Where do they have lunch?",
+      "options": [
+        "At school",
+        "At home",
+        "At a restaurant"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 中午我和同学在学校吃午饭.",
+        "Breakfast is at home, not lunch.",
+        "No restaurant is mentioned."
+      ]
+    },
+    {
+      "prompt": "What do they do in the evening?",
+      "options": [
+        "Read and write characters",
+        "Play football",
+        "Go to the cinema"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 晚上我在家看书，写汉字.",
+        "Football isn't mentioned.",
+        "They stay at home in the evening."
+      ]
+    }
+  ]
+}

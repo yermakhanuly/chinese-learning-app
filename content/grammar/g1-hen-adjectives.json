@@ -1,0 +1,34 @@
+{
+  "id": "g1-hen-adjectives",
+  "level": 1,
+  "title": "很 + adjective: describing people and things",
+  "topic": "basics",
+  "summary": "Lets you describe someone or something with an adjective, usually with 很 and no 是, as in 她很高.",
+  "structure": ["Subject + 很 + adjective", "Subject + 不 + adjective"],
+  "explanation": "In Chinese, describing words such as 忙 (busy), 冷 (cold) or 漂亮 (pretty) work like verbs: they don't need 是. 'I am busy' is simply 我很忙.\n\n很 literally means 'very', but in a plain statement it is mostly there to make the sentence sound complete, so 我很好 is just 'I'm fine.' Without 很, a bare adjective sounds like a comparison (今天冷，昨天不冷). For the negative, use 不 and drop 很: 我不忙. To ask, add 吗: 你忙吗？",
+  "examples": [
+    {"zh": "我很忙。", "en": "I'm busy."},
+    {"zh": "今天很冷。", "en": "It's cold today."},
+    {"zh": "这个苹果很好吃。", "en": "This apple is tasty."},
+    {"zh": "她的衣服很漂亮。", "en": "Her clothes are pretty."},
+    {"zh": "这本书不贵。", "en": "This book isn't expensive."}
+  ],
+  "mistakes": [
+    {"wrong": "我是很忙。", "right": "我很忙。", "why": "Describing words don't need 是. Use 很 + adjective."},
+    {"wrong": "今天很不热。", "right": "今天不热。", "why": "For a simple 'not hot', drop 很 and just put 不 before the adjective."}
+  ],
+  "related": ["g1-shi", "g1-tai-le", "g1-youdianr", "g1-bu-negation"],
+  "exercises": [
+    {"type": "fill", "en": "My mum is busy.", "before": "我妈妈", "after": "忙。", "options": ["很", "是", "有"], "answer": 0,
+     "why": ["Correct: 很 + adjective describes someone.", "是 links two nouns; 忙 is a describing word, so no 是.", "有 means 'have'; you don't 'have busy'."]},
+    {"type": "pick", "prompt": "Which means 'The weather is hot today'?", "options": ["今天天气很热。", "今天天气是热。", "今天是天气热。"], "answer": 0,
+     "why": ["Correct: subject + 很 + adjective.", "Don't put 是 before a describing word like 热.", "是 is in the wrong place, and it isn't needed at all."]},
+    {"type": "transform", "instruction": "Make it negative.", "source": "这个饭店很贵。", "options": ["这个饭店不贵。", "这个饭店没贵。", "这个饭店不是很贵吗。"], "answer": 0,
+     "why": ["Correct: drop 很 and put 不 before the adjective.", "没 is for things that didn't happen; adjectives take 不.", "This adds 是 and 吗 and turns it into an odd question."]},
+    {"type": "transform", "instruction": "Turn it into a 吗 question.", "source": "你很忙。", "options": ["你忙吗？", "你是忙吗？", "你吗很忙？"], "answer": 0,
+     "why": ["Correct: in a question 很 is usually dropped, and 吗 goes at the end.", "Describing words don't take 是.", "吗 always goes at the end of the sentence."]},
+    {"type": "order", "en": "This dress is very pretty.", "answer": ["这件", "衣服", "很", "漂亮"], "also": [], "why": "Thing first, then 很, then the describing word. No 是 is needed."},
+    {"type": "fill", "en": "The shop isn't big.", "before": "这个商店", "after": "大。", "options": ["不", "没", "不是"], "answer": 0,
+     "why": ["Correct: describing words are negated with 不.", "没 is for past actions, not for describing words.", "不是 is for nouns (不是老师), not for describing words."]}
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "g1-xihuan-verb",
+  "level": 1,
+  "title": "喜欢 + verb: like doing",
+  "topic": "verbs",
+  "summary": "Lets you say what you like or like doing, as in 我喜欢看书.",
+  "structure": ["Subject + 喜欢 + Noun", "Subject + 喜欢 + Verb (+ Object)", "Subject + 不喜欢 + …"],
+  "explanation": "喜欢 means 'to like'. It takes a thing (我喜欢猫 'I like cats') or an action (我喜欢看书 'I like reading'). There is no '-ing' in Chinese: just put the verb straight after 喜欢.\n\nTo make it stronger, use 很 or 非常: 我很喜欢喝茶. The negative is 不喜欢. To ask, add 吗 or use 喜欢不喜欢.",
+  "examples": [
+    {"zh": "我喜欢看书。", "en": "I like reading."},
+    {"zh": "她很喜欢猫。", "en": "She really likes cats."},
+    {"zh": "你喜欢喝茶吗？", "en": "Do you like drinking tea?"},
+    {"zh": "我爸爸不喜欢看电影。", "en": "My dad doesn't like watching films."},
+    {"zh": "孩子们非常喜欢唱歌。", "en": "The children love singing."}
+  ],
+  "mistakes": [
+    {"wrong": "我喜欢很看书。", "right": "我很喜欢看书。", "why": "很 goes before 喜欢, not before the action."},
+    {"wrong": "我不喜欢吗看电视？", "right": "我不喜欢看电视。", "why": "Don't put 吗 inside the sentence; a statement needs no 吗."}
+  ],
+  "related": ["g1-xiang-yao", "g1-hen-adjectives", "g1-a-bu-a"],
+  "exercises": [
+    {"type": "fill", "en": "I like cooking.", "before": "我喜欢", "after": "。", "options": ["做饭", "做饭的", "很做饭"], "answer": 0,
+     "why": ["Correct: 喜欢 + verb, nothing in between.", "No 的 is needed after the action.", "很 goes before 喜欢, not before 做饭."]},
+    {"type": "order", "en": "My older sister really likes cats.", "answer": ["我姐姐", "很", "喜欢", "猫"], "also": [], "why": "很 comes before 喜欢."},
+    {"type": "transform", "instruction": "Make it negative.", "source": "他喜欢下雨。", "options": ["他不喜欢下雨。", "他没喜欢下雨。", "他喜欢不下雨。"], "answer": 0,
+     "why": ["Correct: 不喜欢 = 'doesn't like'.", "Likes and dislikes take 不, not 没.", "喜欢不下雨 means 'likes it not raining'."]},
+    {"type": "pick", "prompt": "Which asks 'Do you like Chinese food?'", "options": ["你喜欢中国菜吗？", "你喜欢吗中国菜？", "你中国菜喜欢吗吧？"], "answer": 0,
+     "why": ["Correct: … 吗 at the end.", "吗 goes at the end, after the object.", "This mixes 吗 and 吧 and has the wrong order."]},
+    {"type": "fill", "en": "We love playing outside.", "before": "我们", "after": "喜欢在外边玩儿。", "options": ["非常", "是", "在"], "answer": 0,
+     "why": ["Correct: 非常 + 喜欢 = 'love, like very much'.", "是 doesn't go before 喜欢.", "在 here would need a place and doesn't strengthen 喜欢."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["我喜欢学习汉语。", "我喜欢学习汉语了吗。", "喜欢我学习汉语。"], "answer": 0,
+     "why": ["Correct: 喜欢 + verb + object.", "了吗 doesn't belong in this statement.", "The person (我) comes before 喜欢."]}
+  ],
+  "words": ["玩儿"]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "g2-verb-reduplication",
+  "level": 2,
+  "title": "看看, 试试: doing something a little",
+  "topic": "verbs",
+  "summary": "Lets you make an action sound short and relaxed by saying the verb twice, as in 我看看.",
+  "structure": [
+    "Verb + Verb (看看)",
+    "Verb + 一 + Verb (看一看)",
+    "AB + AB (休息休息)"
+  ],
+  "explanation": "Saying a verb twice makes the action sound brief, casual or polite: 我看看 'Let me have a look', 你试试 'Give it a try.' You can also put 一 in the middle: 看一看.\n\nTwo-syllable verbs repeat as a whole: 休息休息 'take a little rest', 介绍介绍 'introduce briefly'. Don't use the doubled verb for something that is happening right now or for a long time.",
+  "examples": [
+    {
+      "zh": "我看看。",
+      "en": "Let me have a look."
+    },
+    {
+      "zh": "你试试这件衣服。",
+      "en": "Try on this piece of clothing."
+    },
+    {
+      "zh": "我们休息休息吧。",
+      "en": "Let's take a little rest."
+    },
+    {
+      "zh": "你给我们介绍介绍吧。",
+      "en": "Tell us a bit about it."
+    },
+    {
+      "zh": "你想一想。",
+      "en": "Think about it for a moment."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我们休休息息吧。",
+      "right": "我们休息休息吧。",
+      "why": "Two-syllable verbs repeat as a whole: AB AB."
+    },
+    {
+      "wrong": "他正在看看书。",
+      "right": "他正在看书。",
+      "why": "Don't double a verb for an action in progress."
+    }
+  ],
+  "related": [
+    "g1-ba-suggestions",
+    "g2-yidianr"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Can I have a look?",
+      "before": "我可以",
+      "after": "吗？",
+      "options": [
+        "看看",
+        "看看了",
+        "看了看了"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 看看 = 'have a look'.",
+        "了 doesn't fit a request.",
+        "This repeats 了 and isn't a request."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'Let's take a little rest'?",
+      "options": [
+        "我们休息休息吧。",
+        "我们休休息息吧。",
+        "我们休息息吧。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: AB AB.",
+        "Don't double each syllable separately.",
+        "Repeat the whole verb, not one syllable."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it sound casual: 'give it a try'.",
+      "source": "你试这个。",
+      "options": [
+        "你试试这个。",
+        "你试这个试。",
+        "你试了试了这个。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 试试 + object.",
+        "The doubled verb stays together.",
+        "了 twice doesn't make it casual."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "Have a look at this book.",
+      "answer": [
+        "你",
+        "看看",
+        "这本",
+        "书"
+      ],
+      "also": [],
+      "why": "The doubled verb 看看 works like a normal verb: it comes before the object."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is wrong?",
+      "options": [
+        "他正在看看书。",
+        "我看看你的书。",
+        "你听听这个歌。"
+      ],
+      "answer": 0,
+      "why": [
+        "Right choice: this one is wrong — a doubled verb doesn't go with 正在.",
+        "This one is fine: 'let me look at your book'.",
+        "This one is fine: 'have a listen to this song'."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Introduce yourself (briefly).",
+      "before": "你",
+      "after": "你自己吧。",
+      "options": [
+        "介绍介绍",
+        "介介绍绍",
+        "介绍了"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: AB AB.",
+        "Don't double the syllables one by one.",
+        "了 makes it a finished action, not a friendly request."
+      ]
+    }
+  ],
+  "words": [
+    "试"
+  ]
+}

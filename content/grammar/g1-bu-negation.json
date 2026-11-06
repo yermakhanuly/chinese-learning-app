@@ -1,0 +1,213 @@
+{
+  "id": "g1-bu-negation",
+  "level": 1,
+  "title": "不: not",
+  "topic": "negation",
+  "summary": "Lets you say no or not by putting 不 before a verb or adjective, as in 我不是老师 and 我不忙.",
+  "structure": [
+    "Subject + 不 + Verb (+ Object)",
+    "Subject + 不 + Adjective",
+    "Subject + 不是 + Noun"
+  ],
+  "explanation": "不 means \"not\" or \"don't\". It is the most common way to say no in Chinese: 我不忙 (I'm not busy), 他不喝茶 (he doesn't drink tea), 我不是老师 (I'm not a teacher).\n\nTo build it, put 不 right before the verb or adjective (a describing word like 忙 or 冷). The verb itself never changes. With adjectives, you usually drop 很, so 我很忙 becomes 我不忙. With 是, just say 不是.\n\nUse 不 for things that are true now, for habits, for what you like or want, and for plans: 我明天不去 (I'm not going tomorrow). One small sound change: 不 is said with a rising tone before a falling-tone word, as in 不是 and 不去. The app's pinyin shows this.\n\nThe big contrast is 不 vs 没有. Use 没有 for things that didn't happen in the past (我昨天没有去) and to say \"don't have\": always say 没有, never 不有.",
+  "examples": [
+    {
+      "zh": "我不是老师。",
+      "en": "I'm not a teacher."
+    },
+    {
+      "zh": "我今天不忙。",
+      "en": "I'm not busy today."
+    },
+    {
+      "zh": "他不喝茶。",
+      "en": "He doesn't drink tea."
+    },
+    {
+      "zh": "明天我不去学校。",
+      "en": "I'm not going to school tomorrow."
+    },
+    {
+      "zh": "我妈妈不喜欢猫，她喜欢狗。",
+      "en": "My mom doesn't like cats. She likes dogs."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我不有钱。",
+      "right": "我没有钱。",
+      "why": "有 is never negated with 不. Always use 没有."
+    },
+    {
+      "wrong": "我昨天不去学校。",
+      "right": "我昨天没有去学校。",
+      "why": "For something that didn't happen in the past, use 没有, not 不."
+    },
+    {
+      "wrong": "我是不老师。",
+      "right": "我不是老师。",
+      "why": "不 goes before the verb, so it comes before 是, not after it."
+    }
+  ],
+  "related": [
+    "g1-meiyou-negation",
+    "g1-shi",
+    "g1-hen-adjectives",
+    "g1-a-bu-a"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I don't like drinking milk.",
+      "before": "我",
+      "after": "喜欢喝牛奶。",
+      "options": [
+        "不",
+        "没有",
+        "是"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 不 negates likes and habits, so 不喜欢 means \"don't like\".",
+        "没有 is for things that didn't happen in the past. For likes and habits, use 不.",
+        "是 means \"am/is\", not \"not\". It can't make 喜欢 negative."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "The weather isn't cold today.",
+      "before": "今天天气",
+      "after": "冷。",
+      "options": [
+        "没有",
+        "不是",
+        "不"
+      ],
+      "answer": 2,
+      "why": [
+        "没有 is for past actions or \"don't have\". To say an adjective is not true, use 不.",
+        "Don't add 是 before an adjective. Say 不冷, not 不是冷.",
+        "Correct: 不 goes straight before the adjective, so 不冷 means \"not cold\"."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "He doesn't have a phone.",
+      "before": "他",
+      "after": "手机。",
+      "options": [
+        "不有",
+        "没有",
+        "很有"
+      ],
+      "answer": 1,
+      "why": [
+        "有 is never negated with 不. 不有 is always wrong.",
+        "Correct: 有 is negated as 没有, meaning \"doesn't have\".",
+        "很 means \"very\" and doesn't make the sentence negative."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means \"I'm not a student\"?",
+      "options": [
+        "我是不学生。",
+        "我不是学生。",
+        "我没有是学生。",
+        "我不学生。"
+      ],
+      "answer": 1,
+      "why": [
+        "不 must come before the verb 是, not after it.",
+        "Correct: 不是 + noun means \"am not a…\".",
+        "是 is negated with 不, never with 没有.",
+        "You still need 是 between 我 and a noun: 我不是学生."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means \"I'm not going to school tomorrow\"?",
+      "options": [
+        "我明天没有去学校。",
+        "我明天去不学校。",
+        "我明天不去学校。"
+      ],
+      "answer": 2,
+      "why": [
+        "没有 is for things that didn't happen. For plans and the future, use 不.",
+        "不 goes before the verb 去, not after it.",
+        "Correct: 不 goes right before the verb, and 不 is used for future plans."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it negative.",
+      "source": "我很忙。",
+      "options": [
+        "我没有忙。",
+        "我不忙。",
+        "我不是忙。",
+        "我很不是忙。"
+      ],
+      "answer": 1,
+      "why": [
+        "To say \"not busy\", use 不, not 没有.",
+        "Correct: drop 很 and put 不 before the adjective, so you get 我不忙.",
+        "Don't use 是 with an adjective. Just say 不忙.",
+        "Adjectives don't take 是. The simple form is 我不忙."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Make it negative.",
+      "source": "她是医生。",
+      "options": [
+        "她不是医生。",
+        "她是不医生。",
+        "她没有是医生。",
+        "她不医生。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: put 不 right before 是, so 不是 means \"is not\".",
+        "不 must come before 是, not after it.",
+        "是 is negated with 不, never with 没有.",
+        "Keep 是 between 她 and the noun: 她不是医生."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "My friend doesn't like watching TV.",
+      "answer": [
+        "我朋友",
+        "不",
+        "喜欢",
+        "看",
+        "电视"
+      ],
+      "also": [],
+      "why": "不 goes right before the verb it negates, here 喜欢."
+    },
+    {
+      "type": "order",
+      "en": "I'm not going to the hospital today.",
+      "answer": [
+        "我",
+        "今天",
+        "不",
+        "去",
+        "医院"
+      ],
+      "also": [
+        [
+          "今天",
+          "我",
+          "不",
+          "去",
+          "医院"
+        ]
+      ],
+      "why": "The time word comes before or after the subject, and 不 goes right before the verb 去."
+    }
+  ]
+}

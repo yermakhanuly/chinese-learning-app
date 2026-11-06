@@ -1,0 +1,114 @@
+{
+  "id": "r1-01",
+  "level": 1,
+  "kind": "story",
+  "title": "My family",
+  "title_zh": "我的家",
+  "summary": "Xiaoyu introduces her family and what everyone does.",
+  "speakers": [],
+  "names": [
+    "小雨",
+    "小白"
+  ],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "我叫小雨，今年十岁。",
+      "en": "My name is Xiaoyu. I'm ten this year."
+    },
+    {
+      "zh": "我家有五口人：爸爸、妈妈、哥哥、妹妹和我。",
+      "en": "There are five people in my family: Dad, Mum, my older brother, my younger sister and me."
+    },
+    {
+      "zh": "我爸爸是医生，他在医院工作。",
+      "en": "My dad is a doctor; he works at a hospital."
+    },
+    {
+      "zh": "我妈妈是老师，她在一个小学工作。",
+      "en": "My mum is a teacher; she works at a primary school."
+    },
+    {
+      "zh": "爸爸妈妈工作都很忙。",
+      "en": "Mum and Dad are both very busy at work."
+    },
+    {
+      "zh": "我哥哥是大学生，他很喜欢学习。",
+      "en": "My older brother is a university student; he loves studying."
+    },
+    {
+      "zh": "我妹妹五岁，她很喜欢猫。",
+      "en": "My younger sister is five; she really likes cats."
+    },
+    {
+      "zh": "我们家的猫叫小白。",
+      "en": "Our cat is called Xiaobai."
+    },
+    {
+      "zh": "晚上我们都在家吃饭。",
+      "en": "In the evening we all eat at home."
+    },
+    {
+      "zh": "我很爱我的家。",
+      "en": "I love my family."
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "How many people are in Xiaoyu's family?",
+      "options": [
+        "Five",
+        "Four",
+        "Six"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我家有五口人.",
+        "Count again: Dad, Mum, brother, sister and Xiaoyu make five.",
+        "The text says 五口人 — five."
+      ]
+    },
+    {
+      "prompt": "What does her dad do?",
+      "options": [
+        "He's a doctor",
+        "He's a teacher",
+        "He's a university student"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我爸爸是医生.",
+        "Her mum is the teacher.",
+        "Her older brother is the university student."
+      ]
+    },
+    {
+      "prompt": "Who likes cats very much?",
+      "options": [
+        "Her younger sister",
+        "Her mum",
+        "Her older brother"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我妹妹……很喜欢猫.",
+        "The text doesn't say Mum likes cats.",
+        "Her brother studies at university; nothing about cats."
+      ]
+    },
+    {
+      "prompt": "Where does the family eat in the evening?",
+      "options": [
+        "At home",
+        "At a restaurant",
+        "At school"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 晚上我们都在家吃饭.",
+        "They eat at home, not at a restaurant.",
+        "School isn't mentioned for dinner."
+      ]
+    }
+  ]
+}

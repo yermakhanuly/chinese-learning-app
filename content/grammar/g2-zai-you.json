@@ -1,0 +1,150 @@
+{
+  "id": "g2-zai-you",
+  "level": 2,
+  "title": "再 / 又: again",
+  "topic": "adverbs",
+  "summary": "Lets you say again about the future with 再 and about the past with 又, as in 明天再来 and 他又来了.",
+  "structure": [
+    "Subject + 再 + Verb (future, requests)",
+    "Subject + 又 + Verb + 了 (it happened again)"
+  ],
+  "explanation": "Both mean 'again', but they look in different directions. 再 is for something that will happen again, or that you ask for: 明天再来吧 'Come again tomorrow', 请再说一遍 'Please say it again.'\n\n又 is for something that has already happened again, often with a little surprise or annoyance: 他又来了 'He came again', 又下雨了 'It's raining again'. 再见 literally means 'see (you) again'.",
+  "examples": [
+    {
+      "zh": "明天再来吧。",
+      "en": "Come again tomorrow."
+    },
+    {
+      "zh": "请再说一遍。",
+      "en": "Please say it again."
+    },
+    {
+      "zh": "他又来了。",
+      "en": "He came again."
+    },
+    {
+      "zh": "又下雨了。",
+      "en": "It's raining again."
+    },
+    {
+      "zh": "我想再看一次这个电影。",
+      "en": "I'd like to see this film once more."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "昨天他再来了。",
+      "right": "昨天他又来了。",
+      "why": "For a repeat that already happened, use 又."
+    },
+    {
+      "wrong": "明天你又来吧。",
+      "right": "明天你再来吧。",
+      "why": "For a future repeat or a request, use 再."
+    }
+  ],
+  "related": [
+    "g2-hai",
+    "g2-action-measure",
+    "g2-xian-ranhou"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "Please write it once more.",
+      "before": "请你",
+      "after": "写一遍。",
+      "options": [
+        "再",
+        "又",
+        "还是"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: a request to repeat = 再.",
+        "又 is for repeats that already happened.",
+        "还是 means 'or' or 'still'."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "It snowed again today.",
+      "before": "今天",
+      "after": "下雪了。",
+      "options": [
+        "又",
+        "再",
+        "也"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: it already happened again = 又.",
+        "再 looks to the future.",
+        "也 means 'also', not 'again'."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'See you tomorrow' (literally 'tomorrow see again')?",
+      "options": [
+        "明天见。",
+        "明天又见。",
+        "明天见再。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 明天见 is the usual way to say it.",
+        "又 is for the past; it doesn't fit a goodbye.",
+        "再 goes before the verb."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Say he did it AGAIN (it already happened).",
+      "source": "他买了一个手机。",
+      "options": [
+        "他又买了一个手机。",
+        "他再买了一个手机。",
+        "他买了又一个手机。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 又 + verb + 了 for a past repeat.",
+        "再 is for future repeats.",
+        "又 goes before the verb."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "I'd like to try once more.",
+      "answer": [
+        "我",
+        "想",
+        "再",
+        "试一次"
+      ],
+      "also": [],
+      "why": "再 goes right before the verb, after 想."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "你明天再来吧。",
+        "你明天又来吧。",
+        "你再明天来吧。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: future + request = 再, before the verb.",
+        "又 is for the past.",
+        "再 goes after the time word, right before the verb."
+      ]
+    }
+  ],
+  "words": [
+    "又",
+    "试",
+    "遍"
+  ]
+}

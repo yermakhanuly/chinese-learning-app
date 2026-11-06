@@ -116,9 +116,10 @@ function playUri(uri: string, mine: number, done: () => void, failed: () => void
 
 /**
  * Says `text` in Chinese. `fallback` is what the device voice reads when there is no clip
- * (e.g. the character for a tone-trainer syllable like "tone:ma3").
+ * (e.g. the character for a tone-trainer syllable like "tone:ma3"). `onEnd` runs when it finishes
+ * playing to the end (not when it's stopped or another sound starts), e.g. to read the next sentence.
  */
-export async function speakChinese(text: string, id = text, fallback = text) {
+export async function speakChinese(text: string, id = text, fallback = text, onEnd?: () => void) {
   const mine = ++turn;
   stopPlayer();
   await Speech.stop();
@@ -126,8 +127,13 @@ export async function speakChinese(text: string, id = text, fallback = text) {
   const voice = recorded ? undefined : await chineseVoice();
   if (mine !== turn) return; // another button was pressed meanwhile
   setPlaying(id);
-  const done = () => {
+  const stopped = () => {
     if (mine === turn) setPlaying(null);
+  };
+  const finished = () => {
+    if (mine !== turn) return;
+    setPlaying(null);
+    onEnd?.();
   };
   const deviceVoice = () => {
     if (mine !== turn) return;
@@ -137,12 +143,12 @@ export async function speakChinese(text: string, id = text, fallback = text) {
       rate: 0.85 * audioSpeed(),
       // iPhone: let the system manage speech audio, so it plays even with the silent switch on.
       useApplicationAudioSession: false,
-      onDone: done,
-      onStopped: done,
-      onError: done,
+      onDone: finished,
+      onStopped: stopped,
+      onError: stopped,
     });
   };
-  if (recorded) playUri(clipUrl(text), mine, done, deviceVoice);
+  if (recorded) playUri(clipUrl(text), mine, finished, deviceVoice);
   else deviceVoice();
 }
 

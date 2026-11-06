@@ -1,0 +1,35 @@
+{
+  "id": "g2-zui",
+  "level": 2,
+  "title": "最: the most",
+  "topic": "comparison",
+  "summary": "Lets you say something is the best, biggest or most, as in 他最高.",
+  "structure": ["Subject + 最 + Adjective", "Subject + 最 + 喜欢 / 想 + …", "最 + Adjective + 的 + Noun"],
+  "explanation": "最 before an adjective means 'the most': 他最高 'He's the tallest', 这个最便宜 'This one is the cheapest.' It also works with verbs of liking and wanting: 我最喜欢吃饺子 'I like dumplings best.'\n\nBefore a noun, add 的: 最好的朋友 'best friend'. Don't add 很 or 太: 最 is already as strong as it gets.",
+  "examples": [
+    {"zh": "他是我们班最高的学生。", "en": "He's the tallest student in our class."},
+    {"zh": "这个最便宜。", "en": "This one is the cheapest."},
+    {"zh": "我最喜欢吃饺子。", "en": "I like dumplings best."},
+    {"zh": "她是我最好的朋友。", "en": "She's my best friend."},
+    {"zh": "星期一我最忙。", "en": "I'm busiest on Mondays."}
+  ],
+  "mistakes": [
+    {"wrong": "他很最高。", "right": "他最高。", "why": "Don't add 很 to 最."},
+    {"wrong": "她是我最好朋友的。", "right": "她是我最好的朋友。", "why": "最 + adjective + 的 + noun."}
+  ],
+  "related": ["g2-bi", "g1-hen-adjectives", "g2-de-describing"],
+  "exercises": [
+    {"type": "fill", "en": "Which one is the most expensive?", "before": "哪个", "after": "贵？", "options": ["最", "很最", "比"], "answer": 0,
+     "why": ["Correct: 最 + adjective.", "Don't put 很 before 最.", "比 needs two things to compare."]},
+    {"type": "order", "en": "I like tea the most.", "answer": ["我", "最", "喜欢", "喝茶"], "also": [], "why": "最 goes before 喜欢."},
+    {"type": "pick", "prompt": "Which means 'my best friend'?", "options": ["我最好的朋友", "我最朋友好", "我好最的朋友"], "answer": 0,
+     "why": ["Correct: 最 + adjective + 的 + noun.", "The adjective goes before the noun.", "最 goes before the adjective."]},
+    {"type": "transform", "instruction": "Say it's the MOST beautiful.", "source": "这件衣服很漂亮。", "options": ["这件衣服最漂亮。", "这件衣服很最漂亮。", "这件衣服漂亮最。"], "answer": 0,
+     "why": ["Correct: replace 很 with 最.", "很 and 最 don't go together.", "最 goes before the adjective."]},
+    {"type": "fill", "en": "I'm busiest on Fridays.", "before": "星期五我", "after": "忙。", "options": ["最", "太", "比"], "answer": 0,
+     "why": ["Correct: 最 = the most.", "太 needs 了 and means 'too'.", "比 needs something to compare with."]},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["他跑得最快。", "他最跑得快。", "他跑得很最快。"], "answer": 0,
+     "why": ["Correct: 最 before the adjective after 得.", "最 belongs before 快.", "Don't add 很."]}
+  ],
+  "words": ["班"]
+}

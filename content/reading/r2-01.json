@@ -1,0 +1,113 @@
+{
+  "id": "r2-01",
+  "level": 2,
+  "kind": "story",
+  "title": "My hobbies",
+  "title_zh": "我的爱好",
+  "summary": "Someone talks about running, football and listening to music.",
+  "speakers": [],
+  "names": [
+    "小王"
+  ],
+  "new_words": [],
+  "sentences": [
+    {
+      "zh": "我有很多爱好，我最喜欢的是运动。",
+      "en": "I have lots of hobbies; my favourite is sport."
+    },
+    {
+      "zh": "每天早上，我都去外面跑步。",
+      "en": "Every morning I go running outside."
+    },
+    {
+      "zh": "我一边跑步一边听歌，一点儿也不累。",
+      "en": "I listen to music while I run, so I don't get tired at all."
+    },
+    {
+      "zh": "我每次跑四十分钟。",
+      "en": "Each time I run for forty minutes."
+    },
+    {
+      "zh": "我还喜欢踢足球。",
+      "en": "I also like playing football."
+    },
+    {
+      "zh": "每个星期六，我跟朋友们一起去学校踢球。",
+      "en": "Every Saturday I go to the school with my friends to play football."
+    },
+    {
+      "zh": "我踢得不太好，但是很快乐。",
+      "en": "I don't play very well, but it makes me happy."
+    },
+    {
+      "zh": "我的朋友小王踢得最好，他从小就开始踢足球了。",
+      "en": "My friend Xiao Wang plays best; he started playing as a child."
+    },
+    {
+      "zh": "晚上回家了，我喜欢看书。",
+      "en": "In the evening, back home, I like reading."
+    },
+    {
+      "zh": "我觉得，有爱好的人，身体好，每天也很高兴。",
+      "en": "I think people with hobbies are healthy and happy every day."
+    }
+  ],
+  "questions": [
+    {
+      "prompt": "What is the writer's favourite hobby?",
+      "options": [
+        "Sport",
+        "Reading",
+        "Drawing"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我最喜欢的是运动.",
+        "Reading is a hobby too, but not the favourite.",
+        "Drawing isn't mentioned."
+      ]
+    },
+    {
+      "prompt": "What do they do while running?",
+      "options": [
+        "Listen to music",
+        "Talk to friends",
+        "Watch TV"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我一边跑步一边听歌.",
+        "They run alone in the park in the morning.",
+        "You can't watch TV while running in the park."
+      ]
+    },
+    {
+      "prompt": "Who plays football best?",
+      "options": [
+        "Xiao Wang",
+        "The writer",
+        "The teacher"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 小王踢得最好.",
+        "The writer says 我踢得不太好.",
+        "No teacher is mentioned."
+      ]
+    },
+    {
+      "prompt": "How long does each run last?",
+      "options": [
+        "40 minutes",
+        "4 minutes",
+        "4 hours"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: 我每次跑四十分钟.",
+        "It's 四十, forty.",
+        "It's minutes (分钟), not hours."
+      ]
+    }
+  ]
+}

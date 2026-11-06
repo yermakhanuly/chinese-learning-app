@@ -47,6 +47,18 @@ npm run data:import     # loads lessons (adds pinyin/traditional and word detail
 
 Delete a lesson's JSON file and re-run `content:draft` to redraft it; or edit the JSON by hand. `src/lib/lessons.ts` describes the format and the checks (only words already taught, valid answers, every HSK word taught once).
 
+### Grammar library and graded reading
+
+`content/grammar/` (outline + one JSON per point, 72 points for HSK 1–2) and `content/reading/` (outline + 20 texts) are written in English + simplified Chinese; `src/lib/grammar.ts` describes the format and the checks (only words of the level — a point may declare up to 4 words it teaches — one explanation per answer option, valid answer keys, two voices per dialogue, text length per level).
+
+```bash
+npm run content:check                      # checks every grammar point and reading (no database needed)
+npm run data:import -- --only=content      # loads lessons, grammar and readings (adds pinyin and word meanings)
+npm run content:grammar                    # optional: Claude drafts missing files (needs ANTHROPIC_API_KEY)
+```
+
+The grammar outline maps each HSK 1 lesson grammar note to its library page (`lesson_notes`); the import adds `grammar_id` to those lesson steps.
+
 ### Characters
 
 `npm run data:import` also loads stroke order and character details from [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) for every character in the HSK words (simplified and traditional forms, ~4,300). `npm run data:import -- --only=characters` reloads just those. Handwriting is checked in `src/lib/stroke-match.ts` (adapted from Hanzi Writer, MIT).
@@ -57,7 +69,8 @@ Put `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION` in `scripts/.env` (git-ignored)
 
 ```bash
 npm run audio:generate                    # neural voices for HSK 1–4 words, their example sentences, lesson
-                                          # sentences and tone syllables → data/audio/ (cache) → LOCAL storage
+                                          # sentences, grammar examples, readings (dialogue lines in each
+                                          # speaker's voice) and tone syllables → data/audio/ (cache) → LOCAL storage
 SUPABASE_URL=… SUPABASE_SERVICE_ROLE_KEY=… npm run audio:generate -- --upload-only   # same files → cloud
 ```
 
@@ -74,6 +87,10 @@ npx supabase secrets set AZURE_SPEECH_KEY=… AZURE_SPEECH_REGION=…  # cloud (
 ### Review (spaced repetition)
 
 Cards live in `review_cards` and are created by the database: finishing a lesson (`complete_lesson`) adds its words, saving a word adds it (trigger), and learners add sentences and their own cards. Each word gets three cards (read, listen, recall). The app schedules them with [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) (FSRS-7, `src/lib/srs.ts`) and saves each answer through `record_review`, which also logs mistakes. `review_queue` builds the day's session: due cards, then new cards up to the learner's daily limit, one direction of a word per day.
+
+### Fixing example-sentence pinyin
+
+`npm run data:import -- --only=sentence-tokens` recomputes the pinyin (and simplified / traditional text) of the example sentences from the Tatoeba originals and updates only the rows that changed. Use it after changing the word splitter (`src/lib/sentences.ts`): a full `data:import` deletes and re-inserts sentences, which also removes learners' sentence review cards.
 
 ### Word topics (AI-tagged, run once)
 
@@ -139,10 +156,10 @@ src/app/            screens (Expo Router: every file is a route)
 src/components/     shared UI (Screen, Card, SegmentedControl, tab bars)
 src/constants/      design tokens (colors incl. tone colors, spacing) and tab list
 src/hooks/          data + theme hooks
-src/lib/            pinyin, vocabulary parsers, lessons, review scheduling (FSRS), Supabase client, auth, storage
+src/lib/            pinyin, vocabulary parsers, lessons, grammar + reading formats, review scheduling (FSRS), audio, Supabase client, auth, storage
 src/providers/      login session (auth) and theme preference
 supabase/           Supabase config (cloud + local) + SQL migrations
-scripts/            data import, icon generation
+scripts/            data import, content drafting + checking, audio generation, icon generation
 e2e/                Playwright tests
 ```
 

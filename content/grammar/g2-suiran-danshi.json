@@ -1,0 +1,35 @@
+{
+  "id": "g2-suiran-danshi",
+  "level": 2,
+  "title": "虽然…但是…: although … but …",
+  "topic": "connectors",
+  "summary": "Lets you contrast two ideas, as in 虽然很贵，但是很好.",
+  "structure": ["虽然 + A，但是 + B", "(Subject +) 虽然…，但是…"],
+  "explanation": "虽然 means 'although' and 但是 means 'but'. In Chinese you use BOTH in the same sentence: 虽然很贵，但是很好 'Although it's expensive, it's good.' (English uses only one of them.)\n\n虽然 can go before or after the subject: 虽然他很忙 / 他虽然很忙. 但是 always starts the second part. In speech, 但是 is often shortened to 但 or replaced by 可是 (HSK 3).",
+  "examples": [
+    {"zh": "虽然很贵，但是很好。", "en": "Although it's expensive, it's good."},
+    {"zh": "他虽然很忙，但是每天都运动。", "en": "Although he's busy, he exercises every day."},
+    {"zh": "虽然下雨了，但是我们还是去了。", "en": "Although it rained, we still went."},
+    {"zh": "汉语虽然很难，但是很有意思。", "en": "Chinese is hard, but it's interesting."},
+    {"zh": "虽然我没去过中国，但是我会说汉语。", "en": "Although I've never been to China, I can speak Chinese."}
+  ],
+  "mistakes": [
+    {"wrong": "虽然很贵，很好。", "right": "虽然很贵，但是很好。", "why": "虽然 needs 但是 in the second part."},
+    {"wrong": "但是很贵，虽然很好。", "right": "虽然很贵，但是很好。", "why": "虽然 comes in the first part, 但是 in the second."}
+  ],
+  "related": ["g2-yinwei-suoyi", "g2-hai"],
+  "exercises": [
+    {"type": "fill", "en": "Although it's far, I like that restaurant.", "before": "虽然很远，", "after": "我喜欢那个饭馆。", "options": ["但是", "所以", "因为"], "answer": 0,
+     "why": ["Correct: 虽然…但是… contrasts two ideas.", "所以 gives a result, not a contrast.", "因为 gives a reason."]},
+    {"type": "order", "en": "Although he's tired, he still goes to work.", "answer": ["他", "虽然", "很累", "但是", "还去上班"], "also": [["虽然", "他", "很累", "但是", "还去上班"]], "why": "虽然 in the first part, 但是 starts the second."},
+    {"type": "pick", "prompt": "Which sentence is correct?", "options": ["虽然天气不好，但是我们去了。", "虽然天气不好，所以我们去了。", "但是天气不好，虽然我们去了。"], "answer": 0,
+     "why": ["Correct.", "虽然 pairs with 但是, not 所以.", "The two words are swapped."]},
+    {"type": "transform", "instruction": "Join them with 虽然…但是….", "source": "这件衣服很漂亮。这件衣服很贵。", "options": ["这件衣服虽然很漂亮，但是很贵。", "这件衣服但是很漂亮，虽然很贵。", "虽然这件衣服很漂亮，所以很贵。"], "answer": 0,
+     "why": ["Correct.", "虽然 must be in the first part.", "所以 doesn't contrast."]},
+    {"type": "fill", "en": "Although I'm busy, I'll help you.", "before": "", "after": "我很忙，但是我会帮你。", "options": ["虽然", "因为", "所以"], "answer": 0,
+     "why": ["Correct: 虽然 = although.", "因为 + 但是 doesn't fit.", "所以 introduces a result."]},
+    {"type": "pick", "prompt": "Which means 'Chinese is difficult, but interesting'?", "options": ["汉语虽然很难，但是很有意思。", "汉语因为很难，所以很有意思。", "汉语很难，因为很有意思。"], "answer": 0,
+     "why": ["Correct: a contrast takes 虽然…但是….", "This says it's interesting because it's hard.", "This gives a reason, not a contrast."]}
+  ],
+  "words": ["难"]
+}

@@ -1,0 +1,210 @@
+{
+  "id": "g1-ne-questions",
+  "level": 1,
+  "title": "呢: and you?",
+  "topic": "questions",
+  "summary": "Lets you bounce a question back or ask about someone else with a short phrase like 你呢？",
+  "structure": [
+    "Statement, + Person/Thing + 呢？",
+    "Person/Thing + 呢？ (asked right after someone has spoken)"
+  ],
+  "explanation": "呢 at the end of a short question means \"and you?\" or \"what about …?\". First you say something about yourself, or hear an answer. Then you put a person or thing before 呢 to ask the same question about them. 我很好，你呢？ means \"I'm fine, and you?\"\n\nIt's easy to build. Take the person or thing you want to ask about and add 呢: 你呢？ 老师呢？ 你们呢？ You don't repeat the verb or the rest of the question. The sentence before it already tells the listener what you're asking.\n\nUse it to keep a chat going. You can bounce a question back after you answer, or turn the talk to someone else. If nothing was said before it, 老师呢？ usually means \"Where's the teacher?\"\n\nDon't mix it up with 吗. 吗 goes at the end of a full sentence and asks yes or no: 你好吗？ 呢 goes after a short phrase and leans on what was just said: 你呢？ Never use both together.",
+  "examples": [
+    {
+      "zh": "我很好，你呢？",
+      "en": "I'm fine, and you?"
+    },
+    {
+      "zh": "我是老师，你呢？",
+      "en": "I'm a teacher. What about you?"
+    },
+    {
+      "zh": "我喜欢喝茶，你呢？",
+      "en": "I like drinking tea. How about you?"
+    },
+    {
+      "zh": "我今年二十岁。他呢？",
+      "en": "I'm twenty this year. What about him?"
+    },
+    {
+      "zh": "妈妈在家。爸爸呢？",
+      "en": "Mom is at home. What about Dad?"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我很好，你吗？",
+      "right": "我很好，你呢？",
+      "why": "吗 needs a full sentence before it, like 你好吗？ To bounce a question back with just 你, use 呢."
+    },
+    {
+      "wrong": "我是学生，呢你？",
+      "right": "我是学生，你呢？",
+      "why": "呢 always comes at the end, after the person or thing you're asking about."
+    },
+    {
+      "wrong": "我喜欢猫，你呢吗？",
+      "right": "我喜欢猫，你呢？",
+      "why": "Use only one question word at the end. 呢 already makes it a question, so don't add 吗."
+    }
+  ],
+  "related": [
+    "g1-ma-questions",
+    "g1-pronouns-greetings",
+    "g1-question-words",
+    "g2-a-ne-particles"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "I'm fine, and you?",
+      "before": "我很好，你",
+      "after": "？",
+      "options": [
+        "吗",
+        "呢",
+        "的",
+        "吧"
+      ],
+      "answer": 1,
+      "why": [
+        "吗 needs a full sentence like 你好吗？. With just 你, use 呢.",
+        "Correct: 你呢？ bounces the question back: \"and you?\"",
+        "的 shows possession (\"your\") and can't end a question like this.",
+        "吧 is for suggestions or guesses, not for \"and you?\"."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I'm a student. What about you?",
+      "before": "我是学生，你",
+      "after": "？",
+      "options": [
+        "吗",
+        "吧",
+        "呢",
+        "了"
+      ],
+      "answer": 2,
+      "why": [
+        "吗 asks a yes-no question about a full sentence. It doesn't work after a lone 你.",
+        "吧 makes a suggestion or guess. It can't mean \"what about you?\".",
+        "Correct: 你呢？ asks the same question back.",
+        "了 marks a finished action or a change. It doesn't make a \"what about\" question."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I like cats. How about you?",
+      "before": "我喜欢猫，",
+      "after": "？",
+      "options": [
+        "呢你",
+        "你吗",
+        "吗你",
+        "你呢"
+      ],
+      "answer": 3,
+      "why": [
+        "呢 must come after the person: 你呢, not 呢你.",
+        "吗 needs a full sentence before it, like 你喜欢猫吗？",
+        "Question particles never come before the person, and 吗 also needs a full sentence. This option breaks both rules.",
+        "Correct: the person comes first, then 呢 at the end."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means \"I'm busy today. What about you?\"",
+      "options": [
+        "我今天很忙，你呢？",
+        "我今天很忙，你吗？",
+        "我今天很忙，呢你？",
+        "我今天很忙，你吧？"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 你呢？ asks \"what about you?\" after your own statement.",
+        "吗 can't follow a lone 你. It needs a full sentence like 你忙吗？",
+        "呢 goes at the end, after the person: 你呢.",
+        "吧 is for suggestions or guesses, not for bouncing a question back."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "我是中国人，你是呢？",
+        "我是中国人，你呢吗？",
+        "我是中国人，你呢？",
+        "我是中国人，呢你是？"
+      ],
+      "answer": 2,
+      "why": [
+        "With 呢 you drop the verb. Say just 你呢, not 你是呢.",
+        "Don't use 呢 and 吗 together. One question particle is enough.",
+        "Correct: the first part sets the topic, and 你呢 asks the same about the listener.",
+        "呢 belongs at the very end, after the person: 你呢."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Shorten the second question with 呢.",
+      "source": "我很好。你好吗？",
+      "options": [
+        "我很好。你吗？",
+        "我很好。你呢？",
+        "我很好。你好呢？",
+        "我很好。呢你？"
+      ],
+      "answer": 1,
+      "why": [
+        "Once you drop 好, 吗 can't stay. A short \"and you?\" needs 呢.",
+        "Correct: 你呢？ replaces the whole question 你好吗？",
+        "With 呢 you drop the repeated part and keep only the person: 你呢.",
+        "呢 goes after the person, not before."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Bounce the question back using 呢.",
+      "source": "我是老师。你是老师吗？",
+      "options": [
+        "我是老师。你是呢？",
+        "我是老师。你呢吗？",
+        "我是老师。你是老师呢？",
+        "我是老师。你呢？"
+      ],
+      "answer": 3,
+      "why": [
+        "Don't keep the verb. 呢 follows just the person, so say 你呢.",
+        "Use only one question particle. 呢 and 吗 don't go together.",
+        "呢 doesn't turn a full sentence into a yes-no question. Either keep 你是老师吗？ or shorten it to 你呢？",
+        "Correct: 你呢？ means \"and you?\" and repeats nothing."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "What about your teacher?",
+      "answer": [
+        "你们",
+        "老师",
+        "呢"
+      ],
+      "also": [],
+      "why": "Put the person first and 呢 at the very end."
+    },
+    {
+      "type": "order",
+      "en": "What about your Chinese friend?",
+      "answer": [
+        "你",
+        "的",
+        "中国",
+        "朋友",
+        "呢"
+      ],
+      "also": [],
+      "why": "The whole phrase for the person comes first, and 呢 closes the question."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "g1-le-change",
+  "level": 1,
+  "title": "了: change (now it's…)",
+  "topic": "aspect",
+  "summary": "Lets you say a situation has changed by adding 了 at the end, as in 天冷了.",
+  "structure": ["Subject + Adjective + 了", "Subject + 不 + Verb + 了", "Time / age + 了"],
+  "explanation": "了 at the end of a sentence can show a NEW situation: 天冷了 'It's got cold (now).' 我不忙了 'I'm not busy any more' and 他十岁了 'He's ten now' work the same way.\n\nWith 不 it means 'not any more': 我不喝茶了 'I don't drink tea any more.' 现在八点了 'It's eight o'clock now.' This 了 is about change, not about a finished action.",
+  "examples": [
+    {"zh": "天冷了。", "en": "It's getting cold."},
+    {"zh": "我不忙了。", "en": "I'm not busy any more."},
+    {"zh": "他十岁了。", "en": "He's ten now."},
+    {"zh": "现在八点了，我们上课吧。", "en": "It's eight now, let's start class."},
+    {"zh": "下雨了。", "en": "It's started raining."}
+  ],
+  "mistakes": [
+    {"wrong": "我了不喝茶。", "right": "我不喝茶了。", "why": "This 了 goes at the end of the sentence."},
+    {"wrong": "我没喝茶了。", "right": "我不喝茶了。", "why": "'Not any more' is 不 … 了, not 没 … 了."}
+  ],
+  "related": ["g1-le-completed", "g1-tai-le", "g2-kuaiyao-le"],
+  "exercises": [
+    {"type": "fill", "en": "It's hot now.", "before": "天气热", "after": "。", "options": ["了", "吗", "的"], "answer": 0,
+     "why": ["Correct: 了 at the end shows a new situation.", "吗 would make it a question.", "的 doesn't show change."]},
+    {"type": "transform", "instruction": "Say 'not any more'.", "source": "我喝咖啡。", "options": ["我不喝咖啡了。", "我没喝咖啡了。", "我了不喝咖啡。"], "answer": 0,
+     "why": ["Correct: 不 + verb … 了.", "没 … 了 is wrong for 'not any more'.", "了 goes at the end."]},
+    {"type": "pick", "prompt": "Which means 'My daughter is five now'?", "options": ["我女儿五岁了。", "我女儿了五岁。", "我女儿是五岁了吗。"], "answer": 0,
+     "why": ["Correct: age + 了.", "了 goes at the end.", "This adds 是 and 吗 and isn't a statement."]},
+    {"type": "order", "en": "It's started snowing.", "answer": ["下", "雪", "了"], "also": [], "why": "了 at the very end shows the change: now it is snowing."},
+    {"type": "fill", "en": "It's ten o'clock now; time to sleep.", "before": "现在十点", "after": "，睡觉吧。", "options": ["了", "吧", "呢"], "answer": 0,
+     "why": ["Correct: 了 shows the time has come.", "吧 already ends the second part.", "呢 doesn't show a change here."]},
+    {"type": "pick", "prompt": "Your friend was ill but is fine now. You say:", "options": ["他好了。", "他好。", "他没好了。"], "answer": 0,
+     "why": ["Correct: 好了 = 'is better now'.", "Without 了 there's no sense of change.", "没 … 了 doesn't work here."]}
+  ],
+  "words": ["咖啡"]
+}

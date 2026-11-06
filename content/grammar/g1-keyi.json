@@ -1,0 +1,35 @@
+{
+  "id": "g1-keyi",
+  "level": 1,
+  "title": "可以: may, can (permission)",
+  "topic": "verbs",
+  "summary": "Lets you ask for and give permission, as in 我可以坐这儿吗？",
+  "structure": ["Subject + 可以 + Verb", "Subject + 可以 + Verb + 吗？", "Subject + 不可以 + Verb"],
+  "explanation": "可以 + verb means 'may, be allowed to': 你可以走了 'You can go now.' To ask permission, add 吗: 我可以坐这儿吗？'May I sit here?' Answer with 可以 (yes) or 不可以 / 不行 (no).\n\n可以 is about permission or what is possible. For a skill you have learned ('can swim'), Chinese uses 会 instead.",
+  "examples": [
+    {"zh": "我可以坐这儿吗？", "en": "May I sit here?"},
+    {"zh": "你可以用我的电脑。", "en": "You can use my computer."},
+    {"zh": "这里可以打电话吗？", "en": "Can I make a phone call here?"},
+    {"zh": "上课的时候不可以说话。", "en": "You may not talk during class."},
+    {"zh": "可以，请坐。", "en": "Yes, please sit down."}
+  ],
+  "mistakes": [
+    {"wrong": "我可以说汉语，我学了两年。", "right": "我会说汉语，我学了两年。", "why": "A learned skill uses 会, not 可以."},
+    {"wrong": "我可以吗坐这儿？", "right": "我可以坐这儿吗？", "why": "吗 goes at the end of the whole sentence."}
+  ],
+  "related": ["g1-hui-skill", "g2-neng", "g1-ma-questions"],
+  "exercises": [
+    {"type": "fill", "en": "May I ask a question?", "before": "我", "after": "问一个问题吗？", "options": ["可以", "会", "是"], "answer": 0,
+     "why": ["Correct: 可以 asks for permission.", "会 is for learned skills, not permission.", "是 doesn't go before a verb like this."]},
+    {"type": "pick", "prompt": "Which is a polite way to ask if you can sit here?", "options": ["我可以坐这儿吗？", "我会坐这儿吗？", "我坐这儿可以不？"], "answer": 0,
+     "why": ["Correct: 可以 + verb + 吗.", "会 would ask whether you know how to sit.", "The word order is off; say 我可以坐这儿吗？"]},
+    {"type": "transform", "instruction": "Make it negative ('may not').", "source": "这里可以吃东西。", "options": ["这里不可以吃东西。", "这里没可以吃东西。", "这里可以不吃东西。"], "answer": 0,
+     "why": ["Correct: 不可以 means 'may not'.", "可以 is negated with 不, not 没.", "可以不吃 means 'it's OK not to eat' — a different idea."]},
+    {"type": "order", "en": "You can use my phone.", "answer": ["你", "可以", "用", "我的", "手机"], "also": [], "why": "可以 goes right before the verb 用."},
+    {"type": "pick", "prompt": "Someone asks 我可以看看吗？ ('May I have a look?'). How do you say yes?", "options": ["可以，你看吧。", "会，你看吧。", "是可以吗。"], "answer": 0,
+     "why": ["Correct: answer a 可以 question with 可以.", "会 is about skills; it doesn't answer a permission question.", "This turns your answer into another question."]},
+    {"type": "fill", "en": "I can speak Chinese (I learned it).", "before": "我", "after": "说汉语。", "options": ["会", "可以", "要"], "answer": 0,
+     "why": ["Correct: a learned skill uses 会.", "可以 is permission; for a skill you have learned, use 会.", "要 means 'want to / going to', not 'can'."]}
+  ],
+  "words": ["用"]
+}

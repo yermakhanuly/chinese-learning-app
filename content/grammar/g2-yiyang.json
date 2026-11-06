@@ -1,0 +1,152 @@
+{
+  "id": "g2-yiyang",
+  "level": 2,
+  "title": "跟…一样: the same as",
+  "topic": "comparison",
+  "summary": "Lets you say two things are the same, as in 我跟他一样高.",
+  "structure": [
+    "A + 跟 / 和 + B + 一样",
+    "A + 跟 + B + 一样 + Adjective",
+    "A + 跟 + B + 不一样"
+  ],
+  "explanation": "A 跟 B 一样 means 'A is the same as B'. Add an adjective to say in what way: 我跟他一样高 'I'm as tall as he is.' 和 can replace 跟.\n\nThe negative is 不一样 'different': 我的手机跟你的不一样. Note where 不 goes: before 一样, not before 跟.",
+  "examples": [
+    {
+      "zh": "我跟他一样高。",
+      "en": "I'm as tall as him."
+    },
+    {
+      "zh": "今天跟昨天一样冷。",
+      "en": "Today is as cold as yesterday."
+    },
+    {
+      "zh": "我的手机跟你的一样。",
+      "en": "My phone is the same as yours."
+    },
+    {
+      "zh": "中国菜跟日本菜不一样。",
+      "en": "Chinese food is different from Japanese food."
+    },
+    {
+      "zh": "她和她妈妈一样漂亮。",
+      "en": "She's as pretty as her mum."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "我一样高跟他。",
+      "right": "我跟他一样高。",
+      "why": "The order is A + 跟 + B + 一样 + adjective."
+    },
+    {
+      "wrong": "我不跟他一样高。",
+      "right": "我跟他不一样高。",
+      "why": "不 goes before 一样."
+    }
+  ],
+  "related": [
+    "g2-bi",
+    "g2-meiyou-name",
+    "g2-gen-yiqi"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "This book is as expensive as that one.",
+      "before": "这本书跟那本书",
+      "after": "贵。",
+      "options": [
+        "一样",
+        "比",
+        "很"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 跟…一样 + adjective = as … as.",
+        "比 would need no 跟.",
+        "很 doesn't compare."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Say they're different.",
+      "source": "我的书包跟你的一样。",
+      "options": [
+        "我的书包跟你的不一样。",
+        "我的书包不跟你的一样。",
+        "我的书包跟你的一样不。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 不 before 一样.",
+        "不 doesn't go before 跟 here.",
+        "不 can't go at the end."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "My brother is as tall as my dad.",
+      "answer": [
+        "我哥哥",
+        "跟",
+        "我爸爸",
+        "一样",
+        "高"
+      ],
+      "also": [],
+      "why": "A + 跟 + B + 一样 + adjective."
+    },
+    {
+      "type": "pick",
+      "prompt": "Which sentence is correct?",
+      "options": [
+        "今天跟昨天一样热。",
+        "今天跟昨天一样很热。",
+        "今天一样跟昨天热。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: this follows the pattern exactly.",
+        "Don't add 很 after 一样.",
+        "一样 comes after B."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "Her answer is different from mine.",
+      "before": "她的回答跟我的",
+      "after": "。",
+      "options": [
+        "不一样",
+        "没一样",
+        "一样不"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 不一样 = different.",
+        "一样 is negated with 不, not 没.",
+        "不 goes before 一样."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'I like the same things as you'?",
+      "options": [
+        "我跟你喜欢的一样。",
+        "我喜欢一样跟你。",
+        "一样我跟你喜欢。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: A 跟 B … 一样.",
+        "一样 must come after 跟 + B.",
+        "The order is scrambled."
+      ]
+    }
+  ],
+  "words": [
+    "一样",
+    "日本",
+    "回答"
+  ]
+}

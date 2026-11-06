@@ -1,0 +1,233 @@
+{
+  "id": "g1-numbers",
+  "level": 1,
+  "title": "Numbers and 第: counting and first, second",
+  "topic": "basics",
+  "summary": "Lets you count, read phone and room numbers digit by digit, and say first, second, third with 第.",
+  "structure": [
+    "Number + measure word + noun (三个朋友)",
+    "第 + number + measure word (+ noun) (第二本书)",
+    "Phone / room number: read digit by digit (三零二)"
+  ],
+  "explanation": "Chinese numbers are very regular. Learn 一 to 十 (1–10), plus 零 (0). Bigger numbers are built like building blocks: 十一 is 'ten-one' (11), 二十 is 'two-ten' (20), and 二十八 is 'two-ten-eight' (28). Be careful with the order: 十二 is 12, but 二十 is 20. Ten is just 十, never 一十.\n\nTo count things, put a measure word (a small counting word like 个 or 本) between the number and the noun: 三个朋友 (three friends), 五本书 (five books). When you count two of something, use 两, not 二: 两个弟弟 (two younger brothers).\n\nPhone numbers and room numbers are read one digit at a time, and 0 is 零: room 302 is 三零二, and a phone number is just a long chain of digits like 一三八六二五七九零四一.\n\nTo say first, second, third, put 第 in front of the number: 第一 (first), 第二 (second), 第三 (third). Then add the measure word and noun as usual: 第二本书 (the second book), 第三个学生 (the third student). Don't mix them up: 两本书 means 'two books', but 第二本书 means 'the second book'. After 第 you always say 二, never 两.",
+  "examples": [
+    {
+      "zh": "我有三个朋友。",
+      "en": "I have three friends."
+    },
+    {
+      "zh": "他今年二十八岁。",
+      "en": "He is twenty-eight this year."
+    },
+    {
+      "zh": "我的房间是四零六。",
+      "en": "My room is 406."
+    },
+    {
+      "zh": "我的电话是一三八六二五七九零四一。",
+      "en": "My phone number is 13862579041."
+    },
+    {
+      "zh": "这是我的第二本中文书。",
+      "en": "This is my second Chinese book."
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "他是家里的二个孩子。",
+      "right": "他是家里的第二个孩子。",
+      "why": "To say 'second', you need 第 in front of the number. 二个 alone isn't correct (and 'two children' would be 两个孩子)."
+    },
+    {
+      "wrong": "这是第一书。",
+      "right": "这是第一本书。",
+      "why": "After 第 + number, you still need a measure word before the noun: 第一本书, 第三个人."
+    },
+    {
+      "wrong": "我有一十本书。",
+      "right": "我有十本书。",
+      "why": "Ten is just 十. Don't put 一 in front of it."
+    }
+  ],
+  "related": [
+    "g1-measure-words",
+    "g1-ji-duoshao",
+    "g1-dates-time",
+    "g2-big-numbers"
+  ],
+  "exercises": [
+    {
+      "type": "fill",
+      "en": "This is my second book.",
+      "before": "这是我的",
+      "after": "本书。",
+      "options": [
+        "第二",
+        "两",
+        "二",
+        "二第"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 第 + number means 'second', and 第二 comes before the measure word 本.",
+        "两本书 means 'two books', not 'the second book'.",
+        "二 alone just means 'two'. You need 第 to say 'second', and 二本 is not used for counting anyway.",
+        "第 always comes before the number: 第二, not 二第."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "I have two younger brothers.",
+      "before": "我有",
+      "after": "个弟弟。",
+      "options": [
+        "两",
+        "第二",
+        "第两",
+        "二"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: when you count two of something with a measure word, use 两: 两个弟弟.",
+        "第二个弟弟 means 'the second younger brother', not 'two younger brothers'.",
+        "After 第 you say 二, never 两, and this sentence is about counting, not order.",
+        "Before a measure word like 个, 'two' is 两, not 二."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "He is fifteen this year.",
+      "before": "他今年",
+      "after": "岁。",
+      "options": [
+        "十五",
+        "五十",
+        "一十五",
+        "五十一"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 15 is 'ten-five', 十五.",
+        "五十 is 'five-ten', which is 50, not 15.",
+        "Ten is just 十. Don't add 一 in front: 十五, not 一十五.",
+        "五十一 is 51. For 15, 十 comes first: 十五."
+      ]
+    },
+    {
+      "type": "fill",
+      "en": "My phone number is 6025.",
+      "before": "我的电话是",
+      "after": "。",
+      "options": [
+        "六零二五",
+        "六千零二十五",
+        "第六零二五",
+        "六二五"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: phone numbers are read digit by digit, and 0 is 零.",
+        "Phone numbers are not read as one big number. Just read each digit: 六零二五.",
+        "第 is only for order (first, second). Don't use it with phone numbers.",
+        "You can't skip the 0. Read it as 零: 六零二五."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "Which means 'the first day'?",
+      "options": [
+        "第一天",
+        "一天",
+        "天第一",
+        "第一个天"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 第一 + 天 means 'the first day'. 天 doesn't need a measure word.",
+        "一天 means 'one day', not 'the first day'. Add 第 to show order.",
+        "第一 must come before the noun: 第一天, not 天第一.",
+        "天 doesn't take the measure word 个. Just say 第一天."
+      ]
+    },
+    {
+      "type": "pick",
+      "prompt": "How do you say 'My room is 302'?",
+      "options": [
+        "我的房间是三零二。",
+        "我的房间是第三零二。",
+        "我的房间是三二。",
+        "我的房间是三十二。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: room numbers are read digit by digit, with 零 for 0.",
+        "Don't use 第 with room numbers. 第 is only for first, second, third and so on.",
+        "You can't drop the 0. Say it as 零: 三零二.",
+        "三十二 is 32. Read room numbers one digit at a time: 三零二."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Change 'two books' into 'the second book'.",
+      "source": "这是两本书。",
+      "options": [
+        "这是第二本书。",
+        "这是第两本书。",
+        "这是二本书。",
+        "这是第二书。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 第二 + measure word 本 + 书 means 'the second book'.",
+        "After 第 you always say 二, never 两.",
+        "Without 第, this doesn't mean 'second'. Put 第 before the number.",
+        "You still need the measure word 本 after 第二: 第二本书."
+      ]
+    },
+    {
+      "type": "transform",
+      "instruction": "Change it to 'I want the first one.'",
+      "source": "我要一个。",
+      "options": [
+        "我要第一个。",
+        "我要一第个。",
+        "我要第一的。",
+        "我要个第一。"
+      ],
+      "answer": 0,
+      "why": [
+        "Correct: 第 + 一 + 个 means 'the first one'.",
+        "第 must come before the number: 第一个, not 一第个.",
+        "Use the measure word 个 after 第一, not 的: 第一个.",
+        "The order is 第 + number + measure word: 第一个."
+      ]
+    },
+    {
+      "type": "order",
+      "en": "She is the third student.",
+      "answer": [
+        "她",
+        "是",
+        "第三",
+        "个",
+        "学生"
+      ],
+      "also": [],
+      "why": "第 + number comes first, then the measure word, then the noun: 第三个学生."
+    },
+    {
+      "type": "order",
+      "en": "Today is my first day at work.",
+      "answer": [
+        "今天",
+        "是",
+        "我",
+        "上班",
+        "的",
+        "第一天"
+      ],
+      "also": [],
+      "why": "The describing part 我上班的 comes before 第一天, and 第 goes right before the number."
+    }
+  ]
+}
