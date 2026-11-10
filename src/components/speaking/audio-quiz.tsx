@@ -8,6 +8,7 @@ import { ThemedText } from '@/components/themed-text';
 import { SpeakButton } from '@/components/word-parts';
 import { Radius, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
+import { useSaveQuizOnce } from '@/hooks/use-progress';
 import { speakChinese } from '@/lib/speech';
 
 export type AudioQuestion = {
@@ -25,12 +26,20 @@ export type AudioQuestion = {
 };
 
 /** Listen → pick the answer, 10 questions, then a score. Audio plays when each question appears. */
-export function AudioQuiz({ questions }: { questions: AudioQuestion[] }) {
+export function AudioQuiz({
+  questions,
+  record,
+}: {
+  questions: AudioQuestion[];
+  /** Where the result counts for XP: listening or tone quiz, and which one. */
+  record: { kind: 'listening' | 'tones'; ref: string };
+}) {
   const theme = useTheme();
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [right, setRight] = useState(0);
   const q = questions[index];
+  useSaveQuizOnce(record.kind, record.ref, right, questions.length, !q);
 
   useEffect(() => {
     if (q) speakChinese(q.audio, `quiz-${index}`, q.fallback ?? q.audio);

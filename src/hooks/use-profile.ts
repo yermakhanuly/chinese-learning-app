@@ -2,7 +2,9 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { ImageManipulator, SaveFormat } from 'expo-image-manipulator';
 import * as ImagePicker from 'expo-image-picker';
 
-import type { DailyGoal, ExplanationLanguage, LearningGoal, NewCardsPerDay, Script, SelfLevel } from '@/constants/profile-options';
+import type {
+  DailyGoal,
+  DailyXpGoal, ExplanationLanguage, LearningGoal, NewCardsPerDay, Script, SelfLevel } from '@/constants/profile-options';
 import { AVATAR_BUCKET, avatarPath, base64ToBytes } from '@/lib/avatar';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/providers/auth';
@@ -14,6 +16,12 @@ export type Profile = {
   learning_goal: LearningGoal | null;
   self_level: SelfLevel | null;
   daily_goal_minutes: DailyGoal;
+  /** Daily goal in XP (Phase 8). */
+  daily_goal_xp: DailyXpGoal;
+  /** Shown on the weekly leaderboard (Phase 8, off by default). */
+  leaderboard_opt_in: boolean;
+  /** IANA time zone, for streaks and the weekly leaderboard. */
+  time_zone: string;
   script: Script;
   explanation_language: ExplanationLanguage;
   onboarded_at: string | null;
@@ -28,7 +36,7 @@ export type Profile = {
 export type ProfileUpdate = Partial<Omit<Profile, 'id'>>;
 
 const COLUMNS =
-  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at, start_lesson_id, placed_at, new_cards_per_day';
+  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at, start_lesson_id, placed_at, new_cards_per_day, daily_goal_xp, leaderboard_opt_in, time_zone';
 
 /** The signed-in learner's profile. Refetched when the app/tab regains focus, so edits sync across devices. */
 export function useProfile() {

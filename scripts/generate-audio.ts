@@ -105,6 +105,18 @@ async function collectItems(db: SupabaseClient): Promise<Item[]> {
     for (const ex of g.exercises) if (ex.type === 'transform' && ex.source) add(ex.source, 'sentence', g.hsk_level);
   }
 
+  // Mock HSK tests: listening recordings (dialogue lines alternate female / male).
+  const { data: mocks, error: mockError } = await db.from('mock_tests').select('hsk_level, sections');
+  if (mockError) throw mockError;
+  for (const m of mocks as { hsk_level: number; sections: { questions: { type: string; audio?: string | string[] }[] }[] }[]) {
+    for (const q of m.sections.flatMap((s) => s.questions)) {
+      if (q.type === 'listen-judge' && typeof q.audio === 'string') add(q.audio, 'sentence', m.hsk_level, escapeXml(q.audio), FEMALE);
+      if (q.type === 'listen-choice' && Array.isArray(q.audio)) {
+        q.audio.forEach((line, i) => add(line, 'sentence', m.hsk_level, escapeXml(line), i % 2 ? MALE : FEMALE));
+      }
+    }
+  }
+
   for (const p of TONE_PAIRS) for (const w of p.words) add(w, 'word', words.get(w) ?? null);
   for (const s of TONE_SYLLABLES) {
     s.chars.forEach((ch, i) => {

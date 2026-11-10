@@ -1,0 +1,328 @@
+{
+  "id": "hsk2",
+  "level": 2,
+  "title": "Mock HSK 2",
+  "minutes": 30,
+  "sections": [
+    {
+      "id": "listening",
+      "title": "听力 Listening",
+      "instructions": "Each recording can be played twice. For ★ questions, decide whether the statement matches what you heard.",
+      "questions": [
+        {
+          "type": "listen-judge",
+          "audio": "我每天早上跑步，跑半个小时。",
+          "statement": "★ 他每天跑步。",
+          "answer": true,
+          "why": "我每天早上跑步 — he runs every morning."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "我家离公司很远，所以我每天坐地铁去上班。",
+          "statement": "★ 他家离公司很近。",
+          "answer": false,
+          "why": "离公司很远 — it's far, not close."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "这件衣服虽然有点儿贵，但是很漂亮。",
+          "statement": "★ 他觉得这件衣服很便宜。",
+          "answer": false,
+          "why": "有点儿贵 — a bit expensive."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "我已经吃过饭了，你们吃吧。",
+          "statement": "★ 他已经吃饭了。",
+          "answer": true,
+          "why": "我已经吃过饭了 — he has already eaten."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "今天比昨天冷，你多穿一点儿衣服。",
+          "statement": "★ 昨天比今天冷。",
+          "answer": false,
+          "why": "今天比昨天冷 — today is colder than yesterday, not the other way round."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "我是坐飞机来的，飞了两个小时。",
+          "statement": "★ 他是坐飞机来的。",
+          "answer": true,
+          "why": "我是坐飞机来的 — he came by plane."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "电影快要开始了，我们快进去吧。",
+          "statement": "★ 电影已经开始了。",
+          "answer": false,
+          "why": "快要开始了 — it's about to start; it hasn't started yet."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "我弟弟踢足球踢得很好。",
+          "statement": "★ 他弟弟会踢足球。",
+          "answer": true,
+          "why": "踢得很好 — he plays football well."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你喝咖啡还是喝茶？",
+            "我喝咖啡，不要茶。"
+          ],
+          "question": "男的想喝什么？",
+          "options": [
+            "茶",
+            "咖啡",
+            "水"
+          ],
+          "answer": 1,
+          "why": "我喝咖啡 — coffee."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你的手机找到了吗？",
+            "找到了，在我的书包里。"
+          ],
+          "question": "手机在哪儿？",
+          "options": [
+            "书包里",
+            "桌子上",
+            "床上"
+          ],
+          "answer": 0,
+          "why": "在我的书包里 — in the schoolbag."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你为什么没来上课？",
+            "因为我生病了，头很疼。"
+          ],
+          "question": "女的为什么没来上课？",
+          "options": [
+            "她很忙",
+            "她生病了",
+            "她去旅游了"
+          ],
+          "answer": 1,
+          "why": "因为我生病了 — because she was ill."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "从这儿到机场要多长时间？",
+            "打车要四十分钟。"
+          ],
+          "question": "打车去机场要多长时间？",
+          "options": [
+            "十四分钟",
+            "四十分钟",
+            "四个小时"
+          ],
+          "answer": 1,
+          "why": "四十分钟 — forty minutes."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "请问，洗手间在哪儿？",
+            "往前走，在左边。"
+          ],
+          "question": "洗手间在哪儿？",
+          "options": [
+            "右边",
+            "左边",
+            "楼上"
+          ],
+          "answer": 1,
+          "why": "在左边 — on the left."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "这条裤子怎么样？",
+            "太长了，我不要。"
+          ],
+          "question": "这条裤子怎么了？",
+          "options": [
+            "太长了",
+            "太贵了",
+            "颜色不好"
+          ],
+          "answer": 0,
+          "why": "太长了 — too long."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你什么时候开始学汉语的？",
+            "我是去年开始学的。"
+          ],
+          "question": "男的什么时候开始学汉语？",
+          "options": [
+            "今年",
+            "去年",
+            "明年"
+          ],
+          "answer": 1,
+          "why": "去年开始学的 — last year."
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "title": "阅读 Reading",
+      "instructions": "Choose the best answer. For ★ questions, decide whether the statement matches the text.",
+      "questions": [
+        {
+          "type": "read-choice",
+          "text": "你身体怎么样？",
+          "options": [
+            "很好，谢谢。",
+            "我很高。",
+            "我很忙。"
+          ],
+          "answer": 0,
+          "why": "身体怎么样 asks about health: 很好，谢谢. 我很忙 says you're busy, not how you feel."
+        },
+        {
+          "type": "read-choice",
+          "text": "你去过中国吗？",
+          "options": [
+            "去过两次。",
+            "我去中国。",
+            "中国很大吗？"
+          ],
+          "answer": 0,
+          "why": "去过…吗 asks about experience: 去过两次 (been twice)."
+        },
+        {
+          "type": "read-choice",
+          "text": "我们一起去吃饭，怎么样？",
+          "options": [
+            "好啊，走吧！",
+            "我吃过两次。",
+            "饭很好吃。"
+          ],
+          "answer": 0,
+          "why": "A suggestion: agree with 好啊，走吧！"
+        },
+        {
+          "type": "read-choice",
+          "text": "你等了多长时间？",
+          "options": [
+            "二十分钟。",
+            "两点。",
+            "两次。"
+          ],
+          "answer": 0,
+          "why": "多长时间 asks how long: 二十分钟."
+        },
+        {
+          "type": "read-choice",
+          "text": "你的生日是几月几号？",
+          "options": [
+            "九月十号。",
+            "星期三。",
+            "下午三点。"
+          ],
+          "answer": 0,
+          "why": "几月几号 asks a date: 九月十号."
+        },
+        {
+          "type": "read-choice",
+          "text": "他跑___很快。",
+          "options": [
+            "得",
+            "的",
+            "了"
+          ],
+          "answer": 0,
+          "why": "Verb + 得 + how: 跑得很快."
+        },
+        {
+          "type": "read-choice",
+          "text": "我___他高。",
+          "options": [
+            "比",
+            "和",
+            "跟"
+          ],
+          "answer": 0,
+          "why": "A 比 B + adjective: 我比他高."
+        },
+        {
+          "type": "read-choice",
+          "text": "门开___，请进。",
+          "options": [
+            "着",
+            "过",
+            "得"
+          ],
+          "answer": 0,
+          "why": "开着 — (the door) is open."
+        },
+        {
+          "type": "read-choice",
+          "text": "外面下雨了，你___出去了。",
+          "options": [
+            "别",
+            "没",
+            "不是"
+          ],
+          "answer": 0,
+          "why": "别…了 — don't (go out)."
+        },
+        {
+          "type": "read-choice",
+          "text": "我___没吃早饭呢。",
+          "options": [
+            "还",
+            "再",
+            "都"
+          ],
+          "answer": 0,
+          "why": "还没…呢 — not yet."
+        },
+        {
+          "type": "read-judge",
+          "text": "我妻子很喜欢运动，她每个星期去游泳三次。",
+          "statement": "★ 他妻子经常游泳。",
+          "answer": true,
+          "why": "每个星期去游泳三次 — three times a week, so often."
+        },
+        {
+          "type": "read-judge",
+          "text": "这家商场离我家不远，走路十五分钟就到了。",
+          "statement": "★ 商场离他家很远。",
+          "answer": false,
+          "why": "离我家不远 — not far."
+        },
+        {
+          "type": "read-judge",
+          "text": "我同学虽然学了一年汉语，但是说得非常好。",
+          "statement": "★ 他同学汉语说得不好。",
+          "answer": false,
+          "why": "说得非常好 — the classmate speaks very well."
+        },
+        {
+          "type": "read-judge",
+          "text": "我们去书店买了书，再去饭馆吃饭。",
+          "statement": "★ 他们吃了饭，再去书店买书。",
+          "answer": false,
+          "why": "It's the other way round: they buy books first, then (再) go to the restaurant."
+        },
+        {
+          "type": "read-judge",
+          "text": "明天要考试了，所以今天晚上我要在家准备。",
+          "statement": "★ 他明天有考试。",
+          "answer": true,
+          "why": "明天要考试了 — there's an exam tomorrow."
+        }
+      ]
+    }
+  ]
+}

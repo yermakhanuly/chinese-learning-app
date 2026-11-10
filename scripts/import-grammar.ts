@@ -18,6 +18,7 @@ import {
   type GrammarPoint,
   type ReadingText,
 } from '../src/lib/grammar.ts';
+import { checkMock, mockTexts, type MockTest } from '../src/lib/mock-test.ts';
 import { buildLexicon, buildTradToSimp, hanCount, tokenize, type Lexicon, type Token } from '../src/lib/sentences.ts';
 import type { DictionaryRow, WordRow } from '../src/lib/vocab-parsers.ts';
 
@@ -140,5 +141,28 @@ export async function importGrammar(db: SupabaseClient, root: string, words: Wor
     const { error } = await db.from('reading_texts').upsert(rows, { onConflict: 'id' });
     if (error) throw new Error(`reading_texts: ${error.message}`);
     console.log(`✔ reading: ${rows.length} texts`);
+  }
+
+  // Mock HSK tests
+  const mockRows = [];
+  for (const level of [1, 2]) {
+    const file = join(root, 'content', 'mock', `hsk${level}.json`);
+    if (!existsSync(file)) continue;
+    const test: MockTest = JSON.parse(readFileSync(file, 'utf8'));
+    const found = checkMock(test, upTo(level), lex);
+    if (found.length) console.warn(`  mock ${test.id}: ${found.length} problems (first: ${found[0]})`);
+    mockRows.push({
+      id: test.id,
+      hsk_level: test.level,
+      title: test.title,
+      minutes: test.minutes,
+      sections: test.sections,
+      readings: readingsFor(mockTexts(test).map((t) => t.replace(/___/g, '')), lex, t2s),
+    });
+  }
+  if (mockRows.length) {
+    const { error } = await db.from('mock_tests').upsert(mockRows, { onConflict: 'id' });
+    if (error) throw new Error(`mock_tests: ${error.message}`);
+    console.log(`✔ mock tests: ${mockRows.length}`);
   }
 }

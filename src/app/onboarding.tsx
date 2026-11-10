@@ -8,12 +8,12 @@ import { TextField } from '@/components/text-field';
 import { ThemedText } from '@/components/themed-text';
 import { TutorialSlides } from '@/components/tutorial-slides';
 import {
-  DAILY_GOALS,
+  DAILY_XP_GOALS,
   EXPLANATION_LANGUAGES,
   LEARNING_GOALS,
   SCRIPTS,
   SELF_LEVELS,
-  type DailyGoal,
+  type DailyXpGoal,
   type ExplanationLanguage,
   type LearningGoal,
   type Script,
@@ -47,7 +47,7 @@ export default function OnboardingScreen() {
   const [name, setName] = useState(profile?.display_name ?? '');
   const [goal, setGoal] = useState<LearningGoal | null>(profile?.learning_goal ?? null);
   const [level, setLevel] = useState<SelfLevel | null>(profile?.self_level ?? null);
-  const [daily, setDaily] = useState<DailyGoal>(profile?.daily_goal_minutes ?? 10);
+  const [daily, setDaily] = useState<DailyXpGoal>(profile?.daily_goal_xp ?? 20);
   const [script, setScript] = useState<Script>(profile?.script ?? 'simplified');
   const [language, setLanguage] = useState<ExplanationLanguage>(profile?.explanation_language ?? 'en');
   const [error, setError] = useState<string | null>(null);
@@ -75,7 +75,7 @@ export default function OnboardingScreen() {
         display_name: name.trim(),
         learning_goal: goal,
         self_level: level,
-        daily_goal_minutes: daily,
+        daily_goal_xp: daily,
         script,
         explanation_language: language,
         tutorial_completed_at: now,
@@ -116,7 +116,7 @@ export default function OnboardingScreen() {
       {step === 'goal' ? <ChoiceList label="Learning goal" options={LEARNING_GOALS} value={goal} onChange={setGoal} /> : null}
       {step === 'level' ? <ChoiceList label="Chinese level" options={SELF_LEVELS} value={level} onChange={setLevel} /> : null}
       {step === 'daily' ? (
-        <ChoiceList label="Daily goal" options={DAILY_GOALS} value={daily} onChange={setDaily} layout="grid" />
+        <ChoiceList label="Daily goal" options={DAILY_XP_GOALS} value={daily} onChange={setDaily} layout="grid" />
       ) : null}
       {step === 'script' ? <ChoiceList label="Writing system" options={SCRIPTS} value={script} onChange={setScript} /> : null}
       {step === 'language' ? (

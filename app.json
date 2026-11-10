@@ -41,7 +41,14 @@
           "microphonePermission": "Allow $(PRODUCT_NAME) to use the microphone so you can record yourself and get pronunciation feedback.",
           "enableBackgroundPlayback": false
         }
-      ]
+      ],
+      [
+        "expo-notifications",
+        {
+          "enableRemoteNotifications": false
+        }
+      ],
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true,

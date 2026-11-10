@@ -27,10 +27,17 @@ export const AUDIO_SPEEDS: { value: AudioSpeed; label: string }[] = [
   { value: '0.5', label: '0.5×' },
 ];
 
-type Prefs = { showPinyin: boolean; hanziSize: HanziSize; toneColors: boolean; audioSpeed: AudioSpeed };
+type Prefs = {
+  showPinyin: boolean;
+  hanziSize: HanziSize;
+  toneColors: boolean;
+  audioSpeed: AudioSpeed;
+  /** Daily study reminder on this device (iPhone notification), as "HH:MM", or null when off. */
+  reminderTime: string | null;
+};
 
 const KEY = 'display-preferences';
-const DEFAULTS: Prefs = { showPinyin: true, hanziSize: 'medium', toneColors: true, audioSpeed: '1' };
+const DEFAULTS: Prefs = { showPinyin: true, hanziSize: 'medium', toneColors: true, audioSpeed: '1', reminderTime: null };
 
 const listeners = new Set<() => void>();
 let cached: Prefs | null = null;
@@ -44,6 +51,7 @@ function read(): Prefs {
       hanziSize: parsed.hanziSize && parsed.hanziSize in HANZI_SCALE ? parsed.hanziSize : DEFAULTS.hanziSize,
       toneColors: typeof parsed.toneColors === 'boolean' ? parsed.toneColors : DEFAULTS.toneColors,
       audioSpeed: AUDIO_SPEEDS.some((s) => s.value === parsed.audioSpeed) ? parsed.audioSpeed! : DEFAULTS.audioSpeed,
+      reminderTime: typeof parsed.reminderTime === 'string' && /^\d{2}:\d{2}$/.test(parsed.reminderTime) ? parsed.reminderTime : null,
     };
   } catch {
     cached = DEFAULTS;

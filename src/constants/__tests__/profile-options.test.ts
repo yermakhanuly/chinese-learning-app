@@ -3,6 +3,7 @@ import path from 'node:path';
 
 import {
   DAILY_GOALS,
+  DAILY_XP_GOALS,
   EXPLANATION_LANGUAGES,
   LEARNING_GOALS,
   NEW_CARDS_PER_DAY,
@@ -12,7 +13,7 @@ import {
 } from '@/constants/profile-options';
 
 const migrations = path.join(__dirname, '../../../supabase/migrations');
-const migration = ['20261105000000_profiles.sql', '20261108000000_review.sql']
+const migration = ['20261105000000_profiles.sql', '20261108000000_review.sql', '20261112000000_progress.sql']
   .map((f) => fs.readFileSync(path.join(migrations, f), 'utf8'))
   .join('\n');
 
@@ -28,6 +29,7 @@ describe('profile options match the database', () => {
     ['learning_goal', LEARNING_GOALS],
     ['self_level', SELF_LEVELS],
     ['daily_goal_minutes', DAILY_GOALS],
+    ['daily_goal_xp', DAILY_XP_GOALS],
     ['script', SCRIPTS],
     ['explanation_language', EXPLANATION_LANGUAGES],
     ['new_cards_per_day', NEW_CARDS_PER_DAY],

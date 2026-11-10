@@ -59,6 +59,14 @@ npm run content:grammar                    # optional: Claude drafts missing fil
 
 The grammar outline maps each HSK 1 lesson grammar note to its library page (`lesson_notes`); the import adds `grammar_id` to those lesson steps.
 
+### Progress, XP and mock tests
+
+XP is recorded by the database, never by the app: triggers on `lesson_progress`, `review_log`, `grammar_progress`, `reading_progress` and `pronunciation_usage` add `activity` rows; quizzes without their own table call `complete_quiz` (checked, at most 40 a day per kind) and mock tests `complete_mock`. Levels, the streak (one freeze per week), badges, challenges and HSK readiness are computed from that in `src/lib/progress.ts`. The leaderboard (`weekly_leaderboard`) lists only learners who joined it (Profile → Progress & reminders → Weekly leaderboard).
+
+Mock tests are `content/mock/hsk1.json` and `hsk2.json` (format and checks in `src/lib/mock-test.ts`, run with `npm run content:check`; loaded by `npm run data:import -- --only=content`).
+
+Study reminders on iPhone use `expo-notifications` (a local notification, no push server): adding it needs a new development build (`npx expo run:ios` or `eas build --profile development`). On the web, Home shows a banner instead.
+
 ### Characters
 
 `npm run data:import` also loads stroke order and character details from [Make Me a Hanzi](https://github.com/skishore/makemeahanzi) for every character in the HSK words (simplified and traditional forms, ~4,300). `npm run data:import -- --only=characters` reloads just those. Handwriting is checked in `src/lib/stroke-match.ts` (adapted from Hanzi Writer, MIT).

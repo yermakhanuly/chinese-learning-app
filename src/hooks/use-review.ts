@@ -18,7 +18,7 @@ export type NotebookEntry = {
 export type CustomCard = { id: string; front: string; back: string; zh: string | null; created_at: string };
 
 /** Everything that changes when cards are added or reviewed. */
-const REVIEW_KEYS = ['review-summary', 'review-queue', 'mistakes', 'custom-cards', 'grammar-mistakes'];
+const REVIEW_KEYS = ['review-summary', 'review-queue', 'mistakes', 'custom-cards', 'grammar-mistakes', 'progress'];
 
 export function useInvalidateReview() {
   const queryClient = useQueryClient();

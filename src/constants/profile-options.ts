@@ -3,6 +3,7 @@
 export type LearningGoal = 'travel' | 'business' | 'hsk_exam' | 'study_abroad' | 'casual';
 export type SelfLevel = 'beginner' | 'elementary' | 'intermediate' | 'advanced';
 export type DailyGoal = 5 | 10 | 15 | 20 | 30;
+export type DailyXpGoal = 10 | 20 | 30 | 50;
 export type Script = 'simplified' | 'traditional';
 export type ExplanationLanguage = 'en';
 export type NewCardsPerDay = 5 | 10 | 20 | 30 | 50;
@@ -30,6 +31,14 @@ export const DAILY_GOALS: Option<DailyGoal>[] = [
   { value: 15, label: '15 min', description: 'Serious' },
   { value: 20, label: '20 min', description: 'Intense' },
   { value: 30, label: '30 min', description: 'Committed' },
+];
+
+/** Daily goal in XP (Phase 8): one lesson ≈ 15 XP, one review card ≈ 1 XP. */
+export const DAILY_XP_GOALS: Option<DailyXpGoal>[] = [
+  { value: 10, label: '10 XP', description: 'Casual · ~5 min' },
+  { value: 20, label: '20 XP', description: 'Regular · ~10 min' },
+  { value: 30, label: '30 XP', description: 'Serious · ~15 min' },
+  { value: 50, label: '50 XP', description: 'Intense · ~25 min' },
 ];
 
 export const SCRIPTS: Option<Script>[] = [

@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
 import { audioKey } from '@/lib/audio-key';
 import { bytesToBase64 } from '@/lib/base64';
@@ -60,6 +60,7 @@ export type PronunciationResult = {
 
 /** Sends a recording to the pronounce Edge Function (Azure pronunciation assessment). */
 export function useScorePronunciation() {
+  const queryClient = useQueryClient();
   return useMutation({
     mutationFn: async ({ text, wav }: { text: string; wav: Uint8Array }): Promise<PronunciationResult> => {
       const { data, error } = await supabase.functions.invoke('pronounce', { body: { text, audio: bytesToBase64(wav) } });
@@ -71,6 +72,8 @@ export function useScorePronunciation() {
       }
       return data as PronunciationResult;
     },
+    // Each check earns XP.
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['progress'] }),
   });
 }
 

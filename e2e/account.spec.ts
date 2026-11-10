@@ -31,7 +31,7 @@ test.describe('accounts & onboarding (Phase 1)', () => {
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByRole('radio', { name: 'Elementary' }).click();
     await page.getByRole('button', { name: 'Continue' }).click();
-    await page.getByRole('radio', { name: '20 min' }).click();
+    await page.getByRole('radio', { name: /^30 XP/ }).click();
     await page.getByRole('button', { name: 'Continue' }).click();
     await page.getByRole('radio', { name: 'Traditional' }).click();
     await page.getByRole('button', { name: 'Continue' }).click();
@@ -45,7 +45,7 @@ test.describe('accounts & onboarding (Phase 1)', () => {
 
     await expect(page.getByRole('heading', { name: '你好, Mei!' })).toBeVisible();
     await expect(page.getByText('HSK exam')).toBeVisible();
-    await expect(page.getByText('Daily target: 20 min a day.', { exact: false })).toBeVisible();
+    await expect(page.getByText('Daily goal: 30 XP a day.', { exact: false })).toBeVisible();
 
     // Session and profile survive a reload.
     await page.reload();
@@ -63,15 +63,15 @@ test.describe('accounts & onboarding (Phase 1)', () => {
     await logIn(laptop, email);
 
     await phone.goto('/profile');
-    await phone.getByRole('radio', { name: '30 min' }).click();
-    await expect(phone.getByRole('radio', { name: '30 min' })).toHaveAttribute('aria-checked', 'true');
+    await phone.getByRole('radio', { name: /^50 XP/ }).click();
+    await expect(phone.getByRole('radio', { name: /^50 XP/ })).toHaveAttribute('aria-checked', 'true');
     await phone.getByLabel('Name', { exact: true }).fill('Sync Renamed');
     await phone.getByLabel('Name', { exact: true }).press('Enter');
     await expect(phone.getByText('Saved ✓')).toBeVisible();
 
     await laptop.reload();
     await expect(laptop.getByRole('heading', { name: '你好, Sync Renamed!' })).toBeVisible();
-    await expect(laptop.getByText('Daily target: 30 min a day.', { exact: false })).toBeVisible();
+    await expect(laptop.getByText('Daily goal: 50 XP a day.', { exact: false })).toBeVisible();
   });
 
   test('log out and log back in; wrong password is explained', async ({ page }) => {

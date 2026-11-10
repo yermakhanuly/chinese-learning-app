@@ -54,6 +54,15 @@ export default function LearnScreen() {
           {!session ? (
             <ThemedText themeColor="textSecondary">Lessons are free to try. Log in to save your progress.</ThemedText>
           ) : null}
+          <Card title="Mock HSK tests 模拟考试">
+            <ThemedText themeColor="textSecondary">
+              Timed listening and reading tests in the HSK 1 and HSK 2 format, scored out of 200.
+            </ThemedText>
+            <View style={styles.mockButtons}>
+              <Button label="Mock HSK 1" variant="secondary" onPress={() => router.push({ pathname: '/mock-test', params: { level: '1' } })} />
+              <Button label="Mock HSK 2" variant="secondary" onPress={() => router.push({ pathname: '/mock-test', params: { level: '2' } })} />
+            </View>
+          </Card>
           <Card title="Grammar 语法">
             <ThemedText themeColor="textSecondary">
               72 HSK 1–2 grammar points with patterns, examples, common mistakes and exercises.
@@ -203,6 +212,7 @@ function LessonRow({ lesson, score, isNext, skipped }: { lesson: LessonSummary; 
 }
 
 const styles = StyleSheet.create({
+  mockButtons: { gap: Spacing.two },
   flex: { flex: 1 },
   continue: { borderRadius: Radius.large, padding: Spacing.four, gap: Spacing.two },
   unit: { borderRadius: Radius.medium, borderWidth: StyleSheet.hairlineWidth, padding: Spacing.three, gap: Spacing.two },

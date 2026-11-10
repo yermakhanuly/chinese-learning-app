@@ -34,12 +34,12 @@ function SentenceQuiz({ level }: { level: number }) {
   if (clips.isError || english.isError) return <Failed />;
   if (!english.data) return <ActivityIndicator />;
   if (english.data.length < 4) return <ThemedText>No recorded sentences for this level yet.</ThemedText>;
-  return <SentenceQuizReady sentences={english.data} />;
+  return <SentenceQuizReady sentences={english.data} level={level} />;
 }
 
-function SentenceQuizReady({ sentences }: { sentences: { simplified: string; english: string }[] }) {
+function SentenceQuizReady({ sentences, level }: { sentences: { simplified: string; english: string }[]; level: number }) {
   const [questions] = useState(() => sentenceMeaningQuestions(sentences));
-  return <AudioQuiz questions={questions} />;
+  return <AudioQuiz questions={questions} record={{ kind: 'listening', ref: `sentence-${level}` }} />;
 }
 
 function WordQuiz({ level }: { level: number }) {
@@ -48,10 +48,10 @@ function WordQuiz({ level }: { level: number }) {
   const info = useWordsInfo(sample);
   if (clips.isError || info.isError) return <Failed />;
   if (!info.data) return <ActivityIndicator />;
-  return <WordQuizReady words={[...info.data.values()]} />;
+  return <WordQuizReady words={[...info.data.values()]} level={level} />;
 }
 
-function WordQuizReady({ words }: { words: WordPinyin[] }) {
+function WordQuizReady({ words, level }: { words: WordPinyin[]; level: number }) {
   const [questions] = useState(() => wordCharacterQuestions(words));
-  return <AudioQuiz questions={questions} />;
+  return <AudioQuiz questions={questions} record={{ kind: 'listening', ref: `word-${level}` }} />;
 }

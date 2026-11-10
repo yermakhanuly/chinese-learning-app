@@ -6,7 +6,8 @@ import { Button } from '@/components/button';
 
 import { Card } from '@/components/card';
 import { SearchField } from '@/components/dictionary-controls';
-import { DAILY_GOALS, LEARNING_GOALS, SELF_LEVELS, labelFor } from '@/constants/profile-options';
+import { DAILY_XP_GOALS, LEARNING_GOALS, SELF_LEVELS, labelFor } from '@/constants/profile-options';
+import { ProgressSummaryCard, StudyReminderBanner } from '@/components/progress/progress-parts';
 import { Screen } from '@/components/screen';
 import { PressableLink } from '@/components/pressable-link';
 import { ThemedText } from '@/components/themed-text';
@@ -27,6 +28,8 @@ export default function HomeScreen() {
     <Screen title={name ? `你好, ${name}!` : '你好!'} subtitle="Nǐ hǎo! Welcome to HSK Chinese.">
       <HomeSearch />
       <TodaysLesson />
+      {session ? <StudyReminderBanner /> : null}
+      {session ? <ProgressSummaryCard /> : null}
       {session ? <ReviewsDue /> : null}
       {session ? (
         profile ? (
@@ -37,7 +40,7 @@ export default function HomeScreen() {
               {labelFor(SELF_LEVELS, profile.self_level)}
             </ThemedText>
             <ThemedText themeColor="textSecondary">
-              Daily target: {labelFor(DAILY_GOALS, profile.daily_goal_minutes)} a day.
+              Daily goal: {labelFor(DAILY_XP_GOALS, profile.daily_goal_xp)} a day.
             </ThemedText>
           </Card>
         ) : null

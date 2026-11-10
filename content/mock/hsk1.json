@@ -1,0 +1,328 @@
+{
+  "id": "hsk1",
+  "level": 1,
+  "title": "Mock HSK 1",
+  "minutes": 25,
+  "sections": [
+    {
+      "id": "listening",
+      "title": "听力 Listening",
+      "instructions": "Each recording can be played twice. For ★ questions, decide whether the statement matches what you heard.",
+      "questions": [
+        {
+          "type": "listen-judge",
+          "audio": "我有一个哥哥，没有妹妹。",
+          "statement": "★ 他有妹妹。",
+          "answer": false,
+          "why": "He says 没有妹妹 — he has no younger sister, only an older brother."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "今天很冷，我不想去外边。",
+          "statement": "★ 今天天气很冷。",
+          "answer": true,
+          "why": "今天很冷 — it is cold today."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "我妈妈是医生，她在医院工作。",
+          "statement": "★ 他妈妈是老师。",
+          "answer": false,
+          "why": "His mum is a doctor (医生), not a teacher."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "明天是星期六，我们去看电影吧。",
+          "statement": "★ 明天是星期六。",
+          "answer": true,
+          "why": "明天是星期六 — tomorrow is Saturday."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "这个苹果五块钱，太贵了。",
+          "statement": "★ 他觉得苹果很便宜。",
+          "answer": false,
+          "why": "He says 太贵了 — too expensive, not cheap."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "我昨天下午去商店买了一些水果。",
+          "statement": "★ 他昨天去商店了。",
+          "answer": true,
+          "why": "昨天下午去商店 — he went to the shop yesterday afternoon."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "我会说汉语，可以写一点儿汉字。",
+          "statement": "★ 他不会说汉语。",
+          "answer": false,
+          "why": "我会说汉语 — he can speak Chinese."
+        },
+        {
+          "type": "listen-judge",
+          "audio": "现在八点，我要去学校了。",
+          "statement": "★ 现在是八点。",
+          "answer": true,
+          "why": "现在八点 — it's eight o'clock now."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你想喝什么？",
+            "我想喝茶。"
+          ],
+          "question": "她想喝什么？",
+          "options": [
+            "茶",
+            "水",
+            "牛奶"
+          ],
+          "answer": 0,
+          "why": "The answer is 我想喝茶 — tea."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你家有几口人？",
+            "我家有四口人。"
+          ],
+          "question": "他家有几口人？",
+          "options": [
+            "三口",
+            "四口",
+            "五口"
+          ],
+          "answer": 1,
+          "why": "我家有四口人 — four people."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你在哪儿工作？",
+            "我在一个公司工作。"
+          ],
+          "question": "他在哪儿工作？",
+          "options": [
+            "医院",
+            "学校",
+            "公司"
+          ],
+          "answer": 2,
+          "why": "我在一个公司工作 — at a company."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你的手机呢？",
+            "在桌子上。"
+          ],
+          "question": "手机在哪儿？",
+          "options": [
+            "椅子下",
+            "桌子上",
+            "房间外边"
+          ],
+          "answer": 1,
+          "why": "在桌子上 — on the table."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你什么时候回家？",
+            "下午四点。"
+          ],
+          "question": "他几点回家？",
+          "options": [
+            "四点",
+            "十点",
+            "八点"
+          ],
+          "answer": 0,
+          "why": "下午四点 — four in the afternoon."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "你今年多大？",
+            "我今年二十岁。"
+          ],
+          "question": "她今年多大？",
+          "options": [
+            "十二岁",
+            "二十岁",
+            "十岁"
+          ],
+          "answer": 1,
+          "why": "二十岁 — twenty (not 十二, twelve)."
+        },
+        {
+          "type": "listen-choice",
+          "audio": [
+            "我们坐出租车去吧。",
+            "好，我们坐出租车去医院。"
+          ],
+          "question": "他们怎么去医院？",
+          "options": [
+            "坐飞机",
+            "坐火车",
+            "坐出租车"
+          ],
+          "answer": 2,
+          "why": "坐出租车 — by taxi."
+        }
+      ]
+    },
+    {
+      "id": "reading",
+      "title": "阅读 Reading",
+      "instructions": "Choose the best answer. For ★ questions, decide whether the statement matches the text.",
+      "questions": [
+        {
+          "type": "read-choice",
+          "text": "你叫什么名字？",
+          "options": [
+            "我叫小雨。",
+            "我是中国人。",
+            "我很好。"
+          ],
+          "answer": 0,
+          "why": "The question asks for a name: 我叫小雨."
+        },
+        {
+          "type": "read-choice",
+          "text": "你是哪国人？",
+          "options": [
+            "我在家。",
+            "我是中国人。",
+            "我去中国。"
+          ],
+          "answer": 1,
+          "why": "哪国人 asks nationality: 我是中国人."
+        },
+        {
+          "type": "read-choice",
+          "text": "这个多少钱？",
+          "options": [
+            "三个。",
+            "三块。",
+            "三点。"
+          ],
+          "answer": 1,
+          "why": "多少钱 asks a price: 三块 (three yuan)."
+        },
+        {
+          "type": "read-choice",
+          "text": "谢谢你！",
+          "options": [
+            "不客气。",
+            "没关系。",
+            "再见。"
+          ],
+          "answer": 0,
+          "why": "The reply to 谢谢 is 不客气 (you're welcome). 没关系 answers 对不起."
+        },
+        {
+          "type": "read-choice",
+          "text": "对不起！",
+          "options": [
+            "不客气。",
+            "没关系。",
+            "谢谢。"
+          ],
+          "answer": 1,
+          "why": "The reply to 对不起 (sorry) is 没关系 (it's OK)."
+        },
+        {
+          "type": "read-choice",
+          "text": "我___一本书。",
+          "options": [
+            "买",
+            "喝",
+            "坐"
+          ],
+          "answer": 0,
+          "why": "You buy (买) a book; you don't drink or sit a book."
+        },
+        {
+          "type": "read-choice",
+          "text": "她在家___饭。",
+          "options": [
+            "做",
+            "看",
+            "听"
+          ],
+          "answer": 0,
+          "why": "做饭 means 'to cook'."
+        },
+        {
+          "type": "read-choice",
+          "text": "我们___飞机去中国。",
+          "options": [
+            "坐",
+            "开",
+            "叫"
+          ],
+          "answer": 0,
+          "why": "坐飞机 — to go by plane."
+        },
+        {
+          "type": "read-choice",
+          "text": "今天下___了，很冷。",
+          "options": [
+            "雨",
+            "水",
+            "天"
+          ],
+          "answer": 0,
+          "why": "下雨 — to rain."
+        },
+        {
+          "type": "read-choice",
+          "text": "我___喜欢喝茶。",
+          "options": [
+            "很",
+            "是",
+            "在"
+          ],
+          "answer": 0,
+          "why": "很喜欢 — to like very much."
+        },
+        {
+          "type": "read-judge",
+          "text": "我是大学生，现在在中国学习汉语。我很喜欢中国菜。",
+          "statement": "★ 他在中国学习。",
+          "answer": true,
+          "why": "现在在中国学习汉语 — he's studying in China now."
+        },
+        {
+          "type": "read-judge",
+          "text": "我家有一个小狗，它很喜欢吃米饭。",
+          "statement": "★ 他家有一个猫。",
+          "answer": false,
+          "why": "His family has a dog (狗), not a cat."
+        },
+        {
+          "type": "read-judge",
+          "text": "昨天我生病了，没去上班，在家睡了一天。",
+          "statement": "★ 他昨天去上班了。",
+          "answer": false,
+          "why": "没去上班 — he didn't go to work."
+        },
+        {
+          "type": "read-judge",
+          "text": "这家饭店的饺子很好吃，也不贵。",
+          "statement": "★ 这家饭店的饺子很便宜。",
+          "answer": true,
+          "why": "不贵 — not expensive, i.e. cheap."
+        },
+        {
+          "type": "read-judge",
+          "text": "星期天我和朋友去看电影，电影很好看。",
+          "statement": "★ 他星期天一个人去看电影。",
+          "answer": false,
+          "why": "He went with a friend (和朋友), not alone."
+        }
+      ]
+    }
+  ]
+}

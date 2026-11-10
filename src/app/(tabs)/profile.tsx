@@ -7,12 +7,13 @@ import { Button } from '@/components/button';
 import { ReadingSettings } from '@/components/dictionary-controls';
 import { Card } from '@/components/card';
 import { ChoiceList } from '@/components/choice-list';
+import { ProgressSettings } from '@/components/progress/reminder-settings';
 import { Screen } from '@/components/screen';
 import { SegmentedControl } from '@/components/segmented-control';
 import { TextField } from '@/components/text-field';
 import { ThemedText } from '@/components/themed-text';
 import {
-  DAILY_GOALS,
+  DAILY_XP_GOALS,
   EXPLANATION_LANGUAGES,
   LEARNING_GOALS,
   NEW_CARDS_PER_DAY,
@@ -49,6 +50,7 @@ export default function ProfileScreen() {
         <>
           <AccountHeader profile={profile.data} email={session.user.email ?? null} />
           <LearningSettings profile={profile.data} />
+          <ProgressSettings />
         </>
       ) : profile.isError ? (
         <Card>
@@ -177,9 +179,9 @@ function LearningSettings({ profile }: { profile: Profile }) {
         <ChoiceList
           label="Daily goal"
           layout="grid"
-          options={short(DAILY_GOALS)}
-          value={profile.daily_goal_minutes}
-          onChange={(daily_goal_minutes) => update.mutate({ daily_goal_minutes })}
+          options={short(DAILY_XP_GOALS)}
+          value={profile.daily_goal_xp}
+          onChange={(daily_goal_xp) => update.mutate({ daily_goal_xp })}
         />
       </Field>
       <Field label="New review cards per day">

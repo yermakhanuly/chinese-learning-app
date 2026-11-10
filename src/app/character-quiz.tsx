@@ -19,6 +19,7 @@ import {
   type CharacterSummary,
 } from '@/hooks/use-characters';
 import { useHydrated } from '@/hooks/use-hydrated';
+import { useSaveQuizOnce } from '@/hooks/use-progress';
 import { useTheme } from '@/hooks/use-theme';
 import { lookAlikeQuestions, pickWritingCharacters, recognitionQuestions, type ChoiceQuestion } from '@/lib/character-quiz';
 import { useAuth } from '@/providers/auth';
@@ -64,7 +65,7 @@ function RecognitionQuiz({ level }: { level: number }) {
   const list = useCharacterList(level);
   const questions = useMemo(() => (list.data ? recognitionQuestions(list.data) : null), [list.data]);
   if (!questions) return <Loading error={list.isError} />;
-  return <ChoiceQuiz questions={questions} />;
+  return <ChoiceQuiz questions={questions} quizRef={`recognition-${level}`} />;
 }
 
 function LookAlikeQuiz() {
@@ -72,17 +73,17 @@ function LookAlikeQuiz() {
   const info = useCharacterSummaries(all);
   const questions = useMemo(() => (info.data ? lookAlikeQuestions(LOOK_ALIKES, info.data) : null), [info.data]);
   if (!questions) return <Loading error={info.isError} />;
-  return <ChoiceQuiz questions={questions} />;
+  return <ChoiceQuiz questions={questions} quizRef="lookalike" />;
 }
 
 /** Prompt (sound + meaning) → pick the character. */
-function ChoiceQuiz({ questions }: { questions: ChoiceQuestion[] }) {
+function ChoiceQuiz({ questions, quizRef }: { questions: ChoiceQuestion[]; quizRef: string }) {
   const theme = useTheme();
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [right, setRight] = useState(0);
 
-  if (index >= questions.length) return <Result right={right} total={questions.length} />;
+  if (index >= questions.length) return <Result right={right} total={questions.length} quiz={quizRef} />;
   const q = questions[index];
   const correct = picked === q.target.character;
 
@@ -170,7 +171,7 @@ function WriteSession({ chars, info }: { chars: string[]; info: NonNullable<Retu
   const [perfect, setPerfect] = useState(0);
   const [done, setDone] = useState<null | { perfect: boolean }>(null);
 
-  if (index >= chars.length) return <Result right={perfect} total={chars.length} unit="perfect" />;
+  if (index >= chars.length) return <Result right={perfect} total={chars.length} unit="perfect" quiz="write" />;
   const c = info.get(chars[index])!;
   return (
     <View style={styles.gap}>
@@ -211,7 +212,8 @@ function WriteSession({ chars, info }: { chars: string[]; info: NonNullable<Retu
   );
 }
 
-function Result({ right, total, unit = 'right' }: { right: number; total: number; unit?: string }) {
+function Result({ right, total, unit = 'right', quiz }: { right: number; total: number; unit?: string; quiz: string }) {
+  useSaveQuizOnce('characters', quiz, right, total, true);
   return (
     <Card title={right === total ? 'Excellent! 🎉' : 'Quiz complete'}>
       <ThemedText type="subtitle" role="status">

@@ -94,6 +94,7 @@ export function useCompleteGrammar() {
       Promise.all([
         queryClient.invalidateQueries({ queryKey: ['grammar-progress', session?.user.id] }),
         queryClient.invalidateQueries({ queryKey: ['grammar-mistakes'] }),
+        queryClient.invalidateQueries({ queryKey: ['progress'] }),
       ]),
   });
 }
@@ -233,7 +234,11 @@ export function useCompleteReading() {
       const { error } = await supabase.rpc('complete_reading', { p_text_id: id, p_score: Math.round(score) });
       if (error) throw error;
     },
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['reading-progress', session?.user.id] }),
+    onSuccess: () =>
+      Promise.all([
+        queryClient.invalidateQueries({ queryKey: ['reading-progress', session?.user.id] }),
+        queryClient.invalidateQueries({ queryKey: ['progress'] }),
+      ]),
   });
 }
 

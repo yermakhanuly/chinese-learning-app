@@ -8,6 +8,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { checkMock, type MockTest } from '../src/lib/mock-test.ts';
 import { checkGrammarPoint, checkReading, type GrammarOutlineEntry, type GrammarPoint, type ReadingText } from '../src/lib/grammar.ts';
 import { buildLexicon } from '../src/lib/sentences.ts';
 import { parseCedictLine, parseHskEntry, type HskSourceEntry } from '../src/lib/vocab-parsers.ts';
@@ -57,6 +58,20 @@ if (existsSync(readingOutline)) {
       console.log(`✖ ${t.id}\n  - ${problems.join('\n  - ')}`);
     } else ok++;
   }
+}
+for (const level of [1, 2]) {
+  const file = join(ROOT, 'content', 'mock', `hsk${level}.json`);
+  if (!`hsk${level}`.startsWith(prefix) && prefix) continue;
+  if (!existsSync(file)) {
+    missing++;
+    continue;
+  }
+  const test: MockTest = JSON.parse(readFileSync(file, 'utf8'));
+  const problems = checkMock(test, upTo(level), lex);
+  if (problems.length) {
+    bad++;
+    console.log(`✖ mock hsk${level}\n  - ${problems.join('\n  - ')}`);
+  } else ok++;
 }
 console.log(`${ok} OK, ${bad} with problems, ${missing} not written yet`);
 process.exit(bad ? 1 : 0);

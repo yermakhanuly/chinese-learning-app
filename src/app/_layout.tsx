@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import { Celebrations } from '@/components/progress/celebrations';
 import { useProfile } from '@/hooks/use-profile';
 import { AuthProvider, useAuth } from '@/providers/auth';
 import { ThemePreferenceProvider } from '@/providers/theme-preference';
@@ -67,11 +68,14 @@ function ThemedRoot() {
           <Stack.Screen name="grammar-point" options={WITH_HEADER} />
           <Stack.Screen name="reading" options={WITH_HEADER} />
           <Stack.Screen name="reading-text" options={WITH_HEADER} />
+          <Stack.Screen name="progress" options={WITH_HEADER} />
+          <Stack.Screen name="leaderboard" options={WITH_HEADER} />
           {/* Lessons and review sessions take the whole screen; the placement test is a sheet. */}
           <Stack.Screen name="lesson" options={{ presentation: 'fullScreenModal' }} />
           <Stack.Screen name="review-session" options={{ presentation: 'fullScreenModal' }} />
           <Stack.Screen name="grammar-practice" options={{ presentation: 'fullScreenModal' }} />
           <Stack.Screen name="grammar-note" options={{ presentation: 'modal' }} />
+          <Stack.Screen name="mock-test" options={{ presentation: 'fullScreenModal', gestureEnabled: false }} />
           <Stack.Screen name="placement" options={{ presentation: 'modal' }} />
           <Stack.Screen name="character-quiz" options={{ presentation: 'modal', gestureEnabled: false }} />
           <Stack.Screen name="tone-quiz" options={{ presentation: 'modal' }} />
@@ -87,6 +91,7 @@ function ThemedRoot() {
         </Stack.Protected>
         <Stack.Screen name="auth/callback" options={{ presentation: 'card' }} />
       </Stack>
+      {session && profile.data?.onboarded_at ? <Celebrations /> : null}
     </ThemeProvider>
   );
 }

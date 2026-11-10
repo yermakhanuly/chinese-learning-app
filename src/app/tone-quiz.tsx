@@ -27,7 +27,7 @@ export default function ToneQuizScreen() {
 
 function SyllableQuiz() {
   const [questions] = useState(() => syllableToneQuestions());
-  return <AudioQuiz questions={questions} />;
+  return <AudioQuiz questions={questions} record={{ kind: 'tones', ref: 'syllable' }} />;
 }
 
 function WordQuiz() {
@@ -39,5 +39,5 @@ function WordQuiz() {
 
 function WordQuizReady({ words }: { words: ToneWord[] }) {
   const [questions] = useState(() => wordToneQuestions(words));
-  return <AudioQuiz questions={questions} />;
+  return <AudioQuiz questions={questions} record={{ kind: 'tones', ref: 'word' }} />;
 }
