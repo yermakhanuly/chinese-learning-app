@@ -1,0 +1,558 @@
+{
+  "scenarios": [
+    {
+      "id": "meet-friend",
+      "level": 1,
+      "title": "Meeting a new classmate",
+      "emoji": "👋",
+      "setting": "Your first day in a Chinese class. The student next to you starts talking to you.",
+      "ai_role": "Wang Fang, a friendly Chinese university student who likes music and sports",
+      "learner_role": "a new student in the class",
+      "voice": "female",
+      "goals": [
+        "Say your name and where you are from",
+        "Ask what she studies",
+        "Ask for her phone number"
+      ],
+      "opening": {
+        "zh": "你好！你是新同学吗？我叫王芳。你叫什么名字？",
+        "en": "Hi! Are you a new classmate? I'm Wang Fang. What's your name?"
+      },
+      "phrases": [
+        {
+          "zh": "我叫……",
+          "en": "My name is …"
+        },
+        {
+          "zh": "我是……人。",
+          "en": "I'm from … (I'm a … person)."
+        },
+        {
+          "zh": "你学习什么？",
+          "en": "What do you study?"
+        },
+        {
+          "zh": "你的电话是多少？",
+          "en": "What's your phone number?"
+        },
+        {
+          "zh": "认识你很高兴！",
+          "en": "Nice to meet you!"
+        }
+      ],
+      "names": [
+        "王芳"
+      ],
+      "words": []
+    },
+    {
+      "id": "restaurant",
+      "level": 1,
+      "title": "Ordering at a restaurant",
+      "emoji": "🍜",
+      "setting": "A small restaurant in Beijing at lunchtime. The waiter comes to your table.",
+      "ai_role": "a busy but kind waiter",
+      "learner_role": "a customer having lunch",
+      "voice": "male",
+      "goals": [
+        "Order one dish and a drink",
+        "Ask how much it costs",
+        "Ask for the bill"
+      ],
+      "opening": {
+        "zh": "你好！你想吃什么？",
+        "en": "Hello! What would you like to eat?"
+      },
+      "phrases": [
+        {
+          "zh": "我要一个……",
+          "en": "I'd like a …"
+        },
+        {
+          "zh": "有没有米饭？",
+          "en": "Do you have rice?"
+        },
+        {
+          "zh": "我想喝茶。",
+          "en": "I'd like to drink tea."
+        },
+        {
+          "zh": "多少钱？",
+          "en": "How much is it?"
+        },
+        {
+          "zh": "买单！",
+          "en": "The bill, please!"
+        }
+      ],
+      "names": [],
+      "words": [
+        "买单"
+      ]
+    },
+    {
+      "id": "fruit-shop",
+      "level": 1,
+      "title": "Buying fruit",
+      "emoji": "🍎",
+      "setting": "A fruit stall at a street market. The seller calls out to you.",
+      "ai_role": "a cheerful fruit seller who likes to chat",
+      "learner_role": "a shopper buying fruit for your family",
+      "voice": "female",
+      "goals": [
+        "Ask the price of apples",
+        "Buy some fruit",
+        "Ask for a lower price"
+      ],
+      "opening": {
+        "zh": "你好！今天的苹果很好吃，你要买吗？",
+        "en": "Hello! The apples are really good today. Would you like some?"
+      },
+      "phrases": [
+        {
+          "zh": "苹果多少钱一斤？",
+          "en": "How much is a jin (half a kilo) of apples?"
+        },
+        {
+          "zh": "我要两斤。",
+          "en": "I'd like two jin."
+        },
+        {
+          "zh": "太贵了！",
+          "en": "That's too expensive!"
+        },
+        {
+          "zh": "便宜一点儿，好吗？",
+          "en": "Can you make it a bit cheaper?"
+        },
+        {
+          "zh": "给你钱。",
+          "en": "Here's the money."
+        }
+      ],
+      "names": [],
+      "words": [
+        "斤"
+      ]
+    },
+    {
+      "id": "taxi",
+      "level": 1,
+      "title": "Taking a taxi",
+      "emoji": "🚕",
+      "setting": "You get into a taxi outside your hotel.",
+      "ai_role": "a talkative taxi driver",
+      "learner_role": "a passenger going to the train station",
+      "voice": "male",
+      "goals": [
+        "Say where you want to go",
+        "Ask how long it takes",
+        "Pay and say goodbye"
+      ],
+      "opening": {
+        "zh": "你好！你去哪儿？",
+        "en": "Hello! Where are you going?"
+      },
+      "phrases": [
+        {
+          "zh": "我去火车站。",
+          "en": "I'm going to the train station."
+        },
+        {
+          "zh": "要多少分钟？",
+          "en": "How many minutes does it take?"
+        },
+        {
+          "zh": "在这儿下车。",
+          "en": "I'll get out here."
+        },
+        {
+          "zh": "多少钱？",
+          "en": "How much is it?"
+        },
+        {
+          "zh": "谢谢，再见！",
+          "en": "Thanks, goodbye!"
+        }
+      ],
+      "names": [],
+      "words": [
+        "火车站"
+      ]
+    },
+    {
+      "id": "weekend-plans",
+      "level": 1,
+      "title": "Making weekend plans",
+      "emoji": "📞",
+      "setting": "Your Chinese friend calls you on Friday evening.",
+      "ai_role": "Li Ming, your Chinese friend who wants to do something together this weekend",
+      "learner_role": "Li Ming's friend",
+      "voice": "male",
+      "goals": [
+        "Say what you are doing now",
+        "Agree on what to do on the weekend",
+        "Choose a time and a place to meet"
+      ],
+      "opening": {
+        "zh": "喂，你好！我是李明。你现在在做什么？",
+        "en": "Hello! It's Li Ming. What are you doing right now?"
+      },
+      "phrases": [
+        {
+          "zh": "我在家看书。",
+          "en": "I'm at home reading."
+        },
+        {
+          "zh": "星期六你忙不忙？",
+          "en": "Are you busy on Saturday?"
+        },
+        {
+          "zh": "我们去看电影吧！",
+          "en": "Let's go and see a film!"
+        },
+        {
+          "zh": "几点见？",
+          "en": "What time shall we meet?"
+        },
+        {
+          "zh": "在哪儿见？",
+          "en": "Where shall we meet?"
+        }
+      ],
+      "names": [
+        "李明"
+      ],
+      "words": []
+    },
+    {
+      "id": "cafe",
+      "level": 2,
+      "title": "At a coffee shop",
+      "emoji": "☕",
+      "setting": "A busy coffee shop near your office in the morning.",
+      "ai_role": "a young barista",
+      "learner_role": "a customer on the way to work",
+      "voice": "female",
+      "goals": [
+        "Order a coffee and say what size",
+        "Ask for it hot or cold, with or without sugar",
+        "Ask if you can pay by phone"
+      ],
+      "opening": {
+        "zh": "早上好！您想喝什么？",
+        "en": "Good morning! What would you like to drink?"
+      },
+      "phrases": [
+        {
+          "zh": "我要一杯咖啡。",
+          "en": "I'd like a cup of coffee."
+        },
+        {
+          "zh": "要大杯的。",
+          "en": "A large one, please."
+        },
+        {
+          "zh": "不要糖。",
+          "en": "No sugar, please."
+        },
+        {
+          "zh": "可以用手机付钱吗？",
+          "en": "Can I pay with my phone?"
+        },
+        {
+          "zh": "我在这儿喝。",
+          "en": "I'll drink it here."
+        }
+      ],
+      "names": [],
+      "words": [
+        "杯",
+        "糖",
+        "付钱",
+        "用"
+      ]
+    },
+    {
+      "id": "doctor",
+      "level": 2,
+      "title": "Seeing a doctor",
+      "emoji": "🩺",
+      "setting": "A hospital clinic. You haven't felt well for two days.",
+      "ai_role": "a calm, patient doctor",
+      "learner_role": "a patient who has a headache and a cold",
+      "voice": "male",
+      "goals": [
+        "Say what is wrong and for how long",
+        "Answer the doctor's questions",
+        "Ask how to take the medicine"
+      ],
+      "opening": {
+        "zh": "你好，请坐。你哪儿不舒服？",
+        "en": "Hello, please sit down. What's wrong?"
+      },
+      "phrases": [
+        {
+          "zh": "我头疼。",
+          "en": "I have a headache."
+        },
+        {
+          "zh": "我感冒了。",
+          "en": "I've caught a cold."
+        },
+        {
+          "zh": "已经两天了。",
+          "en": "It's been two days already."
+        },
+        {
+          "zh": "这个药怎么吃？",
+          "en": "How do I take this medicine?"
+        },
+        {
+          "zh": "要休息几天？",
+          "en": "How many days should I rest?"
+        }
+      ],
+      "names": [],
+      "words": [
+        "头疼",
+        "感冒"
+      ]
+    },
+    {
+      "id": "hotel",
+      "level": 2,
+      "title": "Checking into a hotel",
+      "emoji": "🏨",
+      "setting": "The front desk of a hotel in Shanghai, late in the evening.",
+      "ai_role": "a polite hotel receptionist",
+      "learner_role": "a traveller who booked a room online",
+      "voice": "female",
+      "goals": [
+        "Say you have a booking and give your name",
+        "Ask what time breakfast is",
+        "Ask for the Wi-Fi password"
+      ],
+      "opening": {
+        "zh": "晚上好！您有预订吗？",
+        "en": "Good evening! Do you have a booking?"
+      },
+      "phrases": [
+        {
+          "zh": "我在网上订了一个房间。",
+          "en": "I booked a room online."
+        },
+        {
+          "zh": "我住三个晚上。",
+          "en": "I'm staying three nights."
+        },
+        {
+          "zh": "早饭几点开始？",
+          "en": "What time does breakfast start?"
+        },
+        {
+          "zh": "上网的密码是什么？",
+          "en": "What is the Wi-Fi (internet) password?"
+        },
+        {
+          "zh": "房间在几楼？",
+          "en": "Which floor is the room on?"
+        }
+      ],
+      "names": [],
+      "words": [
+        "预订",
+        "订",
+        "密码"
+      ]
+    },
+    {
+      "id": "train-tickets",
+      "level": 2,
+      "title": "Buying train tickets",
+      "emoji": "🚄",
+      "setting": "The ticket window at Beijing South railway station.",
+      "ai_role": "a ticket seller at the station",
+      "learner_role": "a traveller going to Shanghai",
+      "voice": "female",
+      "goals": [
+        "Ask for a ticket to Shanghai for tomorrow",
+        "Choose a time and a seat",
+        "Ask which platform the train leaves from"
+      ],
+      "opening": {
+        "zh": "你好，你要去哪儿？",
+        "en": "Hello, where do you want to go?"
+      },
+      "phrases": [
+        {
+          "zh": "我要一张去上海的票。",
+          "en": "I'd like a ticket to Shanghai."
+        },
+        {
+          "zh": "明天上午有车吗？",
+          "en": "Is there a train tomorrow morning?"
+        },
+        {
+          "zh": "我要靠窗的座位。",
+          "en": "I'd like a window seat."
+        },
+        {
+          "zh": "从几号站台上车？",
+          "en": "Which platform does it leave from?"
+        },
+        {
+          "zh": "要坐多长时间？",
+          "en": "How long is the journey?"
+        }
+      ],
+      "names": [
+        "上海"
+      ],
+      "words": [
+        "站台",
+        "靠窗",
+        "张",
+        "座位"
+      ]
+    },
+    {
+      "id": "job-interview",
+      "level": 2,
+      "title": "A job interview",
+      "emoji": "💼",
+      "setting": "An interview for a part-time job at a company in Beijing.",
+      "ai_role": "a friendly but serious interviewer from the company",
+      "learner_role": "a job applicant",
+      "voice": "female",
+      "goals": [
+        "Introduce yourself and your studies",
+        "Say what you are good at",
+        "Ask about working hours"
+      ],
+      "opening": {
+        "zh": "你好，请坐。请你介绍一下自己。",
+        "en": "Hello, please have a seat. Please introduce yourself."
+      },
+      "phrases": [
+        {
+          "zh": "我在大学学习……",
+          "en": "I study … at university."
+        },
+        {
+          "zh": "我会说英语和一点儿汉语。",
+          "en": "I can speak English and a little Chinese."
+        },
+        {
+          "zh": "我以前在……工作过。",
+          "en": "I've worked at … before."
+        },
+        {
+          "zh": "我很喜欢这个工作。",
+          "en": "I really like this job."
+        },
+        {
+          "zh": "每天要工作几个小时？",
+          "en": "How many hours a day is the work?"
+        }
+      ],
+      "names": [],
+      "words": [
+        "英语",
+        "以前"
+      ]
+    },
+    {
+      "id": "directions",
+      "level": 2,
+      "title": "Asking the way",
+      "emoji": "🧭",
+      "setting": "You are lost near a big shopping street and stop someone to ask for help.",
+      "ai_role": "a helpful local walking past",
+      "learner_role": "a visitor looking for the nearest subway station",
+      "voice": "male",
+      "goals": [
+        "Ask where the subway station is",
+        "Understand left, right and straight on",
+        "Ask if it is far"
+      ],
+      "opening": {
+        "zh": "你好！你是不是找不到路了？我可以帮你。",
+        "en": "Hi! Are you lost? I can help you."
+      },
+      "phrases": [
+        {
+          "zh": "请问，地铁站在哪儿？",
+          "en": "Excuse me, where is the subway station?"
+        },
+        {
+          "zh": "往前走，再往左走。",
+          "en": "Go straight on, then turn left."
+        },
+        {
+          "zh": "离这儿远吗？",
+          "en": "Is it far from here?"
+        },
+        {
+          "zh": "走路要多少分钟？",
+          "en": "How many minutes on foot?"
+        },
+        {
+          "zh": "太谢谢你了！",
+          "en": "Thank you so much!"
+        }
+      ],
+      "names": [],
+      "words": [
+        "地铁站"
+      ]
+    },
+    {
+      "id": "birthday",
+      "level": 2,
+      "title": "A friend's birthday",
+      "emoji": "🎂",
+      "setting": "Your friend's birthday party at their home. You arrive with a present.",
+      "ai_role": "Zhang Lei, your friend who is turning twenty-two today",
+      "learner_role": "a guest at the party",
+      "voice": "male",
+      "goals": [
+        "Wish your friend a happy birthday",
+        "Give your present and say what it is",
+        "Ask about the other guests and the plans for tonight"
+      ],
+      "opening": {
+        "zh": "你来了！快进来，大家都在等你呢。",
+        "en": "You're here! Come in, everyone's waiting for you."
+      },
+      "phrases": [
+        {
+          "zh": "生日快乐！",
+          "en": "Happy birthday!"
+        },
+        {
+          "zh": "这是送给你的礼物。",
+          "en": "This is a present for you."
+        },
+        {
+          "zh": "希望你喜欢。",
+          "en": "I hope you like it."
+        },
+        {
+          "zh": "他们是谁？",
+          "en": "Who are they?"
+        },
+        {
+          "zh": "我们一会儿做什么？",
+          "en": "What are we doing later?"
+        }
+      ],
+      "names": [
+        "张磊"
+      ],
+      "words": [
+        "礼物"
+      ]
+    }
+  ]
+}

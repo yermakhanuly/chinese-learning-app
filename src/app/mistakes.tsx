@@ -10,6 +10,8 @@ import { ThemedText } from '@/components/themed-text';
 import { WordRow } from '@/components/word-row';
 import { Radius, Spacing } from '@/constants/theme';
 import { useGrammarMistakes, type GrammarMistake } from '@/hooks/use-grammar';
+import { useConversationMistakes } from '@/hooks/use-tutor';
+import type { Correction, TutorMessage } from '@/lib/tutor';
 import { useMistakeNotebook, type NotebookEntry } from '@/hooks/use-review';
 import { useTheme } from '@/hooks/use-theme';
 import { useAuth } from '@/providers/auth';
@@ -19,6 +21,7 @@ export default function MistakesScreen() {
   const { session } = useAuth();
   const notebook = useMistakeNotebook();
   const grammar = useGrammarMistakes().data ?? [];
+  const conversation = useConversationMistakes().data ?? [];
   const entries = notebook.data ?? [];
   const weak = entries.filter((e) => e.weak);
   const others = entries.filter((e) => !e.weak);
@@ -38,11 +41,11 @@ export default function MistakesScreen() {
             <ThemedText themeColor="danger">Couldn&apos;t load your notebook. Check your connection.</ThemedText>
             <Button label="Retry" variant="secondary" onPress={() => notebook.refetch()} />
           </Card>
-        ) : !entries.length && !grammar.length ? (
+        ) : !entries.length && !grammar.length && !conversation.length ? (
           <Card title="No mistakes yet">
             <ThemedText themeColor="textSecondary">
-              Words you get wrong in lessons, grammar exercises you miss, and cards you mark &quot;Again&quot; in review are
-              collected here.
+              Words you get wrong in lessons, grammar exercises you miss, cards you mark &quot;Again&quot; in review and
+              corrections from AI tutor conversations are collected here.
             </ThemedText>
           </Card>
         ) : (
@@ -65,6 +68,7 @@ export default function MistakesScreen() {
               </>
             ) : null}
             {grammar.length ? <GrammarMistakes items={grammar} /> : null}
+            {conversation.length ? <ConversationMistakes items={conversation} /> : null}
           </>
         )}
       </Screen>
@@ -116,6 +120,41 @@ function GrammarMistakes({ items }: { items: GrammarMistake[] }) {
   );
 }
 
+function ConversationMistakes({ items }: { items: (TutorMessage & { conversation_id: string })[] }) {
+  const theme = useTheme();
+  return (
+    <>
+      <ThemedText type="heading">From conversations</ThemedText>
+      <View role="list" style={styles.list}>
+        {items.map((m) => {
+          const c = m.data.correction as Correction;
+          return (
+            <View
+              key={m.id}
+              role="listitem"
+              aria-label={`${m.text} corrected to ${c.corrected}`}
+              style={[styles.grammar, { borderColor: theme.border, backgroundColor: theme.backgroundElement }]}>
+              <ThemedText lang="zh" themeColor="textSecondary" style={styles.strike}>
+                {m.text}
+              </ThemedText>
+              <ThemedText lang="zh" type="label">
+                → {c.corrected}
+              </ThemedText>
+              <ThemedText type="small" themeColor="textSecondary">
+                {c.kind ? `${c.kind} · ` : ''}
+                {c.explanation}
+              </ThemedText>
+              <PressableLink href={{ pathname: '/conversation', params: { id: m.conversation_id } }}>
+                <ThemedText type="link">Open the conversation</ThemedText>
+              </PressableLink>
+            </View>
+          );
+        })}
+      </View>
+    </>
+  );
+}
+
 function MissBadge({ entry }: { entry: NotebookEntry }) {
   const theme = useTheme();
   return (
@@ -132,4 +171,5 @@ const styles = StyleSheet.create({
   list: { gap: Spacing.two },
   grammar: { borderWidth: StyleSheet.hairlineWidth, borderRadius: Radius.medium, padding: Spacing.three, gap: Spacing.two },
   badge: { borderWidth: 1, borderRadius: Radius.small, paddingHorizontal: Spacing.two, paddingVertical: Spacing.half },
+  strike: { textDecorationLine: 'line-through' },
 });

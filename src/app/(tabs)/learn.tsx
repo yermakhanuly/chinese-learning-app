@@ -54,6 +54,12 @@ export default function LearnScreen() {
           {!session ? (
             <ThemedText themeColor="textSecondary">Lessons are free to try. Log in to save your progress.</ThemedText>
           ) : null}
+          <Card title="AI tutor 老师 ✨">
+            <ThemedText themeColor="textSecondary">
+              Role-plays and conversations with corrections, voice practice, and answers to your questions. Premium.
+            </ThemedText>
+            <Button label="Open the AI tutor" variant="secondary" onPress={() => router.push('/tutor')} />
+          </Card>
           <Card title="Mock HSK tests 模拟考试">
             <ThemedText themeColor="textSecondary">
               Timed listening and reading tests in the HSK 1 and HSK 2 format, scored out of 200.

@@ -92,6 +92,34 @@ npx supabase functions serve --env-file supabase/functions/.env    # local
 npx supabase secrets set AZURE_SPEECH_KEY=… AZURE_SPEECH_REGION=…  # cloud (then: npx supabase functions deploy pronounce)
 ```
 
+### AI tutor (Premium)
+
+The `tutor` Edge Function (`supabase/functions/tutor/`) runs every AI feature: tutor chat, role-plays and free conversation with corrections, voice turns (Azure speech-to-text → Claude → Azure voice), sentence checks and breakdowns, example sentences, quizzes and end-of-conversation feedback. It uses **Claude Sonnet 5.5**; the Anthropic key stays on the server. Prompts and JSON schemas are in `prompts.ts` (unit-tested in `src/lib/__tests__/tutor.test.ts`).
+
+- Only **Premium** learners can use it: `profiles.premium_until` in the future. Learners can't set it themselves; until Phase 10 adds payments, switch it on in the SQL editor:
+  `update profiles set premium_until = '2099-01-01' where id = (select id from auth.users where email = '…');`
+- No daily limits; token use per learner per day is recorded in `tutor_usage`.
+- Role-play scenarios are `content/tutor/scenarios.json` (checked by `npm run content:check`, loaded by `npm run data:import -- --only=content`).
+- Conversations are written by the function only; learners read their own and can delete them. Each learner message earns 2 XP (trigger, at most 60 a day).
+- Voice replies are cached as MP3s in the private `tutor-audio` bucket and handed out as signed paths.
+
+```bash
+npx supabase secrets set --remote ANTHROPIC_API_KEY=…   # plus the Azure secrets above
+npx supabase functions deploy tutor --remote
+```
+
+#### Testing the AI tutor locally (no credit spent)
+
+Web tests replace the function with a stand-in (`e2e/tutor.spec.ts`). To check the function itself, run it against a fake Claude API:
+
+```bash
+cp supabase/functions/.env supabase/functions/.env.fake          # git-ignored
+printf 'ANTHROPIC_API_KEY=fake\nANTHROPIC_BASE_URL=http://host.docker.internal:8787\n' >> supabase/functions/.env.fake
+node scripts/fake-anthropic.ts &                                  # logs requests to scripts/.tutor-requests.jsonl
+npx supabase functions serve --env-file supabase/functions/.env.fake
+node scripts/check-tutor.ts                                        # 17 checks
+```
+
 ### Review (spaced repetition)
 
 Cards live in `review_cards` and are created by the database: finishing a lesson (`complete_lesson`) adds its words, saving a word adds it (trigger), and learners add sentences and their own cards. Each word gets three cards (read, listen, recall). The app schedules them with [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs) (FSRS-7, `src/lib/srs.ts`) and saves each answer through `record_review`, which also logs mistakes. `review_queue` builds the day's session: due cards, then new cards up to the learner's daily limit, one direction of a word per day.
@@ -166,7 +194,7 @@ src/constants/      design tokens (colors incl. tone colors, spacing) and tab li
 src/hooks/          data + theme hooks
 src/lib/            pinyin, vocabulary parsers, lessons, grammar + reading formats, review scheduling (FSRS), audio, Supabase client, auth, storage
 src/providers/      login session (auth) and theme preference
-supabase/           Supabase config (cloud + local) + SQL migrations
+supabase/           Supabase config (cloud + local), SQL migrations, Edge Functions (pronounce, tutor)
 scripts/            data import, content drafting + checking, audio generation, icon generation
 e2e/                Playwright tests
 ```

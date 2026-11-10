@@ -147,7 +147,7 @@ export function useCompleteQuiz() {
   const invalidate = useInvalidateProgress();
   const userId = useSignedIn();
   return useMutation({
-    mutationFn: async ({ kind, ref, correct, total }: { kind: 'listening' | 'tones' | 'characters'; ref: string; correct: number; total: number }) => {
+    mutationFn: async ({ kind, ref, correct, total }: { kind: 'listening' | 'tones' | 'characters' | 'ai_quiz'; ref: string; correct: number; total: number }) => {
       if (!userId) return;
       const { error } = await supabase.rpc('complete_quiz', { p_kind: kind, p_ref: ref, p_correct: correct, p_total: total });
       if (error) throw error;
@@ -157,7 +157,7 @@ export function useCompleteQuiz() {
 }
 
 /** Saves a quiz result once when the quiz ends (signed-in learners; guests earn no XP). */
-export function useSaveQuizOnce(kind: 'listening' | 'tones' | 'characters', ref: string, correct: number, total: number, done: boolean) {
+export function useSaveQuizOnce(kind: 'listening' | 'tones' | 'characters' | 'ai_quiz', ref: string, correct: number, total: number, done: boolean) {
   const { mutate, isIdle } = useCompleteQuiz();
   const userId = useSignedIn();
   useEffect(() => {

@@ -13,6 +13,8 @@ export const XP_RULES: { what: string; xp: string }[] = [
   { what: 'Listening, tone or character quiz', xp: '1 per right answer' },
   { what: 'Pronunciation check', xp: '2' },
   { what: 'Mock HSK test', xp: '30' },
+  { what: 'Message to the AI tutor (Premium)', xp: '2 (up to 60 a day)' },
+  { what: 'AI quiz (Premium)', xp: '1 per right answer' },
 ];
 
 // ---------------------------------------------------------------------------

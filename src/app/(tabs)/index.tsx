@@ -1,4 +1,4 @@
-import { Link, router } from 'expo-router';
+import { Link, router, type Href } from 'expo-router';
 import { useState } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
@@ -15,6 +15,7 @@ import { Radius, Spacing } from '@/constants/theme';
 import { nextLesson, useCourse, useProgress } from '@/hooks/use-course';
 import { hskLevelLabel, useHskLevelCounts } from '@/hooks/use-hsk-level-counts';
 import { useProfile } from '@/hooks/use-profile';
+import { useStudyRecommendations } from '@/hooks/use-recommendations';
 import { useReviewSummary } from '@/hooks/use-review';
 import { useTheme } from '@/hooks/use-theme';
 import { useAuth } from '@/providers/auth';
@@ -31,6 +32,7 @@ export default function HomeScreen() {
       {session ? <StudyReminderBanner /> : null}
       {session ? <ProgressSummaryCard /> : null}
       {session ? <ReviewsDue /> : null}
+      {session ? <StudyNext /> : null}
       {session ? (
         profile ? (
           <Card title="Your plan">
@@ -79,6 +81,35 @@ function ReviewsDue() {
       {today ? (
         <Button label="Start review" onPress={() => router.push({ pathname: '/review-session', params: { deck: 'all' } })} />
       ) : null}
+    </Card>
+  );
+}
+
+/** "What to study next", from the learner's own data. Lessons and reviews have their own cards above. */
+function StudyNext() {
+  const theme = useTheme();
+  const recs = useStudyRecommendations()?.filter((r) => r.id !== 'lesson' && r.id !== 'review');
+  if (!recs?.length) return null;
+  return (
+    <Card title="What to study next">
+      <View style={styles.recs}>
+        {recs.slice(0, 3).map((r) => (
+          <PressableLink
+            key={r.id}
+            href={r.href as Href}
+            aria-label={`${r.title}. ${r.why}`}
+            style={({ pressed }) => [styles.rec, { borderColor: theme.border, backgroundColor: pressed ? theme.backgroundSelected : theme.background }]}>
+            <ThemedText style={styles.recEmoji}>{r.emoji}</ThemedText>
+            <View style={styles.flexOne}>
+              <ThemedText type="label">{r.title}</ThemedText>
+              <ThemedText type="small" themeColor="textSecondary">
+                {r.why}
+              </ThemedText>
+            </View>
+            <ThemedText themeColor="textSecondary">›</ThemedText>
+          </PressableLink>
+        ))}
+      </View>
     </Card>
   );
 }
@@ -175,4 +206,15 @@ const styles = StyleSheet.create({
   buttons: { flexDirection: 'row', gap: Spacing.two, flexWrap: 'wrap' },
   flex: { flexGrow: 1, flexBasis: 140 },
   errorRow: { flexDirection: 'row', gap: Spacing.three, alignItems: 'center' },
+  recs: { gap: Spacing.two },
+  rec: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.three,
+    padding: Spacing.three,
+    borderRadius: Radius.medium,
+    borderWidth: StyleSheet.hairlineWidth,
+  },
+  recEmoji: { fontSize: 22, lineHeight: 28 },
+  flexOne: { flex: 1, gap: Spacing.half },
 });

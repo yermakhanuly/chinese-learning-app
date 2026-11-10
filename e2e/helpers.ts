@@ -3,12 +3,26 @@ import { expect, type Page } from '@playwright/test';
 
 import { localSupabase } from './local-supabase';
 
-export const { url: SUPABASE_URL, key: SUPABASE_KEY } = localSupabase();
+export const { url: SUPABASE_URL, key: SUPABASE_KEY, serviceKey: SUPABASE_SERVICE_KEY } = localSupabase();
 export const MAILPIT_URL = 'http://127.0.0.1:54324';
 export const PASSWORD = 'correct-horse-42';
 
 export function newClient() {
   return createClient(SUPABASE_URL, SUPABASE_KEY, { auth: { persistSession: false } });
+}
+
+/** Local service-role client, for set-up the app can't do itself (never used by the app). */
+export function adminClient() {
+  return createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, { auth: { persistSession: false } });
+}
+
+/** Switches Premium on for a learner (Phase 10 payments will do this). */
+export async function makePremium(userId: string) {
+  const { error } = await adminClient()
+    .from('profiles')
+    .update({ premium_until: new Date(Date.now() + 30 * 86400e3).toISOString() })
+    .eq('id', userId);
+  if (error) throw error;
 }
 
 export function uniqueEmail(tag: string): string {

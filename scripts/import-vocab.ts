@@ -4,7 +4,7 @@
  *
  *   npm run data:import            # local Supabase (credentials read from `supabase status`)
  *   npm run data:import -- --only=characters   # only the characters step
- *   npm run data:import -- --only=content      # only lessons, grammar and readings (content/)
+ *   npm run data:import -- --only=content      # only content/: lessons, grammar, readings, mock tests, scenarios
  *   npm run data:import -- --only=sentence-tokens   # recompute pinyin of the example sentences in place
  *
  * For a cloud project set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY first.

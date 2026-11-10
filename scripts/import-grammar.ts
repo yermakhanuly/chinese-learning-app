@@ -1,5 +1,6 @@
 /**
- * Loads the grammar library (content/grammar/) and the graded readings (content/reading/) into
+ * Loads the grammar library (content/grammar/), the graded readings (content/reading/), the mock
+ * HSK tests (content/mock/) and the tutor's role-play scenarios (content/tutor/) into
  * Supabase, called from import-vocab.ts. Adds what authors don't write by hand: pinyin and
  * traditional characters for every Chinese text, and (readings) a meaning for every word so
  * learners can tap words. Rows are upserted by id, so learners' progress is kept.
@@ -20,6 +21,7 @@ import {
 } from '../src/lib/grammar.ts';
 import { checkMock, mockTexts, type MockTest } from '../src/lib/mock-test.ts';
 import { buildLexicon, buildTradToSimp, hanCount, tokenize, type Lexicon, type Token } from '../src/lib/sentences.ts';
+import { checkScenarios, scenarioTexts, type Scenario } from '../src/lib/tutor.ts';
 import type { DictionaryRow, WordRow } from '../src/lib/vocab-parsers.ts';
 
 /** Lesson id → grammar point id, from the grammar outline's lesson_notes ("<lesson>|<title>"). */
@@ -164,5 +166,31 @@ export async function importGrammar(db: SupabaseClient, root: string, words: Wor
     const { error } = await db.from('mock_tests').upsert(mockRows, { onConflict: 'id' });
     if (error) throw new Error(`mock_tests: ${error.message}`);
     console.log(`✔ mock tests: ${mockRows.length}`);
+  }
+
+  // Role-play scenarios for the AI tutor
+  const scenarioFile = join(root, 'content', 'tutor', 'scenarios.json');
+  if (existsSync(scenarioFile)) {
+    const { scenarios } = JSON.parse(readFileSync(scenarioFile, 'utf8')) as { scenarios: Scenario[] };
+    const found = checkScenarios(scenarios, upTo, lex);
+    if (found.length) console.warn(`  scenarios: ${found.length} problems (first: ${found[0]})`);
+    const rows = scenarios.map((s, i) => ({
+      id: s.id,
+      hsk_level: s.level,
+      position: i + 1,
+      title: s.title,
+      emoji: s.emoji,
+      setting: s.setting,
+      ai_role: s.ai_role,
+      learner_role: s.learner_role,
+      voice: s.voice,
+      goals: s.goals,
+      opening: s.opening,
+      phrases: s.phrases,
+      readings: readingsFor([...scenarioTexts(s), ...s.words], lex, t2s),
+    }));
+    const { error } = await db.from('tutor_scenarios').upsert(rows, { onConflict: 'id' });
+    if (error) throw new Error(`tutor_scenarios: ${error.message}`);
+    console.log(`✔ tutor scenarios: ${rows.length}`);
   }
 }

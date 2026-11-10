@@ -51,6 +51,14 @@ export default function ProfileScreen() {
           <AccountHeader profile={profile.data} email={session.user.email ?? null} />
           <LearningSettings profile={profile.data} />
           <ProgressSettings />
+          <Card title="Premium">
+            <ThemedText themeColor="textSecondary">
+              {profile.data.premium_until && new Date(profile.data.premium_until) > new Date()
+                ? 'Premium is on: the AI tutor is yours to use.'
+                : 'The AI tutor (role-plays, corrections, voice practice) is part of Premium.'}
+            </ThemedText>
+            <Button label="About Premium" variant="secondary" onPress={() => router.push('/premium')} />
+          </Card>
         </>
       ) : profile.isError ? (
         <Card>

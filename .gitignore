@@ -63,3 +63,6 @@ AGENTS.md
 .claude/
 # generated neural audio cache (re-uploaded by npm run audio:generate -- --upload-only)
 /data/audio/
+# local AI tutor check (scripts/fake-anthropic.ts, scripts/check-tutor.ts)
+/scripts/.tutor-requests.jsonl
+/supabase/functions/.env.fake

@@ -234,7 +234,11 @@ export function skillsOf(stats: Stats): Skill[] {
     },
     { label: 'Reading', value: stats.reading_avg, detail: `${stats.readings} texts, average score` },
     { label: 'Listening', value: pct(listen.c, listen.t), detail: `${listen.a} quizzes, right answers` },
-    { label: 'Speaking', value: null, detail: `${stats.pronunciation_checks} pronunciation checks` },
+    {
+      label: 'Speaking',
+      value: null,
+      detail: `${stats.pronunciation_checks} pronunciation checks${k('conversation').activities ? `, ${k('conversation').activities} messages to the tutor` : ''}`,
+    },
   ];
 }
 

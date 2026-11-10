@@ -31,12 +31,14 @@ export type Profile = {
   placed_at: string | null;
   /** New review cards introduced per day (Phase 4). */
   new_cards_per_day: NewCardsPerDay;
+  /** Premium (AI tutor) until this time; set by the server only (Phase 9). */
+  premium_until: string | null;
 };
 
-export type ProfileUpdate = Partial<Omit<Profile, 'id'>>;
+export type ProfileUpdate = Partial<Omit<Profile, 'id' | 'premium_until'>>;
 
 const COLUMNS =
-  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at, start_lesson_id, placed_at, new_cards_per_day, daily_goal_xp, leaderboard_opt_in, time_zone';
+  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at, start_lesson_id, placed_at, new_cards_per_day, daily_goal_xp, leaderboard_opt_in, time_zone, premium_until';
 
 /** The signed-in learner's profile. Refetched when the app/tab regains focus, so edits sync across devices. */
 export function useProfile() {

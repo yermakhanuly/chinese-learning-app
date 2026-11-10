@@ -1,5 +1,6 @@
 /**
- * Checks the grammar library and the graded readings without a database or API calls.
+ * Checks the grammar library, graded readings, mock tests and role-play scenarios without a
+ * database or API calls.
  *
  *   npm run content:check            # every file
  *   npm run content:check -- g1-shi  # only files whose id starts with this
@@ -11,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { checkMock, type MockTest } from '../src/lib/mock-test.ts';
 import { checkGrammarPoint, checkReading, type GrammarOutlineEntry, type GrammarPoint, type ReadingText } from '../src/lib/grammar.ts';
 import { buildLexicon } from '../src/lib/sentences.ts';
+import { checkScenarios, type Scenario } from '../src/lib/tutor.ts';
 import { parseCedictLine, parseHskEntry, type HskSourceEntry } from '../src/lib/vocab-parsers.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -71,6 +73,15 @@ for (const level of [1, 2]) {
   if (problems.length) {
     bad++;
     console.log(`✖ mock hsk${level}\n  - ${problems.join('\n  - ')}`);
+  } else ok++;
+}
+const scenarioFile = join(ROOT, 'content', 'tutor', 'scenarios.json');
+if (existsSync(scenarioFile) && (!prefix || 'scenarios'.startsWith(prefix))) {
+  const scenarios: Scenario[] = JSON.parse(readFileSync(scenarioFile, 'utf8')).scenarios;
+  const problems = checkScenarios(scenarios, upTo, lex);
+  if (problems.length) {
+    bad++;
+    console.log(`✖ scenarios\n  - ${problems.join('\n  - ')}`);
   } else ok++;
 }
 console.log(`${ok} OK, ${bad} with problems, ${missing} not written yet`);

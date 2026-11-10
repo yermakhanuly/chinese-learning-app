@@ -194,16 +194,18 @@ const KIND_LABEL: Record<string, string> = {
   characters: '✍️ Character quiz',
   pronunciation: '🎤 Pronunciation',
   mock: '📝 Mock HSK test',
+  conversation: '💬 Tutor conversation',
+  ai_quiz: '✨ AI quiz',
 };
 
-/** Recent activity, with repeated reviews grouped into one line. */
+/** Recent activity, with repeated reviews (and tutor messages) on one day grouped into one line. */
 function History() {
   const recent = useRecentActivity(40).data;
   if (!recent?.length) return null;
   const rows: (ActivityRow & { count: number })[] = [];
   for (const a of recent) {
     const last = rows[rows.length - 1];
-    if (last && last.kind === 'review' && a.kind === 'review' && last.created_at.slice(0, 10) === a.created_at.slice(0, 10)) {
+    if (last && (a.kind === 'review' || a.kind === 'conversation') && last.kind === a.kind && last.created_at.slice(0, 10) === a.created_at.slice(0, 10)) {
       last.count++;
       last.xp += a.xp;
     } else rows.push({ ...a, count: 1 });

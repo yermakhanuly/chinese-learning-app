@@ -70,6 +70,9 @@ function ThemedRoot() {
           <Stack.Screen name="reading-text" options={WITH_HEADER} />
           <Stack.Screen name="progress" options={WITH_HEADER} />
           <Stack.Screen name="leaderboard" options={WITH_HEADER} />
+          <Stack.Screen name="tutor" options={WITH_HEADER} />
+          <Stack.Screen name="conversation" options={WITH_HEADER} />
+          <Stack.Screen name="ai-tools" options={WITH_HEADER} />
           {/* Lessons and review sessions take the whole screen; the placement test is a sheet. */}
           <Stack.Screen name="lesson" options={{ presentation: 'fullScreenModal' }} />
           <Stack.Screen name="review-session" options={{ presentation: 'fullScreenModal' }} />
@@ -81,6 +84,8 @@ function ThemedRoot() {
           <Stack.Screen name="tone-quiz" options={{ presentation: 'modal' }} />
           <Stack.Screen name="listening-quiz" options={{ presentation: 'modal' }} />
           <Stack.Screen name="pronounce" options={{ presentation: 'modal' }} />
+          <Stack.Screen name="ai-quiz" options={{ presentation: 'modal' }} />
+          <Stack.Screen name="premium" options={{ presentation: 'modal' }} />
           <Stack.Screen name="sign-in" options={{ presentation: 'modal' }} />
           <Stack.Screen name="sign-up" options={{ presentation: 'modal' }} />
           <Stack.Screen name="forgot-password" options={{ presentation: 'modal' }} />

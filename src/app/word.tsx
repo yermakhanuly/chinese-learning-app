@@ -9,12 +9,15 @@ import { AddSentenceToReview, SayItLink, SentenceView } from '@/components/sente
 import { Button } from '@/components/button';
 import { PressableLink } from '@/components/pressable-link';
 import { ThemedText } from '@/components/themed-text';
+import { ChineseLine } from '@/components/tutor/tutor-parts';
 import { FrequencyMeter, Hanzi, LevelBadge, Pinyin, SpeakButton, pickScript, useScript } from '@/components/word-parts';
 import { partsOfSpeech } from '@/constants/parts-of-speech';
 import { Radius, Spacing } from '@/constants/theme';
 import { useWord, type WordDetail } from '@/hooks/use-dictionary';
 import { useTheme } from '@/hooks/use-theme';
+import { useAiExamples, useIsPremium } from '@/hooks/use-tutor';
 import { hanCharacters } from '@/lib/characters';
+import { useAuth } from '@/providers/auth';
 import { useDisplayPreferences } from '@/providers/display-preferences';
 
 export default function WordScreen() {
@@ -173,6 +176,8 @@ function WordDetails({ word }: { word: WordDetail }) {
         </Card>
       ) : null}
 
+      {word.source === 'hsk' ? <AiExamples word={word.simplified} /> : null}
+
       {word.otherForms.length ? (
         <Card title="Other readings">
           {word.otherForms.map((f) => (
@@ -191,6 +196,40 @@ function WordDetails({ word }: { word: WordDetail }) {
         your device&apos;s voice.
       </ThemedText>
     </>
+  );
+}
+
+/** Example sentences the tutor writes for this learner (Premium; others see a short invitation). */
+function AiExamples({ word }: { word: string }) {
+  const { session } = useAuth();
+  const { premium } = useIsPremium();
+  const examples = useAiExamples();
+  if (!session) return null;
+  return (
+    <Card title="✨ Examples made for you">
+      {!premium ? (
+        <>
+          <ThemedText themeColor="textSecondary">The AI tutor can write examples with words you already know.</ThemedText>
+          <ThemedText type="link" role="link" onPress={() => router.push('/premium')}>
+            Premium
+          </ThemedText>
+        </>
+      ) : examples.data ? (
+        examples.data.map((e, i) => (
+          <ChineseLine key={i} id={`example-${word}-${i}`} zh={e.zh} pinyin={e.pinyin} en={e.en} showPinyin showEnglish size={18} />
+        ))
+      ) : (
+        <>
+          <ThemedText themeColor="textSecondary">Three new sentences using {word}, with words you know.</ThemedText>
+          <Button label="Write examples for me" variant="secondary" loading={examples.isPending} onPress={() => examples.mutate(word)} />
+          {examples.isError ? (
+            <ThemedText role="alert" themeColor="danger">
+              {examples.error.message}
+            </ThemedText>
+          ) : null}
+        </>
+      )}
+    </Card>
   );
 }
 
