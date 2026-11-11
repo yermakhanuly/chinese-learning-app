@@ -9,15 +9,18 @@
  *
  * For a cloud project set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY first.
  * Safe to re-run: words are upserted, dictionary entries are replaced.
+ *
+ * Rows edited in the admin dashboard (edited_at set) are kept as they are; the import says which
+ * it skipped. Add --overwrite-edits to replace them with the content/ files again.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gunzipSync } from 'node:zlib';
 
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
-import { parseCedictLine, parseHskEntry, type HskSourceEntry } from '../src/lib/vocab-parsers.ts';
+import { parseCedictLine, parseHskEntry, type HskSourceEntry, type WordRow } from '../src/lib/vocab-parsers.ts';
 import { importCharacters } from './import-characters.ts';
 import { importGrammar } from './import-grammar.ts';
 import { credentials } from './supabase-credentials.ts';
@@ -50,6 +53,35 @@ async function ensureSources() {
   }
 }
 
+const EDITABLE = [
+  ['unit', 'units', 'id'],
+  ['lesson', 'lessons', 'id'],
+  ['grammar', 'grammar_points', 'id'],
+  ['reading', 'reading_texts', 'id'],
+  ['scenario', 'tutor_scenarios', 'id'],
+] as const;
+
+/** Content rows edited in the admin dashboard ("kind:id"), and the edited words as stored. */
+async function editedRows(db: SupabaseClient) {
+  const skip = new Set<string>();
+  if (process.argv.includes('--overwrite-edits')) return { skip, words: new Map<string, Partial<WordRow>>() };
+  for (const [kind, table, col] of EDITABLE) {
+    const { data, error } = await db.from(table).select(col).not('edited_at', 'is', null);
+    if (error) throw new Error(`${table}: ${error.message}`);
+    for (const r of data as unknown as Record<string, string>[]) skip.add(`${kind}:${r[col]}`);
+  }
+  const { data, error } = await db
+    .from('words')
+    .select('simplified, traditional, pinyin, meanings, classifiers, hsk_level')
+    .not('edited_at', 'is', null);
+  if (error) throw new Error(`words: ${error.message}`);
+  const words = new Map((data as Partial<WordRow>[]).map((w) => [w.simplified!, w]));
+  if (skip.size || words.size) {
+    console.log(`  keeping ${skip.size + words.size} items edited in the admin dashboard (--overwrite-edits replaces them)`);
+  }
+  return { skip, words };
+}
+
 async function main() {
   await ensureSources();
   const { url, key } = credentials(ROOT);
@@ -59,14 +91,17 @@ async function main() {
   const hskRaw: HskSourceEntry[] = JSON.parse(readFileSync(HSK_FILE, 'utf8'));
   if (!Array.isArray(hskRaw)) throw new Error('Unexpected HSK file format');
   const words = hskRaw.map(parseHskEntry);
-  const unique = [...new Map(words.map((w) => [w.simplified, w])).values()];
+  const fromFile = [...new Map(words.map((w) => [w.simplified, w])).values()];
+  const edited = await editedRows(db);
+  // Words edited in the dashboard win (also for lesson word details and pinyin).
+  const unique = fromFile.map((w) => ({ ...w, ...(edited.words.get(w.simplified) ?? {}) }));
 
   const only = process.argv.find((a) => a.startsWith('--only='))?.slice('--only='.length);
   if (only === 'characters') return importCharacters(db, RAW, unique);
   if (only === 'content') {
     const cedict = readFileSync(CEDICT_FILE, 'utf8').split('\n').map(parseCedictLine).filter((e) => e !== null);
-    await importLessons(db, ROOT, unique, cedict);
-    return importGrammar(db, ROOT, unique, cedict);
+    await importLessons(db, ROOT, unique, cedict, edited.skip);
+    return importGrammar(db, ROOT, unique, cedict, edited.skip);
   }
   if (only === 'sentence-tokens') {
     const cedict = readFileSync(CEDICT_FILE, 'utf8').split('\n').map(parseCedictLine).filter((e) => e !== null);
@@ -77,7 +112,10 @@ async function main() {
     const { error } = await db
       .from('words')
       .upsert(
-        unique.slice(i, i + BATCH).map((w) => ({ ...w, updated_at: new Date().toISOString() })),
+        unique
+          .slice(i, i + BATCH)
+          .filter((w) => !edited.words.has(w.simplified))
+          .map((w) => ({ ...w, updated_at: new Date().toISOString() })),
         { onConflict: 'simplified' },
       );
     if (error) throw new Error(`words batch ${i}: ${error.message}`);
@@ -99,8 +137,8 @@ async function main() {
 
   await importCharacters(db, RAW, unique);
   await importSentencesAndTopics(db, ROOT, unique, entries);
-  await importLessons(db, ROOT, unique, entries);
-  await importGrammar(db, ROOT, unique, entries);
+  await importLessons(db, ROOT, unique, entries, edited.skip);
+  await importGrammar(db, ROOT, unique, entries, edited.skip);
 
   // Summary per 2026 HSK level
   for (let level = 1; level <= 7; level++) {

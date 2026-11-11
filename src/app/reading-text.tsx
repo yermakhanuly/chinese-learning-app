@@ -18,6 +18,7 @@ import { useTheme } from '@/hooks/use-theme';
 import { readingScore } from '@/lib/grammar';
 import { speakChinese, stopSpeech, useSpeech } from '@/lib/speech';
 import { useAuth } from '@/providers/auth';
+import { ReportLink } from '@/components/report-link';
 
 /** /reading-text?id=r1-01 — read a graded text with audio, tap-to-translate and questions. */
 export default function ReadingTextScreen() {
@@ -37,7 +38,10 @@ export default function ReadingTextScreen() {
             {text.isError ? "Couldn't load this text. Check your connection." : 'Text not found.'}
           </ThemedText>
         ) : (
-          <Reader key={text.data.id} text={text.data} />
+          <>
+            <Reader key={text.data.id} text={text.data} />
+            <ReportLink kind="reading" refId={text.data.id} label={text.data.title} />
+          </>
         )}
       </Screen>
     </>

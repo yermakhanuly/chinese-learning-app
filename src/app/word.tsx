@@ -8,6 +8,7 @@ import { Screen } from '@/components/screen';
 import { AddSentenceToReview, SayItLink, SentenceView } from '@/components/sentence-view';
 import { Button } from '@/components/button';
 import { PressableLink } from '@/components/pressable-link';
+import { ReportLink } from '@/components/report-link';
 import { ThemedText } from '@/components/themed-text';
 import { ChineseLine } from '@/components/tutor/tutor-parts';
 import { FrequencyMeter, Hanzi, LevelBadge, Pinyin, SpeakButton, pickScript, useScript } from '@/components/word-parts';
@@ -191,6 +192,7 @@ function WordDetails({ word }: { word: WordDetail }) {
         </Card>
       ) : null}
 
+      <ReportLink kind="word" refId={word.simplified} label={word.simplified} />
       <ThemedText type="small" themeColor="textSecondary" style={styles.credit}>
         Definitions: CC-CEDICT (CC BY-SA 4.0). {word.sentences.length ? 'Examples: Tatoeba (CC BY 2.0 FR). ' : ''}Audio:
         your device&apos;s voice.

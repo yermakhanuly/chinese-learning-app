@@ -436,6 +436,10 @@ enabled = true
 # ---------------------------------------------------------------------------
 # Cloud project (the app's database). Settings here override the ones above,
 # for `supabase config push` only; local Supabase keeps using Mailpit.
+# Stripe calls the webhook without a Supabase login; it checks Stripe's signature instead.
+[functions.stripe-webhook]
+verify_jwt = false
+
 [remotes.cloud-dev]
 project_id = "dpyfrpfrqewgrmkozsny"
 

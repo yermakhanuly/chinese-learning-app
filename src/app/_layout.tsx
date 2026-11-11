@@ -1,17 +1,41 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
+import { DarkTheme, DefaultTheme, Stack, ThemeProvider, type ErrorBoundaryProps } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 
-import { Colors } from '@/constants/theme';
+import { Button } from '@/components/button';
+import { ThemedText } from '@/components/themed-text';
+import { Colors, Spacing } from '@/constants/theme';
+import { installGlobalErrorHandlers, logError } from '@/lib/error-log';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Celebrations } from '@/components/progress/celebrations';
+import { OfflineSync } from '@/components/offline/offline-parts';
 import { useProfile } from '@/hooks/use-profile';
 import { AuthProvider, useAuth } from '@/providers/auth';
 import { ThemePreferenceProvider } from '@/providers/theme-preference';
 
 SplashScreen.preventAutoHideAsync();
+installGlobalErrorHandlers();
+
+/** Shown when a screen crashes (the error is logged for the admin dashboard). */
+export function ErrorBoundary({ error, retry }: ErrorBoundaryProps) {
+  useEffect(() => {
+    logError(error, { kind: 'screen crash' });
+  }, [error]);
+  return (
+    <View style={styles.crash}>
+      <ThemedText type="subtitle">Something went wrong</ThemedText>
+      <ThemedText themeColor="textSecondary">The problem has been reported. Try again, or go back.</ThemedText>
+      <Button label="Try again" onPress={retry} />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  crash: { flex: 1, justifyContent: 'center', padding: Spacing.four, gap: Spacing.three },
+});
 
 const WITH_HEADER = { headerShown: true, headerBackTitle: 'Back', headerShadowVisible: false } as const;
 
@@ -50,6 +74,7 @@ function ThemedRoot() {
         colors: { ...base.colors, primary: c.tint, background: c.background, card: c.background, text: c.text, border: c.border },
       }}>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
+      <OfflineSync />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Protected guard={!needsOnboarding}>
           <Stack.Screen name="(tabs)" />
@@ -71,6 +96,12 @@ function ThemedRoot() {
           <Stack.Screen name="progress" options={WITH_HEADER} />
           <Stack.Screen name="leaderboard" options={WITH_HEADER} />
           <Stack.Screen name="tutor" options={WITH_HEADER} />
+          <Stack.Screen name="admin" options={WITH_HEADER} />
+          <Stack.Screen name="admin-learners" options={WITH_HEADER} />
+          <Stack.Screen name="admin-content" options={WITH_HEADER} />
+          <Stack.Screen name="admin-edit" options={WITH_HEADER} />
+          <Stack.Screen name="admin-reports" options={WITH_HEADER} />
+          <Stack.Screen name="admin-errors" options={WITH_HEADER} />
           <Stack.Screen name="conversation" options={WITH_HEADER} />
           <Stack.Screen name="ai-tools" options={WITH_HEADER} />
           {/* Lessons and review sessions take the whole screen; the placement test is a sheet. */}
@@ -86,6 +117,7 @@ function ThemedRoot() {
           <Stack.Screen name="pronounce" options={{ presentation: 'modal' }} />
           <Stack.Screen name="ai-quiz" options={{ presentation: 'modal' }} />
           <Stack.Screen name="premium" options={{ presentation: 'modal' }} />
+          <Stack.Screen name="report" options={{ presentation: 'modal' }} />
           <Stack.Screen name="sign-in" options={{ presentation: 'modal' }} />
           <Stack.Screen name="sign-up" options={{ presentation: 'modal' }} />
           <Stack.Screen name="forgot-password" options={{ presentation: 'modal' }} />

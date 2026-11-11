@@ -66,3 +66,7 @@ AGENTS.md
 # local AI tutor check (scripts/fake-anthropic.ts, scripts/check-tutor.ts)
 /scripts/.tutor-requests.jsonl
 /supabase/functions/.env.fake
+# database backups (npm run db:backup)
+/backups/
+/supabase/functions/.env.*
+/supabase/.env.*

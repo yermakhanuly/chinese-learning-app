@@ -4,6 +4,7 @@ import { ActivityIndicator } from 'react-native';
 import { PinyinToggle } from '@/components/dictionary-controls';
 import { GrammarPage } from '@/components/grammar/grammar-page';
 import { Screen } from '@/components/screen';
+import { ReportLink } from '@/components/report-link';
 import { useHydrated } from '@/hooks/use-hydrated';
 
 /** /grammar-point?id=g1-shi — one point of the grammar library. */
@@ -13,7 +14,16 @@ export default function GrammarPointScreen() {
   return (
     <>
       <Stack.Screen options={{ title: 'Grammar', headerRight: () => <PinyinToggle /> }} />
-      <Screen stacked>{hydrated ? <GrammarPage key={id} id={id} /> : <ActivityIndicator />}</Screen>
+      <Screen stacked>
+        {hydrated ? (
+          <>
+            <GrammarPage key={id} id={id} />
+            {id ? <ReportLink kind="grammar" refId={id} /> : null}
+          </>
+        ) : (
+          <ActivityIndicator />
+        )}
+      </Screen>
     </>
   );
 }

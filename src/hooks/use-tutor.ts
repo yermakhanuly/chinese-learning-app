@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
-import { useProfile } from '@/hooks/use-profile';
+import { usePremiumState } from '@/hooks/use-billing';
 import { useInvalidateProgress } from '@/hooks/use-progress';
 import { bytesToBase64 } from '@/lib/base64';
 import type { Token } from '@/lib/sentences';
@@ -19,11 +19,12 @@ import type {
 } from '@/lib/tutor';
 import { useAuth } from '@/providers/auth';
 
-/** Premium (the AI tutor) is on while profiles.premium_until is in the future. */
+/** Premium (the AI tutor): switched on by hand, or a live subscription (the database decides). */
 export function useIsPremium() {
-  const { data: profile, isPending } = useProfile();
-  const until = profile?.premium_until ? new Date(profile.premium_until) : null;
-  return { premium: !!until && until > new Date(), until, loading: isPending };
+  const { data, isPending } = usePremiumState();
+  const manual = data?.manual_until ? new Date(data.manual_until) : null;
+  const end = data?.subscription?.current_period_end ? new Date(data.subscription.current_period_end) : null;
+  return { premium: !!data?.premium, until: manual && manual > new Date() ? manual : end, loading: isPending };
 }
 
 /** Calls the tutor Edge Function; errors carry the function's own message. */

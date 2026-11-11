@@ -12,22 +12,14 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 
 import { lessonGrammarLinks } from './import-grammar.ts';
 
-import { checkCourse, chineseTexts, type Course, type Lesson, type Step } from '../src/lib/lessons.ts';
-import { buildLexicon, buildTradToSimp, tokenize, type Token } from '../src/lib/sentences.ts';
+import { lessonRow, type ExampleRow } from '../src/lib/content-rows.ts';
+import { checkCourse, type Course, type Lesson } from '../src/lib/lessons.ts';
+import { buildLexicon, buildTradToSimp } from '../src/lib/sentences.ts';
 import type { DictionaryRow, WordRow } from '../src/lib/vocab-parsers.ts';
 
 type OutlineUnit = { id: string; title: string; title_zh: string; theme: string; description: string; lessons: { id: string }[] };
 
-/** Every Chinese string a learner sees in a step, including single tiles and options. */
-function allChinese(step: Step): string[] {
-  const texts = chineseTexts(step);
-  if (step.type === 'build' && step.direction === 'en-zh') texts.push(...step.answer, ...step.distractors);
-  if (step.type === 'fill') texts.push(step.before, step.after);
-  if (step.type === 'grammar') texts.push(...step.examples.map((e) => e.zh));
-  return texts.filter((t) => /[㐀-鿿]/.test(t));
-}
-
-export async function importLessons(db: SupabaseClient, root: string, words: WordRow[], cedict: DictionaryRow[]) {
+export async function importLessons(db: SupabaseClient, root: string, words: WordRow[], cedict: DictionaryRow[], skip: Set<string> = new Set()) {
   const contentDir = join(root, 'content');
   if (!existsSync(contentDir)) return;
   const lex = buildLexicon(
@@ -61,7 +53,7 @@ export async function importLessons(db: SupabaseClient, root: string, words: Wor
 
     // Example sentence for each new word: the first one linked in the dictionary.
     const newWords = course.units.flatMap((u) => u.lessons.flatMap((l) => l.words));
-    const examples = new Map<string, { simplified: string; traditional: string; english: string; tokens: Token[] }>();
+    const examples = new Map<string, ExampleRow>();
     for (let i = 0; i < newWords.length; i += 100) {
       const { data, error } = await db
         .from('words')
@@ -70,14 +62,14 @@ export async function importLessons(db: SupabaseClient, root: string, words: Wor
       if (error) throw new Error(`reading examples: ${error.message}`);
       for (const row of data as unknown as {
         simplified: string;
-        word_sentences: { position: number; sentences: { simplified: string; traditional: string; english: string; tokens: Token[] } }[];
+        word_sentences: { position: number; sentences: ExampleRow }[];
       }[]) {
         const first = [...row.word_sentences].sort((a, b) => a.position - b.position)[0];
         if (first) examples.set(row.simplified, first.sentences);
       }
     }
 
-    const unitRows = course.units.map((u, i) => ({
+    const unitRows = course.units.flatMap((u, i) => skip.has(`unit:${u.id}`) ? [] : [{
       id: u.id,
       hsk_level: level,
       position: i + 1,
@@ -85,48 +77,14 @@ export async function importLessons(db: SupabaseClient, root: string, words: Wor
       title_zh: u.title_zh,
       theme: u.theme,
       description: u.description,
-    }));
+    }]);
     const { error: unitError } = await db.from('units').upsert(unitRows, { onConflict: 'id' });
     if (unitError) throw new Error(`units: ${unitError.message}`);
 
     const lessonRows = course.units.flatMap((u) =>
-      u.lessons.map((l, i) => {
-        const readings: Record<string, Token[]> = {};
-        for (const text of new Set(l.steps.flatMap(allChinese))) {
-          const tokens = tokenize(text, lex, t2s);
-          if (tokens) readings[text] = tokens;
-        }
-        const wordDetails = Object.fromEntries(
-          l.words.map((w) => {
-            const row = byWord.get(w)!;
-            return [
-              w,
-              {
-                traditional: row.traditional,
-                pinyin: row.pinyin,
-                meanings: row.meanings.slice(0, 4),
-                classifiers: row.classifiers,
-                example: examples.get(w) ?? null,
-              },
-            ];
-          }),
-        );
-        return {
-          id: l.id,
-          unit_id: u.id,
-          position: i + 1,
-          title: l.title,
-          kind: l.kind,
-          words: l.words,
-          steps: l.steps.map((s) => {
-            const grammarId = s.type === 'grammar' ? grammarLinks.get(`${l.id}|${s.title}`) : undefined;
-            return grammarId ? { ...s, grammar_id: grammarId } : s;
-          }),
-          readings,
-          word_details: wordDetails,
-          minutes: Math.max(2, Math.round(l.steps.length * 0.35)),
-        };
-      }),
+      u.lessons.flatMap((l, i) =>
+        skip.has(`lesson:${l.id}`) ? [] : [lessonRow(l, u.id, i + 1, lex, t2s, byWord, examples, grammarLinks)],
+      ),
     );
     const { error: lessonError } = await db.from('lessons').upsert(lessonRows, { onConflict: 'id' });
     if (lessonError) throw new Error(`lessons: ${lessonError.message}`);

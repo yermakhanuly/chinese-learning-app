@@ -1,5 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
+import { isOnline } from '@/lib/network';
+import { enqueue, isNetworkError, readCopy, saveCopy, withCopy } from '@/lib/offline';
 import { supabase } from '@/lib/supabase';
 import { localDayStart, type Deck, type FsrsCard, type Grade, type ReviewCardRow, type WordContent } from '@/lib/srs';
 import { useAuth } from '@/providers/auth';
@@ -32,12 +34,13 @@ export function useReviewSummary() {
   return useQuery({
     queryKey: ['review-summary', userId],
     enabled: !!userId,
-    queryFn: async (): Promise<ReviewSummary> => {
-      const { data, error } = await supabase.rpc('review_summary', { p_day_start: localDayStart() }).single();
-      if (error) throw error;
-      const d = data as Record<keyof ReviewSummary, number | string>;
-      return { due: Number(d.due), new: Number(d.new), total: Number(d.total), weak: Number(d.weak) };
-    },
+    queryFn: () =>
+      withCopy(`review-summary:${userId}`, async (): Promise<ReviewSummary> => {
+        const { data, error } = await supabase.rpc('review_summary', { p_day_start: localDayStart() }).single();
+        if (error) throw error;
+        const d = data as Record<keyof ReviewSummary, number | string>;
+        return { due: Number(d.due), new: Number(d.new), total: Number(d.total), weak: Number(d.weak) };
+      }),
   });
 }
 
@@ -45,17 +48,14 @@ export function useReviewSummary() {
 export function useReviewQueue(deck: Deck, enabled = true) {
   const { session } = useAuth();
   const userId = session?.user.id;
+  rememberUser(userId);
   return useQuery({
     queryKey: ['review-queue', userId, deck],
     enabled: !!userId && enabled,
     staleTime: Infinity,
     gcTime: 0,
     refetchOnWindowFocus: false,
-    queryFn: async (): Promise<ReviewCardRow[]> => {
-      const { data, error } = await supabase.rpc('review_queue', { p_day_start: localDayStart(), p_deck: deck });
-      if (error) throw error;
-      return data as ReviewCardRow[];
-    },
+    queryFn: () => fetchReviewQueue(userId!, deck),
   });
 }
 
@@ -64,12 +64,60 @@ export function useReviewQueue(deck: Deck, enabled = true) {
  * mutation hook: answers are sent in quick succession and each needs its own result.
  */
 export async function recordReview(cardId: string, grade: Grade, card: FsrsCard, attempts = 3): Promise<void> {
+  forgetQueuedCard(cardId);
+  if (!isOnline()) {
+    // Offline: kept on the device and sent later with the time of the answer.
+    enqueue({ type: 'review', at: new Date().toISOString(), cardId, grade, card });
+    return;
+  }
   for (let i = 1; ; i++) {
     const { error } = await supabase.rpc('record_review', { p_card_id: cardId, p_rating: grade, p_card: card });
     if (!error) return;
+    if (isNetworkError(error) && i >= attempts) {
+      enqueue({ type: 'review', at: new Date().toISOString(), cardId, grade, card });
+      return;
+    }
     if (i >= attempts) throw error;
     await new Promise((r) => setTimeout(r, 500 * i));
   }
+}
+
+/** Sends a review answered offline (from the outbox), with the time it was given. */
+export async function sendQueuedReview(cardId: string, grade: number, card: unknown, at: string) {
+  const { error } = await supabase.rpc('record_review', { p_card_id: cardId, p_rating: grade, p_card: card, p_at: at });
+  if (error) throw error;
+}
+
+// Today's queue is kept on the device per deck, so reviews work offline; answered cards are
+// taken out of the copy so an offline session doesn't show them again.
+const DECKS_KEY = 'review-decks';
+
+/** Today's cards for a deck, from the server or (offline) the device copy. */
+export function fetchReviewQueue(userId: string, deck: Deck): Promise<ReviewCardRow[]> {
+  const decks = new Set(readCopy<string[]>(`${DECKS_KEY}:${userId}`) ?? []);
+  if (!decks.has(deck)) saveCopy(`${DECKS_KEY}:${userId}`, [...decks, deck]);
+  return withCopy(`queue:${userId}:${deck}`, async () => {
+    const { data, error } = await supabase.rpc('review_queue', { p_day_start: localDayStart(), p_deck: deck });
+    if (error) throw error;
+    return data as ReviewCardRow[];
+  });
+}
+
+function forgetQueuedCard(cardId: string) {
+  if (process.env.EXPO_OS === 'web') return;
+  const userId = currentUserId;
+  if (!userId) return;
+  for (const deck of readCopy<string[]>(`${DECKS_KEY}:${userId}`) ?? []) {
+    const key = `queue:${userId}:${deck}`;
+    const rows = readCopy<ReviewCardRow[]>(key);
+    if (rows?.some((r) => r.id === cardId)) saveCopy(key, rows.filter((r) => r.id !== cardId));
+  }
+}
+
+let currentUserId: string | undefined;
+/** Set by useReviewQueue, so plain functions know whose device copy to update. */
+function rememberUser(id: string | undefined) {
+  currentUserId = id;
 }
 
 export function useMistakeNotebook() {

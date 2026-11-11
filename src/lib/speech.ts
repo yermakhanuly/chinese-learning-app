@@ -3,6 +3,7 @@ import * as Speech from 'expo-speech';
 import { useSyncExternalStore } from 'react';
 
 import { audioKey } from '@/lib/audio-key';
+import { localClipUri } from '@/lib/audio-files';
 import { supabase } from '@/lib/supabase';
 import { audioSpeed } from '@/providers/display-preferences';
 
@@ -123,7 +124,9 @@ export async function speakChinese(text: string, id = text, fallback = text, onE
   const mine = ++turn;
   stopPlayer();
   await Speech.stop();
-  const recorded = await hasClip(text);
+  // A clip downloaded for offline study plays first (iPhone), then the online one.
+  const local = localClipUri(audioKey(text));
+  const recorded = !!local || (await hasClip(text));
   const voice = recorded ? undefined : await chineseVoice();
   if (mine !== turn) return; // another button was pressed meanwhile
   setPlaying(id);
@@ -148,7 +151,7 @@ export async function speakChinese(text: string, id = text, fallback = text, onE
       onError: stopped,
     });
   };
-  if (recorded) playUri(clipUrl(text), mine, finished, deviceVoice);
+  if (recorded) playUri(local ?? clipUrl(text), mine, finished, deviceVoice);
   else deviceVoice();
 }
 

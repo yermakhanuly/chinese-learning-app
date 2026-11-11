@@ -7,7 +7,9 @@ import { Button } from '@/components/button';
 import { ReadingSettings } from '@/components/dictionary-controls';
 import { Card } from '@/components/card';
 import { ChoiceList } from '@/components/choice-list';
+import { OfflineDownloads } from '@/components/offline/offline-parts';
 import { ProgressSettings } from '@/components/progress/reminder-settings';
+import { useIsPremium } from '@/hooks/use-tutor';
 import { Screen } from '@/components/screen';
 import { SegmentedControl } from '@/components/segmented-control';
 import { TextField } from '@/components/text-field';
@@ -39,6 +41,7 @@ const THEME_OPTIONS: { value: ThemePreference; label: string }[] = [
 const short = <T,>(options: Option<T>[]) => options.map(({ value, label }) => ({ value, label }));
 
 export default function ProfileScreen() {
+  const { premium } = useIsPremium();
   const { session } = useAuth();
   const profile = useProfile();
 
@@ -51,14 +54,20 @@ export default function ProfileScreen() {
           <AccountHeader profile={profile.data} email={session.user.email ?? null} />
           <LearningSettings profile={profile.data} />
           <ProgressSettings />
+          <OfflineDownloads />
           <Card title="Premium">
             <ThemedText themeColor="textSecondary">
-              {profile.data.premium_until && new Date(profile.data.premium_until) > new Date()
+              {premium
                 ? 'Premium is on: the AI tutor is yours to use.'
                 : 'The AI tutor (role-plays, corrections, voice practice) is part of Premium.'}
             </ThemedText>
             <Button label="About Premium" variant="secondary" onPress={() => router.push('/premium')} />
           </Card>
+          {profile.data.is_admin && process.env.EXPO_OS === 'web' ? (
+            <Card title="Admin">
+              <Button label="Open the admin dashboard" variant="secondary" onPress={() => router.push('/admin')} />
+            </Card>
+          ) : null}
         </>
       ) : profile.isError ? (
         <Card>

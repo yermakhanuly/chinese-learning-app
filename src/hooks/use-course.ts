@@ -3,6 +3,8 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import type { LearningGoal } from '@/constants/profile-options';
 import { useInvalidateReview } from '@/hooks/use-review';
 import type { Lesson, Step } from '@/lib/lessons';
+import { isOnline } from '@/lib/network';
+import { enqueue, isNetworkError, saveCopy, withCopy } from '@/lib/offline';
 import type { Token } from '@/lib/sentences';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/providers/auth';
@@ -45,11 +47,11 @@ export type LessonContent = LessonSummary & {
 export type Progress = Map<string, { best_score: number; completed_at: string }>;
 
 /** Units and lessons of one HSK level, in course order. */
-export function useCourse(level = 1) {
-  return useQuery({
-    queryKey: ['course', level],
-    staleTime: 60 * 60 * 1000,
-    queryFn: async (): Promise<UnitWithLessons[]> => {
+export const courseQuery = (level: number) => ({
+  queryKey: ['course', level],
+  staleTime: 60 * 60 * 1000,
+  queryFn: () =>
+    withCopy(`course:${level}`, async (): Promise<UnitWithLessons[]> => {
       const { data, error } = await supabase
         .from('units')
         .select('id, hsk_level, position, title, title_zh, theme, description, lessons(id, unit_id, position, title, kind, words, minutes)')
@@ -57,25 +59,30 @@ export function useCourse(level = 1) {
         .order('position');
       if (error) throw error;
       return (data as UnitWithLessons[]).map((u) => ({ ...u, lessons: [...u.lessons].sort((a, b) => a.position - b.position) }));
-    },
-  });
+    }),
+});
+
+export function useCourse(level = 1) {
+  return useQuery(courseQuery(level));
 }
 
-export function useLesson(id: string | undefined) {
-  return useQuery({
-    queryKey: ['lesson', id],
-    enabled: !!id,
-    staleTime: 60 * 60 * 1000,
-    queryFn: async (): Promise<LessonContent | null> => {
+export const lessonQuery = (id: string) => ({
+  queryKey: ['lesson', id],
+  staleTime: 60 * 60 * 1000,
+  queryFn: () =>
+    withCopy(`lesson:${id}`, async (): Promise<LessonContent | null> => {
       const { data, error } = await supabase
         .from('lessons')
         .select('id, unit_id, position, title, kind, words, minutes, steps, readings, word_details')
-        .eq('id', id!)
+        .eq('id', id)
         .maybeSingle();
       if (error) throw error;
       return data as LessonContent | null;
-    },
-  });
+    }),
+});
+
+export function useLesson(id: string | undefined) {
+  return useQuery({ ...lessonQuery(id ?? ''), enabled: !!id });
 }
 
 /** Finished lessons of the signed-in learner (empty for guests). */
@@ -85,11 +92,12 @@ export function useProgress() {
   return useQuery({
     queryKey: ['progress', userId],
     enabled: !!userId,
-    queryFn: async (): Promise<Progress> => {
-      const { data, error } = await supabase.from('lesson_progress').select('lesson_id, best_score, completed_at');
-      if (error) throw error;
-      return new Map(data.map((r) => [r.lesson_id, { best_score: r.best_score, completed_at: r.completed_at }]));
-    },
+    queryFn: () =>
+      withCopy(`progress:${userId}`, async (): Promise<Progress> => {
+        const { data, error } = await supabase.from('lesson_progress').select('lesson_id, best_score, completed_at');
+        if (error) throw error;
+        return new Map(data.map((r) => [r.lesson_id, { best_score: r.best_score, completed_at: r.completed_at }]));
+      }),
   });
 }
 
@@ -99,17 +107,49 @@ export function useCompleteLesson() {
   const { session } = useAuth();
   const invalidateReview = useInvalidateReview();
   return useMutation({
-    mutationFn: async ({ lessonId, score, missed }: { lessonId: string; score: number; missed: string[] }) => {
-      const { error } = await supabase.rpc('complete_lesson', {
-        p_lesson_id: lessonId,
-        p_score: Math.round(score),
-        p_missed: missed.slice(0, 50),
-      });
-      if (error) throw error;
+    mutationFn: async ({ lessonId, score, missed }: { lessonId: string; score: number; missed: string[] }): Promise<'saved' | 'queued'> => {
+      const result = await saveLesson(lessonId, Math.round(score), missed.slice(0, 50));
+      if (result === 'queued') {
+        // Offline: show the lesson as done now; the outbox sends it later.
+        const key = ['progress', session?.user.id];
+        queryClient.setQueryData<Progress>(key, (old) => {
+          const next = new Map(old ?? []);
+          const prev = next.get(lessonId);
+          next.set(lessonId, { best_score: Math.max(prev?.best_score ?? 0, Math.round(score)), completed_at: prev?.completed_at ?? new Date().toISOString() });
+          saveCopy(`progress:${session?.user.id}`, { __map: [...next.entries()] });
+          return next;
+        });
+      }
+      return result;
     },
-    onSuccess: () =>
-      Promise.all([queryClient.invalidateQueries({ queryKey: ['progress', session?.user.id] }), invalidateReview()]),
+    onSuccess: (result) =>
+      result === 'saved'
+        ? Promise.all([queryClient.invalidateQueries({ queryKey: ['progress', session?.user.id] }), invalidateReview()])
+        : undefined,
   });
+}
+
+/**
+ * Saves a finished lesson; with no connection it goes into the outbox (sent with the time it was
+ * finished, so XP counts that day).
+ */
+export async function saveLesson(lessonId: string, score: number, missed: string[], at?: string): Promise<'saved' | 'queued'> {
+  if (!isOnline()) {
+    enqueue({ type: 'lesson', at: at ?? new Date().toISOString(), lessonId, score, missed });
+    return 'queued';
+  }
+  const { error } = await supabase.rpc('complete_lesson', {
+    p_lesson_id: lessonId,
+    p_score: score,
+    p_missed: missed,
+    ...(at ? { p_at: at } : {}),
+  });
+  if (!error) return 'saved';
+  if (!at && isNetworkError(error)) {
+    enqueue({ type: 'lesson', at: new Date().toISOString(), lessonId, score, missed });
+    return 'queued';
+  }
+  throw error;
 }
 
 /** Lessons in course order, flattened. */

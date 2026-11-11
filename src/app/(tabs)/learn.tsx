@@ -4,6 +4,7 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
 import { Button } from '@/components/button';
 import { Card, ComingSoon } from '@/components/card';
+import { OfflineBanner } from '@/components/offline/offline-parts';
 import { PressableLink } from '@/components/pressable-link';
 import { Screen } from '@/components/screen';
 import { ThemedText } from '@/components/themed-text';
@@ -36,6 +37,7 @@ export default function LearnScreen() {
 
   return (
     <Screen title="Learn" subtitle="HSK 1 · 10 themed units">
+      <OfflineBanner />
       {course.isPending ? (
         <ActivityIndicator />
       ) : course.isError ? (

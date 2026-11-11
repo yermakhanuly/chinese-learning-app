@@ -7,6 +7,7 @@ import { Button } from '@/components/button';
 import { Card } from '@/components/card';
 import { SearchField } from '@/components/dictionary-controls';
 import { DAILY_XP_GOALS, LEARNING_GOALS, SELF_LEVELS, labelFor } from '@/constants/profile-options';
+import { OfflineBanner } from '@/components/offline/offline-parts';
 import { ProgressSummaryCard, StudyReminderBanner } from '@/components/progress/progress-parts';
 import { Screen } from '@/components/screen';
 import { PressableLink } from '@/components/pressable-link';
@@ -27,6 +28,7 @@ export default function HomeScreen() {
 
   return (
     <Screen title={name ? `你好, ${name}!` : '你好!'} subtitle="Nǐ hǎo! Welcome to HSK Chinese.">
+      <OfflineBanner />
       <HomeSearch />
       <TodaysLesson />
       {session ? <StudyReminderBanner /> : null}

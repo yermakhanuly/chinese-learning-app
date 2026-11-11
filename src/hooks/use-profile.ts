@@ -6,6 +6,7 @@ import type {
   DailyGoal,
   DailyXpGoal, ExplanationLanguage, LearningGoal, NewCardsPerDay, Script, SelfLevel } from '@/constants/profile-options';
 import { AVATAR_BUCKET, avatarPath, base64ToBytes } from '@/lib/avatar';
+import { withCopy } from '@/lib/offline';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/providers/auth';
 
@@ -33,12 +34,14 @@ export type Profile = {
   new_cards_per_day: NewCardsPerDay;
   /** Premium (AI tutor) until this time; set by the server only (Phase 9). */
   premium_until: string | null;
+  /** Admin dashboard access (Phase 10); set by hand in the database only. */
+  is_admin: boolean;
 };
 
-export type ProfileUpdate = Partial<Omit<Profile, 'id' | 'premium_until'>>;
+export type ProfileUpdate = Partial<Omit<Profile, 'id' | 'premium_until' | 'is_admin'>>;
 
 const COLUMNS =
-  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at, start_lesson_id, placed_at, new_cards_per_day, daily_goal_xp, leaderboard_opt_in, time_zone, premium_until';
+  'id, display_name, avatar_url, learning_goal, self_level, daily_goal_minutes, script, explanation_language, onboarded_at, tutorial_completed_at, start_lesson_id, placed_at, new_cards_per_day, daily_goal_xp, leaderboard_opt_in, time_zone, premium_until, is_admin';
 
 /** The signed-in learner's profile. Refetched when the app/tab regains focus, so edits sync across devices. */
 export function useProfile() {
@@ -47,11 +50,12 @@ export function useProfile() {
   return useQuery({
     queryKey: ['profile', userId],
     enabled: !!userId,
-    queryFn: async (): Promise<Profile> => {
-      const { data, error } = await supabase.from('profiles').select(COLUMNS).eq('id', userId!).single();
-      if (error) throw error;
-      return data as Profile;
-    },
+    queryFn: () =>
+      withCopy(`profile:${userId}`, async (): Promise<Profile> => {
+        const { data, error } = await supabase.from('profiles').select(COLUMNS).eq('id', userId!).single();
+        if (error) throw error;
+        return data as Profile;
+      }),
   });
 }
 

@@ -142,7 +142,11 @@ function checkedTexts(point: GrammarPoint): { right: string[]; wrong: string[] }
  * Problems in one grammar point (empty = OK). `known`: the words its level may use (HSK words up to
  * its level). `ids`: every point id, for `related`.
  */
-export function checkGrammarPoint(point: GrammarPoint, known: Set<string>, lex: Lexicon, ids: Set<string>): string[] {
+/**
+ * `knownChars`: characters used in words up to the level (wrong-form options are checked per
+ * character); worked out from `known` when not given.
+ */
+export function checkGrammarPoint(point: GrammarPoint, known: Set<string>, lex: Lexicon, ids: Set<string>, knownChars?: Set<string>): string[] {
   const problems: string[] = [];
   const taught = point.words ?? [];
   if (taught.length > 4) problems.push(`teaches ${taught.length} extra words (at most 4)`);
@@ -195,9 +199,10 @@ export function checkGrammarPoint(point: GrammarPoint, known: Set<string>, lex: 
     const unknown = unknownWords(text, allowed, lex);
     if (unknown.length) problems.push(`"${text}" uses words above HSK ${point.level}: ${unknown.join(', ')}`);
   }
-  const knownChars = new Set([...allowed].flatMap((w) => [...w]));
+  const chars = new Set([...allowed].flatMap((w) => [...w]));
+  for (const c of knownChars ?? []) chars.add(c);
   for (const text of wrong) {
-    const unknown = [...new Set([...text].filter((c) => isHan(c) && !knownChars.has(c)))];
+    const unknown = [...new Set([...text].filter((c) => isHan(c) && !chars.has(c)))];
     if (unknown.length) problems.push(`"${text}" uses characters above HSK ${point.level}: ${unknown.join(', ')}`);
   }
   return problems;

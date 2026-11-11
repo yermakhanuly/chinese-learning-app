@@ -5,6 +5,7 @@ import { ActivityIndicator, Pressable, ScrollView, StyleSheet, View } from 'reac
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/button';
+import { ReportLink } from '@/components/report-link';
 import { closeModal } from '@/components/close-button';
 import { BuildExercise, ChoiceExercise, FillExercise, GrammarStep, LessonDataContext, WordStep } from '@/components/lesson/lesson-parts';
 import { ThemedText } from '@/components/themed-text';
@@ -218,6 +219,7 @@ function Finished({ lesson, score, missed }: { lesson: LessonContent; score: num
           {!session ? <Button label="Log in" variant="secondary" onPress={() => router.push('/sign-in')} /> : null}
           <Button label="Back to lessons" variant={next ? 'ghost' : 'primary'} onPress={() => router.replace('/learn')} />
         </View>
+        {session ? <ReportLink kind="lesson" refId={lesson.id} label={lesson.title} /> : null}
       </View>
     </View>
   );

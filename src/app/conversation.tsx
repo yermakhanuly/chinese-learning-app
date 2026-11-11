@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { ActivityIndicator, StyleSheet, TextInput, View } from 'react-native';
 
 import { Button } from '@/components/button';
+import { ReportLink } from '@/components/report-link';
 import { Card } from '@/components/card';
 import { Screen } from '@/components/screen';
 import { ThemedText } from '@/components/themed-text';
@@ -130,6 +131,8 @@ function Chat({ id }: { id: string }) {
           {error.message}
         </ThemedText>
       ) : null}
+
+      <ReportLink kind="tutor" refId={c.id} label={`AI tutor: ${c.title}`} />
 
       {finished ? (
         <>

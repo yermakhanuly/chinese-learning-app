@@ -117,7 +117,62 @@ cp supabase/functions/.env supabase/functions/.env.fake          # git-ignored
 printf 'ANTHROPIC_API_KEY=fake\nANTHROPIC_BASE_URL=http://host.docker.internal:8787\n' >> supabase/functions/.env.fake
 node scripts/fake-anthropic.ts &                                  # logs requests to scripts/.tutor-requests.jsonl
 npx supabase functions serve --env-file supabase/functions/.env.fake
-node scripts/check-tutor.ts                                        # 17 checks
+npm run check:tutor                                                # 17 checks
+```
+
+### Admin dashboard (web)
+
+`/admin` in the web app, for accounts with `profiles.is_admin` (set it in the SQL editor:
+`update profiles set is_admin = true where id = (select id from auth.users where email = '…');`).
+Everyone else gets "Page not found", and the database refuses them anyway.
+
+- **Learners**: search, last activity, XP, AI tokens (30 days); switch manual Premium on/off.
+- **Content**: lessons, units, grammar, readings, role-plays and word meanings. Edits are **drafts** (`content_drafts`): *Check* runs the same checks as `npm run content:check` and shows the pinyin; *Review* lists the changed fields; *Publish* (the `admin` Edge Function) builds the row exactly as the import does (`src/lib/content-rows.ts`) and marks it `edited_at`. Then *Make missing clips* creates the audio (Azure), or upload your own MP3.
+- `npm run data:import` keeps rows edited in the dashboard (it says how many); `-- --overwrite-edits` replaces them with the `content/` files again. To keep an edit for good, copy it back into `content/`.
+- **Problem reports** from learners ("⚑ Report a problem" on words, lessons, grammar, readings and tutor chats) and **Errors** (crashes and unexpected errors from the app and the Edge Functions, in `client_errors`; our own monitoring, no third-party service).
+
+```bash
+npx supabase functions deploy admin --remote
+npm run check:admin      # local: every content item must be rebuilt exactly by the function
+```
+
+### Payments (Stripe, web)
+
+Premium is monthly or yearly with a 7-day free trial (first time only), through Stripe Checkout; learners manage or cancel in Stripe's customer portal. The `stripe-webhook` function (signature-checked) writes `subscriptions`; `is_premium()` = manual Premium **or** a trialing / active / past-due subscription. On iPhone the Premium page says to subscribe on the web (App Store purchases come in Phase 11).
+
+Set-up in Stripe (test mode first):
+1. Products → *Premium* with two recurring prices (monthly, yearly). Note the price ids (`price_…`).
+2. Developers → Webhooks → endpoint `https://<project-ref>.supabase.co/functions/v1/stripe-webhook`, events `customer.subscription.created`, `.updated`, `.deleted`. Note the signing secret (`whsec_…`).
+3. Settings → Billing → Customer portal: allow cancelling and switching plans.
+4. Secrets and deploy (keys only in git-ignored files, never in chat or git):
+
+```bash
+# supabase/functions/.env.stripe (git-ignored):
+#   STRIPE_SECRET_KEY=sk_test_…  STRIPE_WEBHOOK_SECRET=whsec_…
+#   STRIPE_PRICE_MONTHLY=price_…  STRIPE_PRICE_YEARLY=price_…  APP_ORIGINS=https://your-web-app.example
+npx supabase secrets set --remote --env-file supabase/functions/.env.stripe
+npx supabase functions deploy billing stripe-webhook --remote
+```
+
+Test cards: `4242 4242 4242 4242`, any future date, any CVC.
+
+### Offline (iPhone)
+
+Profile → Offline study → *Download HSK 1*: the lessons, their audio (MP3s in the app's documents folder) and today's reviews. Lessons, the course, progress, the profile and the review queue also keep a device copy whenever they load (`withCopy` in `src/lib/offline.ts`). Answers given offline go into an outbox and are sent when the device is back online, with the time they were given (`record_review` / `complete_lesson` take `p_at`, so XP and streaks count the right day). The AI tutor and dictionary search need a connection.
+
+### Backups and security
+
+The free Supabase plan has no downloadable backups: `npm run db:backup` saves roles, schema and all `public` + `auth` data to `backups/<date>/` (git-ignored; `-- --local` for local Supabase). Keep them somewhere safe; restore with `psql "$DB_URL" -f roles.sql -f schema.sql -f data.sql`. Storage files aren't included (audio is rebuilt with `npm run audio:generate -- --upload-only`).
+
+Security review (2026-11-10): every `public` table has RLS; every `security definer` function sets `search_path`; learners can't write progress, XP, Premium, subscriptions, admin flags or tutor messages directly (only checked functions or the service role can); admin data and actions check `is_admin()` in the database; Edge Functions check the login (and Premium / admin), and the Stripe webhook checks Stripe's signature; checkout only returns to the app's own origins; API keys live only in Supabase secrets and git-ignored files; voice replies are in a private bucket behind short-lived signed URLs. Leftover grants that RLS already blocked were removed (`20261116000000_security.sql`).
+
+#### Testing payments locally (no Stripe account needed)
+
+```bash
+# supabase/functions/.env.fake also gets (test values, local only):
+printf 'STRIPE_SECRET_KEY=sk_test_fake\nSTRIPE_WEBHOOK_SECRET=whsec_test_local\nSTRIPE_PRICE_MONTHLY=price_monthly_test\nSTRIPE_PRICE_YEARLY=price_yearly_test\n' >> supabase/functions/.env.fake
+npx supabase functions serve --env-file supabase/functions/.env.fake
+npm run check:billing    # 11 checks with events signed like Stripe's
 ```
 
 ### Review (spaced repetition)
@@ -194,7 +249,7 @@ src/constants/      design tokens (colors incl. tone colors, spacing) and tab li
 src/hooks/          data + theme hooks
 src/lib/            pinyin, vocabulary parsers, lessons, grammar + reading formats, review scheduling (FSRS), audio, Supabase client, auth, storage
 src/providers/      login session (auth) and theme preference
-supabase/           Supabase config (cloud + local), SQL migrations, Edge Functions (pronounce, tutor)
+supabase/           Supabase config (cloud + local), SQL migrations, Edge Functions (pronounce, tutor, admin, billing, stripe-webhook)
 scripts/            data import, content drafting + checking, audio generation, icon generation
 e2e/                Playwright tests
 ```
